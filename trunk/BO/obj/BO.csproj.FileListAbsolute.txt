@@ -1,0 +1,50 @@
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Carrito de Compras\BO\bin\Debug\BO.dll
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Carrito de Compras\BO\bin\Debug\BO.pdb
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Carrito de Compras\BO\obj\Debug\ResolveAssemblyReference.cache
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Carrito de Compras\BO\obj\Debug\BO.dll
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Carrito de Compras\BO\obj\Debug\BO.pdb
+C:\Documents and Settings\alumno\Escritorio\Carrito 2009\Carrito de Compras\BO\bin\Debug\BO.dll
+C:\Documents and Settings\alumno\Escritorio\Carrito 2009\Carrito de Compras\BO\bin\Debug\BO.pdb
+C:\Documents and Settings\alumno\Escritorio\Carrito 2009\Carrito de Compras\BO\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\alumno\Escritorio\Carrito 2009\Carrito de Compras\BO\obj\Debug\BO.dll
+C:\Documents and Settings\alumno\Escritorio\Carrito 2009\Carrito de Compras\BO\obj\Debug\BO.pdb
+E:\jacinto\Carrito de Compras\BO\bin\Debug\BO.dll
+E:\jacinto\Carrito de Compras\BO\bin\Debug\BO.pdb
+E:\jacinto\Carrito de Compras\BO\obj\Debug\ResolveAssemblyReference.cache
+E:\jacinto\Carrito de Compras\BO\obj\Debug\BO.dll
+E:\jacinto\Carrito de Compras\BO\obj\Debug\BO.pdb
+C:\Documents and Settings\alumno\Escritorio\jacinto\Carrito de Compras\BO\bin\Debug\BO.dll
+C:\Documents and Settings\alumno\Escritorio\jacinto\Carrito de Compras\BO\bin\Debug\BO.pdb
+C:\Documents and Settings\alumno\Escritorio\jacinto\Carrito de Compras\BO\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\alumno\Escritorio\jacinto\Carrito de Compras\BO\obj\Debug\BO.dll
+C:\Documents and Settings\alumno\Escritorio\jacinto\Carrito de Compras\BO\obj\Debug\BO.pdb
+G:\jacinto\Carrito de Compras\BO\bin\Debug\BO.dll
+G:\jacinto\Carrito de Compras\BO\bin\Debug\BO.pdb
+G:\jacinto\Carrito de Compras\BO\obj\Debug\ResolveAssemblyReference.cache
+G:\jacinto\Carrito de Compras\BO\obj\Debug\BO.dll
+G:\jacinto\Carrito de Compras\BO\obj\Debug\BO.pdb
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacinto\Carrito de Compras\BO\bin\Debug\BO.dll
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacinto\Carrito de Compras\BO\bin\Debug\BO.pdb
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacinto\Carrito de Compras\BO\obj\Debug\ResolveAssemblyReference.cache
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacinto\Carrito de Compras\BO\obj\Debug\BO.dll
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacinto\Carrito de Compras\BO\obj\Debug\BO.pdb
+N:\jacinto\jacinto\Carrito de Compras\BO\bin\Debug\BO.dll
+N:\jacinto\jacinto\Carrito de Compras\BO\bin\Debug\BO.pdb
+N:\jacinto\jacinto\Carrito de Compras\BO\obj\Debug\ResolveAssemblyReference.cache
+N:\jacinto\jacinto\Carrito de Compras\BO\obj\Debug\BO.dll
+N:\jacinto\jacinto\Carrito de Compras\BO\obj\Debug\BO.pdb
+D:\jacinto\Carrito de Compras\BO\bin\Debug\BO.dll
+D:\jacinto\Carrito de Compras\BO\bin\Debug\BO.pdb
+D:\jacinto\Carrito de Compras\BO\obj\Debug\ResolveAssemblyReference.cache
+D:\jacinto\Carrito de Compras\BO\obj\Debug\BO.dll
+D:\jacinto\Carrito de Compras\BO\obj\Debug\BO.pdb
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Jacinto With Singleton\Carrito de Compras\BO\bin\Debug\BO.dll
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Jacinto With Singleton\Carrito de Compras\BO\bin\Debug\BO.pdb
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Jacinto With Singleton\Carrito de Compras\BO\obj\Debug\ResolveAssemblyReference.cache
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Jacinto With Singleton\Carrito de Compras\BO\obj\Debug\BO.dll
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Jacinto With Singleton\Carrito de Compras\BO\obj\Debug\BO.pdb
+D:\Carrito de Compras\BO\bin\Debug\BO.dll
+D:\Carrito de Compras\BO\bin\Debug\BO.pdb
+D:\Carrito de Compras\BO\obj\Debug\ResolveAssemblyReference.cache
+D:\Carrito de Compras\BO\obj\Debug\BO.dll
+D:\Carrito de Compras\BO\obj\Debug\BO.pdb
