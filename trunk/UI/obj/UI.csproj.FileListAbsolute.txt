@@ -1,0 +1,179 @@
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Carrito de Compras\UI\obj\Debug\ResolveAssemblyReference.cache
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Carrito de Compras\UI\obj\Debug\UI.AdministracionCategorias.resources
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Carrito de Compras\UI\obj\Debug\UI.Principal.resources
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Carrito de Compras\UI\obj\Debug\UI.AdministracionProductos.resources
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Carrito de Compras\UI\obj\Debug\UI.Properties.Resources.resources
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Carrito de Compras\UI\obj\Debug\UI.csproj.GenerateResource.Cache
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Carrito de Compras\UI\bin\Debug\UI.exe
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Carrito de Compras\UI\bin\Debug\UI.pdb
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Carrito de Compras\UI\bin\Debug\Control.dll
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Carrito de Compras\UI\bin\Debug\BO.dll
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Carrito de Compras\UI\bin\Debug\DAO.dll
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Carrito de Compras\UI\bin\Debug\BO.pdb
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Carrito de Compras\UI\bin\Debug\DAO.pdb
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Carrito de Compras\UI\bin\Debug\Control.pdb
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Carrito de Compras\UI\obj\Debug\UI.exe
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Carrito de Compras\UI\obj\Debug\UI.pdb
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Carrito de Compras\UI\obj\Debug\UI.AdministracionABMProductos.resources
+C:\Documents and Settings\alumno\Escritorio\Carrito 2009\Carrito de Compras\UI\obj\Debug\UI.exe
+C:\Documents and Settings\alumno\Escritorio\Carrito 2009\Carrito de Compras\UI\obj\Debug\UI.pdb
+C:\Documents and Settings\alumno\Escritorio\Carrito 2009\Carrito de Compras\UI\bin\Debug\UI.exe
+C:\Documents and Settings\alumno\Escritorio\Carrito 2009\Carrito de Compras\UI\bin\Debug\UI.pdb
+C:\Documents and Settings\alumno\Escritorio\Carrito 2009\Carrito de Compras\UI\bin\Debug\Control.dll
+C:\Documents and Settings\alumno\Escritorio\Carrito 2009\Carrito de Compras\UI\bin\Debug\BO.dll
+C:\Documents and Settings\alumno\Escritorio\Carrito 2009\Carrito de Compras\UI\bin\Debug\DAO.dll
+C:\Documents and Settings\alumno\Escritorio\Carrito 2009\Carrito de Compras\UI\bin\Debug\BO.pdb
+C:\Documents and Settings\alumno\Escritorio\Carrito 2009\Carrito de Compras\UI\bin\Debug\DAO.pdb
+C:\Documents and Settings\alumno\Escritorio\Carrito 2009\Carrito de Compras\UI\bin\Debug\Control.pdb
+C:\Documents and Settings\alumno\Escritorio\Carrito 2009\Carrito de Compras\UI\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\alumno\Escritorio\Carrito 2009\Carrito de Compras\UI\obj\Debug\UI.AdministracionABMProductos.resources
+C:\Documents and Settings\alumno\Escritorio\Carrito 2009\Carrito de Compras\UI\obj\Debug\UI.AdministracionCategorias.resources
+C:\Documents and Settings\alumno\Escritorio\Carrito 2009\Carrito de Compras\UI\obj\Debug\UI.Principal.resources
+C:\Documents and Settings\alumno\Escritorio\Carrito 2009\Carrito de Compras\UI\obj\Debug\UI.AdministracionProductos.resources
+C:\Documents and Settings\alumno\Escritorio\Carrito 2009\Carrito de Compras\UI\obj\Debug\UI.Properties.Resources.resources
+C:\Documents and Settings\alumno\Escritorio\Carrito 2009\Carrito de Compras\UI\obj\Debug\UI.csproj.GenerateResource.Cache
+E:\jacinto\Carrito de Compras\UI\obj\Debug\UI.exe
+E:\jacinto\Carrito de Compras\UI\obj\Debug\UI.pdb
+E:\jacinto\Carrito de Compras\UI\obj\Debug\ResolveAssemblyReference.cache
+E:\jacinto\Carrito de Compras\UI\obj\Debug\UI.AdministracionABMProductos.resources
+E:\jacinto\Carrito de Compras\UI\obj\Debug\UI.AdministracionCategorias.resources
+E:\jacinto\Carrito de Compras\UI\obj\Debug\UI.Principal.resources
+E:\jacinto\Carrito de Compras\UI\obj\Debug\UI.AdministracionProductos.resources
+E:\jacinto\Carrito de Compras\UI\obj\Debug\UI.Properties.Resources.resources
+E:\jacinto\Carrito de Compras\UI\obj\Debug\UI.csproj.GenerateResource.Cache
+E:\jacinto\Carrito de Compras\UI\bin\Debug\UI.exe
+E:\jacinto\Carrito de Compras\UI\bin\Debug\UI.pdb
+E:\jacinto\Carrito de Compras\UI\bin\Debug\Control.dll
+E:\jacinto\Carrito de Compras\UI\bin\Debug\BO.dll
+E:\jacinto\Carrito de Compras\UI\bin\Debug\DAO.dll
+E:\jacinto\Carrito de Compras\UI\bin\Debug\BO.pdb
+E:\jacinto\Carrito de Compras\UI\bin\Debug\DAO.pdb
+E:\jacinto\Carrito de Compras\UI\bin\Debug\Control.pdb
+C:\Documents and Settings\alumno\Escritorio\jacinto\Carrito de Compras\UI\obj\Debug\UI.exe
+C:\Documents and Settings\alumno\Escritorio\jacinto\Carrito de Compras\UI\obj\Debug\UI.pdb
+C:\Documents and Settings\alumno\Escritorio\jacinto\Carrito de Compras\UI\bin\Debug\UI.exe
+C:\Documents and Settings\alumno\Escritorio\jacinto\Carrito de Compras\UI\bin\Debug\UI.pdb
+C:\Documents and Settings\alumno\Escritorio\jacinto\Carrito de Compras\UI\bin\Debug\Control.dll
+C:\Documents and Settings\alumno\Escritorio\jacinto\Carrito de Compras\UI\bin\Debug\BO.dll
+C:\Documents and Settings\alumno\Escritorio\jacinto\Carrito de Compras\UI\bin\Debug\DAO.dll
+C:\Documents and Settings\alumno\Escritorio\jacinto\Carrito de Compras\UI\bin\Debug\BO.pdb
+C:\Documents and Settings\alumno\Escritorio\jacinto\Carrito de Compras\UI\bin\Debug\DAO.pdb
+C:\Documents and Settings\alumno\Escritorio\jacinto\Carrito de Compras\UI\bin\Debug\Control.pdb
+C:\Documents and Settings\alumno\Escritorio\jacinto\Carrito de Compras\UI\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\alumno\Escritorio\jacinto\Carrito de Compras\UI\obj\Debug\UI.AdministracionABMProductos.resources
+C:\Documents and Settings\alumno\Escritorio\jacinto\Carrito de Compras\UI\obj\Debug\UI.AdministracionCategorias.resources
+C:\Documents and Settings\alumno\Escritorio\jacinto\Carrito de Compras\UI\obj\Debug\UI.Principal.resources
+C:\Documents and Settings\alumno\Escritorio\jacinto\Carrito de Compras\UI\obj\Debug\UI.AdministracionProductos.resources
+C:\Documents and Settings\alumno\Escritorio\jacinto\Carrito de Compras\UI\obj\Debug\UI.Properties.Resources.resources
+C:\Documents and Settings\alumno\Escritorio\jacinto\Carrito de Compras\UI\obj\Debug\UI.csproj.GenerateResource.Cache
+G:\jacinto\Carrito de Compras\UI\obj\Debug\UI.exe
+G:\jacinto\Carrito de Compras\UI\obj\Debug\UI.pdb
+G:\jacinto\Carrito de Compras\UI\bin\Debug\UI.exe
+G:\jacinto\Carrito de Compras\UI\bin\Debug\UI.pdb
+G:\jacinto\Carrito de Compras\UI\bin\Debug\Control.dll
+G:\jacinto\Carrito de Compras\UI\bin\Debug\BO.dll
+G:\jacinto\Carrito de Compras\UI\bin\Debug\DAO.dll
+G:\jacinto\Carrito de Compras\UI\bin\Debug\BO.pdb
+G:\jacinto\Carrito de Compras\UI\bin\Debug\DAO.pdb
+G:\jacinto\Carrito de Compras\UI\bin\Debug\Control.pdb
+G:\jacinto\Carrito de Compras\UI\obj\Debug\ResolveAssemblyReference.cache
+G:\jacinto\Carrito de Compras\UI\obj\Debug\UI.AdministracionABMProductos.resources
+G:\jacinto\Carrito de Compras\UI\obj\Debug\UI.AdministracionCategorias.resources
+G:\jacinto\Carrito de Compras\UI\obj\Debug\UI.Principal.resources
+G:\jacinto\Carrito de Compras\UI\obj\Debug\UI.AdministracionProductos.resources
+G:\jacinto\Carrito de Compras\UI\obj\Debug\UI.Properties.Resources.resources
+G:\jacinto\Carrito de Compras\UI\obj\Debug\UI.csproj.GenerateResource.Cache
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacinto\Carrito de Compras\UI\obj\Debug\UI.pdb
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacinto\Carrito de Compras\UI\bin\Debug\UI.exe
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacinto\Carrito de Compras\UI\bin\Debug\UI.pdb
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacinto\Carrito de Compras\UI\bin\Debug\Control.dll
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacinto\Carrito de Compras\UI\bin\Debug\BO.dll
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacinto\Carrito de Compras\UI\bin\Debug\DAO.dll
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacinto\Carrito de Compras\UI\bin\Debug\BO.pdb
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacinto\Carrito de Compras\UI\bin\Debug\DAO.pdb
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacinto\Carrito de Compras\UI\bin\Debug\Control.pdb
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacinto\Carrito de Compras\UI\obj\Debug\ResolveAssemblyReference.cache
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacinto\Carrito de Compras\UI\obj\Debug\UI.AdministracionABMProductos.resources
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacinto\Carrito de Compras\UI\obj\Debug\UI.AdministracionCategorias.resources
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacinto\Carrito de Compras\UI\obj\Debug\UI.Principal.resources
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacinto\Carrito de Compras\UI\obj\Debug\UI.AdministracionProductos.resources
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacinto\Carrito de Compras\UI\obj\Debug\UI.Properties.Resources.resources
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacinto\Carrito de Compras\UI\obj\Debug\UI.csproj.GenerateResource.Cache
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacinto\Carrito de Compras\UI\obj\Debug\UI.exe
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacinto\Carrito de Compras\UI\obj\Debug\UI.Principal___Administracion.resources
+N:\jacinto\jacinto\Carrito de Compras\UI\obj\Debug\UI.exe
+N:\jacinto\jacinto\Carrito de Compras\UI\obj\Debug\UI.pdb
+N:\jacinto\jacinto\Carrito de Compras\UI\bin\Debug\UI.exe
+N:\jacinto\jacinto\Carrito de Compras\UI\bin\Debug\UI.pdb
+N:\jacinto\jacinto\Carrito de Compras\UI\bin\Debug\Control.dll
+N:\jacinto\jacinto\Carrito de Compras\UI\bin\Debug\BO.dll
+N:\jacinto\jacinto\Carrito de Compras\UI\bin\Debug\DAO.dll
+N:\jacinto\jacinto\Carrito de Compras\UI\bin\Debug\BO.pdb
+N:\jacinto\jacinto\Carrito de Compras\UI\bin\Debug\DAO.pdb
+N:\jacinto\jacinto\Carrito de Compras\UI\bin\Debug\Control.pdb
+N:\jacinto\jacinto\Carrito de Compras\UI\obj\Debug\ResolveAssemblyReference.cache
+N:\jacinto\jacinto\Carrito de Compras\UI\obj\Debug\UI.AdministracionABMProductos.resources
+N:\jacinto\jacinto\Carrito de Compras\UI\obj\Debug\UI.AdministracionCategorias.resources
+N:\jacinto\jacinto\Carrito de Compras\UI\obj\Debug\UI.Principal___Administracion.resources
+N:\jacinto\jacinto\Carrito de Compras\UI\obj\Debug\UI.Principal.resources
+N:\jacinto\jacinto\Carrito de Compras\UI\obj\Debug\UI.AdministracionProductos.resources
+N:\jacinto\jacinto\Carrito de Compras\UI\obj\Debug\UI.Properties.Resources.resources
+N:\jacinto\jacinto\Carrito de Compras\UI\obj\Debug\UI.csproj.GenerateResource.Cache
+D:\jacinto\Carrito de Compras\UI\obj\Debug\UI.exe
+D:\jacinto\Carrito de Compras\UI\obj\Debug\UI.pdb
+D:\jacinto\Carrito de Compras\UI\bin\Debug\UI.exe
+D:\jacinto\Carrito de Compras\UI\bin\Debug\UI.pdb
+D:\jacinto\Carrito de Compras\UI\bin\Debug\Control.dll
+D:\jacinto\Carrito de Compras\UI\bin\Debug\BO.dll
+D:\jacinto\Carrito de Compras\UI\bin\Debug\DAO.dll
+D:\jacinto\Carrito de Compras\UI\bin\Debug\BO.pdb
+D:\jacinto\Carrito de Compras\UI\bin\Debug\DAO.pdb
+D:\jacinto\Carrito de Compras\UI\bin\Debug\Control.pdb
+D:\jacinto\Carrito de Compras\UI\obj\Debug\ResolveAssemblyReference.cache
+D:\jacinto\Carrito de Compras\UI\obj\Debug\UI.AdministracionABMProductos.resources
+D:\jacinto\Carrito de Compras\UI\obj\Debug\UI.AdministracionCategorias.resources
+D:\jacinto\Carrito de Compras\UI\obj\Debug\UI.Principal___Administracion.resources
+D:\jacinto\Carrito de Compras\UI\obj\Debug\UI.Principal.resources
+D:\jacinto\Carrito de Compras\UI\obj\Debug\UI.AdministracionProductos.resources
+D:\jacinto\Carrito de Compras\UI\obj\Debug\UI.Properties.Resources.resources
+D:\jacinto\Carrito de Compras\UI\obj\Debug\UI.csproj.GenerateResource.Cache
+N:\jacinto\Carrito de Compras\UI\obj\Debug\UI.exe
+N:\jacinto\Carrito de Compras\UI\obj\Debug\UI.pdb
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Jacinto With Singleton\Carrito de Compras\UI\obj\Debug\UI.exe
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Jacinto With Singleton\Carrito de Compras\UI\obj\Debug\UI.pdb
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Jacinto With Singleton\Carrito de Compras\UI\bin\Debug\UI.exe
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Jacinto With Singleton\Carrito de Compras\UI\bin\Debug\UI.pdb
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Jacinto With Singleton\Carrito de Compras\UI\bin\Debug\Control.dll
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Jacinto With Singleton\Carrito de Compras\UI\bin\Debug\DAO.dll
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Jacinto With Singleton\Carrito de Compras\UI\bin\Debug\BO.dll
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Jacinto With Singleton\Carrito de Compras\UI\bin\Debug\DAO.pdb
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Jacinto With Singleton\Carrito de Compras\UI\bin\Debug\BO.pdb
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Jacinto With Singleton\Carrito de Compras\UI\bin\Debug\Control.pdb
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Jacinto With Singleton\Carrito de Compras\UI\obj\Debug\ResolveAssemblyReference.cache
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Jacinto With Singleton\Carrito de Compras\UI\obj\Debug\UI.AdministracionABMProductos.resources
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Jacinto With Singleton\Carrito de Compras\UI\obj\Debug\UI.AdministracionCategorias.resources
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Jacinto With Singleton\Carrito de Compras\UI\obj\Debug\UI.Principal___Administracion.resources
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Jacinto With Singleton\Carrito de Compras\UI\obj\Debug\UI.Principal.resources
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Jacinto With Singleton\Carrito de Compras\UI\obj\Debug\UI.AdministracionProductos.resources
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Jacinto With Singleton\Carrito de Compras\UI\obj\Debug\UI.Properties.Resources.resources
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Jacinto With Singleton\Carrito de Compras\UI\obj\Debug\UI.csproj.GenerateResource.Cache
+D:\Carrito de Compras\UI\obj\Debug\UI.exe
+D:\Carrito de Compras\UI\obj\Debug\UI.pdb
+D:\Carrito de Compras\UI\bin\Debug\UI.exe
+D:\Carrito de Compras\UI\bin\Debug\UI.pdb
+D:\Carrito de Compras\UI\bin\Debug\Control.dll
+D:\Carrito de Compras\UI\bin\Debug\DAO.dll
+D:\Carrito de Compras\UI\bin\Debug\BO.dll
+D:\Carrito de Compras\UI\bin\Debug\DAO.pdb
+D:\Carrito de Compras\UI\bin\Debug\BO.pdb
+D:\Carrito de Compras\UI\bin\Debug\Control.pdb
+D:\Carrito de Compras\UI\obj\Debug\ResolveAssemblyReference.cache
+D:\Carrito de Compras\UI\obj\Debug\UI.AdministracionABMProductos.resources
+D:\Carrito de Compras\UI\obj\Debug\UI.AdministracionCategorias.resources
+D:\Carrito de Compras\UI\obj\Debug\UI.IngresoCantidad.resources
+D:\Carrito de Compras\UI\obj\Debug\UI.Principal___Administracion.resources
+D:\Carrito de Compras\UI\obj\Debug\UI.Principal___Usuario.resources
+D:\Carrito de Compras\UI\obj\Debug\UI.Principal.resources
+D:\Carrito de Compras\UI\obj\Debug\UI.AdministracionProductos.resources
+D:\Carrito de Compras\UI\obj\Debug\UI.Properties.Resources.resources
+D:\Carrito de Compras\UI\obj\Debug\UI.csproj.GenerateResource.Cache
