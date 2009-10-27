@@ -1,0 +1,70 @@
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Carrito de Compras\DAO\bin\Debug\DAO.dll
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Carrito de Compras\DAO\bin\Debug\DAO.pdb
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Carrito de Compras\DAO\bin\Debug\BO.dll
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Carrito de Compras\DAO\bin\Debug\BO.pdb
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Carrito de Compras\DAO\obj\Debug\ResolveAssemblyReference.cache
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Carrito de Compras\DAO\obj\Debug\DAO.dll
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Carrito de Compras\DAO\obj\Debug\DAO.pdb
+C:\Documents and Settings\alumno\Escritorio\Carrito 2009\Carrito de Compras\DAO\bin\Debug\DAO.dll
+C:\Documents and Settings\alumno\Escritorio\Carrito 2009\Carrito de Compras\DAO\bin\Debug\DAO.pdb
+C:\Documents and Settings\alumno\Escritorio\Carrito 2009\Carrito de Compras\DAO\bin\Debug\BO.dll
+C:\Documents and Settings\alumno\Escritorio\Carrito 2009\Carrito de Compras\DAO\bin\Debug\BO.pdb
+C:\Documents and Settings\alumno\Escritorio\Carrito 2009\Carrito de Compras\DAO\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\alumno\Escritorio\Carrito 2009\Carrito de Compras\DAO\obj\Debug\DAO.dll
+C:\Documents and Settings\alumno\Escritorio\Carrito 2009\Carrito de Compras\DAO\obj\Debug\DAO.pdb
+E:\jacinto\Carrito de Compras\DAO\bin\Debug\DAO.dll
+E:\jacinto\Carrito de Compras\DAO\bin\Debug\DAO.pdb
+E:\jacinto\Carrito de Compras\DAO\bin\Debug\BO.dll
+E:\jacinto\Carrito de Compras\DAO\bin\Debug\BO.pdb
+E:\jacinto\Carrito de Compras\DAO\obj\Debug\ResolveAssemblyReference.cache
+E:\jacinto\Carrito de Compras\DAO\obj\Debug\DAO.dll
+E:\jacinto\Carrito de Compras\DAO\obj\Debug\DAO.pdb
+C:\Documents and Settings\alumno\Escritorio\jacinto\Carrito de Compras\DAO\bin\Debug\DAO.dll
+C:\Documents and Settings\alumno\Escritorio\jacinto\Carrito de Compras\DAO\bin\Debug\DAO.pdb
+C:\Documents and Settings\alumno\Escritorio\jacinto\Carrito de Compras\DAO\bin\Debug\BO.dll
+C:\Documents and Settings\alumno\Escritorio\jacinto\Carrito de Compras\DAO\bin\Debug\BO.pdb
+C:\Documents and Settings\alumno\Escritorio\jacinto\Carrito de Compras\DAO\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\alumno\Escritorio\jacinto\Carrito de Compras\DAO\obj\Debug\DAO.dll
+C:\Documents and Settings\alumno\Escritorio\jacinto\Carrito de Compras\DAO\obj\Debug\DAO.pdb
+G:\jacinto\Carrito de Compras\DAO\bin\Debug\DAO.dll
+G:\jacinto\Carrito de Compras\DAO\bin\Debug\DAO.pdb
+G:\jacinto\Carrito de Compras\DAO\bin\Debug\BO.dll
+G:\jacinto\Carrito de Compras\DAO\bin\Debug\BO.pdb
+G:\jacinto\Carrito de Compras\DAO\obj\Debug\ResolveAssemblyReference.cache
+G:\jacinto\Carrito de Compras\DAO\obj\Debug\DAO.dll
+G:\jacinto\Carrito de Compras\DAO\obj\Debug\DAO.pdb
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacinto\Carrito de Compras\DAO\bin\Debug\DAO.dll
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacinto\Carrito de Compras\DAO\bin\Debug\DAO.pdb
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacinto\Carrito de Compras\DAO\bin\Debug\BO.dll
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacinto\Carrito de Compras\DAO\bin\Debug\BO.pdb
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacinto\Carrito de Compras\DAO\obj\Debug\ResolveAssemblyReference.cache
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacinto\Carrito de Compras\DAO\obj\Debug\DAO.dll
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacinto\Carrito de Compras\DAO\obj\Debug\DAO.pdb
+N:\jacinto\jacinto\Carrito de Compras\DAO\bin\Debug\DAO.dll
+N:\jacinto\jacinto\Carrito de Compras\DAO\bin\Debug\DAO.pdb
+N:\jacinto\jacinto\Carrito de Compras\DAO\bin\Debug\BO.dll
+N:\jacinto\jacinto\Carrito de Compras\DAO\bin\Debug\BO.pdb
+N:\jacinto\jacinto\Carrito de Compras\DAO\obj\Debug\ResolveAssemblyReference.cache
+N:\jacinto\jacinto\Carrito de Compras\DAO\obj\Debug\DAO.dll
+N:\jacinto\jacinto\Carrito de Compras\DAO\obj\Debug\DAO.pdb
+D:\jacinto\Carrito de Compras\DAO\bin\Debug\DAO.dll
+D:\jacinto\Carrito de Compras\DAO\bin\Debug\DAO.pdb
+D:\jacinto\Carrito de Compras\DAO\bin\Debug\BO.dll
+D:\jacinto\Carrito de Compras\DAO\bin\Debug\BO.pdb
+D:\jacinto\Carrito de Compras\DAO\obj\Debug\ResolveAssemblyReference.cache
+D:\jacinto\Carrito de Compras\DAO\obj\Debug\DAO.dll
+D:\jacinto\Carrito de Compras\DAO\obj\Debug\DAO.pdb
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Jacinto With Singleton\Carrito de Compras\DAO\bin\Debug\DAO.dll
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Jacinto With Singleton\Carrito de Compras\DAO\bin\Debug\DAO.pdb
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Jacinto With Singleton\Carrito de Compras\DAO\bin\Debug\BO.dll
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Jacinto With Singleton\Carrito de Compras\DAO\bin\Debug\BO.pdb
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Jacinto With Singleton\Carrito de Compras\DAO\obj\Debug\ResolveAssemblyReference.cache
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Jacinto With Singleton\Carrito de Compras\DAO\obj\Debug\DAO.dll
+L:\Documentos\Facultad\Metodologia\Carrito 2009\Jacinto With Singleton\Carrito de Compras\DAO\obj\Debug\DAO.pdb
+D:\Carrito de Compras\DAO\bin\Debug\DAO.dll
+D:\Carrito de Compras\DAO\bin\Debug\DAO.pdb
+D:\Carrito de Compras\DAO\bin\Debug\BO.dll
+D:\Carrito de Compras\DAO\bin\Debug\BO.pdb
+D:\Carrito de Compras\DAO\obj\Debug\ResolveAssemblyReference.cache
+D:\Carrito de Compras\DAO\obj\Debug\DAO.dll
+D:\Carrito de Compras\DAO\obj\Debug\DAO.pdb
