@@ -24,9 +24,9 @@ namespace Control
         }
         public ArrayList CargarCarrito()
         {
-            CarritoMostrable carr = unCarrito.ToMostrable();
-            ArrayList arr = carr._listaItems;
-            return arr;
+            //nose que hacer
+            return null;
+
         }
         
         
