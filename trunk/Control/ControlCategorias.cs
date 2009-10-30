@@ -65,12 +65,7 @@ namespace Control
 
         public ArrayList CargarCategorias()
         {
-            ArrayList Categorias=new ArrayList();
-
-            foreach (Categoria c in this.miDao.leer_categorias())
-            {
-                Categorias.Add(c.Codigo + "    " + c.Nombre);
-            }
+            ArrayList Categorias = miDao.leer_categorias();
             return Categorias;
         }
         public string NombreCategoria(int i)
