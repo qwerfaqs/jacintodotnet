@@ -13,7 +13,7 @@ namespace DAOSQL
             get { return _instancia; }   
         }
 
-        public void EliminarCategoria(int catID)
+        public void EliminarCategoriaId(int catID)
         {
             try
             {
@@ -75,21 +75,7 @@ namespace DAOSQL
         //{
         //    ListaCategorias.Add(cat);
         //}
-        //public ArrayList leer_categorias()
-        //{
-        //    return ListaCategorias;
-        //}
-        //public void EliminarCategoriaId(int IdCategoria)
-        //{
-        //    foreach (Categoria c in ListaCategorias)
-        //    {
-        //        if (c.Codigo == IdCategoria)
-        //        {
-        //            ListaCategorias.Remove(c);
-        //            break;
-        //        }
-        //    }
-        //}
+        
         //public void ModificarCategoria(int codigo, string nombre)
         //{
         //    foreach (Categoria c in ListaCategorias)
