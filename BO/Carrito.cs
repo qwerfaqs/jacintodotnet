@@ -41,20 +41,24 @@ namespace BO
 
         public void agregar_item(Producto prod,int cant)
         {
-            
-            //busca item en el carrito
-            //sino lo agrega al arraylist
-            if (buscarProducto(prod))
+            bool _existia = false;
+            foreach (Item it in _ListaItems)
             {
-                // modifica cantidad del item en el carrito
-                modificaCantidad(prod, cant);
+                if (it.Codigo == prod.Codigo)
+                {
+                    it.Cantidad = it.Cantidad + cant;
+                    _existia = true;
+                }
             }
-            else
+            if (_existia == false)
             {
-                //agrega el Item al carrito
                 Item i = new Item(prod, cant);
                 _ListaItems.Add(i);
             }
+            
+            
+            
+       
 
         }
 
@@ -102,23 +106,19 @@ namespace BO
                 x++;
             }
             return Encontrado;
+            
         }
       
       private bool modificaCantidad(Producto prod, int cant)
       {
           bool modificado = false;
-          int x = 0;
-          while ((x < _ListaItems.Count) && (!modificado))
+          foreach (Item it in _ListaItems)
           {
-              Item i = (Item)_ListaItems[x];
-              if (i.Codigo == prod.Codigo)
+              if (it.Codigo == prod.Codigo)
               {
-                  i.Cantidad = cant;
-                  //ModificarStock(prod, cant);
-                  //i.UnProducto.StockActual = cant;
+                  it.Cantidad = it.Cantidad + cant;
                   modificado = true;
               }
-              x++;
           }
           return modificado;
       }
