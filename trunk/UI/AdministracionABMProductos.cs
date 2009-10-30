@@ -74,13 +74,11 @@ namespace UI
         private void cmb_categorias_SelectedIndexChanged(object sender, EventArgs e)
         {
             x = -1;
-            if (cmb_categorias.SelectedIndex < this.ListaCategorias.Count - 1)
-            {
+            
                 Categoria c = (Categoria)this.ListaCategorias[cmb_categorias.SelectedIndex];
                 RecargarGrilla(c.Codigo);
-            }
-            else
-                RecargarGrilla(-1);
+            
+           
         }
 
 
