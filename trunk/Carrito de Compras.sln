@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BO", "BO\BO.csproj", "{D1B8
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Control", "Control\Control.csproj", "{0304854B-2A6D-4BBF-81A6-04443CF2655C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAOSQL", "DAOSQL\DAOSQL.csproj", "{DF658F59-3DBD-475C-8857-D1BFEF027699}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{0304854B-2A6D-4BBF-81A6-04443CF2655C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0304854B-2A6D-4BBF-81A6-04443CF2655C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0304854B-2A6D-4BBF-81A6-04443CF2655C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF658F59-3DBD-475C-8857-D1BFEF027699}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF658F59-3DBD-475C-8857-D1BFEF027699}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF658F59-3DBD-475C-8857-D1BFEF027699}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF658F59-3DBD-475C-8857-D1BFEF027699}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
