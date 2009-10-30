@@ -16,25 +16,12 @@ namespace DAO
         }
         private ArrayList ListaProductos = new ArrayList();
         
+
         public void agregar_producto(Producto product)
         {
             ListaProductos.Add(product);
         }
-
-        public bool existenproductosconestacategoria(Categoria categoria)
-        {
-            bool existen = false;
-
-            foreach (Producto p in ListaProductos)
-            { 
-                if(p.Cat.Codigo==categoria.Codigo)
-                {
-                    existen = true;
-                    break;
-                }
-            }
-            return existen;
-        }
+       
 
         public void modificar_producto(Producto product)
         {
@@ -106,8 +93,6 @@ namespace DAO
             return (Cantidad);
         }
        
-        
-        
         public int StockComprometido(Producto UnProducto) //devuelve el stock de un producto
         {
             int Cantidad = -1;//devuelve -1 si no lo encuentra
@@ -149,8 +134,6 @@ namespace DAO
 
 
         }
-
-
 
         public void ModificarStock(Producto UnProducto, int cant)// modifica stock de un producto
         {

@@ -25,7 +25,7 @@ namespace Control
             {
                 float Precio = Convert.ToInt64(precio);
                 int Codigo = Convert.ToInt32(codigo);
-                Categoria Categoria = this.CatDao.ObjetoCategoria(categoria);
+                Categoria Categoria = this.CatDao.UnObjetoCategoria(categoria);
                 int StockActual = Convert.ToInt32(stockactual);
                 int StockComprometido = Convert.ToInt32(stockcomprometido);
                 float PrecioOferta = Convert.ToInt64(preciooferta);
@@ -64,7 +64,7 @@ namespace Control
             {
                 float Precio = Convert.ToInt64(precio);
                 int Codigo = Convert.ToInt32(codigo);
-                Categoria Categoria = this.CatDao.ObjetoCategoria(categoria);
+                Categoria Categoria = this.CatDao.UnObjetoCategoria(categoria);
                 int StockActual = Convert.ToInt32(stockactual);
                 int StockComprometido = Convert.ToInt32(stockcomprometido);
                 float PrecioOferta = Convert.ToInt64(preciooferta);

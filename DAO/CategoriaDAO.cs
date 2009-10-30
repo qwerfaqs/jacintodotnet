@@ -14,6 +14,7 @@ namespace DAO
         {
             return _instancia;
         }
+
         public void agregar_categoria(Categoria cat)
         {
             ListaCategorias.Add(cat);
@@ -22,10 +23,6 @@ namespace DAO
         {
             return ListaCategorias;
         }     
-        //public void EliminarCategoria(int i)
-        //{
-        //    ListaCategorias.RemoveAt(i);          
-        //}
         public void EliminarCategoriaId(int IdCategoria)
         {
             foreach (Categoria c in ListaCategorias)
@@ -37,34 +34,6 @@ namespace DAO
                 }
             }
         }
-        //public int CodigoCategoria(int indice)
-        //{
-        //    Categoria c = (Categoria)ListaCategorias[indice];
-        //    return c.Codigo;
-        //}
-        //public string NombreCategoria(int indice)
-        //{
-        //    Categoria c = (Categoria)ListaCategorias[indice];
-        //    return c.Nombre;
-        //}
-        //public int IdCategoria(int indice)
-        //{
-        //    Categoria c = (Categoria)ListaCategorias[indice];
-        //    return c.Codigo;
-        //}
-        //public string NombreCategoriaPorId(int Id)
-        //{
-        //    string Cat="";
-        //    foreach (Categoria cat in ListaCategorias)
-        //    {
-        //        if (cat.Codigo == Id)
-        //        {
-        //            Cat = cat.Nombre;    
-        //            break;
-        //        }
-        //    }
-        //    return Cat;
-        //}
         public void ModificarCategoria(int codigo, string nombre)
         {
             foreach (Categoria c in ListaCategorias)
@@ -76,7 +45,7 @@ namespace DAO
                 }
             }
         }
-        public Categoria ObjetoCategoria(int i)
+        public Categoria UnObjetoCategoria(int i)
         {
             Categoria Nueva=new Categoria(0,"v");
             foreach (Categoria c in ListaCategorias)

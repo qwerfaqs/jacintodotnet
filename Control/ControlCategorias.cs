@@ -49,6 +49,7 @@ namespace Control
             }
             return Repetido;
         }
+        
         public bool NombreRepetido(string nombre)
         {
             bool Repetido = false;
@@ -68,26 +69,12 @@ namespace Control
             ArrayList Categorias = miDao.leer_categorias();
             return Categorias;
         }
-        //public string NombreCategoria(int i)
-        //{
-        //    return this.miDao.NombreCategoria(i);            
-        //}
-
-        //public string NombreCategoriaporId(int i)
-        //{
-        //    return this.miDao.NombreCategoriaPorId(i);
-        //}
-
-        //public string IdCategoria(int i)
-        //{
-        //    Categoria c;
-        //    c = (Categoria)this.miDao.leer_categorias()[i];
-        //    return Convert.ToString(c.Codigo);
-        //}
+        
         public void EliminarCategoria(int Id)
         {
            miDao.EliminarCategoriaId(Id);
         }
+        
         public void ModificarCategoria(int Id,string nombre)
         {
             miDao.ModificarCategoria(Id, nombre);
