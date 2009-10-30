@@ -45,6 +45,10 @@
       <Project>{D1B86D35-9B04-4948-80DB-75CB7792197F}</Project>
       <Name>BO</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DAOSQL\DAOSQL.csproj">
+      <Project>{DF658F59-3DBD-475C-8857-D1BFEF027699}</Project>
+      <Name>DAOSQL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DAO\DAO.csproj">
       <Project>{5A78E38B-DC98-4E2D-8A68-8FAFE806554E}</Project>
       <Name>DAO</Name>
