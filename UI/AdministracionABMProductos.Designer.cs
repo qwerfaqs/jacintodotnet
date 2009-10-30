@@ -76,7 +76,7 @@
             this.cmb_categorias.FormattingEnabled = true;
             this.cmb_categorias.Location = new System.Drawing.Point(116, 482);
             this.cmb_categorias.Name = "cmb_categorias";
-            this.cmb_categorias.Size = new System.Drawing.Size(127, 21);
+            this.cmb_categorias.Size = new System.Drawing.Size(143, 21);
             this.cmb_categorias.TabIndex = 4;
             this.cmb_categorias.SelectedIndexChanged += new System.EventHandler(this.cmb_categorias_SelectedIndexChanged);
             // 
@@ -143,7 +143,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(262, 486);
+            this.checkBox1.Location = new System.Drawing.Point(283, 486);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(94, 17);
             this.checkBox1.TabIndex = 6;
