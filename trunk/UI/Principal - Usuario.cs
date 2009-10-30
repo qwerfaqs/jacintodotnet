@@ -65,20 +65,20 @@ namespace UI
         {
             try
             {
+                //se le carga por un milisegundo la grilla de ´productos para que se actualize (Problema a resolver bien)
+                dataGridView2.DataSource = BS;
+
                 BScarrito.ResetBindings(false);
                 ArrayList arreglo = Carromato.CargarCarrito();
                 BScarrito.DataSource = arreglo;
                 dataGridView2.DataSource = BScarrito;
 
-                /*if (dataGridView2.Rows.Count > 0)
+                if (dataGridView2.Rows.Count > 0)
                 {
                     dataGridView2.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
                     dataGridView2.Columns["Codigo"].Width = 50;
-                    dataGridView2.Columns["Cat"].Width = 80;
-                    dataGridView2.Columns["Cat"].HeaderText = "Categoria";
-                    dataGridView2.Columns["StockActual"].Width = 70;
-                    dataGridView2.Columns["StockActual"].HeaderText = "Stock Actual";
+                    
                     dataGridView2.Columns["Nombre"].Width = 200;
                     dataGridView2.Columns["PrecioOferta"].Width = 60;
                     dataGridView2.Columns["PrecioOferta"].HeaderText = "Precio de Oferta";
@@ -90,7 +90,7 @@ namespace UI
 
 
 
-                }*/
+                }
             }
             catch (Exception ex)
             {
@@ -98,42 +98,7 @@ namespace UI
                 MessageBox.Show(ex.Message);
             }
         }
-        private void RecargarCarretilla(ArrayList NuevoCarromato)
-        {
-            try
-            {
-                BScarrito.ResetBindings(false);
-                //BScarrito.DataSource = NuevoCarromato;
-                //dataGridView2.DataSource = BScarrito;
-                
-                /*if (dataGridView2.Rows.Count > 0)
-                {
-                    dataGridView2.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-
-                    dataGridView2.Columns["Codigo"].Width = 50;
-                    dataGridView2.Columns["Cat"].Width = 80;
-                    dataGridView2.Columns["Cat"].HeaderText = "Categoria";
-                    dataGridView2.Columns["StockActual"].Width = 70;
-                    dataGridView2.Columns["StockActual"].HeaderText = "Stock Actual";
-                    dataGridView2.Columns["Nombre"].Width = 200;
-                    dataGridView2.Columns["PrecioOferta"].Width = 60;
-                    dataGridView2.Columns["PrecioOferta"].HeaderText = "Precio de Oferta";
-                    dataGridView2.Columns["Precio"].Width = 60;
-                    dataGridView2.Columns["StockComprometido"].Width = 80;
-                    dataGridView2.Columns["StockComprometido"].HeaderText = "Stock Comprometido";
-                    dataGridView2.Columns["FotoPath"].Width = 135;
-                    dataGridView2.Columns["FotoPath"].HeaderText = "Imagen";
-
-
-
-                }*/
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message);
-            }
-        }
+        
 
         private void Principal___Usuario_Load(object sender, EventArgs e)
         {

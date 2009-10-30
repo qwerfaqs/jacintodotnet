@@ -15,7 +15,7 @@ namespace BO
         {
             this._Cantidad = Cantidad;
             this._UnProducto = UnProducto;
-            this.Total = UnProducto.Precio * Cantidad;
+            //this.Total = UnProducto.Precio * Cantidad;
         }
 
         public int Cantidad
@@ -27,7 +27,7 @@ namespace BO
             set
             {
                 _Cantidad = value;
-                Total = _Cantidad * this._UnProducto.Precio;
+                
             }
         }
 
@@ -35,12 +35,9 @@ namespace BO
         {
             get
             {
-                return (_total);
+                return (_Cantidad * this._UnProducto.Precio);
             }
-            set
-            {
-                _total = value;
-            }
+            
         }
 
 
