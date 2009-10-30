@@ -53,14 +53,14 @@
             // 
             // mtxtPass
             // 
-            this.mtxtPass.Location = new System.Drawing.Point(116, 13);
+            this.mtxtPass.Location = new System.Drawing.Point(116, 39);
             this.mtxtPass.Name = "mtxtPass";
             this.mtxtPass.Size = new System.Drawing.Size(118, 20);
             this.mtxtPass.TabIndex = 2;
             // 
             // txtUser
             // 
-            this.txtUser.Location = new System.Drawing.Point(116, 39);
+            this.txtUser.Location = new System.Drawing.Point(116, 13);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(118, 20);
             this.txtUser.TabIndex = 1;
@@ -89,10 +89,10 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.panel1);
+            this.groupBox1.Controls.Add(this.mtxtPass);
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.txtUser);
-            this.groupBox1.Controls.Add(this.mtxtPass);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(10, 10);
