@@ -75,26 +75,39 @@ namespace Control
             }
             return Exito;
         }
-        public ArrayList CargarProductos(int indice)
-        {
+
+        public ArrayList CargarProductos(int Categoria)
+        {   
             ArrayList Lista;
-            try
+            if (Categoria > 0)
             {
-                if ((indice == -1) || (indice+1 > ControlCategorias.CargarCategorias().Count))
-                {
-                    Lista = this.miDao.leer_productos();
-                }
-                else
-                {
-                    Lista = this.miDao.leer_productos(Convert.ToInt32(ControlCategorias.IdCategoria(indice)));
-                }
-                return Lista;
+                Lista = miDao.leer_productos(Categoria);
             }
-            catch 
-            {
-                throw new Exception("Error Cargando Productos");
-            }
+            else
+                Lista = miDao.leer_productos();
+                
+            return Lista;
         }
+        //public ArrayList CargarProductos(int indice)
+        //{
+        //    ArrayList Lista;
+        //    try
+        //    {
+        //        if ((indice == -1) || (indice+1 > ControlCategorias.CargarCategorias().Count))
+        //        {
+        //            Lista = this.miDao.leer_productos();
+        //        }
+        //        else
+        //        {
+        //            Lista = this.miDao.leer_productos(Convert.ToInt32(ControlCategorias.IdCategoria(indice)));
+        //        }
+        //        return Lista;
+        //    }
+        //    catch 
+        //    {
+        //        throw new Exception("Error Cargando Productos");
+        //    }
+        //}
         public BO.Producto DameProducto(int IdProducto)
         {
             return this.miDao.leer_unproducto(IdProducto);

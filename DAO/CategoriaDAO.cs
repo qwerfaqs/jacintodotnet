@@ -33,6 +33,7 @@ namespace DAO
                 if (c.Codigo == IdCategoria)
                 {
                     ListaCategorias.Remove(c);
+                    break;
                 }
             }
         }

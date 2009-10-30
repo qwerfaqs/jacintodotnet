@@ -172,6 +172,7 @@
             this.Name = "AdministracionABMProductos";
             this.Text = "Productos";
             this.Load += new System.EventHandler(this.AdministracionABMProductos_Load);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdministracionABMProductos_FormClosed);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
