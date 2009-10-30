@@ -24,8 +24,8 @@ namespace Control
         }
         public ArrayList CargarCarrito()
         {
-            //nose que hacer
-            return null;
+            
+            return this.unCarrito.ver_lista();
 
         }
         
