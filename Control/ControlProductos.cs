@@ -43,11 +43,15 @@ namespace Control
         }
         public bool ExistenProductosConEstaCategoria(int categoria)
         {
+            Control.ControlCategorias CC = new ControlCategorias();
             bool r = false;
-            Categoria Cat = new Categoria(categoria, ControlCategorias.NombreCategoriaporId(categoria));
-            if (miDao.existenproductosconestacategoria(Cat))
+            foreach (Categoria c in CC.CargarCategorias())
             {
-                r = true;
+                if (c.Codigo == categoria)
+                {
+                    r = true;
+                    break;
+                }
             }
             return r;
         }

@@ -15,6 +15,7 @@ namespace UI
         Control.ControlCategorias ControlCategorias = new ControlCategorias();
         Control.ControlProductos ControlProductos = new ControlProductos();
         private ArrayList ListaCategorias;
+        Categoria c;
         public AdministracionCategorias()
         {
             InitializeComponent();
@@ -52,10 +53,11 @@ namespace UI
 
         private void listBox_listado_SelectedValueChanged(object sender, EventArgs e)
         {
-            label_nombre.Text=ControlCategorias.NombreCategoria(listBox_listado.SelectedIndex);
-            label_id.Text = ControlCategorias.IdCategoria(listBox_listado.SelectedIndex);
-            txt_modif_id.Text = ControlCategorias.IdCategoria(listBox_listado.SelectedIndex);
-            txt_modif_nombre.Text = ControlCategorias.NombreCategoria(listBox_listado.SelectedIndex);
+            c = (Categoria)ListaCategorias[listBox_listado.SelectedIndex];
+            label_nombre.Text = c.Nombre;
+            label_id.Text = c.Codigo.ToString();
+            txt_modif_id.Text = c.Codigo.ToString();
+            txt_modif_nombre.Text = c.Nombre;
         }
 
         private void btn_ok_Click(object sender, EventArgs e)
@@ -65,13 +67,14 @@ namespace UI
 
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
-            if (ControlProductos.ExistenProductosConEstaCategoria(Convert.ToInt32(ControlCategorias.IdCategoria(listBox_listado.SelectedIndex))))
+            Categoria c = (Categoria)this.ListaCategorias[listBox_listado.SelectedIndex];
+            if (ControlProductos.ExistenProductosConEstaCategoria(c.Codigo))
             {
                 MessageBox.Show("Antes de Borrar la Categoria asegurese de borrar los productos de dicha categoria", "Atencion!");
             }
             else
             {
-                Categoria c=(Categoria)this.ListaCategorias[listBox_listado.SelectedIndex];
+                
                 ControlCategorias.EliminarCategoria(c.Codigo);
                 this.ActualizarLista();
             }
@@ -81,7 +84,7 @@ namespace UI
         {
             try
             {
-                ControlCategorias.ModificarCategoria(listBox_listado.SelectedIndex, txt_modif_nombre.Text);
+                ControlCategorias.ModificarCategoria(c.Codigo, txt_modif_nombre.Text);
                 ActualizarLista();
             }
             catch(Exception ex)
@@ -89,10 +92,5 @@ namespace UI
                 MessageBox.Show(ex.Message);
             }
         }
-
-        
-
-        
-
     }
 }
