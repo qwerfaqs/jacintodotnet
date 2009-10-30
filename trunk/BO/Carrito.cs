@@ -10,7 +10,6 @@ namespace BO
     {
         private ArrayList _ListaItems=new ArrayList();
         private DateTime _fecha;
-        public CarritoMostrable ass;
 
         
         public Carrito(DateTime fecha)
@@ -27,7 +26,7 @@ namespace BO
                 while (( x < _ListaItems.Count))
                 {
                     Item i = (Item)_ListaItems[x];
-                    sub = sub +( i.Cantidad * i.UnProducto.Precio);
+                    sub = sub +( i.Cantidad * i.PrecioUnitario);
                     x++;
                 }
                 return sub;
@@ -99,7 +98,7 @@ namespace BO
             while ((x < _ListaItems.Count) && (!Encontrado))
             {
                 Item  i = (Item)_ListaItems[x];
-                Encontrado = (i.UnProducto.Codigo == Prod.Codigo);
+                Encontrado = (i.Codigo == Prod.Codigo);
                 x++;
             }
             return Encontrado;
@@ -112,7 +111,7 @@ namespace BO
           while ((x < _ListaItems.Count) && (!modificado))
           {
               Item i = (Item)_ListaItems[x];
-              if (i.UnProducto.Codigo == prod.Codigo)
+              if (i.Codigo == prod.Codigo)
               {
                   i.Cantidad = cant;
                   //ModificarStock(prod, cant);
@@ -123,10 +122,6 @@ namespace BO
           }
           return modificado;
       }
-      public CarritoMostrable ToMostrable()
-      {
-          return new CarritoMostrable(this);
-      }
       public void eliminar_item(Producto prod)
       {
           bool Encontrado = false;
@@ -134,7 +129,7 @@ namespace BO
           while ((x < _ListaItems.Count) && (!Encontrado))
           {
               Item aux = (Item)_ListaItems[x];
-              if (aux.UnProducto.Codigo == prod.Codigo)
+              if (aux.Codigo == prod.Codigo)
               {
                   _ListaItems.RemoveAt(x);
               }
@@ -143,17 +138,5 @@ namespace BO
       }
 
  
-    }
-    public struct CarritoMostrable
-    {
-        public ArrayList _listaItems; 
-        public CarritoMostrable(Carrito car)
-        {
-            _listaItems = new ArrayList();
-            foreach(Item it in car.ver_lista())
-            {
-                _listaItems.Add(new ItemMostrable(it));
-            }
-        }
     }
 }

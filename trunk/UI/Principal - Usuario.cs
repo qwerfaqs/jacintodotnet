@@ -197,5 +197,20 @@ namespace UI
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            BScarrito.ResetBindings(false);
+            ArrayList arreglo = Carromato.CargarCarrito();
+            BScarrito.DataSource = arreglo;
+            dataGridView2.DataSource = BScarrito;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            BS.ResetBindings(false);
+            BS.DataSource = CP.CargarProductos(cmb_categorias.SelectedIndex);
+            dataGridView2.DataSource = BS;
+        }
+
     }
 }

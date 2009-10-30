@@ -27,7 +27,7 @@ namespace BO
             set
             {
                 _Cantidad = value;
-                Total = _Cantidad * this.UnProducto.Precio;
+                Total = _Cantidad * this._UnProducto.Precio;
             }
         }
 
@@ -45,7 +45,7 @@ namespace BO
 
 
         
-        
+        /*
         public Producto UnProducto
         {
             get
@@ -57,27 +57,43 @@ namespace BO
                 _UnProducto = value;
             }
         }
-
-        public ItemMostrable toMostrable()
+        */
+        public override string ToString()
         {
-            return new ItemMostrable(this);
+            return this.Nombre + "por"+this.Cantidad.ToString()+ "unidades $ " + this.Total.ToString();
         }
-
+        public string Nombre
+        {
+            get
+            {
+                return (_UnProducto.Nombre);
+            }
+            set
+            {
+                _UnProducto.Nombre = value;
+            }
+        }
+        public float PrecioUnitario
+        {
+            get
+            {
+                return (_UnProducto.Precio);
+            }
+            set
+            {
+                _UnProducto.Precio=value;
+            }
+        }
+        public int Codigo
+        {
+            get
+            {
+                return (_UnProducto.Codigo);
+            }
+            
+        }
 
 
     }
-    public struct ItemMostrable
-        {
-            public string Descripcion;
-            public int Cantidad;
-            public float PrecioUnitario;
-            public float Total;
-            public ItemMostrable(Item item)
-            {
-                this.Descripcion = item.UnProducto.Nombre;
-                this.Cantidad = item.Cantidad;
-                this.PrecioUnitario = item.UnProducto.Precio;
-                this.Total = item.Total;
-            }
-        }
+
 }
