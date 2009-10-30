@@ -10,6 +10,7 @@ namespace BO
     {
         private ArrayList _ListaItems=new ArrayList();
         private DateTime _fecha;
+        public CarritoMostrable ass;
 
         
         public Carrito(DateTime fecha)
@@ -122,7 +123,10 @@ namespace BO
           }
           return modificado;
       }
-
+      public CarritoMostrable ToMostrable()
+      {
+          return new CarritoMostrable(this);
+      }
       public void eliminar_item(Producto prod)
       {
           bool Encontrado = false;
@@ -139,5 +143,17 @@ namespace BO
       }
 
  
+    }
+    public struct CarritoMostrable
+    {
+        public ArrayList _listaItems; 
+        public CarritoMostrable(Carrito car)
+        {
+            _listaItems = new ArrayList();
+            foreach(Item it in car.ver_lista())
+            {
+                _listaItems.Add(new ItemMostrable(it));
+            }
+        }
     }
 }
