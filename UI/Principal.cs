@@ -86,6 +86,8 @@ namespace UI
             {
                 label3.Text = "Nombre de usuario o contraseña incorrectos!";
                 panel1.Visible = true;
+                button3.Hide();
+                button4.Hide();
             }
             else
             {
@@ -127,6 +129,8 @@ namespace UI
             panel1.Visible = false;
             txtUser.Clear();
             mtxtPass.Clear();
+            button4.Show();
+            button3.Show();
         }
     }
 }
