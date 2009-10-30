@@ -84,9 +84,9 @@ namespace Control
             c = (Categoria)this.miDao.leer_categorias()[i];
             return Convert.ToString(c.Codigo);
         }
-        public void EliminarCategoria(int i)
+        public void EliminarCategoria(int Id)
         {
-            this.miDao.EliminarCategoria(i);
+           miDao.EliminarCategoriaId(Id);
         }
         public void ModificarCategoria(int indice,string nombre)
         {

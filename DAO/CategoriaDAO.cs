@@ -26,6 +26,16 @@ namespace DAO
         {
             ListaCategorias.RemoveAt(i);          
         }
+        public void EliminarCategoriaId(int IdCategoria)
+        {
+            foreach (Categoria c in ListaCategorias)
+            {
+                if (c.Codigo == IdCategoria)
+                {
+                    ListaCategorias.Remove(c);
+                }
+            }
+        }
         public int CodigoCategoria(int indice)
         {
             Categoria c = (Categoria)ListaCategorias[indice];
