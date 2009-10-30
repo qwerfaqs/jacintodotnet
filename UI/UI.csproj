@@ -130,6 +130,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BO\BO.csproj">
+      <Project>{D1B86D35-9B04-4948-80DB-75CB7792197F}</Project>
+      <Name>BO</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Control\Control.csproj">
       <Project>{0304854B-2A6D-4BBF-81A6-04443CF2655C}</Project>
       <Name>Control</Name>

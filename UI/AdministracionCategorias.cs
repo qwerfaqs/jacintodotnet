@@ -7,7 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using Control;
 using System.Collections;
-
+using BO;
 namespace UI
 {
     public partial class AdministracionCategorias : Form
@@ -41,11 +41,11 @@ namespace UI
         }
         private void ActualizarLista()
         {
-            listBox_listado.Items.Clear();
-            foreach (string s in ControlCategorias.CargarCategorias())
-            {
-                listBox_listado.Items.Add(s);
-            }
+            //listBox_listado.Items.Clear();
+            //foreach ()
+            //{
+            //    listBox_listado.Items.Add(s);
+            //}
         }
 
         private void listBox_listado_SelectedValueChanged(object sender, EventArgs e)

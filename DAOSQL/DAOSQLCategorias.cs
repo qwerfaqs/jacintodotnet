@@ -1,15 +1,15 @@
 using System;
-using System.Collections.Generic;
+using System.Collections;//.Generic;
 using System.Text;
-
+using System.Data.SqlClient;
 namespace DAOSQL
 {
     public sealed class DAOSQLCategorias
     {
         private static readonly DAOSQLCategorias _instancia = new DAOSQLCategorias();
-        public static DAOSQLCategorias Instancia()
+        public static DAOSQLCategorias Instancia
         {
-            return _instancia();   
+            get { return _instancia; }   
         }
 
         public void EliminarCategoria(int catID)
@@ -27,7 +27,6 @@ namespace DAOSQL
 
                         command.ExecuteNonQuery();
                     }
-
                     conn.Close();
                 }
             }
