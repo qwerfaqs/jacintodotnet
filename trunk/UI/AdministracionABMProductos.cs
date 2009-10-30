@@ -5,14 +5,14 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-
+using BO;
 namespace UI
 {
     public partial class AdministracionABMProductos : Form
     {
         Control.ControlProductos CP = new Control.ControlProductos();
         Control.ControlCategorias CC = new Control.ControlCategorias();
-        ArrayList Categorias;
+        private ArrayList Categorias;
         int x;//producto seleccionado
         
 
@@ -24,12 +24,12 @@ namespace UI
         }
 
         
-        private void RecargarGrilla(int categoria)
+        private void RecargarGrilla(int Categoria)
         {
             try
             {
                 BS.ResetBindings(false);
-                BS.DataSource = CP.CargarProductos(categoria);
+                BS.DataSource = CP.CargarProductos(Categoria);
                 dataGridView1.DataSource = BS;
 
                 if (dataGridView1.Rows.Count > 0)
@@ -64,9 +64,10 @@ namespace UI
 
         private void AdministracionABMProductos_Load(object sender, EventArgs e)
         {
-            Categorias = CC.CargarCategorias();
-            Categorias.Add("Todas");
+            this.Categorias = CC.CargarCategorias();
+            this.Categorias.Add("Todas");
             cmb_categorias.DataSource = Categorias;
+            
             cmb_categorias.Text = "Todas";
             RecargarGrilla(-1);
         }
@@ -75,7 +76,13 @@ namespace UI
         private void cmb_categorias_SelectedIndexChanged(object sender, EventArgs e)
         {
             x = -1;
-            RecargarGrilla(cmb_categorias.SelectedIndex);            
+            if (cmb_categorias.SelectedIndex < Categorias.Count - 1)
+            {
+                Categoria c = (Categoria)Categorias[cmb_categorias.SelectedIndex];
+                RecargarGrilla(c.Codigo);
+            }
+            else
+                RecargarGrilla(-1);
         }
 
 
@@ -133,6 +140,11 @@ namespace UI
             {
                 RecargarGrilla(cmb_categorias.SelectedIndex);
             }
+        }
+
+        private void AdministracionABMProductos_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Categorias.Clear();
         }
 
        
