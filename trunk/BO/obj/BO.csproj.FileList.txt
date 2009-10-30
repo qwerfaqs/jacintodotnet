@@ -1,5 +1,0 @@
-bin\Debug\BO.dll
-bin\Debug\BO.pdb
-obj\Debug\ResolveAssemblyReference.cache
-obj\Debug\BO.dll
-obj\Debug\BO.pdb
