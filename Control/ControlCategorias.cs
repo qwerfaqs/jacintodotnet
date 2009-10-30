@@ -9,11 +9,14 @@ namespace Control
 {
     public class ControlCategorias
     {
+        private DAO.CategoriaDAO miDao;
+        private DAOSQL.DAOSQLCategorias MiDAOSQL;
         public ControlCategorias()
         {
             this.miDao = DAO.CategoriaDAO.Instancia();
+            this.MiDAOSQL = new DAOSQL.DAOSQLCategorias();
         }
-        private DAO.CategoriaDAO miDao;
+        
         public bool InsertarCategoria(string nombre, string c)
         {
             bool Exito = false;
