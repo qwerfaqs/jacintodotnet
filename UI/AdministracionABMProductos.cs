@@ -49,9 +49,7 @@ namespace UI
                     dataGridView1.Columns["StockComprometido"].HeaderText = "Stock Comprometido";
                     dataGridView1.Columns["FotoPath"].Width = 135;
                     dataGridView1.Columns["FotoPath"].HeaderText = "Imagen";
-
-
-
+                    
                 }
             }
             catch (Exception ex)
@@ -65,7 +63,7 @@ namespace UI
         private void AdministracionABMProductos_Load(object sender, EventArgs e)
         {
             this.ListaCategorias = CC.CargarCategorias();
-            this.ListaCategorias.Add("Todas");
+            //this.ListaCategorias.Add("Todas");
             cmb_categorias.DataSource = this.ListaCategorias;
             
             cmb_categorias.Text = "Seleccione Categoria";
@@ -145,6 +143,18 @@ namespace UI
         private void AdministracionABMProductos_FormClosed(object sender, FormClosedEventArgs e)
         {
             //this.ListaCategorias.Clear();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == true)
+                RecargarGrilla(-1);
+            else
+            {
+                Categoria c = (Categoria)this.ListaCategorias[cmb_categorias.SelectedIndex];
+                RecargarGrilla(c.Codigo);
+            }
+            
         }
 
        
