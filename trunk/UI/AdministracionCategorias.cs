@@ -70,7 +70,8 @@ namespace UI
             }
             else
             {
-                ControlCategorias.EliminarCategoria(listBox_listado.SelectedIndex);
+                Categoria c=(Categoria)Categorias[listBox_listado.SelectedIndex];
+                ControlCategorias.EliminarCategoria(c.Codigo);
                 this.ActualizarLista();
             }
         }
