@@ -147,12 +147,16 @@ namespace UI
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox1.Checked == true)
-                RecargarGrilla(-1);
-            else
+            if (checkBox1.Checked == true)//tildo
             {
-                Categoria c = (Categoria)this.ListaCategorias[cmb_categorias.SelectedIndex];
-                RecargarGrilla(c.Codigo);
+                RecargarGrilla(-1);
+                cmb_categorias.Enabled = false;
+            }
+            else//destildo
+            {
+                cmb_categorias.Enabled = true;
+                cmb_categorias.Text = "Seleccione una Categoria";
+                RecargarGrilla(-1);
             }            
         }
     }
