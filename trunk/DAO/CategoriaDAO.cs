@@ -18,23 +18,19 @@ namespace DAO
         {
             ListaCategorias.Add(cat);
         }
-
         public ArrayList leer_categorias()
         {
             return ListaCategorias;
-        }
-     
+        }     
         public void EliminarCategoria(int i)
         {
             ListaCategorias.RemoveAt(i);          
         }
-
         public int CodigoCategoria(int indice)
         {
             Categoria c = (Categoria)ListaCategorias[indice];
             return c.Codigo;
         }
-
         public string NombreCategoria(int indice)
         {
             Categoria c = (Categoria)ListaCategorias[indice];
@@ -58,7 +54,6 @@ namespace DAO
             }
             return Cat;
         }
-
         public void ModificarCategoria(int codigo, string nombre)
         {
             foreach (Categoria c in ListaCategorias)
