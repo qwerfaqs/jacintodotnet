@@ -4,8 +4,14 @@ using System.Text;
 
 namespace DAOSQL
 {
-    public class DAOSQLCategorias
+    public sealed class DAOSQLCategorias
     {
+        private static readonly DAOSQLCategorias _instancia = new DAOSQLCategorias();
+        public static DAOSQLCategorias Instancia()
+        {
+            return _instancia();   
+        }
+
         public void EliminarCategoria(int catID)
         {
             try
