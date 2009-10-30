@@ -12,7 +12,7 @@ namespace UI
     {
         Control.ControlProductos CP = new Control.ControlProductos();
         Control.ControlCategorias CC = new Control.ControlCategorias();
-        private ArrayList Categorias;
+        private ArrayList ListaCategorias;
         int x;//producto seleccionado
         
 
@@ -64,11 +64,11 @@ namespace UI
 
         private void AdministracionABMProductos_Load(object sender, EventArgs e)
         {
-            this.Categorias = CC.CargarCategorias();
-            this.Categorias.Add("Todas");
-            cmb_categorias.DataSource = Categorias;
+            this.ListaCategorias = CC.CargarCategorias();
+            this.ListaCategorias.Add("Todas");
+            cmb_categorias.DataSource = this.ListaCategorias;
             
-            cmb_categorias.Text = "Todas";
+            cmb_categorias.Text = "Seleccione Categoria";
             RecargarGrilla(-1);
         }
 
@@ -76,9 +76,9 @@ namespace UI
         private void cmb_categorias_SelectedIndexChanged(object sender, EventArgs e)
         {
             x = -1;
-            if (cmb_categorias.SelectedIndex < Categorias.Count - 1)
+            if (cmb_categorias.SelectedIndex < this.ListaCategorias.Count - 1)
             {
-                Categoria c = (Categoria)Categorias[cmb_categorias.SelectedIndex];
+                Categoria c = (Categoria)this.ListaCategorias[cmb_categorias.SelectedIndex];
                 RecargarGrilla(c.Codigo);
             }
             else
@@ -114,7 +114,7 @@ namespace UI
         private void dataGridView1_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             x = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-            label2.Text = Convert.ToString(x);
+            //label2.Text = Convert.ToString(x);
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -144,7 +144,7 @@ namespace UI
 
         private void AdministracionABMProductos_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Categorias.Clear();
+            //this.ListaCategorias.Clear();
         }
 
        

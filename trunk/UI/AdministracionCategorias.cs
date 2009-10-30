@@ -14,7 +14,7 @@ namespace UI
     {
         Control.ControlCategorias ControlCategorias = new ControlCategorias();
         Control.ControlProductos ControlProductos = new ControlProductos();
-        ArrayList ListaCategorias = new ArrayList();
+        private ArrayList ListaCategorias;
         public AdministracionCategorias()
         {
             InitializeComponent();
@@ -42,6 +42,7 @@ namespace UI
         private void ActualizarLista()
         {
             listBox_listado.Items.Clear();
+            
             this.ListaCategorias=ControlCategorias.CargarCategorias();
             foreach (Categoria c in this.ListaCategorias) 
             {
