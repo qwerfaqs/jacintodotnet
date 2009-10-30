@@ -58,9 +58,26 @@ namespace BO
             }
         }
 
-
+        public ItemMostrable toMostrable()
+        {
+            return new ItemMostrable(this);
+        }
 
 
 
     }
+    public struct ItemMostrable
+        {
+            public string Descripcion;
+            public int Cantidad;
+            public float PrecioUnitario;
+            public float Total;
+            public ItemMostrable(Item item)
+            {
+                this.Descripcion = item.UnProducto.Nombre;
+                this.Cantidad = item.Cantidad;
+                this.PrecioUnitario = item.UnProducto.Precio;
+                this.Total = item.Total;
+            }
+        }
 }

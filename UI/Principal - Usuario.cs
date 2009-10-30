@@ -13,11 +13,13 @@ namespace UI
     {
         Control.ControlProductos CP = new Control.ControlProductos();
         Control.ControlCategorias CC = new Control.ControlCategorias();
+        Control.ControlCarritos Carromato = new Control.ControlCarritos();
         ArrayList Categorias;
         int x;//producto seleccionado
 
 
         BindingSource BS = new BindingSource();
+        BindingSource BScarrito = new BindingSource();
 
         public Principal___Usuario()
         {
@@ -59,6 +61,79 @@ namespace UI
                 MessageBox.Show(ex.Message);
             }
         }
+        private void RecargarCarretilla()
+        {
+            try
+            {
+                BScarrito.ResetBindings(false);
+                ArrayList arreglo = Carromato.CargarCarrito();
+                BScarrito.DataSource = arreglo;
+                dataGridView2.DataSource = BScarrito;
+
+                /*if (dataGridView2.Rows.Count > 0)
+                {
+                    dataGridView2.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+                    dataGridView2.Columns["Codigo"].Width = 50;
+                    dataGridView2.Columns["Cat"].Width = 80;
+                    dataGridView2.Columns["Cat"].HeaderText = "Categoria";
+                    dataGridView2.Columns["StockActual"].Width = 70;
+                    dataGridView2.Columns["StockActual"].HeaderText = "Stock Actual";
+                    dataGridView2.Columns["Nombre"].Width = 200;
+                    dataGridView2.Columns["PrecioOferta"].Width = 60;
+                    dataGridView2.Columns["PrecioOferta"].HeaderText = "Precio de Oferta";
+                    dataGridView2.Columns["Precio"].Width = 60;
+                    dataGridView2.Columns["StockComprometido"].Width = 80;
+                    dataGridView2.Columns["StockComprometido"].HeaderText = "Stock Comprometido";
+                    dataGridView2.Columns["FotoPath"].Width = 135;
+                    dataGridView2.Columns["FotoPath"].HeaderText = "Imagen";
+
+
+
+                }*/
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void RecargarCarretilla(ArrayList NuevoCarromato)
+        {
+            try
+            {
+                BScarrito.ResetBindings(false);
+                //BScarrito.DataSource = NuevoCarromato;
+                //dataGridView2.DataSource = BScarrito;
+                
+                /*if (dataGridView2.Rows.Count > 0)
+                {
+                    dataGridView2.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+                    dataGridView2.Columns["Codigo"].Width = 50;
+                    dataGridView2.Columns["Cat"].Width = 80;
+                    dataGridView2.Columns["Cat"].HeaderText = "Categoria";
+                    dataGridView2.Columns["StockActual"].Width = 70;
+                    dataGridView2.Columns["StockActual"].HeaderText = "Stock Actual";
+                    dataGridView2.Columns["Nombre"].Width = 200;
+                    dataGridView2.Columns["PrecioOferta"].Width = 60;
+                    dataGridView2.Columns["PrecioOferta"].HeaderText = "Precio de Oferta";
+                    dataGridView2.Columns["Precio"].Width = 60;
+                    dataGridView2.Columns["StockComprometido"].Width = 80;
+                    dataGridView2.Columns["StockComprometido"].HeaderText = "Stock Comprometido";
+                    dataGridView2.Columns["FotoPath"].Width = 135;
+                    dataGridView2.Columns["FotoPath"].HeaderText = "Imagen";
+
+
+
+                }*/
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
 
         private void Principal___Usuario_Load(object sender, EventArgs e)
         {
@@ -67,6 +142,7 @@ namespace UI
             cmb_categorias.DataSource = Categorias;
             cmb_categorias.Text = "Todas";
             RecargarGrilla(-1);
+            RecargarCarretilla();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -101,7 +177,9 @@ namespace UI
         private void AgregarACarrito(int codigo, int cant)
         {
             //llamada al control del carrito
-            MessageBox.Show("Ingresastes" + cant.ToString() + " Articulos del Producto con Codigo: " + codigo.ToString());
+            //MessageBox.Show("Ingresastes" + cant.ToString() + " Articulos del Producto con Codigo: " + codigo.ToString());
+            Carromato.AgregarItem(codigo, cant);
+            RecargarCarretilla();
         }
         private void dataGridView2_DragDrop(object sender, DragEventArgs e)
         {
