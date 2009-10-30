@@ -7,6 +7,8 @@ namespace DAOSQL
     public class DAOSQLCategorias
     {
         
+
+
         // public void EliminarItem(int catID)
         //{
         //    try
