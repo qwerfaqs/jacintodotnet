@@ -14,7 +14,7 @@ namespace UI
     {
         Control.ControlCategorias ControlCategorias = new ControlCategorias();
         Control.ControlProductos ControlProductos = new ControlProductos();
-
+        ArrayList Categorias = new ArrayList();
         public AdministracionCategorias()
         {
             InitializeComponent();
@@ -41,11 +41,12 @@ namespace UI
         }
         private void ActualizarLista()
         {
-            //listBox_listado.Items.Clear();
-            //foreach ()
-            //{
-            //    listBox_listado.Items.Add(s);
-            //}
+            listBox_listado.Items.Clear();
+            Categorias=ControlCategorias.CargarCategorias();
+            foreach (Categoria c in Categorias) 
+            {
+                listBox_listado.Items.Add(Convert.ToString(c.Codigo)+" "+c.Nombre);
+            }
         }
 
         private void listBox_listado_SelectedValueChanged(object sender, EventArgs e)
