@@ -84,8 +84,8 @@ namespace UI
             short LogIn=CU.LogIn(txtUser.Text, mtxtPass.Text);
             if (LogIn == -1)
             {
-                label3.Text = "Nombre de usuario \r\n o contraseña incorrectos!";
-                
+                label3.Text = "Nombre de usuario o contraseña incorrectos!";
+                panel1.Visible = true;
             }
             else
             {
@@ -110,6 +110,21 @@ namespace UI
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUser_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            panel1.Visible = false;
         }
     }
 }

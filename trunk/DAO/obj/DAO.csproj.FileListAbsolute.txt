@@ -68,3 +68,10 @@ D:\Carrito de Compras\DAO\bin\Debug\BO.pdb
 D:\Carrito de Compras\DAO\obj\Debug\ResolveAssemblyReference.cache
 D:\Carrito de Compras\DAO\obj\Debug\DAO.dll
 D:\Carrito de Compras\DAO\obj\Debug\DAO.pdb
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacintodotnet\DAO\bin\Debug\DAO.dll
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacintodotnet\DAO\bin\Debug\DAO.pdb
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacintodotnet\DAO\bin\Debug\BO.dll
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacintodotnet\DAO\bin\Debug\BO.pdb
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacintodotnet\DAO\obj\Debug\ResolveAssemblyReference.cache
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacintodotnet\DAO\obj\Debug\DAO.dll
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacintodotnet\DAO\obj\Debug\DAO.pdb

@@ -177,3 +177,23 @@ D:\Carrito de Compras\UI\obj\Debug\UI.Principal.resources
 D:\Carrito de Compras\UI\obj\Debug\UI.AdministracionProductos.resources
 D:\Carrito de Compras\UI\obj\Debug\UI.Properties.Resources.resources
 D:\Carrito de Compras\UI\obj\Debug\UI.csproj.GenerateResource.Cache
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacintodotnet\UI\obj\Debug\UI.exe
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacintodotnet\UI\obj\Debug\UI.pdb
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacintodotnet\UI\bin\Debug\UI.exe
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacintodotnet\UI\bin\Debug\UI.pdb
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacintodotnet\UI\bin\Debug\Control.dll
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacintodotnet\UI\bin\Debug\DAO.dll
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacintodotnet\UI\bin\Debug\BO.dll
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacintodotnet\UI\bin\Debug\DAO.pdb
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacintodotnet\UI\bin\Debug\BO.pdb
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacintodotnet\UI\bin\Debug\Control.pdb
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacintodotnet\UI\obj\Debug\ResolveAssemblyReference.cache
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacintodotnet\UI\obj\Debug\UI.AdministracionABMProductos.resources
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacintodotnet\UI\obj\Debug\UI.AdministracionCategorias.resources
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacintodotnet\UI\obj\Debug\UI.IngresoCantidad.resources
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacintodotnet\UI\obj\Debug\UI.Principal___Administracion.resources
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacintodotnet\UI\obj\Debug\UI.Principal___Usuario.resources
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacintodotnet\UI\obj\Debug\UI.Principal.resources
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacintodotnet\UI\obj\Debug\UI.AdministracionProductos.resources
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacintodotnet\UI\obj\Debug\UI.Properties.Resources.resources
+L:\Documentos\Facultad\Metodologia\Carrito 2009\jacintodotnet\UI\obj\Debug\UI.csproj.GenerateResource.Cache
