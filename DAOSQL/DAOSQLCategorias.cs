@@ -2,6 +2,7 @@ using System;
 using System.Collections;//.Generic;
 using System.Text;
 using System.Data.SqlClient;
+using BO;
 namespace DAOSQL
 {
     public sealed class DAOSQLCategorias
