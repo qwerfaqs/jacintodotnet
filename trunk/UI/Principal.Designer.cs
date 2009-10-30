@@ -109,14 +109,14 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(6, 13);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(269, 57);
+            this.panel1.Size = new System.Drawing.Size(269, 88);
             this.panel1.TabIndex = 9;
             this.panel1.Visible = false;
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(210, 33);
+            this.linkLabel1.Location = new System.Drawing.Point(106, 51);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(56, 13);
             this.linkLabel1.TabIndex = 9;
@@ -128,7 +128,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(25, 7);
+            this.label3.Location = new System.Drawing.Point(25, 25);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(39, 13);
             this.label3.TabIndex = 8;
