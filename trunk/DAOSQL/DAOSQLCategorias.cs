@@ -75,7 +75,7 @@ namespace DAOSQL
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection("Data Source=EMMANUEL2; Initial Catalog=Examen; Integrated Security=True"))
+                using (SqlConnection conn = new SqlConnection("Data Source=EMMANUEL2; Initial Catalog=Carrito; Integrated Security=True"))
                 {
                     conn.Open();
 

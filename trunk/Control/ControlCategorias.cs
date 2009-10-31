@@ -26,7 +26,8 @@ namespace Control
                 int codigo = Convert.ToInt32(c);
                 if (nombre != "" && c != "" && (CodigoRepetido(codigo) == false) && (NombreRepetido(nombre) == false))
                 {
-                    this.miDao.agregar_categoria(new Categoria(codigo, nombre));
+                    //this.miDao.agregar_categoria(new Categoria(codigo, nombre));
+                    this.MiDAOSQL.agregar_categoria(new Categoria(codigo, nombre));
                     Exito = true;
                 }
             }
