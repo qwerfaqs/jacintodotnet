@@ -41,8 +41,7 @@ namespace DAOSQL
             {
                 if (ListaCategorias!=null)
                 {
-                    ListaCategorias.Clear();
-                    ListaCategorias = null;
+                    ListaCategorias.Clear();                    
                 }                
             }
             //try
@@ -55,6 +54,7 @@ namespace DAOSQL
                 }
                 else
                 {
+                    ListaCategorias = new ArrayList();
                     using (SqlConnection conn = new SqlConnection("Data Source=EMMANUEL2; Initial Catalog=Carrito; Integrated Security=True"))
                     {
                         Categoria cat = null;
