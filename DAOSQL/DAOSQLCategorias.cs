@@ -37,24 +37,21 @@ namespace DAOSQL
         }
         public ArrayList leer_categorias(bool DesdeMemoria)
         {
-            if (DesdeMemoria == false)
+            //DesdeMemoria = false;
+            if (DesdeMemoria)
             {
-                if (ListaCategorias!=null)
+                if (ListaCategorias!=null && ListaCategorias.Count>0)
                 {
-                    ListaCategorias.Clear();                    
+                    return ListaCategorias;                    
                 }                
             }
-            //try
-            //{
-                //IList<Categoria> listCategorias = new List<Categoria>();
-                                
-                if(ListaCategorias!=null)
-                {
-                    return ListaCategorias;
-                }
-                else
+            	        
+		    else
+            {
+                try
                 {
                     ListaCategorias = new ArrayList();
+                    ListaCategorias.Clear();
                     using (SqlConnection conn = new SqlConnection("Data Source=EMMANUEL2; Initial Catalog=Carrito; Integrated Security=True"))
                     {
                         Categoria cat = null;
@@ -76,13 +73,13 @@ namespace DAOSQL
                         }
                         conn.Close();
                         return ListaCategorias;
-                    }   
-                }                  
-            //}
-            //catch 
-            //{
-            //    throw new ArgumentException("Error Cargando Categorias");
-            //}
+                    }
+                }
+	            catch 
+	            {
+		            throw new ArgumentException("Error Cargando Categorias");
+        	    }                
+            }
         }
 
         public void agregar_categoria(Categoria cat)
