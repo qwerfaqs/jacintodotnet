@@ -70,7 +70,7 @@ namespace UI
                 ArrayList AL = CC.CargarCategorias();
                 Categoria C = (Categoria)AL[cmbCategorias.SelectedIndex];
 
-                CP.AgregarProducto(C.Codigo, txtCodigo.Text, pictureBox1.Image, txtNombre.Text, txtPrecio.Text, txtPrecioOferta.Text, txtStock.Text, txtStockComprometido.Text);
+                CP.AgregarProducto(C, txtCodigo.Text, pictureBox1.Image, txtNombre.Text, txtPrecio.Text, txtPrecioOferta.Text, txtStock.Text, txtStockComprometido.Text);
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }

@@ -46,7 +46,7 @@ namespace DAO
         }
         public Categoria UnObjetoCategoria(int i)
         {
-            Categoria Nueva=new Categoria(0,"v");
+            Categoria Nueva=new Categoria();
             foreach (Categoria c in ListaCategorias)
             {
                 if (c.Codigo == i)

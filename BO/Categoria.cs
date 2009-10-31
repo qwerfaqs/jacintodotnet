@@ -14,6 +14,8 @@ namespace BO
             this._Codigo = Codigo;
             this._Nombre = Nombre;
         }
+        public Categoria()
+        {}
 
         public int Codigo
         {

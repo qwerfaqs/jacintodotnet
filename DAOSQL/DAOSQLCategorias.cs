@@ -7,7 +7,7 @@ namespace DAOSQL
 {
     public sealed class DAOSQLCategorias
     {
-        private static ArrayList ListaCategorias = null;
+        private static ArrayList ListaCategorias;
         private static readonly DAOSQLCategorias _instancia = new DAOSQLCategorias();
         public static DAOSQLCategorias Instancia
         {
@@ -35,18 +35,21 @@ namespace DAOSQL
             catch
             { }
         }
-        public ArrayList leer_categorias(bool p)
+        public ArrayList leer_categorias(bool DesdeMemoria)
         {
-            if (p == true)
+            if (DesdeMemoria == false)
             {
-                ListaCategorias.Clear();
-                ListaCategorias = null;
+                if (ListaCategorias!=null)
+                {
+                    ListaCategorias.Clear();
+                    ListaCategorias = null;
+                }                
             }
-            try
-            {
+            //try
+            //{
                 //IList<Categoria> listCategorias = new List<Categoria>();
                                 
-                if(ListaCategorias=!null)
+                if(ListaCategorias!=null)
                 {
                     return ListaCategorias;
                 }
@@ -54,7 +57,6 @@ namespace DAOSQL
                 {
                     using (SqlConnection conn = new SqlConnection("Data Source=EMMANUEL2; Initial Catalog=Carrito; Integrated Security=True"))
                     {
-                        ArrayList Categorias;
                         Categoria cat = null;
                         conn.Open();
 
@@ -73,19 +75,20 @@ namespace DAOSQL
                             }
                         }
                         conn.Close();
+                        return ListaCategorias;
                     }   
                 }                  
-            }
-            catch 
-            {
-                throw new ArgumentException("Error Cargando Categorias");
-            }
+            //}
+            //catch 
+            //{
+            //    throw new ArgumentException("Error Cargando Categorias");
+            //}
         }
 
         public void agregar_categoria(Categoria cat)
         {
-            //try
-            //{
+            try
+            {
                 using (SqlConnection conn = new SqlConnection("Data Source=EMMANUEL2; Initial Catalog=Carrito; Integrated Security=True"))
                 {
                     conn.Open();
@@ -99,9 +102,11 @@ namespace DAOSQL
                     }
                     conn.Close();
                 }
-            //}
-            //catch
-            //{ }
+            }
+            catch
+            {
+                throw new ArgumentException("Error Agregando Categoria");
+            }
         }
         
         //public void ModificarCategoria(int codigo, string nombre)
@@ -115,20 +120,33 @@ namespace DAOSQL
         //        }
         //    }
         //}
-        //public Categoria UnObjetoCategoria(int i)
-        //{
-        //    Categoria Nueva = new Categoria(0, "v");
-        //    foreach (Categoria c in ListaCategorias)
-        //    {
-        //        if (c.Codigo == i)
-        //        {
-        //            Nueva.Codigo = c.Codigo;
+        public Categoria UnObjetoCategoria(int i)
+        {
+            Categoria Nueva = new Categoria();
+            //try
+            //{
+                if (ListaCategorias!=null)
+                {
+                    
+                    foreach (Categoria c in ListaCategorias)
+                    {
+                        if (c.Codigo == i)
+                        {
+                            Nueva.Codigo = c.Codigo;
+                            Nueva.Nombre = c.Nombre;
 
-        //            Nueva.Nombre = c.Nombre;
-        //            break;
-        //        }
-        //    }
-        //    return Nueva;
-        //}
+                            break;
+                        }
+                    } 
+                }
+                
+                return Nueva;
+                
+            //}
+            //catch 
+            //{
+            //    throw new ArgumentException("Error Buscando Categoria [DAOSQL]") ;
+            //}         
+        }
     }
 }
