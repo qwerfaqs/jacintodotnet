@@ -63,8 +63,8 @@ namespace UI
         }
         private void RecargarCarretilla()
         {
-            try
-            {
+            /*try
+            {*/
                 //se le carga por un milisegundo la grilla de ´productos para que se actualize (Problema a resolver bien)
                 dataGridView2.DataSource = BS;
 
@@ -91,12 +91,12 @@ namespace UI
 
 
                 }
-            }
+            /*}
             catch (Exception ex)
             {
 
                 MessageBox.Show(ex.Message);
-            }
+            }*/
         }
         
 
