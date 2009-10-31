@@ -74,42 +74,8 @@ namespace DAO
             return p;
         }
 
-        public int StockActual(Producto UnProducto) //devuelve el stock de un producto
-        {
-            int Cantidad = -1;//devuelve -1 si no lo encuentra
-            int Encontrado = 0;
-            int x = 0;
-            while ((x < ListaProductos.Count) && (Encontrado == 0))
-            {
-                Producto Product = (Producto)ListaProductos[x];
-                if (Product.Codigo == UnProducto.Codigo)
-                {
-                    Cantidad = Product.StockActual;
-                    Encontrado = 1;
-                }
-                x++;
-            }
-            return (Cantidad);
-        }
-       
-        public int StockComprometido(Producto UnProducto) //devuelve el stock de un producto
-        {
-            int Cantidad = -1;//devuelve -1 si no lo encuentra
-            int Encontrado = 0;
-            int x = 0;
-            while ((x < ListaProductos.Count) && (Encontrado == 0))
-            {
-                Producto Product = (Producto)ListaProductos[x];
-                if (Product.Codigo == UnProducto.Codigo)
-                {
-                    Cantidad = Product.StockComprometido;
-                    Encontrado = 1;
-                }
-                x++;
-            }
-            return (Cantidad);
-        }
-        
+        //---------------------------------------------------------------------------
+
         public bool ModificarProducto(Producto UnProducto)
         {
             int Encontrado = 0;
@@ -133,7 +99,25 @@ namespace DAO
 
 
         }
-
+        
+        public int StockComprometido(Producto UnProducto) //devuelve el stock de un producto
+        {
+            int Cantidad = -1;//devuelve -1 si no lo encuentra
+            int Encontrado = 0;
+            int x = 0;
+            while ((x < ListaProductos.Count) && (Encontrado == 0))
+            {
+                Producto Product = (Producto)ListaProductos[x];
+                if (Product.Codigo == UnProducto.Codigo)
+                {
+                    Cantidad = Product.StockComprometido;
+                    Encontrado = 1;
+                }
+                x++;
+            }
+            return (Cantidad);
+        }
+        
         public void ModificarStock(Producto UnProducto, int cant)// modifica stock de un producto
         {
             int Encontrado = 0;
@@ -168,6 +152,22 @@ namespace DAO
 
         }
 
-
+        public int StockActual(Producto UnProducto) //devuelve el stock de un producto
+        {
+            int Cantidad = -1;//devuelve -1 si no lo encuentra
+            int Encontrado = 0;
+            int x = 0;
+            while ((x < ListaProductos.Count) && (Encontrado == 0))
+            {
+                Producto Product = (Producto)ListaProductos[x];
+                if (Product.Codigo == UnProducto.Codigo)
+                {
+                    Cantidad = Product.StockActual;
+                    Encontrado = 1;
+                }
+                x++;
+            }
+            return (Cantidad);
+        }
     }
 }
