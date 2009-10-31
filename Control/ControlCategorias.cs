@@ -81,7 +81,7 @@ namespace Control
         
         public void ModificarCategoria(int Id,string nombre)
         {
-            //miDao.ModificarCategoria(Id, nombre);
+            MiDAOSQL.ModificarCategoria(Id, nombre);
         }
 
         public Categoria ObtenerUnaCategoria(int Id)

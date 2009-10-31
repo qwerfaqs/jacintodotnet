@@ -26,7 +26,7 @@ namespace UI
             try
             {
                 bool r = ControlCategorias.InsertarCategoria(txt_carga_nombre.Text, txt_carga_id.Text);
-                ActualizarLista();
+                ActualizarLista(false);
                 if (r == false)
                     MessageBox.Show("Verifique codigo y Nombre de la Categoria a Insertar");
             }
@@ -38,13 +38,13 @@ namespace UI
 
         private void Categorias_Load(object sender, EventArgs e)
         {
-            ActualizarLista();
+            ActualizarLista(false);
         }
-        private void ActualizarLista()
+        private void ActualizarLista(bool Desdememoria)
         {
             listBox_listado.Items.Clear();
             
-            this.ListaCategorias=ControlCategorias.CargarCategorias(false);
+            this.ListaCategorias=ControlCategorias.CargarCategorias(Desdememoria);
             foreach (Categoria c in this.ListaCategorias) 
             {
                 listBox_listado.Items.Add(Convert.ToString(c.Codigo)+" "+c.Nombre);
@@ -76,7 +76,7 @@ namespace UI
             {
                 
                 ControlCategorias.EliminarCategoria(c.Codigo);
-                this.ActualizarLista();
+                this.ActualizarLista(false);
             }
         }
 
@@ -85,7 +85,7 @@ namespace UI
             try
             {
                 ControlCategorias.ModificarCategoria(c.Codigo, txt_modif_nombre.Text);
-                ActualizarLista();
+                ActualizarLista(false);
             }
             catch(Exception ex)
             {
