@@ -27,6 +27,8 @@ namespace UI
             {
                 bool r = ControlCategorias.InsertarCategoria(txt_carga_nombre.Text, txt_carga_id.Text);
                 ActualizarLista(false);
+                txt_carga_id.Clear();
+                txt_carga_nombre.Clear();
                 if (r == false)
                     MessageBox.Show("Verifique codigo y Nombre de la Categoria a Insertar");
             }
