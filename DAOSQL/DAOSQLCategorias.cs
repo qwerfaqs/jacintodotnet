@@ -40,12 +40,20 @@ namespace DAOSQL
             //DesdeMemoria = false;
             if (DesdeMemoria)
             {
-                if (ListaCategorias!=null && ListaCategorias.Count>0)
+                try
                 {
-                    return ListaCategorias;                    
+                    if (ListaCategorias != null && ListaCategorias.Count > 0)
+                    {
+                        return ListaCategorias;
+                    }
+                    else
+                        return null;
+                }
+                catch 
+                {
+                    throw new ArgumentException("Error");
                 }                
-            }
-            	        
+            }            	        
 		    else
             {
                 try
@@ -72,13 +80,14 @@ namespace DAOSQL
                             }
                         }
                         conn.Close();
-                        return ListaCategorias;
+                        
                     }
                 }
 	            catch 
 	            {
 		            throw new ArgumentException("Error Cargando Categorias");
-        	    }                
+        	    }
+                return ListaCategorias;
             }
         }
 
