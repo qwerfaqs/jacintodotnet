@@ -37,8 +37,9 @@ namespace UI
                     dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
                     
                     dataGridView1.Columns["Codigo"].Width = 50;
-                    dataGridView1.Columns["Cat"].Width = 80;
-                    dataGridView1.Columns["Cat"].HeaderText = "Categoria";
+                    //dataGridView1.Columns["Cat"].Width = 80;
+                    //dataGridView1.Columns["Cat"].HeaderText = "Categoria";
+                    dataGridView1.Columns["Cat"].Visible = false;
                     dataGridView1.Columns["StockActual"].Width = 70;
                     dataGridView1.Columns["StockActual"].HeaderText = "Stock Actual";
                     dataGridView1.Columns["Nombre"].Width = 200;
