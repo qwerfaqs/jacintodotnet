@@ -74,8 +74,8 @@ namespace Control
         
         public void EliminarCategoria(int Id)
         {
-           miDao.EliminarCategoriaId(Id);
-           //MiDAOSQL.EliminarCategoriaId(Id);
+           //miDao.EliminarCategoriaId(Id);
+           MiDAOSQL.EliminarCategoriaId(Id);
         }
         
         public void ModificarCategoria(int Id,string nombre)
