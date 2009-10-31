@@ -63,7 +63,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(265, 486);
+            this.checkBox1.Location = new System.Drawing.Point(305, 486);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(94, 17);
             this.checkBox1.TabIndex = 6;
@@ -75,7 +75,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(-25, 487);
+            this.label1.Location = new System.Drawing.Point(15, 487);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(107, 13);
             this.label1.TabIndex = 5;
@@ -85,7 +85,7 @@
             // 
             this.cmb_categorias.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.cmb_categorias.FormattingEnabled = true;
-            this.cmb_categorias.Location = new System.Drawing.Point(88, 482);
+            this.cmb_categorias.Location = new System.Drawing.Point(128, 482);
             this.cmb_categorias.Name = "cmb_categorias";
             this.cmb_categorias.Size = new System.Drawing.Size(143, 21);
             this.cmb_categorias.TabIndex = 4;
