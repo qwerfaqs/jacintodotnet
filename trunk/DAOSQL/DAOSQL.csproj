@@ -33,8 +33,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAOSQLCategorias.cs" />
-    <Compile Include="DAOSQLProductos.cs" />
+    <Compile Include="CategoriaDAOSQL.cs" />
+    <Compile Include="ProductoDAOSQL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
