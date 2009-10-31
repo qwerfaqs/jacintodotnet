@@ -16,7 +16,7 @@ namespace Control
         private DAO.CategoriaDAO CatDao;
         Control.ControlCategorias ControlCategorias = new ControlCategorias();
 
-        public bool AgregarProducto(int categoria, string codigo,Image Foto, string nombre, string precio, string preciooferta, string stockactual, string stockcomprometido)
+        public bool AgregarProducto(Categoria categoria, string codigo,Image Foto, string nombre, string precio, string preciooferta, string stockactual, string stockcomprometido)
         {
             bool Exito = false;
             
@@ -24,15 +24,13 @@ namespace Control
             {
                 float Precio = Convert.ToInt64(precio);
                 int Codigo = Convert.ToInt32(codigo);
-                Categoria Categoria = this.CatDao.UnObjetoCategoria(categoria);
+                Categoria Categoria = categoria;
                 int StockActual = Convert.ToInt32(stockactual);
                 int StockComprometido = Convert.ToInt32(stockcomprometido);
                 float PrecioOferta = Convert.ToInt64(preciooferta);
-
                 Producto Producto = new Producto(Codigo, nombre, Precio, Categoria, PrecioOferta, Foto, StockActual, StockComprometido);
                 this.miDao.agregar_producto(Producto);
-                Exito = true;
-                
+                Exito = true;                
             }
             catch
             {
