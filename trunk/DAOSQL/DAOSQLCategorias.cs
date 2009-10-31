@@ -7,6 +7,7 @@ namespace DAOSQL
 {
     public sealed class DAOSQLCategorias
     {
+        private static ArrayList ListaCategorias = null;
         private static readonly DAOSQLCategorias _instancia = new DAOSQLCategorias();
         public static DAOSQLCategorias Instancia
         {
@@ -34,36 +35,46 @@ namespace DAOSQL
             catch
             { }
         }
-        public ArrayList leer_categorias()
+        public ArrayList leer_categorias(bool p)
         {
+            if (p == true)
+            {
+                ListaCategorias.Clear();
+                ListaCategorias = null;
+            }
             try
             {
                 //IList<Categoria> listCategorias = new List<Categoria>();
-                ArrayList listCategorias = new ArrayList();
-                Categoria cat = null;
-
-                using (SqlConnection conn = new SqlConnection("Data Source=EMMANUEL2; Initial Catalog=Carrito; Integrated Security=True"))
+                                
+                if(ListaCategorias=!null)
                 {
-                    conn.Open();
-
-                    using (SqlCommand command = new SqlCommand())
-                    {
-                        command.CommandText = "SELECT Id,Nombre FROM Categorias";
-                        command.Connection = conn;
-
-                        SqlDataReader rdr = command.ExecuteReader();
-
-                        while (rdr.Read())
-                        {
-
-                            cat = new Categoria(Convert.ToInt32(rdr.GetValue(0)), rdr.GetValue(1).ToString());
-                            listCategorias.Add(cat);
-                        }
-                    }
-                    conn.Close();
+                    return ListaCategorias;
                 }
+                else
+                {
+                    using (SqlConnection conn = new SqlConnection("Data Source=EMMANUEL2; Initial Catalog=Carrito; Integrated Security=True"))
+                    {
+                        ArrayList Categorias;
+                        Categoria cat = null;
+                        conn.Open();
 
-                return listCategorias;
+                        using (SqlCommand command = new SqlCommand())
+                        {
+                            command.CommandText = "SELECT Id,Nombre FROM Categorias";
+                            command.Connection = conn;
+
+                            SqlDataReader rdr = command.ExecuteReader();
+
+                            while (rdr.Read())
+                            {
+
+                                cat = new Categoria(Convert.ToInt32(rdr.GetValue(0)), rdr.GetValue(1).ToString());
+                                ListaCategorias.Add(cat);
+                            }
+                        }
+                        conn.Close();
+                    }   
+                }                  
             }
             catch 
             {
