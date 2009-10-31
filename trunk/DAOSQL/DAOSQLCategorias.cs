@@ -70,11 +70,28 @@ namespace DAOSQL
                 return null;
             }
         }
-        
-        //public void agregar_categoria(Categoria cat)
-        //{
-        //    ListaCategorias.Add(cat);
-        //}
+
+        public void agregar_categoria(Categoria cat)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection("Data Source=EMMANUEL2; Initial Catalog=Examen; Integrated Security=True"))
+                {
+                    conn.Open();
+
+                    using (SqlCommand command = new SqlCommand())
+                    {
+                        command.CommandText = "INSERT INTO Categorias (Id,Nombre) values ("+cat.Codigo+","+cat.Nombre+")";
+                        command.Connection = conn;
+
+                        command.ExecuteNonQuery();
+                    }
+                    conn.Close();
+                }
+            }
+            catch
+            { }
+        }
         
         //public void ModificarCategoria(int codigo, string nombre)
         //{
