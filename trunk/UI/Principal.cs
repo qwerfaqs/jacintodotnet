@@ -63,8 +63,6 @@ namespace UI
             oCategoria = CC.ObtenerUnaCategoria(5);
             ControladoraP.AgregarProducto(oCategoria, "11", Image.FromFile(path + "\\Imagenes\\PanLactal.jpg"), "Pan Lactal Fargo", "5", "4", "4", "1");
             ControladoraP.AgregarProducto(oCategoria, "12", Image.FromFile(path + "\\Imagenes\\PanHamburguesas.jpg"), "Pan Hamburguesas Bimbo", "5", "4", "6", "1");
-            
-            
         }
 
         //private void button3_Click(object sender, EventArgs e)
