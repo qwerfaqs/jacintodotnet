@@ -36,19 +36,19 @@ namespace DAOSQL
         }
         public ArrayList leer_categorias()
         {
-            try
-            {
+            //try
+            //{
                 //IList<Categoria> listCategorias = new List<Categoria>();
                 ArrayList listCategorias = new ArrayList();
                 Categoria cat = null;
 
-                using (SqlConnection conn = new SqlConnection("Data Source=EMMANUEL2; Initial Catalog=Examen; Integrated Security=True"))
+                using (SqlConnection conn = new SqlConnection("Data Source=EMMANUEL2; Initial Catalog=Carrito; Integrated Security=True"))
                 {
                     conn.Open();
 
                     using (SqlCommand command = new SqlCommand())
                     {
-                        command.CommandText = "SELECT Id,Nombre FROM CATEGORIAS";
+                        command.CommandText = "SELECT Id,Nombre FROM Categorias";
                         command.Connection = conn;
 
                         SqlDataReader rdr = command.ExecuteReader();
@@ -64,11 +64,11 @@ namespace DAOSQL
                 }
 
                 return listCategorias;
-            }
-            catch
-            {
-                return null;
-            }
+            //}
+            //catch 
+            //{
+            //    throw new ArgumentException("Error Cargando Categorias");
+            //}
         }
 
         public void agregar_categoria(Categoria cat)

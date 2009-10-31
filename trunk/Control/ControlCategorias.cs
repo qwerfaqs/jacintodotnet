@@ -67,7 +67,8 @@ namespace Control
 
         public ArrayList CargarCategorias()
         {
-            ArrayList Categorias = miDao.leer_categorias();
+            //ArrayList Categorias = miDao.leer_categorias();
+            ArrayList Categorias = MiDAOSQL.leer_categorias();
             return Categorias;
         }
         
