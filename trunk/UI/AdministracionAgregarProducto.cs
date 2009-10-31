@@ -18,7 +18,7 @@ namespace UI
         public AdministracionProductos()
         {
             InitializeComponent();
-            BS.DataSource = CC.CargarCategorias();
+            BS.DataSource = CC.CargarCategorias(true);
             cmbCategorias.DataSource = BS;
             String path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase).Substring(6);
             
@@ -67,7 +67,7 @@ namespace UI
             {
                 Control.ControlProductos CP = new Control.ControlProductos();
                 Control.ControlCategorias CC = new Control.ControlCategorias();
-                ArrayList AL = CC.CargarCategorias();
+                ArrayList AL = CC.CargarCategorias(true);
                 Categoria C = (Categoria)AL[cmbCategorias.SelectedIndex];
 
                 CP.AgregarProducto(C, txtCodigo.Text, pictureBox1.Image, txtNombre.Text, txtPrecio.Text, txtPrecioOferta.Text, txtStock.Text, txtStockComprometido.Text);
@@ -90,7 +90,7 @@ namespace UI
             try
             {
                 Control.ControlProductos CP = new Control.ControlProductos();
-                Categoria C = (Categoria)CC.CargarCategorias()[cmbCategorias.SelectedIndex];
+                Categoria C = (Categoria)CC.CargarCategorias(true)[cmbCategorias.SelectedIndex];
                 CP.ModificarProducto(C, txtCodigo.Text, pictureBox1.Image, txtNombre.Text, txtPrecio.Text, txtPrecioOferta.Text, txtStock.Text, txtStockComprometido.Text);
                 this.DialogResult = DialogResult.OK;
                 this.Close();

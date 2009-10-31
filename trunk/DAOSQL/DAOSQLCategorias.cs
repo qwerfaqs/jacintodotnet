@@ -127,7 +127,6 @@ namespace DAOSQL
             //{
                 if (ListaCategorias!=null)
                 {
-                    
                     foreach (Categoria c in ListaCategorias)
                     {
                         if (c.Codigo == i)

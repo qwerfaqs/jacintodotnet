@@ -102,7 +102,7 @@ namespace UI
 
         private void Principal___Usuario_Load(object sender, EventArgs e)
         {
-            Categorias = CC.CargarCategorias();
+            Categorias = CC.CargarCategorias(false);
             Categorias.Add("Todas");
             cmb_categorias.DataSource = Categorias;
             cmb_categorias.Text = "Todas";

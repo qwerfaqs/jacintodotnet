@@ -44,7 +44,7 @@ namespace UI
         {
             listBox_listado.Items.Clear();
             
-            this.ListaCategorias=ControlCategorias.CargarCategorias();
+            this.ListaCategorias=ControlCategorias.CargarCategorias(false);
             foreach (Categoria c in this.ListaCategorias) 
             {
                 listBox_listado.Items.Add(Convert.ToString(c.Codigo)+" "+c.Nombre);

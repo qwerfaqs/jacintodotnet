@@ -45,6 +45,7 @@ namespace UI
 
             Control.ControlProductos ControladoraP = new Control.ControlProductos();
             Categoria oCategoria = new Categoria();
+            CC.CargarCategorias(false);
             oCategoria = CC.ObtenerUnaCategoria(1);
             ControladoraP.AgregarProducto(oCategoria, "1", Image.FromFile(path + "\\Imagenes\\PortSalut.jpg"), "Queso Port Salut Sancor", "100", "90", "4", "1");
             ControladoraP.AgregarProducto(oCategoria, "2", Image.FromFile(path + "\\Imagenes\\LecheConHierro.jpg"), "Leche con Hierro La Serenisima", "3", "2", "4", "1");

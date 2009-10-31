@@ -66,7 +66,7 @@ namespace Control
             return Repetido;
         }
 
-        public ArrayList CargarCategorias()
+        public ArrayList CargarCategorias(bool DesdeMemoria)
         {
             //ArrayList Categorias = miDao.leer_categorias();
             ArrayList Categorias = MiDAOSQL.leer_categorias(false);
