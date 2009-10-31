@@ -11,6 +11,7 @@ namespace Control
     {
         private DAO.CategoriaDAO miDao;
         private DAOSQL.DAOSQLCategorias MiDAOSQL;
+
         public ControlCategorias()
         {
             this.miDao = DAO.CategoriaDAO.Instancia();
@@ -73,6 +74,7 @@ namespace Control
         public void EliminarCategoria(int Id)
         {
            miDao.EliminarCategoriaId(Id);
+           //MiDAOSQL.EliminarCategoriaId(Id);
         }
         
         public void ModificarCategoria(int Id,string nombre)
