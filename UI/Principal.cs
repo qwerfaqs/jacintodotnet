@@ -30,18 +30,18 @@ namespace UI
         public void CargaInicial()
         {
             String path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase).Substring(6);
-            Control.ControlCategorias Controladora = new Control.ControlCategorias();
+            //Control.ControlCategorias Controladora = new Control.ControlCategorias();
             Control.ControlUsuarios ControladoraU = new Control.ControlUsuarios();
 
             ControladoraU.AgregarNuevoUsuario("Gustavo Emmanuel", "Sanchez Figueroa", "emmanuel.sf@hotmail.com", "admin", "1234", "14 de Julio 2182 6º B", 32395520,2);
             ControladoraU.AgregarNuevoUsuario("Gustavo Emmanuel", "Sanchez Figueroa", "emmanuel.sf@hotmail.com", "user", "1234", "14 de Julio 2182 6º B", 32395520, 1);
             
 
-            Controladora.InsertarCategoria("Lacteos", "1");
-            Controladora.InsertarCategoria("Fiambres", "2");
-            Controladora.InsertarCategoria("Limpieza", "3");
-            Controladora.InsertarCategoria("Supercongelados", "4");
-            Controladora.InsertarCategoria("Panaderia", "5");
+            //Controladora.InsertarCategoria("Lacteos", "1");
+            //Controladora.InsertarCategoria("Fiambres", "2");
+            //Controladora.InsertarCategoria("Limpieza", "3");
+            //Controladora.InsertarCategoria("Supercongelados", "4");
+            //Controladora.InsertarCategoria("Panaderia", "5");
 
             Control.ControlProductos ControladoraP = new Control.ControlProductos();
             ControladoraP.AgregarProducto(1, "1",Image.FromFile(path +"\\Imagenes\\PortSalut.jpg"), "Queso Port Salut Sancor", "100", "90", "4", "1");
