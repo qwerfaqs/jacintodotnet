@@ -177,5 +177,10 @@ namespace UI
             dataGridView2.DataSource = BS;
         }
 
+        private void btn_EliminarCarrito_Click(object sender, EventArgs e)
+        {
+            //Carromato.EliminarDelCarrito(dataGridView.CurrentRow.Cells["Codigo"].value);
+        }
+
     }
 }
