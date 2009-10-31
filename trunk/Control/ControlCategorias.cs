@@ -21,8 +21,8 @@ namespace Control
         public bool InsertarCategoria(string nombre, string c)
         {
             bool Exito = false;
-            //try
-            //{
+            try
+            {
                 int codigo = Convert.ToInt32(c);
                 if (nombre != "" && c != "" && (CodigoRepetido(codigo) == false) && (NombreRepetido(nombre) == false))
                 {
@@ -30,11 +30,11 @@ namespace Control
                     this.MiDAOSQL.agregar_categoria(new Categoria(codigo, nombre));
                     Exito = true;
                 }
-            //}
-            //catch
-            //{
-            //    throw new ArgumentException("Error Insertando Categoria");
-            //}
+            }
+            catch
+            {
+                throw new ArgumentException("Error Insertando Categoria");
+            }
             return Exito;
         }
 

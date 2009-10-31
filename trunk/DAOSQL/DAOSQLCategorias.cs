@@ -129,8 +129,8 @@ namespace DAOSQL
         public Categoria UnObjetoCategoria(int i)
         {
             Categoria Nueva = new Categoria();
-            //try
-            //{
+            try
+            {
                 if (ListaCategorias!=null)
                 {
                     foreach (Categoria c in ListaCategorias)
@@ -147,11 +147,11 @@ namespace DAOSQL
                 
                 return Nueva;
                 
-            //}
-            //catch 
-            //{
-            //    throw new ArgumentException("Error Buscando Categoria [DAOSQL]") ;
-            //}         
+            }
+            catch 
+            {
+                throw new ArgumentException("Error Buscando Categoria [DAOSQL]") ;
+            }         
         }
     }
 }
