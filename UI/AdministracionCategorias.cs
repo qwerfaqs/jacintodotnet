@@ -69,16 +69,24 @@ namespace UI
 
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
-            Categoria c = (Categoria)this.ListaCategorias[listBox_listado.SelectedIndex];
-            if (ControlProductos.ExistenProductosConEstaCategoria(c.Codigo))
+            try
             {
-                MessageBox.Show("Antes de Borrar la Categoria asegurese de borrar los productos de dicha categoria", "Atencion!");
+                Categoria c = (Categoria)this.ListaCategorias[listBox_listado.SelectedIndex];
+                if (ControlProductos.ExistenProductosConEstaCategoria(c.Codigo))
+                {
+                    MessageBox.Show("Antes de Borrar la Categoria asegurese de borrar los productos de dicha categoria", "Atencion!");
+                }
+                else
+                {
+
+                    ControlCategorias.EliminarCategoria(c.Codigo);
+                    this.ActualizarLista(false);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                
-                ControlCategorias.EliminarCategoria(c.Codigo);
-                this.ActualizarLista(false);
+
+                MessageBox.Show(ex.Message);
             }
         }
 
