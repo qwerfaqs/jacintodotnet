@@ -9,12 +9,12 @@ namespace Control
 {
     public class ControlCategorias
     {
-        private DAO.CategoriaDAO miDao;
+        //private DAO.CategoriaDAO miDao;
         private DAOSQL.DAOSQLCategorias MiDAOSQL;
 
         public ControlCategorias()
         {
-            this.miDao = DAO.CategoriaDAO.Instancia();
+            //this.miDao = DAO.CategoriaDAO.Instancia();
             this.MiDAOSQL = new DAOSQL.DAOSQLCategorias();
         }
         
@@ -41,7 +41,7 @@ namespace Control
         public bool CodigoRepetido(int codigo)
         {
             bool Repetido = false;
-            foreach (Categoria c in this.miDao.leer_categorias())
+            foreach (Categoria c in this.MiDAOSQL.leer_categorias(false))
             {
                 if (c.Codigo == codigo)
                 {
@@ -55,7 +55,7 @@ namespace Control
         public bool NombreRepetido(string nombre)
         {
             bool Repetido = false;
-            foreach (Categoria c in this.miDao.leer_categorias())
+            foreach (Categoria c in this.MiDAOSQL.leer_categorias(false))
             {
                 if (c.Nombre == nombre)
                 {
@@ -69,7 +69,7 @@ namespace Control
         public ArrayList CargarCategorias()
         {
             //ArrayList Categorias = miDao.leer_categorias();
-            ArrayList Categorias = MiDAOSQL.leer_categorias();
+            ArrayList Categorias = MiDAOSQL.leer_categorias(false);
             return Categorias;
         }
         
@@ -81,7 +81,13 @@ namespace Control
         
         public void ModificarCategoria(int Id,string nombre)
         {
-            miDao.ModificarCategoria(Id, nombre);
+            //miDao.ModificarCategoria(Id, nombre);
+        }
+
+        public Categoria ObtenerUnaCategoria(int Id)
+        {
+            Categoria C=MiDAOSQL.UnObjetoCategoria(Id);
+            return C;
         }
     }
 }
