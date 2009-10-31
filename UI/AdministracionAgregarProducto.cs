@@ -1,11 +1,11 @@
 using System;
-using System.Collections.Generic;
+using System.Collections;//.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-
+using BO;
 namespace UI
 {
     public partial class AdministracionProductos : Form
@@ -66,7 +66,11 @@ namespace UI
             try
             {
                 Control.ControlProductos CP = new Control.ControlProductos();
-                CP.AgregarProducto((cmbCategorias.SelectedIndex + 1), txtCodigo.Text, pictureBox1.Image, txtNombre.Text, txtPrecio.Text, txtPrecioOferta.Text, txtStock.Text, txtStockComprometido.Text);
+                Control.ControlCategorias CC = new Control.ControlCategorias();
+                ArrayList AL = CC.CargarCategorias();
+                Categoria C = (Categoria)AL[cmbCategorias.SelectedIndex];
+
+                CP.AgregarProducto(C.Codigo, txtCodigo.Text, pictureBox1.Image, txtNombre.Text, txtPrecio.Text, txtPrecioOferta.Text, txtStock.Text, txtStockComprometido.Text);
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }

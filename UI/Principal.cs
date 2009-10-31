@@ -56,7 +56,7 @@ namespace UI
             ControladoraP.AgregarProducto(4, "10", Image.FromFile(path + "\\Imagenes\\Pizza.jpg"), "Pizza Especial Sivarita", "22", "19", "4", "1");
             ControladoraP.AgregarProducto(5, "11", Image.FromFile(path + "\\Imagenes\\PanLactal.jpg"), "Pan Lactal Fargo", "5", "4", "4", "1");
             ControladoraP.AgregarProducto(5, "12", Image.FromFile(path + "\\Imagenes\\PanHamburguesas.jpg"), "Pan Hamburguesas Bimbo", "5", "4", "6", "1");
-        
+            
             
         }
 

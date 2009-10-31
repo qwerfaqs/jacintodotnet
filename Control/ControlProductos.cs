@@ -20,7 +20,6 @@ namespace Control
         {
             bool Exito = false;
             
-
             try
             {
                 float Precio = Convert.ToInt64(precio);
