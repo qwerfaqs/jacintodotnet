@@ -49,8 +49,7 @@ namespace UI
                     dataGridView1.Columns["StockComprometido"].Width = 80;
                     dataGridView1.Columns["StockComprometido"].HeaderText = "Stock Comprometido";
                     dataGridView1.Columns["FotoPath"].Width = 135;
-                    dataGridView1.Columns["FotoPath"].HeaderText = "Imagen";
-                    
+                    dataGridView1.Columns["FotoPath"].HeaderText = "Imagen";                    
                 }
             }
             catch (Exception ex)
@@ -63,7 +62,7 @@ namespace UI
 
         private void AdministracionABMProductos_Load(object sender, EventArgs e)
         {
-            this.ListaCategorias = CC.CargarCategorias();
+            this.ListaCategorias = CC.CargarCategorias(true);
             //this.ListaCategorias.Add("Todas");
             cmb_categorias.DataSource = this.ListaCategorias;
             

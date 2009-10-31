@@ -18,9 +18,14 @@ namespace DAO
         {
             ListaCategorias.Add(cat);
         }
-        public ArrayList leer_categorias()
+        public ArrayList leer_categorias(bool Siempretrue)
         {
-            return ListaCategorias;
+            if (Siempretrue)
+            {
+                return ListaCategorias;
+            }
+            else
+                return null;
         }     
         public void EliminarCategoriaId(int IdCategoria)
         {
