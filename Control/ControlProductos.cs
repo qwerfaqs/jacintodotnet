@@ -43,11 +43,11 @@ namespace Control
         }
         public bool ExistenProductosConEstaCategoria(int categoria)
         {
-            Control.ControlCategorias CC = new ControlCategorias();
+            Control.ControlProductos CP = new ControlProductos();
             bool r = false;
-            foreach (Categoria c in CC.CargarCategorias())
+            foreach (Producto c in CP.CargarProductos(-1))
             {
-                if (c.Codigo == categoria)
+                if (c.Cat.Codigo == categoria)
                 {
                     r = true;
                     break;
