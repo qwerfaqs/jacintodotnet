@@ -86,6 +86,7 @@
             this.btn_EliminarCarrito.TabIndex = 3;
             this.btn_EliminarCarrito.Text = "Eliminar del Carrito";
             this.btn_EliminarCarrito.UseVisualStyleBackColor = true;
+            this.btn_EliminarCarrito.Click += new System.EventHandler(this.btn_EliminarCarrito_Click);
             // 
             // button1
             // 
