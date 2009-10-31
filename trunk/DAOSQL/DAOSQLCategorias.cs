@@ -114,18 +114,30 @@ namespace DAOSQL
                 throw new ArgumentException("Error Agregando Categoria");
             }
         }
-        
-        //public void ModificarCategoria(int codigo, string nombre)
-        //{
-        //    foreach (Categoria c in ListaCategorias)
-        //    {
-        //        if (c.Codigo == codigo)
-        //        {
-        //            c.Nombre = nombre;
-        //            break;
-        //        }
-        //    }
-        //}
+
+        public void ModificarCategoria(int codigo, string nombre)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection("Data Source=EMMANUEL2; Initial Catalog=Carrito; Integrated Security=True"))
+                {
+                    conn.Open();
+
+                    using (SqlCommand command = new SqlCommand())
+                    {
+                        command.CommandText = "UPDATE Categorias Set Nombre='"+nombre+"' where Id="+codigo+"";
+                        command.Connection = conn;
+
+                        command.ExecuteNonQuery();
+                    }
+                    conn.Close();
+                }
+            }
+            catch
+            {
+                throw new ArgumentException("Error Modificando Categoria");
+            }
+        }
         public Categoria UnObjetoCategoria(int i)
         {
             Categoria Nueva = new Categoria();
