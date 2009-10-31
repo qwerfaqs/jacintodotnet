@@ -14,7 +14,6 @@ namespace DAO
         {
             return _instancia;
         }
-
         public void agregar_categoria(Categoria cat)
         {
             ListaCategorias.Add(cat);

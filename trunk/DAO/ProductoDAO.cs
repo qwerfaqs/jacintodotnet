@@ -21,8 +21,7 @@ namespace DAO
         {
             ListaProductos.Add(product);
         }
-       
-
+        
         public void modificar_producto(Producto product)
         {
             foreach (Producto p in ListaProductos)

@@ -77,7 +77,6 @@ namespace UI
             
                 Categoria c = (Categoria)this.ListaCategorias[cmb_categorias.SelectedIndex];
                 RecargarGrilla(c.Codigo);
-            
            
         }
 
