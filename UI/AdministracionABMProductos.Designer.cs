@@ -55,7 +55,7 @@
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Location = new System.Drawing.Point(7, 1);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(808, 532);
+            this.groupBox1.Size = new System.Drawing.Size(753, 532);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Lista";
@@ -75,7 +75,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 487);
+            this.label1.Location = new System.Drawing.Point(-25, 487);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(107, 13);
             this.label1.TabIndex = 5;
@@ -85,7 +85,7 @@
             // 
             this.cmb_categorias.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.cmb_categorias.FormattingEnabled = true;
-            this.cmb_categorias.Location = new System.Drawing.Point(116, 482);
+            this.cmb_categorias.Location = new System.Drawing.Point(88, 482);
             this.cmb_categorias.Name = "cmb_categorias";
             this.cmb_categorias.Size = new System.Drawing.Size(143, 21);
             this.cmb_categorias.TabIndex = 4;
@@ -94,7 +94,7 @@
             // btnBorrar
             // 
             this.btnBorrar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnBorrar.Location = new System.Drawing.Point(651, 482);
+            this.btnBorrar.Location = new System.Drawing.Point(598, 482);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(70, 23);
             this.btnBorrar.TabIndex = 3;
@@ -105,7 +105,7 @@
             // BTNModif
             // 
             this.BTNModif.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.BTNModif.Location = new System.Drawing.Point(724, 482);
+            this.BTNModif.Location = new System.Drawing.Point(671, 482);
             this.BTNModif.Name = "BTNModif";
             this.BTNModif.Size = new System.Drawing.Size(70, 23);
             this.BTNModif.TabIndex = 2;
@@ -116,7 +116,7 @@
             // btnAgregar
             // 
             this.btnAgregar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnAgregar.Location = new System.Drawing.Point(578, 482);
+            this.btnAgregar.Location = new System.Drawing.Point(525, 482);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(70, 23);
             this.btnAgregar.TabIndex = 1;
@@ -136,14 +136,14 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 60;
-            this.dataGridView1.Size = new System.Drawing.Size(773, 457);
+            this.dataGridView1.Size = new System.Drawing.Size(723, 457);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick_1);
             // 
             // button4
             // 
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Location = new System.Drawing.Point(735, 539);
+            this.button4.Location = new System.Drawing.Point(685, 539);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 4;
@@ -155,7 +155,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(822, 570);
+            this.ClientSize = new System.Drawing.Size(772, 570);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.groupBox1);
             this.Name = "AdministracionABMProductos";
