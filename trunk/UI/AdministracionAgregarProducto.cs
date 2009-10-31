@@ -90,7 +90,8 @@ namespace UI
             try
             {
                 Control.ControlProductos CP = new Control.ControlProductos();
-                CP.ModificarProducto((cmbCategorias.SelectedIndex +1), txtCodigo.Text, pictureBox1.Image, txtNombre.Text, txtPrecio.Text, txtPrecioOferta.Text, txtStock.Text, txtStockComprometido.Text);
+                Categoria C = (Categoria)CC.CargarCategorias()[cmbCategorias.SelectedIndex];
+                CP.ModificarProducto(C, txtCodigo.Text, pictureBox1.Image, txtNombre.Text, txtPrecio.Text, txtPrecioOferta.Text, txtStock.Text, txtStockComprometido.Text);
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }

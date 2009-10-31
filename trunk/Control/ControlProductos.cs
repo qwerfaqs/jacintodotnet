@@ -11,9 +11,12 @@ namespace Control
         {
             this.miDao = DAO.Productodao.Instancia();
             this.CatDao = DAO.CategoriaDAO.Instancia();
+            this.CatDaoSQL = DAOSQL.DAOSQLCategorias.Instancia();
         }
         private DAO.Productodao miDao;
         private DAO.CategoriaDAO CatDao;
+        private DAOSQL.DAOSQLCategorias CatDaoSQL;
+        
         Control.ControlCategorias ControlCategorias = new ControlCategorias();
 
         public bool AgregarProducto(Categoria categoria, string codigo,Image Foto, string nombre, string precio, string preciooferta, string stockactual, string stockcomprometido)
@@ -52,7 +55,7 @@ namespace Control
             }
             return r;
         }
-        public bool ModificarProducto(int categoria, string codigo, Image Foto, string nombre, string precio, string preciooferta, string stockactual, string stockcomprometido)
+        public bool ModificarProducto(Categoria categoria, string codigo, Image Foto, string nombre, string precio, string preciooferta, string stockactual, string stockcomprometido)
         {
             bool Exito = false;
 
@@ -61,7 +64,7 @@ namespace Control
             {
                 float Precio = Convert.ToInt64(precio);
                 int Codigo = Convert.ToInt32(codigo);
-                Categoria Categoria = this.CatDao.UnObjetoCategoria(categoria);
+                Categoria Categoria = categoria;
                 int StockActual = Convert.ToInt32(stockactual);
                 int StockComprometido = Convert.ToInt32(stockcomprometido);
                 float PrecioOferta = Convert.ToInt64(preciooferta);

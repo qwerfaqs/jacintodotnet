@@ -9,9 +9,9 @@ namespace DAOSQL
     {
         private static ArrayList ListaCategorias;
         private static readonly DAOSQLCategorias _instancia = new DAOSQLCategorias();
-        public static DAOSQLCategorias Instancia
+        public static DAOSQLCategorias Instancia ()
         {
-            get { return _instancia; }   
+             return _instancia;    
         }
 
         public void EliminarCategoriaId(int catID)
