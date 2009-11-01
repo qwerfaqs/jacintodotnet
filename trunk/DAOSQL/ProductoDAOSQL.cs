@@ -19,8 +19,8 @@ namespace DAOSQL
 
         public void modificar_producto(Producto product)
         {
-            //try
-            //{
+            try
+            {
                 using (SqlConnection conn = new SqlConnection("Data Source=EMMANUEL2; Initial Catalog=Carrito; Integrated Security=True"))
                 {
                     conn.Open();
@@ -40,11 +40,11 @@ namespace DAOSQL
                     }
                     conn.Close();
                 }
-            //}
-            //catch
-            //{
-            //    throw new ArgumentException("Error Modificando Producto");
-            //}
+            }
+            catch
+            {
+                throw new ArgumentException("Error Modificando Producto");
+            }
         }
 
         public void Agregar_producto(Producto product)
