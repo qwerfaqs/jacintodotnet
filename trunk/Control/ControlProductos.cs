@@ -102,7 +102,8 @@ namespace Control
         public BO.Producto DameProducto(int IdProducto)
         {
             //return this.miDao.leer_unproducto(IdProducto);
-            return null;//borrar
+            return this.ProductoDaoSQL.leer_unproducto(IdProducto);
+
         }
         
         public void BorrarProducto(int id)

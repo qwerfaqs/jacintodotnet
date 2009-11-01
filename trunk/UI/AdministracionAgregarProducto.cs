@@ -12,7 +12,7 @@ namespace UI
     {
         BindingSource BS = new BindingSource();
         Control.ControlCategorias CC = new Control.ControlCategorias();
-        
+        Control.ControlProductos CP = new Control.ControlProductos();
         
         DataGridViewRow prodamodif;
         public AdministracionProductos()
@@ -27,13 +27,13 @@ namespace UI
         }
         public AdministracionProductos(DataGridViewRow prodamodif): this()
         {
-
-            
+            Producto P = CP.DameProducto((int)prodamodif.Cells["Codigo"].Value);
+            cmbCategorias.Text = P.Cat.Nombre;
             this.prodamodif = prodamodif;
             txtCodigo.Text = prodamodif.Cells["Codigo"].Value.ToString();
             txtNombre.Text = prodamodif.Cells["Nombre"].Value.ToString();
             txtPrecio.Text = prodamodif.Cells["Precio"].Value.ToString();
-            cmbCategorias.SelectedText = prodamodif.Cells["Cat"].Value.ToString();
+            //cmbCategorias.SelectedText = prodamodif.Cells["Cat"].Value.ToString();
             txtStock.Text = prodamodif.Cells["StockActual"].Value.ToString();
             txtPrecioOferta.Text = prodamodif.Cells["PrecioOferta"].Value.ToString();
             txtStockComprometido.Text = prodamodif.Cells["StockComprometido"].Value.ToString();
@@ -41,8 +41,6 @@ namespace UI
             btnGuardar.Visible = false;
             button1.Visible = true;
             txtCodigo.Enabled = false;
-
-            
         }
 
         private void AdministracionProductos_Load(object sender, EventArgs e)
