@@ -25,9 +25,9 @@ namespace Control
         public bool AgregarProducto(Categoria categoria, string codigo,Image Foto, string nombre, string precio, string preciooferta, string stockactual, string stockcomprometido)
         {
             bool Exito = false;
-            
-            //try
-            //{
+
+            try
+            {
                 int Precio = Convert.ToInt32(precio);
                 int Codigo = Convert.ToInt32(codigo);
                 Categoria Categoria = categoria;
@@ -38,11 +38,11 @@ namespace Control
                 //this.miDao.agregar_producto(Producto);
                 this.ProductoDaoSQL.Agregar_producto(Producto);
                 Exito = true;                
-            //}
-            //catch
-            //{
-            //    throw new ArgumentException("Error Cargando Producto");
-            //}
+            }
+            catch
+            {
+                throw new ArgumentException("Error Cargando Producto");
+            }
             return Exito;
         }
         public bool ExistenProductosConEstaCategoria(int categoria)
@@ -75,6 +75,7 @@ namespace Control
 
             //    Producto Producto = new Producto(Codigo, nombre, Precio, Categoria, PrecioOferta, Foto, StockActual, StockComprometido);
             //    this.miDao.modificar_producto(Producto);
+                
             //    Exito = true;
             //}
             //catch
@@ -98,26 +99,7 @@ namespace Control
                 
             return Lista;
         }
-        //public ArrayList CargarProductos(int indice)
-        //{
-        //    ArrayList Lista;
-        //    try
-        //    {
-        //        if ((indice == -1) || (indice+1 > ControlCategorias.CargarCategorias().Count))
-        //        {
-        //            Lista = this.miDao.leer_productos();
-        //        }
-        //        else
-        //        {
-        //            Lista = this.miDao.leer_productos(Convert.ToInt32(ControlCategorias.IdCategoria(indice)));
-        //        }
-        //        return Lista;
-        //    }
-        //    catch 
-        //    {
-        //        throw new Exception("Error Cargando Productos");
-        //    }
-        //}
+
         public BO.Producto DameProducto(int IdProducto)
         {
             //return this.miDao.leer_unproducto(IdProducto);
@@ -126,16 +108,18 @@ namespace Control
         
         public void BorrarProducto(int id)
         {
-            //try
-            //{
-            //    Producto p = this.miDao.leer_unproducto(id);
-            //    this.miDao.EliminarProducto(p);
-            //}
-            //catch
-            //{
-                
-            //    throw new Exception("Error Borrando Producto. Producto no se ha boorado");
-            //}
+            try
+            {
+                //Producto p = this.miDao.leer_unproducto(id);
+                //this.miDao.EliminarProducto(p);
+                Producto p = this.ProductoDaoSQL.leer_unproducto(id);
+                this.ProductoDaoSQL.EliminarProducto(p);
+            }
+            catch
+            {
+
+                throw new Exception("Error Borrando Producto. Producto no se ha boorado");
+            }
         }
     }
 }
