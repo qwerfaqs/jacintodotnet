@@ -7,7 +7,7 @@ namespace DAOSQL
 {
     public sealed class DAOSQLCategorias
     {
-        private static ArrayList ListaCategorias;
+        private ArrayList ListaCategorias = new ArrayList();
         private static readonly DAOSQLCategorias _instancia = new DAOSQLCategorias();
         public static DAOSQLCategorias Instancia ()
         {
@@ -59,7 +59,7 @@ namespace DAOSQL
             {
                 try
                 {
-                    ListaCategorias = new ArrayList();
+                    //ListaCategorias = new ArrayList();
                     ListaCategorias.Clear();
                     using (SqlConnection conn = new SqlConnection("Data Source=EMMANUEL2; Initial Catalog=Carrito; Integrated Security=True"))
                     {
