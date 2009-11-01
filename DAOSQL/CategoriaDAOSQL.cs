@@ -57,8 +57,8 @@ namespace DAOSQL
             }            	        
 		    else
             {
-                //try
-                //{
+                try
+                {
                     ListaCategorias = new ArrayList();
                     ListaCategorias.Clear();
                     using (SqlConnection conn = new SqlConnection("Data Source=EMMANUEL2; Initial Catalog=Carrito; Integrated Security=True"))
@@ -83,11 +83,11 @@ namespace DAOSQL
                         conn.Close();
                         
                     }
-                //}
-                //catch 
-                //{
-                //    throw new ArgumentException("Error Cargando Categorias");
-                //}
+                }
+                catch 
+                {
+                    throw new ArgumentException("Error Cargando Categorias");
+                }
                 return ListaCategorias;
             }
         }

@@ -53,22 +53,22 @@ namespace DAOSQL
             string string1 = "", string2 = "";
             if (Categoria1 > -1)
             {
-                string1 = "where Categoria=";
+                string1 = "where Categoria = ";
                 string2 = Convert.ToString(Categoria1);
             }
 
-            try
-            {
+            //try
+            //{
                 ListaProductos = new ArrayList();
                 ListaProductos.Clear();
-                using (SqlConnection conn = new SqlConnection("Data Source=EMMANUEL2; Initial Catalog=Carrito; Integrated Security=True " + string1 + string2))
+                using (SqlConnection conn = new SqlConnection("Data Source=EMMANUEL2; Initial Catalog=Carrito; Integrated Security=True " ))
                 {
                     Producto producto = null;
                     conn.Open();
 
                     using (SqlCommand command = new SqlCommand())
                     {//                                0    1        2      3         4        5     6          7
-                        command.CommandText = "SELECT Id,Nombre,Categoria,Precio,PrecioOferta,Foto,Stock,StockComprometido FROM Productos";
+                        command.CommandText = "SELECT Id,Nombre,Categoria,Precio,PrecioOferta,Foto,Stock,StockComprometido FROM Productos " + string1 + string2;
                         command.Connection = conn;
 
                         SqlDataReader rdr = command.ExecuteReader();
@@ -101,11 +101,11 @@ namespace DAOSQL
                     conn.Close();
 
                 }
-            }
-            catch
-            {
-                throw new ArgumentException("Error Cargando Categorias");
-            }
+            //}
+            //catch
+            //{
+            //    throw new ArgumentException("Error Cargando Productos");
+            //}
             return ListaProductos;
         }
 
