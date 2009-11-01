@@ -11,12 +11,12 @@ namespace Control
     {
         public ControlProductos()
         {
-            this.miDao = DAO.Productodao.Instancia();
+            //this.miDao = DAO.Productodao.Instancia();
             this.CatDao = DAO.CategoriaDAO.Instancia();
             this.CatDaoSQL = DAOSQL.DAOSQLCategorias.Instancia();
             this.ProductoDaoSQL = DAOSQL.ProductoDAOSQL.Instancia();
         }
-        private DAO.Productodao miDao;
+        //private DAO.Productodao miDao;
         private DAO.CategoriaDAO CatDao;
         private DAOSQL.DAOSQLCategorias CatDaoSQL;
         private DAOSQL.ProductoDAOSQL ProductoDaoSQL;
@@ -28,14 +28,14 @@ namespace Control
             
             //try
             //{
-                float Precio = Convert.ToInt64(precio);
+                int Precio = Convert.ToInt32(precio);
                 int Codigo = Convert.ToInt32(codigo);
                 Categoria Categoria = categoria;
                 int StockActual = Convert.ToInt32(stockactual);
                 int StockComprometido = Convert.ToInt32(stockcomprometido);
-                float PrecioOferta = Convert.ToInt64(preciooferta);
+                int PrecioOferta = Convert.ToInt32(preciooferta);
                 Producto Producto = new Producto(Codigo, nombre, Precio, Categoria, PrecioOferta, Foto, StockActual, StockComprometido);
-                this.miDao.agregar_producto(Producto);
+                //this.miDao.agregar_producto(Producto);
                 this.ProductoDaoSQL.Agregar_producto(Producto);
                 Exito = true;                
             //}
@@ -64,23 +64,23 @@ namespace Control
             bool Exito = false;
 
 
-            try
-            {
-                float Precio = Convert.ToInt64(precio);
-                int Codigo = Convert.ToInt32(codigo);
-                Categoria Categoria = categoria;
-                int StockActual = Convert.ToInt32(stockactual);
-                int StockComprometido = Convert.ToInt32(stockcomprometido);
-                float PrecioOferta = Convert.ToInt64(preciooferta);
+            //try
+            //{
+            //    int Precio = Convert.ToInt32(precio);
+            //    int Codigo = Convert.ToInt32(codigo);
+            //    Categoria Categoria = categoria;
+            //    int StockActual = Convert.ToInt32(stockactual);
+            //    int StockComprometido = Convert.ToInt32(stockcomprometido);
+            //    int PrecioOferta = Convert.ToInt32(preciooferta);
 
-                Producto Producto = new Producto(Codigo, nombre, Precio, Categoria, PrecioOferta, Foto, StockActual, StockComprometido);
-                this.miDao.modificar_producto(Producto);
-                Exito = true;
-            }
-            catch
-            {
-                throw new ArgumentException("Error Cargando Producto");
-            }
+            //    Producto Producto = new Producto(Codigo, nombre, Precio, Categoria, PrecioOferta, Foto, StockActual, StockComprometido);
+            //    this.miDao.modificar_producto(Producto);
+            //    Exito = true;
+            //}
+            //catch
+            //{
+            //    throw new ArgumentException("Error Cargando Producto");
+            //}
             return Exito;
         }
 
@@ -89,10 +89,12 @@ namespace Control
             ArrayList Lista;
             if (Categoria > 0)
             {
-                Lista = miDao.leer_productos(Categoria);
+                Lista = ProductoDaoSQL.leer_productos(Categoria);
+                //Lista = miDao.leer_productos(Categoria);
             }
             else
-                Lista = miDao.leer_productos();
+                //Lista = miDao.leer_productos();
+                Lista = ProductoDaoSQL.leer_productos(-1);
                 
             return Lista;
         }
@@ -118,22 +120,22 @@ namespace Control
         //}
         public BO.Producto DameProducto(int IdProducto)
         {
-            return this.miDao.leer_unproducto(IdProducto);
-
+            //return this.miDao.leer_unproducto(IdProducto);
+            return null;//borrar
         }
         
         public void BorrarProducto(int id)
         {
-            try
-            {
-                Producto p = this.miDao.leer_unproducto(id);
-                this.miDao.EliminarProducto(p);
-            }
-            catch
-            {
+            //try
+            //{
+            //    Producto p = this.miDao.leer_unproducto(id);
+            //    this.miDao.EliminarProducto(p);
+            //}
+            //catch
+            //{
                 
-                throw new Exception("Error Borrando Producto. Producto no se ha boorado");
-            }
+            //    throw new Exception("Error Borrando Producto. Producto no se ha boorado");
+            //}
         }
     }
 }

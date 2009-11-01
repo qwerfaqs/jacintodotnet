@@ -70,7 +70,7 @@ namespace BO
                 _UnProducto.Nombre = value;
             }
         }
-        public float PrecioUnitario
+        public int PrecioUnitario
         {
             get
             {
