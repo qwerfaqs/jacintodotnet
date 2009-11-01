@@ -17,6 +17,36 @@ namespace DAOSQL
             return _instancia;
         }
 
+        public void modificar_producto(Producto product)
+        {
+            //try
+            //{
+                using (SqlConnection conn = new SqlConnection("Data Source=EMMANUEL2; Initial Catalog=Carrito; Integrated Security=True"))
+                {
+                    conn.Open();
+
+                    using (SqlCommand command = new SqlCommand())
+                    {
+                        command.CommandText = "UPDATE Productos SET Id=" + product.Codigo + ",Nombre ='" + product.Nombre + "',Categoria=" + product.Cat.Codigo + ",Precio=" + product.Precio + ",PrecioOferta=" + product.PrecioOferta + ",Foto= @img,Stock= " + product.StockActual + ",StockComprometido=" + product.StockComprometido + " where Id="+product.Codigo;
+                        command.Parameters.Add("@img", SqlDbType.Image);
+                        command.Connection = conn;
+                        if (product.FotoPath != null)
+                        {
+                            MemoryStream ms = new MemoryStream();
+                            product.FotoPath.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                            command.Parameters["@img"].Value = ms.GetBuffer();
+                        }
+                        command.ExecuteNonQuery();
+                    }
+                    conn.Close();
+                }
+            //}
+            //catch
+            //{
+            //    throw new ArgumentException("Error Modificando Producto");
+            //}
+        }
+
         public void Agregar_producto(Producto product)
         {
             try
@@ -57,8 +87,8 @@ namespace DAOSQL
                 string2 = Convert.ToString(Categoria1);
             }
 
-            //try
-            //{
+            try
+            {
                 ListaProductos = new ArrayList();
                 ListaProductos.Clear();
                 using (SqlConnection conn = new SqlConnection("Data Source=EMMANUEL2; Initial Catalog=Carrito; Integrated Security=True " ))
@@ -101,11 +131,11 @@ namespace DAOSQL
                     conn.Close();
 
                 }
-            //}
-            //catch
-            //{
-            //    throw new ArgumentException("Error Cargando Productos");
-            //}
+            }
+            catch
+            {
+                throw new ArgumentException("Error Cargando Productos");
+            }
             return ListaProductos;
         }
 

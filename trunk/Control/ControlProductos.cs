@@ -62,25 +62,24 @@ namespace Control
         public bool ModificarProducto(Categoria categoria, string codigo, Image Foto, string nombre, string precio, string preciooferta, string stockactual, string stockcomprometido)
         {
             bool Exito = false;
-
-
+            
             //try
             //{
-            //    int Precio = Convert.ToInt32(precio);
-            //    int Codigo = Convert.ToInt32(codigo);
-            //    Categoria Categoria = categoria;
-            //    int StockActual = Convert.ToInt32(stockactual);
-            //    int StockComprometido = Convert.ToInt32(stockcomprometido);
-            //    int PrecioOferta = Convert.ToInt32(preciooferta);
+                int Precio = Convert.ToInt32(precio);
+                int Codigo = Convert.ToInt32(codigo);
+                Categoria Categoria = categoria;
+                int StockActual = Convert.ToInt32(stockactual);
+                int StockComprometido = Convert.ToInt32(stockcomprometido);
+                int PrecioOferta = Convert.ToInt32(preciooferta);
 
-            //    Producto Producto = new Producto(Codigo, nombre, Precio, Categoria, PrecioOferta, Foto, StockActual, StockComprometido);
-            //    this.miDao.modificar_producto(Producto);
-                
-            //    Exito = true;
+                Producto Producto1 = new Producto(Codigo, nombre, Precio, Categoria, PrecioOferta, Foto, StockActual, StockComprometido);
+                //this.miDao.modificar_producto(Producto);
+                this.ProductoDaoSQL.modificar_producto(Producto1);
+                Exito = true;
             //}
             //catch
             //{
-            //    throw new ArgumentException("Error Cargando Producto");
+            //    throw new ArgumentException("Error Modificando Producto");
             //}
             return Exito;
         }
