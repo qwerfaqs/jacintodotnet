@@ -14,6 +14,7 @@ namespace DAOSQL
              return _instancia;    
         }
 
+        
         public void EliminarCategoriaId(int catID)
         {
             try
@@ -35,6 +36,7 @@ namespace DAOSQL
             catch
             { }
         }
+       
         public ArrayList leer_categorias(bool DesdeMemoria)
         {
             //DesdeMemoria = false;
@@ -138,6 +140,7 @@ namespace DAOSQL
                 throw new ArgumentException("Error Modificando Categoria");
             }
         }
+        
         public Categoria UnObjetoCategoria(int i)
         {
             Categoria Nueva = new Categoria();

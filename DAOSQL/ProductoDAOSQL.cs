@@ -2,9 +2,13 @@ using System;
 using System.Collections;//.Generic;
 using System.Text;
 using BO;
+using System.Data.SqlClient;
+using System.Data;
+using System.IO;
+using System.Drawing;
 namespace DAOSQL
 {
-    class ProductoDAOSQL
+    public sealed class ProductoDAOSQL
     {
         private static ArrayList ListaProductos;
         private static readonly ProductoDAOSQL _instancia = new ProductoDAOSQL();
@@ -12,29 +16,37 @@ namespace DAOSQL
         {
             return _instancia;
         }
-
-        public void agregar_producto(Producto product)
+       
+        public void Agregar_producto(Producto product)
         {
-            ListaProductos.Add(product);
-        }
+            try
+            {
+                using (SqlConnection conn = new SqlConnection("Data Source=EMMANUEL2; Initial Catalog=Carrito; Integrated Security=True"))
+                {
+                    conn.Open();
 
-        //public void modificar_producto(Producto product)
-        //{
-        //    foreach (Producto p in ListaProductos)
-        //    {
-        //        if (p.Codigo == product.Codigo)
-        //        {
-        //            p.Nombre = product.Nombre;
-        //            p.Cat = product.Cat;
-        //            p.FotoPath = product.FotoPath;
-        //            p.Precio = product.Precio;
-        //            p.PrecioOferta = product.PrecioOferta;
-        //            p.StockActual = product.StockActual;
-        //            p.StockComprometido = product.StockComprometido;
-        //            break;
-        //        }
-        //    }
-        //}
+                    using (SqlCommand command = new SqlCommand())
+                    {
+                        command.CommandText = "INSERT INTO Productos (Id,Nombre,Categoria,Precio,PrecioOferta,Foto,Stock,StockComprometido) values (" + product.Codigo + ",'" + product.Nombre + "'," + product.Cat.Codigo + "," + product.Precio + "," + product.PrecioOferta + ",@img," + product.StockActual + "," + product.StockComprometido + ")";
+                        command.Parameters.Add("@img", SqlDbType.Image);
+                        command.Connection = conn;
+                        if (product.FotoPath != null)
+                        {
+                            MemoryStream ms = new MemoryStream();
+                            product.FotoPath.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                            command.Parameters["@img"].Value = ms.GetBuffer();
+                        }
+
+                        command.ExecuteNonQuery();
+                    }
+                    conn.Close();
+                }
+            }
+            catch
+            {
+                throw new ArgumentException("Error Agregando Producto");
+            }
+        }
 
         //public void EliminarProducto(Producto UnProducto)
         //{

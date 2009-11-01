@@ -3,6 +3,8 @@ using System.Collections;//.Generic;
 using System.Text;
 using BO;
 using System.Drawing;
+using System.Data.SqlClient;
+
 namespace Control
 {
     public class ControlProductos
@@ -12,19 +14,20 @@ namespace Control
             this.miDao = DAO.Productodao.Instancia();
             this.CatDao = DAO.CategoriaDAO.Instancia();
             this.CatDaoSQL = DAOSQL.DAOSQLCategorias.Instancia();
+            this.ProductoDaoSQL = DAOSQL.ProductoDAOSQL.Instancia();
         }
         private DAO.Productodao miDao;
         private DAO.CategoriaDAO CatDao;
         private DAOSQL.DAOSQLCategorias CatDaoSQL;
-        
+        private DAOSQL.ProductoDAOSQL ProductoDaoSQL;
         Control.ControlCategorias ControlCategorias = new ControlCategorias();
 
         public bool AgregarProducto(Categoria categoria, string codigo,Image Foto, string nombre, string precio, string preciooferta, string stockactual, string stockcomprometido)
         {
             bool Exito = false;
             
-            try
-            {
+            //try
+            //{
                 float Precio = Convert.ToInt64(precio);
                 int Codigo = Convert.ToInt32(codigo);
                 Categoria Categoria = categoria;
@@ -33,12 +36,13 @@ namespace Control
                 float PrecioOferta = Convert.ToInt64(preciooferta);
                 Producto Producto = new Producto(Codigo, nombre, Precio, Categoria, PrecioOferta, Foto, StockActual, StockComprometido);
                 this.miDao.agregar_producto(Producto);
+                this.ProductoDaoSQL.Agregar_producto(Producto);
                 Exito = true;                
-            }
-            catch
-            {
-                throw new ArgumentException("Error Cargando Producto");
-            }
+            //}
+            //catch
+            //{
+            //    throw new ArgumentException("Error Cargando Producto");
+            //}
             return Exito;
         }
         public bool ExistenProductosConEstaCategoria(int categoria)
