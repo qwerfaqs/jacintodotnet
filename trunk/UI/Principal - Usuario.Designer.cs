@@ -73,7 +73,7 @@
             this.dataGridView2.Location = new System.Drawing.Point(23, 374);
             this.dataGridView2.MultiSelect = false;
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(1029, 339);
+            this.dataGridView2.Size = new System.Drawing.Size(1029, 228);
             this.dataGridView2.TabIndex = 2;
             this.dataGridView2.DragEnter += new System.Windows.Forms.DragEventHandler(this.dataGridView2_DragEnter);
             this.dataGridView2.DragDrop += new System.Windows.Forms.DragEventHandler(this.dataGridView2_DragDrop);
@@ -101,7 +101,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1117, 846);
+            this.ClientSize = new System.Drawing.Size(1117, 622);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_EliminarCarrito);
             this.Controls.Add(this.dataGridView2);
