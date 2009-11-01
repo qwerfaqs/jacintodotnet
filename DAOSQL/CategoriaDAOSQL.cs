@@ -9,9 +9,8 @@ namespace DAOSQL
     {
         
         
-        private ArrayList ListaCategorias = new ArrayList();
+        private static ArrayList ListaCategorias = new ArrayList();
         
-        //private static ArrayList ListaCategorias;
         private static readonly DAOSQLCategorias _instancia = new DAOSQLCategorias();
         public static DAOSQLCategorias Instancia ()
         {
