@@ -78,6 +78,7 @@
             // 
             // button4
             // 
+            this.button4.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button4.Location = new System.Drawing.Point(143, 78);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
@@ -146,8 +147,10 @@
             // 
             // Principal
             // 
+            this.AcceptButton = this.button3;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.button4;
             this.ClientSize = new System.Drawing.Size(300, 127);
             this.Controls.Add(this.groupBox1);
             this.Name = "Principal";
