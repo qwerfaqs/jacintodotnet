@@ -24,7 +24,7 @@ namespace DAOSQL
             return _instancia;
         }
         private SqlConnection _conn = new SqlConnection();
-        private IList<CadenaDeConexiones> _connectionStrings;
+        private IList<CadenaDeConexiones> _connectionStrings = new List<CadenaDeConexiones>();
         private String path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase).Substring(6);
         public SqlConnection Conexion()
         {
@@ -82,6 +82,8 @@ namespace DAOSQL
         }
         public void Cerrrar()
         {
+            _conn.Close();
+
         }
         }
 }
