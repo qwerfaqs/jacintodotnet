@@ -120,7 +120,6 @@ namespace DAOSQL
                     using (SqlCommand command = new SqlCommand())
                     {
                         command.CommandText = "DELETE Productos WHERE Id=" + UnProducto.Codigo + "";
-                        command.Parameters.Add("@img", SqlDbType.Image);
                         command.Connection = conn;
 
                         command.ExecuteNonQuery();
@@ -134,7 +133,6 @@ namespace DAOSQL
             }
         }
 
-
         public Producto leer_unproducto(int codigoproducto)
         {
             Producto producto = null;
@@ -145,14 +143,14 @@ namespace DAOSQL
 
             try
             {
-                using (SqlConnection conn = new SqlConnection("Data Source=EMMANUEL2; Initial Catalog=Carrito; Integrated Security=True " + string1 + string2))
+                using (SqlConnection conn = new SqlConnection("Data Source=EMMANUEL2; Initial Catalog=Carrito; Integrated Security=True" ))
                 {
 
                     conn.Open();
 
                     using (SqlCommand command = new SqlCommand())
                     {//                                0    1        2      3         4        5     6          7
-                        command.CommandText = "SELECT Id,Nombre,Categoria,Precio,PrecioOferta,Foto,Stock,StockComprometido FROM Productos";
+                        command.CommandText = "SELECT Id,Nombre,Categoria,Precio,PrecioOferta,Foto,Stock,StockComprometido FROM Productos " + string1 + string2;
                         command.Connection = conn;
 
                         SqlDataReader rdr = command.ExecuteReader();
