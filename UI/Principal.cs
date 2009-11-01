@@ -112,8 +112,8 @@ namespace UI
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
-            Principal___Administracion PA = new Principal___Administracion();
-            PA.Show();
+            //Principal___Administracion PA = new Principal___Administracion();
+            //PA.Show();
         }
 
         private void label3_Click(object sender, EventArgs e)
