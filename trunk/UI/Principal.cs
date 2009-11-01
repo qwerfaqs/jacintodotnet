@@ -134,5 +134,11 @@ namespace UI
             button4.Show();
             button3.Show();
         }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Principal___Administracion PA = new Principal___Administracion();
+            PA.Show();
+        }
     }
 }
