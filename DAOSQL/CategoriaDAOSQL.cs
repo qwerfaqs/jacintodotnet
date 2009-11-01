@@ -39,7 +39,6 @@ namespace DAOSQL
        
         public ArrayList leer_categorias(bool DesdeMemoria)
         {
-            //DesdeMemoria = false;
             if (DesdeMemoria)
             {
                 try
