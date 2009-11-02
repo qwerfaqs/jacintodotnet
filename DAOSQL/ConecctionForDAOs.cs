@@ -19,16 +19,61 @@ namespace DAOSQL
     public sealed class ConecctionServer
     {
         private static readonly ConecctionServer _instancia = new ConecctionServer();
+        private SqlConnection _conn = new SqlConnection();
+        private IList<CadenaDeConexiones> _connectionStrings = new List<CadenaDeConexiones>();
+        private String path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase).Substring(6);
+        private bool conecto = false;
+        private ConecctionServer()
+        {
+            bool conecto = false;
+            CargarListaStrings();
+            foreach (CadenaDeConexiones cs in _connectionStrings)
+            {
+                
+                try
+                {
+
+                    if (this.conecto == true && _conn.State == System.Data.ConnectionState.Open)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        _conn.ConnectionString = cs.cadena;
+                        _conn.Open();
+                    }
+                }
+                catch
+                {
+                    this.conecto = false;
+                }
+                finally
+                {
+                    if (_conn.State == System.Data.ConnectionState.Open)
+                    {
+                        this.conecto = true;
+                        _conn.Close();
+
+                    }
+                    else
+                    {
+                        this.conecto = false;
+                    }
+
+
+                }
+            }
+            
+        }
         public static ConecctionServer Instancia()
         {
             return _instancia;
         }
-        private SqlConnection _conn = new SqlConnection();
-        private IList<CadenaDeConexiones> _connectionStrings = new List<CadenaDeConexiones>();
-        private String path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase).Substring(6);
         public SqlConnection Conexion()
         {
-           return _conn;           
+            //this.CargarListaStrings();
+            return _conn;
+           
         }
         public void CargarListaStrings()
         {
@@ -45,42 +90,11 @@ namespace DAOSQL
         }
         public void Abrir()
         {
+            //this.CargarListaStrings();
+            _conn.Open();
             
-            foreach (CadenaDeConexiones cs in _connectionStrings)
-            {
-                bool conecto = false;
-                try
-                {
-
-                    if (conecto == true && _conn.State == System.Data.ConnectionState.Open)
-                    {
-                        break;
-                    }
-                    else
-                    {
-                        _conn.ConnectionString = cs.cadena;
-                        _conn.Open();
-                    }
-                }
-                catch
-                {
-                    conecto = false;
-                }
-                finally
-                {
-                    if (_conn.State == System.Data.ConnectionState.Open)
-                    {
-                        conecto = true;
-                    }
-                    else
-                    {
-                        conecto = false;
-                    }
-                    
-                }
-            }
         }
-        public void Cerrrar()
+        public void Cerrar()
         {
             _conn.Close();
 
