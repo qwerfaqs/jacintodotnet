@@ -23,45 +23,47 @@ namespace DAOSQL
         private IList<CadenaDeConexiones> _connectionStrings = new List<CadenaDeConexiones>();
         private String path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase).Substring(6);
         private bool conecto = false;
+        private string cadena = null;
+
         private ConecctionServer()
         {
-            bool conecto = false;
+            
             CargarListaStrings();
             foreach (CadenaDeConexiones cs in _connectionStrings)
             {
-                
-                try
-                {
 
-                    if (this.conecto == true && _conn.State == System.Data.ConnectionState.Open)
-                    {
-                        break;
-                    }
-                    else
+
+                if (this.conecto == false)
+                {
+                    try
                     {
                         _conn.ConnectionString = cs.cadena;
                         _conn.Open();
+                        if (_conn.State == System.Data.ConnectionState.Open)
+                        {
+                            this.conecto = true;
+                            this.cadena = cs.cadena;
+                            _conn.Close();
+                        }
+                        
+                        
                     }
-                }
-                catch
-                {
-                    this.conecto = false;
-                }
-                finally
-                {
-                    if (_conn.State == System.Data.ConnectionState.Open)
+
+                    catch (Exception exp)
                     {
-                        this.conecto = true;
-                        _conn.Close();
-
+                        
                     }
-                    else
-                    {
-                        this.conecto = false;
-                    }
-
-
                 }
+                else
+                {
+                    break;
+                }
+                
+                
+            }
+            if (this.conecto == false)
+            {
+                throw new Exception("NO SE PUDO CONECTAR CON NINGUN CONECCTRION STRING revise conexiones.xml o consulte a su administrador de base de datos");
             }
             
         }
@@ -91,11 +93,20 @@ namespace DAOSQL
         public void Abrir()
         {
             //this.CargarListaStrings();
-            _conn.Open();
+            if (conecto = false)
+            {
+                throw new Exception("NO SE PUDO CONECTAR CON NINGUN CONECCTRION STRING revise conexiones.xml o consulte a su administrador de base de datos");
+            }
+                _conn.Open();
+            
             
         }
         public void Cerrar()
         {
+            if (conecto = false)
+            {
+                throw new Exception("NO SE PUDO CONECTAR CON NINGUN CONECCTRION STRING revise conexiones.xml o consulte a su administrador de base de datos");
+            }
             _conn.Close();
 
         }
