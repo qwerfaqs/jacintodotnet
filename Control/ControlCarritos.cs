@@ -13,8 +13,9 @@ namespace Control
     public class ControlCarritos
     {
         private Carrito unCarrito = new Carrito(DateTime.Now);
-        private DAO.Productodao DAOProductos = DAO.Productodao.Instancia();
-        private DAO.OrdenCompraDAO DAOOrdenCompra = DAO.OrdenCompraDAO.Instancia();
+        //private DAO.Productodao DAOProductos = DAO.Productodao.Instancia();
+        //private DAO.OrdenCompraDAO DAOOrdenCompra = DAO.OrdenCompraDAO.Instancia();
+        private DAOSQL.ProductoDAOSQL DAOProductos = DAOSQL.ProductoDAOSQL.Instancia();
         public ControlCarritos()
         {
         }
@@ -28,7 +29,18 @@ namespace Control
             return this.unCarrito.ver_lista();
 
         }
-        
+        public void EliminarItem(int Codigo)
+        {
+            this.unCarrito.eliminar_item(this.DAOProductos.leer_unproducto(Codigo));
+        }
+        public void ModificarItem(int Codigo,int cant)
+        {
+            this.unCarrito.modificar_item(this.DAOProductos.leer_unproducto(Codigo),cant);
+        }
+        public void VaciarCarrito()
+        {
+            this.unCarrito.VaciarCarrito();
+        }
         
     }
     

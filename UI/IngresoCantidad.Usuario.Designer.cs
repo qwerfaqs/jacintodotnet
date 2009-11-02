@@ -32,6 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.btn_modificar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -71,6 +72,16 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // btn_modificar
+            // 
+            this.btn_modificar.Location = new System.Drawing.Point(12, 40);
+            this.btn_modificar.Name = "btn_modificar";
+            this.btn_modificar.Size = new System.Drawing.Size(66, 23);
+            this.btn_modificar.TabIndex = 4;
+            this.btn_modificar.Text = "Aceptar";
+            this.btn_modificar.UseVisualStyleBackColor = true;
+            this.btn_modificar.Click += new System.EventHandler(this.btn_modificar_Click);
+            // 
             // IngresoCantidad
             // 
             this.AcceptButton = this.button1;
@@ -79,6 +90,7 @@
             this.CancelButton = this.button2;
             this.ClientSize = new System.Drawing.Size(184, 75);
             this.ControlBox = false;
+            this.Controls.Add(this.btn_modificar);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
@@ -104,5 +116,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_modificar;
     }
 }
