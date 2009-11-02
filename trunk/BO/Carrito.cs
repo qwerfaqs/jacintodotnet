@@ -94,7 +94,11 @@ namespace BO
       //    }
       //    else { return false; }
       //}
-      
+      /// <summary>
+      /// Busca un PRoducto en el carrito
+      /// </summary>
+      /// <param name="Prod"></param>
+      /// <returns> un valor boleano si encontro o no</returns>
       public  bool buscarProducto(Producto Prod)//busca un producto en el carrito
         {
             bool Encontrado = false ;
@@ -116,7 +120,7 @@ namespace BO
           {
               if (it.Codigo == prod.Codigo)
               {
-                  it.Cantidad = it.Cantidad + cant;
+                  it.Cantidad = cant;
                   modificado = true;
               }
           }
@@ -124,16 +128,19 @@ namespace BO
       }
       public void eliminar_item(Producto prod)
       {
-          bool Encontrado = false;
-          int x = 0;
-          while ((x < _ListaItems.Count) && (!Encontrado))
+          bool _existia = false;
+          foreach (Item it in _ListaItems)
           {
-              Item aux = (Item)_ListaItems[x];
-              if (aux.Codigo == prod.Codigo)
+              if (it.Codigo == prod.Codigo)
               {
-                  _ListaItems.RemoveAt(x);
+                  _ListaItems.Remove(it);
+                  _existia = true;
+                  break;
               }
-              x++;
+          }
+          if (_existia == false)
+          {
+              //manejo de error no existia
           }
       }
       public void VaciarCarrito()
