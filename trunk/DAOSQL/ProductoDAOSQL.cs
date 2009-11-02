@@ -12,6 +12,7 @@ namespace DAOSQL
     {
         private static ArrayList ListaProductos;
         private static readonly ProductoDAOSQL _instancia = new ProductoDAOSQL();
+        private ConecctionServer connServ = ConecctionServer.Instancia();
         public static ProductoDAOSQL Instancia()
         {
             return _instancia;
@@ -21,15 +22,14 @@ namespace DAOSQL
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection("Data Source=QWERFAQS\\SQLEXPRESS; Initial Catalog=Carrito; Integrated Security = True"))
-                {
-                    conn.Open();
+                
+                    connServ.Abrir();
 
                     using (SqlCommand command = new SqlCommand())
                     {
                         command.CommandText = "UPDATE Productos SET Id=" + product.Codigo + ",Nombre ='" + product.Nombre + "',Categoria=" + product.Cat.Codigo + ",Precio=" + product.Precio + ",PrecioOferta=" + product.PrecioOferta + ",Foto= @img,Stock= " + product.StockActual + ",StockComprometido=" + product.StockComprometido + " where Id="+product.Codigo;
                         command.Parameters.Add("@img", SqlDbType.Image);
-                        command.Connection = conn;
+                        command.Connection = connServ.Conexion();
                         if (product.FotoPath != null)
                         {
                             MemoryStream ms = new MemoryStream();
@@ -38,8 +38,8 @@ namespace DAOSQL
                         }
                         command.ExecuteNonQuery();
                     }
-                    conn.Close();
-                }
+                    connServ.Cerrar();
+                
             }
             catch
             {
@@ -51,15 +51,13 @@ namespace DAOSQL
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection("Data Source=QWERFAQS\\SQLEXPRESS; Initial Catalog=Carrito; Integrated Security = True"))
-                {
-                    conn.Open();
+                    connServ.Abrir();
 
                     using (SqlCommand command = new SqlCommand())
                     {
                         command.CommandText = "INSERT INTO Productos (Id,Nombre,Categoria,Precio,PrecioOferta,Foto,Stock,StockComprometido) values (" + product.Codigo + ",'" + product.Nombre + "'," + product.Cat.Codigo + "," + product.Precio + "," + product.PrecioOferta + ",@img," + product.StockActual + "," + product.StockComprometido + ")";
                         command.Parameters.Add("@img", SqlDbType.Image);
-                        command.Connection = conn;
+                        command.Connection = connServ.Conexion();
                         if (product.FotoPath != null)
                         {
                             MemoryStream ms = new MemoryStream();
@@ -69,8 +67,8 @@ namespace DAOSQL
 
                         command.ExecuteNonQuery();
                     }
-                    conn.Close();
-                }
+                    connServ.Cerrar();
+                
             }
             catch
             {
@@ -91,15 +89,14 @@ namespace DAOSQL
             {
                 ListaProductos = new ArrayList();
                 ListaProductos.Clear();
-                using (SqlConnection conn = new SqlConnection("Data Source=QWERFAQS\\SQLEXPRESS; Initial Catalog=Carrito; Integrated Security = True"))
-                {
+                
                     Producto producto = null;
-                    conn.Open();
+                    connServ.Abrir();
 
                     using (SqlCommand command = new SqlCommand())
                     {//                                0    1        2      3         4        5     6          7
                         command.CommandText = "SELECT Id,Nombre,Categoria,Precio,PrecioOferta,Foto,Stock,StockComprometido FROM Productos " + string1 + string2;
-                        command.Connection = conn;
+                        command.Connection = connServ.Conexion();
 
                         SqlDataReader rdr = command.ExecuteReader();
 
@@ -128,9 +125,9 @@ namespace DAOSQL
                             ListaProductos.Add(producto);
                         }
                     }
-                    conn.Close();
+                    connServ.Cerrar();
 
-                }
+                
             }
             catch
             {
@@ -143,19 +140,18 @@ namespace DAOSQL
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection("Data Source=QWERFAQS\\SQLEXPRESS; Initial Catalog=Carrito; Integrated Security = True"))
-                {
-                    conn.Open();
+                
+                    connServ.Abrir();
 
                     using (SqlCommand command = new SqlCommand())
                     {
                         command.CommandText = "DELETE Productos WHERE Id=" + UnProducto.Codigo + "";
-                        command.Connection = conn;
+                        command.Connection = connServ.Conexion();
 
                         command.ExecuteNonQuery();
                     }
-                    conn.Close();
-                }
+                    connServ.Cerrar();
+                
             }
             catch
             {
@@ -173,15 +169,14 @@ namespace DAOSQL
 
             try
             {
-                using (SqlConnection conn = new SqlConnection("Data Source=QWERFAQS\\SQLEXPRESS; Initial Catalog=Carrito; Integrated Security = True"))
-                {
+                
 
-                    conn.Open();
+                    connServ.Abrir();
 
                     using (SqlCommand command = new SqlCommand())
                     {//                                0    1        2      3         4        5     6          7
                         command.CommandText = "SELECT Id,Nombre,Categoria,Precio,PrecioOferta,Foto,Stock,StockComprometido FROM Productos " + string1 + string2;
-                        command.Connection = conn;
+                        command.Connection = connServ.Conexion();
 
                         SqlDataReader rdr = command.ExecuteReader();
 
@@ -209,9 +204,9 @@ namespace DAOSQL
                             producto = new Producto(Id, Nombre, Precio, Cat, PrecioOferta, Foto, Stock, StockComprometido);
                         }
                     }
-                    conn.Close();
+                    connServ.Cerrar();
 
-                }
+                
             }
             catch
             {
