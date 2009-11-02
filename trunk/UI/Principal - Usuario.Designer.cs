@@ -32,7 +32,8 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.btn_EliminarCarrito = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.bt_modificarItem = new System.Windows.Forms.Button();
+            this.btn_vaciarCarrito = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -40,7 +41,7 @@
             // cmb_categorias
             // 
             this.cmb_categorias.FormattingEnabled = true;
-            this.cmb_categorias.Location = new System.Drawing.Point(45, 751);
+            this.cmb_categorias.Location = new System.Drawing.Point(23, 677);
             this.cmb_categorias.Name = "cmb_categorias";
             this.cmb_categorias.Size = new System.Drawing.Size(269, 21);
             this.cmb_categorias.TabIndex = 0;
@@ -70,17 +71,17 @@
             this.dataGridView2.AllowUserToResizeColumns = false;
             this.dataGridView2.AllowUserToResizeRows = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(23, 374);
+            this.dataGridView2.Location = new System.Drawing.Point(23, 388);
             this.dataGridView2.MultiSelect = false;
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(1029, 228);
+            this.dataGridView2.Size = new System.Drawing.Size(1029, 272);
             this.dataGridView2.TabIndex = 2;
             this.dataGridView2.DragEnter += new System.Windows.Forms.DragEventHandler(this.dataGridView2_DragEnter);
             this.dataGridView2.DragDrop += new System.Windows.Forms.DragEventHandler(this.dataGridView2_DragDrop);
             // 
             // btn_EliminarCarrito
             // 
-            this.btn_EliminarCarrito.Location = new System.Drawing.Point(449, 749);
+            this.btn_EliminarCarrito.Location = new System.Drawing.Point(463, 677);
             this.btn_EliminarCarrito.Name = "btn_EliminarCarrito";
             this.btn_EliminarCarrito.Size = new System.Drawing.Size(103, 23);
             this.btn_EliminarCarrito.TabIndex = 3;
@@ -88,21 +89,33 @@
             this.btn_EliminarCarrito.UseVisualStyleBackColor = true;
             this.btn_EliminarCarrito.Click += new System.EventHandler(this.btn_EliminarCarrito_Click);
             // 
-            // button1
+            // bt_modificarItem
             // 
-            this.button1.Location = new System.Drawing.Point(606, 749);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.bt_modificarItem.Location = new System.Drawing.Point(572, 677);
+            this.bt_modificarItem.Name = "bt_modificarItem";
+            this.bt_modificarItem.Size = new System.Drawing.Size(103, 23);
+            this.bt_modificarItem.TabIndex = 4;
+            this.bt_modificarItem.Text = "Modificar Item";
+            this.bt_modificarItem.UseVisualStyleBackColor = true;
+            this.bt_modificarItem.Click += new System.EventHandler(this.bt_modificarItem_Click);
+            // 
+            // btn_vaciarCarrito
+            // 
+            this.btn_vaciarCarrito.Location = new System.Drawing.Point(690, 677);
+            this.btn_vaciarCarrito.Name = "btn_vaciarCarrito";
+            this.btn_vaciarCarrito.Size = new System.Drawing.Size(103, 23);
+            this.btn_vaciarCarrito.TabIndex = 5;
+            this.btn_vaciarCarrito.Text = "Vaciar Carrito";
+            this.btn_vaciarCarrito.UseVisualStyleBackColor = true;
+            this.btn_vaciarCarrito.Click += new System.EventHandler(this.btn_vaciarCarrito_Click);
             // 
             // Principal___Usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1117, 622);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1117, 710);
+            this.Controls.Add(this.btn_vaciarCarrito);
+            this.Controls.Add(this.bt_modificarItem);
             this.Controls.Add(this.btn_EliminarCarrito);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
@@ -122,6 +135,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Button btn_EliminarCarrito;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button bt_modificarItem;
+        private System.Windows.Forms.Button btn_vaciarCarrito;
     }
 }

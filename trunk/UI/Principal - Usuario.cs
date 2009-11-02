@@ -80,13 +80,14 @@ namespace UI
                     dataGridView2.Columns["Codigo"].Width = 50;
                     
                     dataGridView2.Columns["Nombre"].Width = 200;
-                    dataGridView2.Columns["PrecioOferta"].Width = 60;
-                    dataGridView2.Columns["PrecioOferta"].HeaderText = "Precio de Oferta";
-                    dataGridView2.Columns["Precio"].Width = 60;
-                    dataGridView2.Columns["StockComprometido"].Width = 80;
-                    dataGridView2.Columns["StockComprometido"].HeaderText = "Stock Comprometido";
-                    dataGridView2.Columns["FotoPath"].Width = 135;
-                    dataGridView2.Columns["FotoPath"].HeaderText = "Imagen";
+                    dataGridView2.Columns["Total"].Width = 60;
+                    dataGridView2.Columns["Total"].HeaderText = "Subtotal";
+                    dataGridView2.Columns["PrecioUnitario"].Width = 60;
+                    dataGridView2.Columns["PrecioUnitario"].HeaderText = "Precio Unitario";
+                    dataGridView2.Columns["Cantidad"].Width = 80;
+                    dataGridView2.Columns["Cantidad"].HeaderText = "Cantidad";
+                    //dataGridView2.Columns["FotoPath"].Width = 135;
+                    //dataGridView2.Columns["FotoPath"].HeaderText = "Imagen";
 
 
 
@@ -179,7 +180,25 @@ namespace UI
 
         private void btn_EliminarCarrito_Click(object sender, EventArgs e)
         {
-            //Carromato.EliminarDelCarrito(dataGridView.CurrentRow.Cells["Codigo"].value);
+            Carromato.EliminarItem(Convert.ToInt16(dataGridView2.CurrentRow.Cells["Codigo"].Value));
+        }
+
+        private void bt_modificarItem_Click(object sender, EventArgs e)
+        {
+            int codigo = int.Parse(dataGridView2.CurrentRow.Cells["Codigo"].Value.ToString());
+            int cantidad = int.Parse(dataGridView2.CurrentRow.Cells["Cantidad"].Value.ToString());
+            IngresoCantidad form_cantidad = new IngresoCantidad(cantidad);
+            form_cantidad.ShowDialog();
+            if (form_cantidad.DialogResult == DialogResult.OK)
+            {
+                Carromato.ModificarItem(codigo, form_cantidad.Cantidad);
+            }
+
+        }
+
+        private void btn_vaciarCarrito_Click(object sender, EventArgs e)
+        {
+            Carromato.VaciarCarrito();
         }
 
     }

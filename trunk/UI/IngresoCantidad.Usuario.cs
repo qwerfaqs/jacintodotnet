@@ -10,11 +10,21 @@ namespace UI
 {
     public partial class IngresoCantidad : Form
     {
+        public int Cantidad;
         public IngresoCantidad()
         {
             InitializeComponent();
+            button1.Visible = true;
+            btn_modificar.Visible = false;
         }
-        public int Cantidad;
+        public IngresoCantidad(int cant) : this()
+        {
+            this.textBox1.Text = cant.ToString();
+            button1.Visible = false;
+            btn_modificar.Visible = true;
+            this.Text = "MODIFICAR CANTIDAD DE ITEMS";
+        }
+        
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -26,6 +36,13 @@ namespace UI
         private void button2_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
+            this.Close();
+        }
+
+        private void btn_modificar_Click(object sender, EventArgs e)
+        {
+            this.Cantidad = Convert.ToInt16(this.textBox1.Text);
+            this.DialogResult = DialogResult.OK;
             this.Close();
         }
     }

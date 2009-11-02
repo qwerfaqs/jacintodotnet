@@ -136,6 +136,10 @@ namespace BO
               x++;
           }
       }
+      public void VaciarCarrito()
+      {
+          _ListaItems.Clear();
+      }
 
  
     }
