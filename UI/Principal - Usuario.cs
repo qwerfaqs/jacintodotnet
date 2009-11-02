@@ -180,7 +180,17 @@ namespace UI
 
         private void btn_EliminarCarrito_Click(object sender, EventArgs e)
         {
-            Carromato.EliminarItem(Convert.ToInt16(dataGridView2.CurrentRow.Cells["Codigo"].Value));
+            int codigo = int.Parse(dataGridView2.CurrentRow.Cells["Codigo"].Value.ToString());
+
+            try
+            {
+                Carromato.EliminarItem(codigo);
+                RecargarCarretilla();
+            }
+            catch(Exception exepcion)
+            {
+                MessageBox.Show("Error al Eliminar un Item : "+exepcion.Message);
+            }
         }
 
         private void bt_modificarItem_Click(object sender, EventArgs e)
@@ -192,6 +202,7 @@ namespace UI
             if (form_cantidad.DialogResult == DialogResult.OK)
             {
                 Carromato.ModificarItem(codigo, form_cantidad.Cantidad);
+                RecargarCarretilla();
             }
 
         }
@@ -199,6 +210,7 @@ namespace UI
         private void btn_vaciarCarrito_Click(object sender, EventArgs e)
         {
             Carromato.VaciarCarrito();
+            RecargarCarretilla();
         }
 
     }
