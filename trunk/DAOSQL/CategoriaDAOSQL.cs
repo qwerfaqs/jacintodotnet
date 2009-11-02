@@ -10,31 +10,30 @@ namespace DAOSQL
         
         
         private static ArrayList ListaCategorias = new ArrayList();
-        
+        private ConecctionServer connServ = ConecctionServer.Instancia();
         private static readonly DAOSQLCategorias _instancia = new DAOSQLCategorias();
         public static DAOSQLCategorias Instancia ()
         {
              return _instancia;    
         }
-
+       
         
         public void EliminarCategoriaId(int catID)
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection("Data Source=QWERFAQS\\SQLEXPRESS; Initial Catalog=Carrito; Integrated Security = True"))
-                {
-                    conn.Open();
+
+                connServ.Abrir();
 
                     using (SqlCommand command = new SqlCommand())
                     {
                         command.CommandText = "DELETE FROM Categorias WHERE Id=" + catID;
-                        command.Connection = conn;
+                        command.Connection = connServ.Conexion();
 
                         command.ExecuteNonQuery();
                     }
-                    conn.Close();
-                }
+                    connServ.Cerrar();
+                
             }
             catch
             { }
@@ -64,15 +63,14 @@ namespace DAOSQL
                 {
                     //ListaCategorias = new ArrayList();
                     ListaCategorias.Clear();
-                    using (SqlConnection conn = new SqlConnection("Data Source=QWERFAQS\\SQLEXPRESS; Initial Catalog=Carrito; Integrated Security = True"))
-                    {
+                    
                         Categoria cat = null;
-                        conn.Open();
+                        connServ.Abrir();
 
                         using (SqlCommand command = new SqlCommand())
                         {
                             command.CommandText = "SELECT Id,Nombre FROM Categorias";
-                            command.Connection = conn;
+                            command.Connection = connServ.Conexion();
 
                             SqlDataReader rdr = command.ExecuteReader();
 
@@ -83,13 +81,13 @@ namespace DAOSQL
                                 ListaCategorias.Add(cat);
                             }
                         }
-                        conn.Close();
+                        connServ.Cerrar();
                         
-                    }
+                    
                 }
-                catch 
+                catch (Exception e)
                 {
-                    throw new ArgumentException("Error Cargando Categorias");
+                    throw new ArgumentException("Error Cargando Categorias :"+e.Message);
                 }
                 return ListaCategorias;
             }
@@ -99,19 +97,18 @@ namespace DAOSQL
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection("Data Source=QWERFAQS\\SQLEXPRESS; Initial Catalog=Carrito; Integrated Security = True"))
-                {
-                    conn.Open();
+
+                connServ.Abrir();
 
                     using (SqlCommand command = new SqlCommand())
                     {
                         command.CommandText = "INSERT INTO Categorias (Id,Nombre) values ("+cat.Codigo+",'"+cat.Nombre+"')";
-                        command.Connection = conn;
+                        command.Connection = connServ.Conexion();
 
                         command.ExecuteNonQuery();
                     }
-                    conn.Close();
-                }
+                    connServ.Cerrar();
+                
             }
             catch
             {
@@ -123,19 +120,18 @@ namespace DAOSQL
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection("Data Source=QWERFAQS\\SQLEXPRESS; Initial Catalog=Carrito; Integrated Security = True"))
-                {
-                    conn.Open();
+                
+                    connServ.Abrir();
 
                     using (SqlCommand command = new SqlCommand())
                     {
                         command.CommandText = "UPDATE Categorias Set Nombre='"+nombre+"' where Id="+codigo+"";
-                        command.Connection = conn;
+                        command.Connection = connServ.Conexion();
 
                         command.ExecuteNonQuery();
                     }
-                    conn.Close();
-                }
+                    connServ.Cerrar();
+                
             }
             catch
             {
