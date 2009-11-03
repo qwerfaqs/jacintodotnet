@@ -92,6 +92,7 @@ namespace UI
 
 
                 }
+                label1.Text = Carromato.DameTotal();
             /*}
             catch (Exception ex)
             {
