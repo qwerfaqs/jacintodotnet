@@ -43,7 +43,12 @@ namespace Control
         {
             this.unCarrito.VaciarCarrito();
         }
-        
+
+
+        public string DameTotal()
+        {
+            return this.unCarrito.Subtotal.ToString();
+        }
     }
     
 }
