@@ -14,6 +14,10 @@ namespace DAO
         {
             return _instancia;
         }
+        private CategoriaDAO()
+        {
+            //Constructor Privado es necesario para respetar el singlenton
+        }
         public void agregar_categoria(Categoria cat)
         {
             ListaCategorias.Add(cat);

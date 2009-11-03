@@ -9,13 +9,12 @@ namespace Control
 {
     public class ControlCategorias
     {
-        //private DAO.CategoriaDAO miDao;
-        private DAOSQL.DAOSQLCategorias MiDAOSQL;
+        //private DAO.CategoriaDAO miDao = DAO.CategoriaDAO.Instancia();
+        private DAOSQL.DAOSQLCategorias miDao = DAOSQL.DAOSQLCategorias.Instancia();
 
         public ControlCategorias()
         {
-            //this.miDao = DAO.CategoriaDAO.Instancia();
-            this.MiDAOSQL = new DAOSQL.DAOSQLCategorias();
+            
         }
         
         public bool InsertarCategoria(string nombre, string c)
@@ -27,7 +26,7 @@ namespace Control
                 if (nombre != "" && c != "" && (CodigoRepetido(codigo) == false) && (NombreRepetido(nombre) == false))
                 {
                     //this.miDao.agregar_categoria(new Categoria(codigo, nombre));
-                    this.MiDAOSQL.agregar_categoria(new Categoria(codigo, nombre));
+                    this.miDao.agregar_categoria(new Categoria(codigo, nombre));
                     Exito = true;
                 }
             }
@@ -41,7 +40,7 @@ namespace Control
         public bool CodigoRepetido(int codigo)
         {
             bool Repetido = false;
-            foreach (Categoria c in this.MiDAOSQL.leer_categorias(false))
+            foreach (Categoria c in this.miDao.leer_categorias(false))
             {
                 if (c.Codigo == codigo)
                 {
@@ -55,7 +54,7 @@ namespace Control
         public bool NombreRepetido(string nombre)
         {
             bool Repetido = false;
-            foreach (Categoria c in this.MiDAOSQL.leer_categorias(false))
+            foreach (Categoria c in this.miDao.leer_categorias(false))
             {
                 if (c.Nombre == nombre)
                 {
@@ -69,24 +68,24 @@ namespace Control
         public ArrayList CargarCategorias(bool DesdeMemoria)
         {
             //ArrayList Categorias = miDao.leer_categorias();
-            ArrayList Categorias = MiDAOSQL.leer_categorias(false);
+            ArrayList Categorias = miDao.leer_categorias(false);
             return Categorias;
         }
         
         public void EliminarCategoria(int Id)
         {
            //miDao.EliminarCategoriaId(Id);
-           MiDAOSQL.EliminarCategoriaId(Id);
+           miDao.EliminarCategoriaId(Id);
         }
         
         public void ModificarCategoria(int Id,string nombre)
         {
-            MiDAOSQL.ModificarCategoria(Id, nombre);
+            miDao.ModificarCategoria(Id, nombre);
         }
 
         public Categoria ObtenerUnaCategoria(int Id)
         {
-            Categoria C=MiDAOSQL.UnObjetoCategoria(Id);
+            Categoria C=miDao.UnObjetoCategoria(Id);
             return C;
         }
     }
