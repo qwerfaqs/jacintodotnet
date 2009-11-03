@@ -213,5 +213,10 @@ namespace UI
             RecargarCarretilla();
         }
 
+        private void btn_generarorden_Click(object sender, EventArgs e)
+        {
+            //Carromato.GenerarOrden();
+        }
+
     }
 }

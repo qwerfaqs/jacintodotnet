@@ -9,18 +9,15 @@ namespace Control
 {
     public class ControlProductos
     {
+        //private DAO.Productodao DaoProducto = DAO.Productodao.Instancia();
+        private DAOSQL.ProductoDAOSQL DaoProducto = DAOSQL.ProductoDAOSQL.Instancia();
+        Control.ControlCategorias ControlCategorias = new ControlCategorias();
+
         public ControlProductos()
         {
-            //this.miDao = DAO.Productodao.Instancia();
-            this.CatDao = DAO.CategoriaDAO.Instancia();
-            this.CatDaoSQL = DAOSQL.DAOSQLCategorias.Instancia();
-            this.ProductoDaoSQL = DAOSQL.ProductoDAOSQL.Instancia();
+            
         }
-        //private DAO.Productodao miDao;
-        private DAO.CategoriaDAO CatDao;
-        private DAOSQL.DAOSQLCategorias CatDaoSQL;
-        private DAOSQL.ProductoDAOSQL ProductoDaoSQL;
-        Control.ControlCategorias ControlCategorias = new ControlCategorias();
+        
 
         public bool AgregarProducto(Categoria categoria, string codigo,Image Foto, string nombre, string precio, string preciooferta, string stockactual, string stockcomprometido)
         {
@@ -36,7 +33,7 @@ namespace Control
                 int PrecioOferta = Convert.ToInt32(preciooferta);
                 Producto Producto = new Producto(Codigo, nombre, Precio, Categoria, PrecioOferta, Foto, StockActual, StockComprometido);
                 //this.miDao.agregar_producto(Producto);
-                this.ProductoDaoSQL.Agregar_producto(Producto);
+                this.DaoProducto.Agregar_producto(Producto);
                 Exito = true;                
             }
             catch
@@ -74,7 +71,7 @@ namespace Control
 
                 Producto Producto1 = new Producto(Codigo, nombre, Precio, Categoria, PrecioOferta, Foto, StockActual, StockComprometido);
                 //this.miDao.modificar_producto(Producto);
-                this.ProductoDaoSQL.modificar_producto(Producto1);
+                this.DaoProducto.modificar_producto(Producto1);
                 Exito = true;
             }
             catch
@@ -89,12 +86,12 @@ namespace Control
             ArrayList Lista;
             if (Categoria > 0)
             {
-                Lista = ProductoDaoSQL.leer_productos(Categoria);
+                Lista = DaoProducto.leer_productos(Categoria);
                 //Lista = miDao.leer_productos(Categoria);
             }
             else
                 //Lista = miDao.leer_productos();
-                Lista = ProductoDaoSQL.leer_productos(-1);
+                Lista = DaoProducto.leer_productos(-1);
                 
             return Lista;
         }
@@ -102,7 +99,7 @@ namespace Control
         public BO.Producto DameProducto(int IdProducto)
         {
             //return this.miDao.leer_unproducto(IdProducto);
-            return this.ProductoDaoSQL.leer_unproducto(IdProducto);
+            return this.DaoProducto.leer_unproducto(IdProducto);
 
         }
         
@@ -112,8 +109,8 @@ namespace Control
             {
                 //Producto p = this.miDao.leer_unproducto(id);
                 //this.miDao.EliminarProducto(p);
-                Producto p = this.ProductoDaoSQL.leer_unproducto(id);
-                this.ProductoDaoSQL.EliminarProducto(p);
+                Producto p = this.DaoProducto.leer_unproducto(id);
+                this.DaoProducto.EliminarProducto(p);
             }
             catch
             {

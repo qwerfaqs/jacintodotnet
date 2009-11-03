@@ -13,15 +13,17 @@ namespace Control
     public class ControlCarritos
     {
         private Carrito unCarrito = new Carrito(DateTime.Now);
-        //private DAO.Productodao DAOProductos = DAO.Productodao.Instancia();
+        //DAOS CON ARRAYLIST
+        //private DAO.Productodao DAO = DAO.Productodao.Instancia();
         //private DAO.OrdenCompraDAO DAOOrdenCompra = DAO.OrdenCompraDAO.Instancia();
-        private DAOSQL.ProductoDAOSQL DAOProductos = DAOSQL.ProductoDAOSQL.Instancia();
+        //DAOS CON SQL
+        private DAOSQL.ProductoDAOSQL DAO = DAOSQL.ProductoDAOSQL.Instancia();
         public ControlCarritos()
         {
         }
         public void AgregarItem(int idProducto, int cant)
         {
-            this.unCarrito.agregar_item(this.DAOProductos.leer_unproducto(idProducto), cant);
+            this.unCarrito.agregar_item(this.DAO.leer_unproducto(idProducto), cant);
         }
         public ArrayList CargarCarrito()
         {
@@ -31,11 +33,11 @@ namespace Control
         }
         public void EliminarItem(int Codigo)
         {
-            this.unCarrito.eliminar_item(this.DAOProductos.leer_unproducto(Codigo));
+            this.unCarrito.eliminar_item(this.DAO.leer_unproducto(Codigo));
         }
         public void ModificarItem(int Codigo,int cant)
         {
-            this.unCarrito.modificar_item(this.DAOProductos.leer_unproducto(Codigo),cant);
+            this.unCarrito.modificar_item(this.DAO.leer_unproducto(Codigo),cant);
         }
         public void VaciarCarrito()
         {

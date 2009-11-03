@@ -10,14 +10,17 @@ namespace DAOSQL
 {
     public sealed class ProductoDAOSQL
     {
-        private static ArrayList ListaProductos;
+        private ArrayList ListaProductos;
         private static readonly ProductoDAOSQL _instancia = new ProductoDAOSQL();
         private ConecctionServer connServ = ConecctionServer.Instancia();
         public static ProductoDAOSQL Instancia()
         {
             return _instancia;
         }
-
+        private ProductoDAOSQL()
+        {
+            //Constructor Privado es necesario para respetar el singlenton
+        }
         public void modificar_producto(Producto product)
         {
             try

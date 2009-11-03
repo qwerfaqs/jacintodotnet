@@ -34,6 +34,7 @@
             this.btn_EliminarCarrito = new System.Windows.Forms.Button();
             this.bt_modificarItem = new System.Windows.Forms.Button();
             this.btn_vaciarCarrito = new System.Windows.Forms.Button();
+            this.btn_generarorden = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -81,7 +82,7 @@
             // 
             // btn_EliminarCarrito
             // 
-            this.btn_EliminarCarrito.Location = new System.Drawing.Point(463, 677);
+            this.btn_EliminarCarrito.Location = new System.Drawing.Point(472, 677);
             this.btn_EliminarCarrito.Name = "btn_EliminarCarrito";
             this.btn_EliminarCarrito.Size = new System.Drawing.Size(103, 23);
             this.btn_EliminarCarrito.TabIndex = 3;
@@ -91,7 +92,7 @@
             // 
             // bt_modificarItem
             // 
-            this.bt_modificarItem.Location = new System.Drawing.Point(572, 677);
+            this.bt_modificarItem.Location = new System.Drawing.Point(581, 677);
             this.bt_modificarItem.Name = "bt_modificarItem";
             this.bt_modificarItem.Size = new System.Drawing.Size(103, 23);
             this.bt_modificarItem.TabIndex = 4;
@@ -109,11 +110,22 @@
             this.btn_vaciarCarrito.UseVisualStyleBackColor = true;
             this.btn_vaciarCarrito.Click += new System.EventHandler(this.btn_vaciarCarrito_Click);
             // 
+            // btn_generarorden
+            // 
+            this.btn_generarorden.Location = new System.Drawing.Point(799, 677);
+            this.btn_generarorden.Name = "btn_generarorden";
+            this.btn_generarorden.Size = new System.Drawing.Size(103, 23);
+            this.btn_generarorden.TabIndex = 6;
+            this.btn_generarorden.Text = "Realizar Pedido";
+            this.btn_generarorden.UseVisualStyleBackColor = true;
+            this.btn_generarorden.Click += new System.EventHandler(this.btn_generarorden_Click);
+            // 
             // Principal___Usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1117, 710);
+            this.Controls.Add(this.btn_generarorden);
             this.Controls.Add(this.btn_vaciarCarrito);
             this.Controls.Add(this.bt_modificarItem);
             this.Controls.Add(this.btn_EliminarCarrito);
@@ -137,5 +149,6 @@
         private System.Windows.Forms.Button btn_EliminarCarrito;
         private System.Windows.Forms.Button bt_modificarItem;
         private System.Windows.Forms.Button btn_vaciarCarrito;
+        private System.Windows.Forms.Button btn_generarorden;
     }
 }

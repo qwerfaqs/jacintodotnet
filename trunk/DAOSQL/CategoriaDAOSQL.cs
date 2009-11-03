@@ -9,12 +9,16 @@ namespace DAOSQL
     {
         
         
-        private static ArrayList ListaCategorias = new ArrayList();
+        private ArrayList ListaCategorias = new ArrayList();
         private ConecctionServer connServ = ConecctionServer.Instancia();
         private static readonly DAOSQLCategorias _instancia = new DAOSQLCategorias();
         public static DAOSQLCategorias Instancia ()
         {
              return _instancia;    
+        }
+        private DAOSQLCategorias()
+        {
+            //Constructor Privado es necesario para respetar el singlenton
         }
        
         

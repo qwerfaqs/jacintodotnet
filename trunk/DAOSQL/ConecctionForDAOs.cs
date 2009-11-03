@@ -24,7 +24,9 @@ namespace DAOSQL
         private String path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase).Substring(6);
         private bool conecto = false;
         private string cadena = null;
-
+        /// <summary>
+        /// El Construcctor debe ser private para respetar el singleton
+        /// </summary>
         private ConecctionServer()
         {
             
@@ -51,7 +53,7 @@ namespace DAOSQL
 
                     catch (Exception exp)
                     {
-                        
+                        string mensaje = exp.Message;
                     }
                 }
                 else
@@ -93,7 +95,7 @@ namespace DAOSQL
         public void Abrir()
         {
             //this.CargarListaStrings();
-            if (conecto = false)
+            if (conecto == false)
             {
                 throw new Exception("NO SE PUDO CONECTAR CON NINGUN CONECCTRION STRING revise conexiones.xml o consulte a su administrador de base de datos");
             }
@@ -103,7 +105,7 @@ namespace DAOSQL
         }
         public void Cerrar()
         {
-            if (conecto = false)
+            if (conecto == false)
             {
                 throw new Exception("NO SE PUDO CONECTAR CON NINGUN CONECCTRION STRING revise conexiones.xml o consulte a su administrador de base de datos");
             }
