@@ -7,7 +7,7 @@ namespace BO
     public class Item
     {
         int _Cantidad;
-        float _total;
+        
         Producto _UnProducto;
 
         

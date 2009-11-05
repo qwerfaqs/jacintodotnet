@@ -8,12 +8,12 @@ namespace BO
 {
     public class OrdenCompra 
     {
-        private Carrito _unCarrito;
+        private ArrayList _items;
         private int _numero;
         private Cliente _unCliente;
-        private string _pendiente;
-        private double _iva;
-        private double _envio;
+        private bool _estado;
+        private double _iva =0.21f;
+        private double _envio = 50;
 
         public double Envio
         {
@@ -29,10 +29,10 @@ namespace BO
         }
 
 
-        public string Pendiente
+        public string Estado
         {
-            get { return _pendiente; }
-            set { _pendiente = value; }
+            get { return _estado; }
+            set { _estado = value; }
         }
 
 	
@@ -49,22 +49,22 @@ namespace BO
             get { return _numero; }
             set { _numero = value; }
         }
-
-        public OrdenCompra(int numero,Carrito carr, double iva, double total,double envio, DateTime fecha, string estado)
+        public OrdenCompra(Carrito carr, Cliente client,double iva): this(carr,client)
         {
-            this.Numero = numero;
-            this.UnCarrito = carr;
-            this.Iva = iva;
-            this.Pendiente = estado;
-            this.Envio = envio;
+            this._iva = iva;
+
         }
-
-
-        public Carrito UnCarrito
+        public OrdenCompra(Carrito carr,Cliente client)
         {
-            get { return _unCarrito; }
-            set { _unCarrito = value; }
+            this._items = carr.DameFuego();
+            this._unCliente = client;
+            
+
+
         }
+        
+
+        
     
     
     }
