@@ -11,7 +11,7 @@ namespace BO
         private ArrayList _items;
         private int _numero;
         private Cliente _unCliente;
-        private bool _estado;
+        private string _estado;
         private double _iva =0.21f;
         private double _envio = 50;
 
@@ -58,6 +58,7 @@ namespace BO
         {
             this._items = carr.DameFuego();
             this._unCliente = client;
+            this.estado = "PENDIENTE";
             
 
 

@@ -15,9 +15,11 @@ namespace Control
         private Carrito unCarrito = new Carrito(DateTime.Now);
         //DAOS CON ARRAYLIST
         //private DAO.Productodao DAO = DAO.Productodao.Instancia();
-        //private DAO.OrdenCompraDAO DAOOrdenCompra = DAO.OrdenCompraDAO.Instancia();
+        private DAO.OrdenCompraDAO DAOOrdenCompra = DAO.OrdenCompraDAO.Instancia();
+      
         //DAOS CON SQL
         private DAOSQL.ProductoDAOSQL DAO = DAOSQL.ProductoDAOSQL.Instancia();
+        
         public ControlCarritos()
         {
         }
@@ -49,6 +51,15 @@ namespace Control
         {
             return this.unCarrito.Subtotal.ToString();
         }
+
+        public void GenerarOrden(Cliente client)
+        {
+            throw new Exception("The method or operation is not implemented.");
+            OrdenCompra orden = new OrdenCompra(this.unCarrito, client);
+            
+        }
+
+        
     }
     
 }
