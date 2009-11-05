@@ -147,7 +147,14 @@ namespace BO
       {
           _ListaItems.Clear();
       }
-
+      /// <summary>
+      /// Esta Funcion Lee la Lista Del carrito y la retorna
+      /// </summary>
+      /// <returns>Lista de Items</returns>
+      public ArrayList DameFuego()
+      {
+          return this._ListaItems;
+      }
  
     }
 }
