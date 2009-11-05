@@ -36,6 +36,7 @@
   <ItemGroup>
     <Compile Include="ControlCarritos.cs" />
     <Compile Include="ControlCategorias.cs" />
+    <Compile Include="ControlOrdenCompra.cs" />
     <Compile Include="ControlProductos.cs" />
     <Compile Include="ControlUsuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
