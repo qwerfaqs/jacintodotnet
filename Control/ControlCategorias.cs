@@ -9,8 +9,8 @@ namespace Control
 {
     public class ControlCategorias
     {
-        //private DAO.CategoriaDAO miDao = DAO.CategoriaDAO.Instancia();
-        private DAOSQL.DAOSQLCategorias miDao = DAOSQL.DAOSQLCategorias.Instancia();
+        private DAO.CategoriaDAO miDao = DAO.CategoriaDAO.Instancia();
+        //private DAOSQL.DAOSQLCategorias miDao = DAOSQL.DAOSQLCategorias.Instancia();
 
         public ControlCategorias()
         {
@@ -30,9 +30,9 @@ namespace Control
                     Exito = true;
                 }
             }
-            catch
+            catch(Exception e)
             {
-                throw new ArgumentException("Error Insertando Categoria");
+                throw new ArgumentException("Error Insertando Categoria",e);
             }
             return Exito;
         }
@@ -40,7 +40,7 @@ namespace Control
         public bool CodigoRepetido(int codigo)
         {
             bool Repetido = false;
-            foreach (Categoria c in this.miDao.leer_categorias(false))
+            foreach (Categoria c in this.miDao.leer_categorias())
             {
                 if (c.Codigo == codigo)
                 {
@@ -54,7 +54,7 @@ namespace Control
         public bool NombreRepetido(string nombre)
         {
             bool Repetido = false;
-            foreach (Categoria c in this.miDao.leer_categorias(false))
+            foreach (Categoria c in this.miDao.leer_categorias())
             {
                 if (c.Nombre == nombre)
                 {
@@ -68,7 +68,7 @@ namespace Control
         public ArrayList CargarCategorias(bool DesdeMemoria)
         {
             //ArrayList Categorias = miDao.leer_categorias();
-            ArrayList Categorias = miDao.leer_categorias(false);
+            ArrayList Categorias = miDao.leer_categorias();
             return Categorias;
         }
         

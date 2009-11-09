@@ -10,7 +10,7 @@ namespace BO
     {
         private ArrayList _items;
         private int _numero;
-        private Cliente _unCliente;
+        private User _unCliente;
         private string _estado;
         private double _iva =0.21f;
         private double _envio = 50;
@@ -37,7 +37,7 @@ namespace BO
 
 	
 
-        public Cliente UnCliente
+        public User UnCliente
         {
             get { return _unCliente; }
             set { _unCliente = value; }
@@ -49,16 +49,16 @@ namespace BO
             get { return _numero; }
             set { _numero = value; }
         }
-        public OrdenCompra(Carrito carr, Cliente client,double iva): this(carr,client)
+        public OrdenCompra(Carrito carr, User client,double iva): this(carr,client)
         {
             this._iva = iva;
 
         }
-        public OrdenCompra(Carrito carr,Cliente client)
+        public OrdenCompra(Carrito carr,User client)
         {
             this._items = carr.DameFuego();
             this._unCliente = client;
-            this.estado = "PENDIENTE";
+            this._estado = "PENDIENTE";
             
 
 

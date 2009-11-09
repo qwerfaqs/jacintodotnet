@@ -133,7 +133,10 @@ namespace UI
         private void dataGridView1_MouseDown(object sender, MouseEventArgs e)
         {
             dataGridView1.Update();
-            DoDragDrop(this.dataGridView1.CurrentRow.Cells["Codigo"].Value.ToString(), DragDropEffects.Copy);
+            if (dataGridView1.Rows.Count > 0)
+            {
+                DoDragDrop(this.dataGridView1.CurrentRow.Cells["Codigo"].Value.ToString(), DragDropEffects.Copy);
+            }
           
         }
 

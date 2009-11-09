@@ -14,18 +14,18 @@ namespace Control
     {
         private Carrito unCarrito = new Carrito(DateTime.Now);
         //DAOS CON ARRAYLIST
-        //private DAO.Productodao DAO = DAO.Productodao.Instancia();
-        private DAO.OrdenCompraDAO DAOOrdenCompra = DAO.OrdenCompraDAO.Instancia();
+        private DAO.Productodao DAOproducto = DAO.Productodao.Instancia();
+        //private DAO.OrdenCompraDAO DAOOrdenCompra = DAO.OrdenCompraDAO.Instancia();
       
         //DAOS CON SQL
-        private DAOSQL.ProductoDAOSQL DAO = DAOSQL.ProductoDAOSQL.Instancia();
+        //private DAOSQL.ProductoDAOSQL DAOproducto = DAOSQL.ProductoDAOSQL.Instancia();
         
         public ControlCarritos()
         {
         }
         public void AgregarItem(int idProducto, int cant)
         {
-            this.unCarrito.agregar_item(this.DAO.leer_unproducto(idProducto), cant);
+            this.unCarrito.agregar_item(this.DAOproducto.leer_unproducto(idProducto), cant);
         }
         public ArrayList CargarCarrito()
         {
@@ -35,11 +35,11 @@ namespace Control
         }
         public void EliminarItem(int Codigo)
         {
-            this.unCarrito.eliminar_item(this.DAO.leer_unproducto(Codigo));
+            this.unCarrito.eliminar_item(this.DAOproducto.leer_unproducto(Codigo));
         }
         public void ModificarItem(int Codigo,int cant)
         {
-            this.unCarrito.modificar_item(this.DAO.leer_unproducto(Codigo),cant);
+            this.unCarrito.modificar_item(this.DAOproducto.leer_unproducto(Codigo), cant);
         }
         public void VaciarCarrito()
         {
@@ -52,14 +52,15 @@ namespace Control
             return this.unCarrito.Subtotal.ToString();
         }
 
-        public void GenerarOrden(Cliente client)
+        public void GenerarOrden(User client)
         {
             throw new Exception("The method or operation is not implemented.");
-            OrdenCompra orden = new OrdenCompra(this.unCarrito, client);
+            //ControlOrdenCompra crtlOrden = new ControlOrdenCompra();
+            //ControladoraOrdenDeCompra.GenerarOrden(this.unCarrito);
             
         }
 
-        
+       
     }
     
 }

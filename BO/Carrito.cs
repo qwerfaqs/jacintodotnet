@@ -17,11 +17,11 @@ namespace BO
             this.Fecha = fecha;
         }
 
-        public float Subtotal
+      public double Subtotal
         {
             get
             {
-                float sub = 0;
+                double sub = 0;
                 int x=0;
                 while (( x < _ListaItems.Count))
                 {

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Collections;
+using BO;
 
 namespace DAO
 {
@@ -13,28 +14,33 @@ namespace DAO
             return _instancia;
         }
         private ArrayList Usuarios = new ArrayList();
-
+        private UsuarioDAO()
+        {
+        }
         public  void AgregarUsuario(BO.User usuario)
         {
             Usuarios.Add(usuario);
         }
 
 
-        public  short Logueo(string Nick, string Pass)
+        public User Logueo(string Nick, string Pass)
         {
-            short Entra = -1;
-            foreach (BO.User Chabon in Usuarios)
+            User result = null;
+            foreach (User Chabon in Usuarios)
             {
                 if (Chabon.NickName == Nick)
                 {
                     if (Chabon.Pass == Pass)
                     {
-                        Entra = Chabon.Categoria;
+                        result = Chabon;
                     }
-                    break;
                 }
             }
-            return Entra;
+            if (result == null)
+            {
+                throw new Exception("ERROR DE LOGIN");
+            }
+            return result;
         }
     }
 }
