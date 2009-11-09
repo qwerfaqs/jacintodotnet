@@ -31,7 +31,7 @@ namespace BO
             }
         }
 
-        public float Total
+        public double Total
         {
             get
             {
@@ -70,7 +70,7 @@ namespace BO
                 _UnProducto.Nombre = value;
             }
         }
-        public int PrecioUnitario
+        public double PrecioUnitario
         {
             get
             {

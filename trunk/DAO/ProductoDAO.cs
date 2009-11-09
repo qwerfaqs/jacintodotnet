@@ -17,7 +17,7 @@ namespace DAO
         private ArrayList ListaProductos = new ArrayList();
         
 
-        public void agregar_producto(Producto product)
+        public void Agregar_producto(Producto product)
         {
             ListaProductos.Add(product);
         }

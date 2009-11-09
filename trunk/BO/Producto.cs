@@ -7,17 +7,17 @@ namespace BO
     public class Producto
     {
         string _Nombre;
-        int _Precio;
+        double _Precio;
         int _Codigo;
         Categoria _Cat;
         private int _StockActual;
         private int _StockComprometido;
         private Image  _FotoPath;
-        private int _PrecioOferta;
+        private double _PrecioOferta;
 
         public Producto()
         { }
-        public Producto(int Codigo,string Nombre,int Precio,Categoria Cat,int PrecioOferta,Image FotoPath,int StockActual, int StockComprometido)
+        public Producto(int Codigo, string Nombre, double Precio, Categoria Cat, double PrecioOferta, Image FotoPath, int StockActual, int StockComprometido)
         {
             this._Codigo = Codigo;
             this._Nombre = Nombre;
@@ -53,7 +53,7 @@ namespace BO
             }
         }
 
-        public int Precio
+        public double Precio
         {
             get
             {
@@ -97,7 +97,7 @@ namespace BO
         }
 
 
-        public int PrecioOferta
+        public double PrecioOferta
         {
             get { return _PrecioOferta; }
             set { _PrecioOferta = value; }
