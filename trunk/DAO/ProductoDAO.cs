@@ -52,13 +52,22 @@ namespace DAO
 
         public ArrayList leer_productos(int categoria)
         {
-            ArrayList Lista = new ArrayList();
-            foreach (Producto UnProducto in ListaProductos)
+            ArrayList Lista = null;
+            if(categoria == -1)
             {
-                if(UnProducto.Cat.Codigo == categoria)
-                    Lista.Add(UnProducto);
+                return this.ListaProductos;
+            }else
+            {
+                Lista = new ArrayList();
+
+                foreach (Producto UnProducto in this.ListaProductos)
+                {
+                    if(UnProducto.Cat.Codigo == categoria)
+                        Lista.Add(UnProducto);
+                }
+                
             }
-            return Lista;
+                return Lista;
         }
 
         public Producto leer_unproducto(int codigoproducto)
