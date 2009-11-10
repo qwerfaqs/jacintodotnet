@@ -9,22 +9,30 @@ namespace BO
     {
         User _user;
         ArrayList SessionVariables = new ArrayList();
-        bool Loged
+        public bool Loged
         {
-            get { if (_user!=null) { return true; } }
+            
+            get 
+            {
+                bool salida = false;
+                if (_user!=null) { salida = true; }
+                return salida;
+            }
         }
-        string tipo
+        public string tipo
         {
             get
             {
+                string salida = null;
                 if (_user.Categoria == 2)
                 {
-                    return "ADMIN";
+                    salida = "ADMIN";
                 }
                 else if(_user.Categoria == 1)
                 {
-                    return "CLIENT";
+                    salida = "CLIENT";
                 }
+                return salida;
             }
             
         }

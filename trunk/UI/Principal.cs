@@ -88,7 +88,8 @@ namespace UI
             label3.Text = "";
             Control.ControlUsuarios CU = new Control.ControlUsuarios();
             this.session = CU.LogIn(txtUser.Text, mtxtPass.Text);
-            if (LogIn == -1)
+            
+            if (this.session.Loged == false)
             {
                 label3.Text = "Nombre de usuario o contraseña incorrectos!";
                 panel1.Visible = true;
@@ -98,12 +99,12 @@ namespace UI
             else
             {
                 label3.Text = "";
-                if (LogIn == 1)
+                if (this.session.tipo.Equals("CLIENT"))
                 {
                     Principal___Usuario PU = new Principal___Usuario();
                     PU.Show();
                 }
-                else
+                else if(this.session.tipo.Equals("ADMIN"))
                 {
                     Principal___Administracion PA = new Principal___Administracion();
                     PA.Show();
