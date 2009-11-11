@@ -11,7 +11,6 @@ namespace BO
         ArrayList SessionVariables = new ArrayList();
         public bool Loged
         {
-            
             get 
             {
                 bool salida = false;
