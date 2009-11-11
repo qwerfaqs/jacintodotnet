@@ -27,6 +27,7 @@ namespace Control
 
             try
             {
+                Exception ex;
                 int Precio = Convert.ToInt32(precio);
                 int Codigo = Convert.ToInt32(codigo);
                 Categoria Categoria = categoria;
@@ -38,9 +39,9 @@ namespace Control
                 this.DaoProducto.Agregar_producto(Producto);
                 Exito = true;                
             }
-            catch
+            catch (Exception ex)
             {
-                throw new ArgumentException("Error Cargando Producto");
+                throw new ArgumentException("Error Agregando Producto");
             }
             return Exito;
         }
