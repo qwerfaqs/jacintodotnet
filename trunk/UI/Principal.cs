@@ -85,11 +85,18 @@ namespace UI
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            label3.Text = "";
-            Control.ControlUsuarios CU = new Control.ControlUsuarios();
-            this.session = CU.LogIn(txtUser.Text, mtxtPass.Text);
-            
-            if (this.session.Loged == false)
+            try
+            {
+                label3.Text = "";
+                Control.ControlUsuarios CU = new Control.ControlUsuarios();
+                this.session = CU.LogIn(txtUser.Text, mtxtPass.Text);
+            }
+            catch 
+            {
+                
+            }
+
+            if ( this.session==null || this.session.Loged == false)
             {
                 label3.Text = "Nombre de usuario o contraseña incorrectos!";
                 panel1.Visible = true;
@@ -142,5 +149,7 @@ namespace UI
             Principal___Administracion PA = new Principal___Administracion();
             PA.Show();
         }
+
+       
     }
 }

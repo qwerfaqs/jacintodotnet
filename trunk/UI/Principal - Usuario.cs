@@ -50,9 +50,6 @@ namespace UI
                     dataGridView1.Columns["StockComprometido"].HeaderText = "Stock Comprometido";
                     dataGridView1.Columns["FotoPath"].Width = 135;
                     dataGridView1.Columns["FotoPath"].HeaderText = "Imagen";
-
-
-
                 }
             }
             catch (Exception ex)
