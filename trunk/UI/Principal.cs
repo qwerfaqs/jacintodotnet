@@ -108,7 +108,7 @@ namespace UI
                 label3.Text = "";
                 if (this.session.tipo.Equals("CLIENT"))
                 {
-                    Principal___Usuario PU = new Principal___Usuario();
+                    Principal___Usuario PU = new Principal___Usuario(this.session);
                     PU.Show();
                 }
                 else if(this.session.tipo.Equals("ADMIN"))
