@@ -129,7 +129,7 @@ namespace UI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AdministracionProductos agregarProd = new AdministracionProductos();
+            AdministracionProductos agregarProd = new AdministracionProductos(this.session);
             agregarProd.ShowDialog();
             if (agregarProd.DialogResult == DialogResult.OK)
                 {
@@ -139,7 +139,7 @@ namespace UI
 
         private void button2_Click(object sender, EventArgs e)
         {
-            AdministracionProductos adm = new AdministracionProductos(dataGridView1.CurrentRow);
+            AdministracionProductos adm = new AdministracionProductos(dataGridView1.CurrentRow,this.session);
             adm.ShowDialog();
             if (adm.DialogResult == DialogResult.OK)
             {
