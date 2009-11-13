@@ -14,13 +14,23 @@ namespace UI
         Control.ControlCategorias CC = new Control.ControlCategorias();
         private ArrayList ListaCategorias;
         int x;//producto seleccionado
-        
+        Session session = null;
 
         BindingSource BS = new BindingSource();
 
-        public AdministracionABMProductos()
+        public AdministracionABMProductos(Session session)
         {
             InitializeComponent();
+            if (session.Loged == true)
+            {
+                this.session = session;
+                this.Text = "Bienvenido, " + this.session.username+"  -  ADMINISTRACION DE PRODUCTOS";
+            }
+            else
+            {
+                throw new Exception("SESSION NO VALIDA");
+            }
+
         }
 
         

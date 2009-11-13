@@ -15,14 +15,24 @@ namespace UI
         Control.ControlProductos CP = new Control.ControlProductos();
         
         DataGridViewRow prodamodif;
-        public AdministracionProductos()
+        public AdministracionProductos(Session session)
         {
             InitializeComponent();
+            if (session.Loged == true)
+            {
+                this.session = session;
+                this.Text = "Bienvenido, " + this.session.username;
+            }
+            else
+            {
+                throw new Exception("SESSION NO VALIDA");
+            }
+
             BS.DataSource = CC.CargarCategorias(true);
             cmbCategorias.DataSource = BS;
             String path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase).Substring(6);
             
-            pictureBox1.Image = Image.FromFile(path +"\\Imagenes\\ImagenNodisponible.jpg");
+            pictureBox1.Image = Image.FromFile(path +"\\ImagenNodisponible.jpg");
             
         }
         public AdministracionProductos(DataGridViewRow prodamodif): this()

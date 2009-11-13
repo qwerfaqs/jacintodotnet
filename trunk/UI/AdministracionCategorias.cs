@@ -16,9 +16,20 @@ namespace UI
         Control.ControlProductos ControlProductos = new ControlProductos();
         private ArrayList ListaCategorias;
         Categoria c;
-        public AdministracionCategorias()
+        Session session = null;
+        public AdministracionCategorias(Session session)
         {
             InitializeComponent();
+            if (session.Loged == true)
+            {
+                this.session = session;
+                this.Text = "Bienvenido, " + this.session.username+"  -  ADMINISTRACION DE CATEGORIAS";
+            }
+            else
+            {
+                throw new Exception("SESSION NO VALIDA");
+            }
+
         }
 
         private void btn_carga_Click(object sender, EventArgs e)
