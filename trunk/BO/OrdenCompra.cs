@@ -58,10 +58,7 @@ namespace BO
         {
             this._items = carr.DameFuego();
             this._unCliente = client;
-            this._estado = "PENDIENTE";
-            
-
-
+            this._estado = "PENDIENTE";            
         }
         
         

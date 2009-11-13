@@ -36,6 +36,16 @@ namespace UI
                 throw new Exception("SESSION NO VALIDA");
             }
 
+            int x;//producto seleccionado
+
+
+            BindingSource BS = new BindingSource();
+            BindingSource BScarrito = new BindingSource();
+        }
+
+        public Principal___Usuario()
+        {
+            InitializeComponent();
         }
         private void RecargarGrilla(int categoria)
         {
@@ -233,6 +243,7 @@ namespace UI
         private void btn_generarorden_Click(object sender, EventArgs e)
         {
            Carromato.GenerarOrden(this.session);
+           //Carromato.GenerarOrden(this.usuario);
         }
 
     }
