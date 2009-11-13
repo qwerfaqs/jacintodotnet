@@ -55,11 +55,6 @@ namespace BO
                 Item i = new Item(prod, cant);
                 _ListaItems.Add(i);
             }
-            
-            
-            
-       
-
         }
 
 

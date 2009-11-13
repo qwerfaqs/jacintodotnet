@@ -54,7 +54,7 @@ namespace Control
 
         public void GenerarOrden(Session session)
         {
-            throw new Exception("The method or operation is not implemented.");
+            //throw new Exception("The method or operation is not implemented.");
             ControlOrdenCompra crtlOrden = new ControlOrdenCompra();
             crtlOrden.GenerarOrden(this.unCarrito,session.dameUser());
             
