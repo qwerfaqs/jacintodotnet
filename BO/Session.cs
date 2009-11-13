@@ -40,5 +40,18 @@ namespace BO
         {
             this._user = usuario;
         }
+        public string username
+        {
+            get
+            {
+                string salida = null;
+                if (this.Loged)
+                {
+                    salida = this._user.Nombre + " " + this._user.Apellido;
+                }
+                return salida;
+                
+            }
+        }
     }
 }

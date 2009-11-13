@@ -26,13 +26,14 @@ namespace UI
         public Principal___Usuario(Session session)
         {
             InitializeComponent();
-            if (session.Loged = true)
+            if (session.Loged == true)
             {
                 this.session = session;
+                this.Text = "Bienvenido, " + this.session.username;
             }
             else
             {
-                throw new Exception("AC");
+                throw new Exception("SESSION NO VALIDA");
             }
 
         }
