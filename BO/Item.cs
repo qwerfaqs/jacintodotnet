@@ -57,7 +57,7 @@ namespace BO
         */
         public override string ToString()
         {
-            return this.Nombre + " por "+this.Cantidad.ToString()+ " unidades $ = " + this.Total.ToString();
+            return this.Nombre + " por " + this.Cantidad.ToString() + " unidades = $" + this.Total.ToString();
         }
         public string Nombre
         {
