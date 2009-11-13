@@ -113,7 +113,7 @@ namespace UI
                 }
                 else if(this.session.tipo.Equals("ADMIN"))
                 {
-                    Principal___Administracion PA = new Principal___Administracion();
+                    Principal___Administracion PA = new Principal___Administracion(this.session);
                     PA.Show();
                 }
             }
