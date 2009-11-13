@@ -39,8 +39,10 @@ namespace DAOSQL
                     connServ.Cerrar();
                 
             }
-            catch
-            { }
+            catch(Exception ex)
+            {
+                throw new Exception("ERROR ELIMINANDO CATEGORIA", ex);
+            }
         }
        
         public ArrayList leer_categorias(bool DesdeMemoria)
@@ -56,9 +58,9 @@ namespace DAOSQL
                     else
                         return null;
                 }
-                catch 
+                catch(Exception ex) 
                 {
-                    throw new ArgumentException("Error");
+                    throw new ArgumentException("Error",ex);
                 }                
             }            	        
 		    else
@@ -91,7 +93,7 @@ namespace DAOSQL
                 }
                 catch (Exception e)
                 {
-                    throw new ArgumentException("Error Cargando Categorias :"+e.Message);
+                    throw new ArgumentException("Error Cargando Categorias ",e);
                 }
                 return ListaCategorias;
             }
@@ -114,9 +116,9 @@ namespace DAOSQL
                     connServ.Cerrar();
                 
             }
-            catch
+            catch(Exception ex)
             {
-                throw new ArgumentException("Error Agregando Categoria");
+                throw new ArgumentException("Error Agregando Categoria",ex);
             }
         }
 
@@ -137,9 +139,9 @@ namespace DAOSQL
                     connServ.Cerrar();
                 
             }
-            catch
+            catch(Exception ex)
             {
-                throw new ArgumentException("Error Modificando Categoria");
+                throw new ArgumentException("Error Modificando Categoria",ex);
             }
         }
         
@@ -165,9 +167,9 @@ namespace DAOSQL
                 return Nueva;
                 
             }
-            catch 
+            catch(Exception ex) 
             {
-                throw new ArgumentException("Error Buscando Categoria [DAOSQL]") ;
+                throw new ArgumentException("Error Buscando Categoria [DAOSQL]",ex) ;
             }         
         }
     }

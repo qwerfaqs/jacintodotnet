@@ -39,6 +39,7 @@
     <Compile Include="ConecctionForDAOs.cs" />
     <Compile Include="ProductoDAOSQL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsuarioDAOSQL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BO\BO.csproj">
