@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using BO;
 
 namespace UI
 {
@@ -16,14 +17,24 @@ namespace UI
         Control.ControlCarritos Carromato = new Control.ControlCarritos();
         ArrayList Categorias;
         int x;//producto seleccionado
+        Session session = null;
 
 
         BindingSource BS = new BindingSource();
         BindingSource BScarrito = new BindingSource();
 
-        public Principal___Usuario()
+        public Principal___Usuario(Session session)
         {
             InitializeComponent();
+            if (session.Loged = true)
+            {
+                this.session = session;
+            }
+            else
+            {
+                throw new Exception("AC");
+            }
+
         }
         private void RecargarGrilla(int categoria)
         {
