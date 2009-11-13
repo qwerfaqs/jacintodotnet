@@ -18,6 +18,7 @@ namespace BO
                 return salida;
             }
         }
+
         public string tipo
         {
             get

@@ -23,7 +23,6 @@ namespace DAOSQL
         private IList<CadenaDeConexiones> _connectionStrings = new List<CadenaDeConexiones>();
         private String path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase).Substring(6);
         private bool conecto = false;
-        private string cadena = null;
         /// <summary>
         /// El Construcctor debe ser private para respetar el singleton
         /// </summary>
@@ -44,7 +43,6 @@ namespace DAOSQL
                         if (_conn.State == System.Data.ConnectionState.Open)
                         {
                             this.conecto = true;
-                            this.cadena = cs.cadena;
                             _conn.Close();
                         }
                         
@@ -53,7 +51,7 @@ namespace DAOSQL
 
                     catch (Exception exp)
                     {
-                        string mensaje = exp.Message;
+                        exp = null;
                     }
                 }
                 else
@@ -76,6 +74,10 @@ namespace DAOSQL
         public SqlConnection Conexion()
         {
             //this.CargarListaStrings();
+            if (this.conecto == false)
+            {
+                throw new Exception("NO SE PUEDE LOGRAR CONEXION");
+            }
             return _conn;
            
         }
