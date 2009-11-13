@@ -15,13 +15,14 @@ namespace UI
         Control.ControlProductos CP = new Control.ControlProductos();
         
         DataGridViewRow prodamodif;
+        Session session = null;
         public AdministracionProductos(Session session)
         {
             InitializeComponent();
             if (session.Loged == true)
             {
                 this.session = session;
-                this.Text = "Bienvenido, " + this.session.username;
+                this.Text = "Bienvenido, " + this.session.username + "  -  NUEVO PRODUCTO";
             }
             else
             {
@@ -35,8 +36,9 @@ namespace UI
             pictureBox1.Image = Image.FromFile(path +"\\ImagenNodisponible.jpg");
             
         }
-        public AdministracionProductos(DataGridViewRow prodamodif): this()
+        public AdministracionProductos(DataGridViewRow prodamodif, Session session): this(session)
         {
+            this.Text = "Bienvenido, " + this.session.username + "  -  MODIFICAR PRODUCTO";
             Producto P = CP.DameProducto((int)prodamodif.Cells["Codigo"].Value);
             cmbCategorias.Text = P.Cat.Nombre;
             this.prodamodif = prodamodif;
