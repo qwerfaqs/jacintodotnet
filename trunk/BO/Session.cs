@@ -40,6 +40,10 @@ namespace BO
         {
             this._user = usuario;
         }
+        public User dameUser()
+        {
+            return this._user;
+        }
         public string username
         {
             get
