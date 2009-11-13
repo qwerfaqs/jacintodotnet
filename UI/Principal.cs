@@ -146,7 +146,7 @@ namespace UI
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            MessageBox.Show("NO TE HAGAS EL VIVO Y PONE BIEN EL USER Y PASS", "KERNEL PANIC", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.ServiceNotification, true);
+            MessageBox.Show("NO TE HAGAS EL VIVO Y PONE BIEN EL USER Y PASS", "KERNEL PANIC", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.ServiceNotification, false);
            // Principal___Administracion PA = new Principal___Administracion();
            // PA.Show();
         }
