@@ -226,13 +226,13 @@ namespace UI
             RecargarCarretilla();
         }
         /// <summary>
-        /// Ten que generar la Orden y Mandarle El Usuario
+        /// Tiene que generar la Orden y Mandarle El Usuario
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btn_generarorden_Click(object sender, EventArgs e)
         {
-           /// Carromato.GenerarOrden(this.usuario);
+           Carromato.GenerarOrden(this.session);
         }
 
     }
