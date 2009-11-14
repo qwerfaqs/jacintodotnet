@@ -21,6 +21,14 @@ namespace Control
             //throw new Exception("The method or operation is not implemented.");
             _orden = new OrdenCompra(carrito,usuario);
             miDAO.grabarCompra(_orden);
-        } 
+        }
+        public ArrayList LeerOdenesdeCompra()
+        {
+            return miDAO.LeerOrdenes();
+        }
+        public ArrayList LeerOdenesdeCompra(string Estado)
+        {
+            return miDAO.LeerOrdenes(Estado);
+        }
     }
 }

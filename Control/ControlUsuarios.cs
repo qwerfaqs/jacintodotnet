@@ -30,7 +30,7 @@ namespace Control
             }
             catch (Exception e)
             {
-                throw new Exception("ERROR AL CREAR SESSION", e);
+                throw new Exception("Error al crear sesion", e);
             }
         }
     }
