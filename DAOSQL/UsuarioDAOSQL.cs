@@ -15,7 +15,7 @@ namespace DAOSQL
         {
 
         }
-        public UsuarioDAOSQL Instancia()
+        public static UsuarioDAOSQL Instancia()
         {
             return _instancia;
         }

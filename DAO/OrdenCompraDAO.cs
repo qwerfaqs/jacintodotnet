@@ -9,6 +9,9 @@ namespace DAO
     public sealed class OrdenCompraDAO
     {
         private static readonly OrdenCompraDAO _instancia = new OrdenCompraDAO();
+        private OrdenCompraDAO()
+        { 
+        }
         public static OrdenCompraDAO Instancia()
         {
             return _instancia;
