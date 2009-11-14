@@ -243,7 +243,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(470, 233);
+            this.ClientSize = new System.Drawing.Size(665, 233);
             this.Controls.Add(this.grp_lista);
             this.Controls.Add(this.btn_ok);
             this.Controls.Add(this.grp_eliminacion);
