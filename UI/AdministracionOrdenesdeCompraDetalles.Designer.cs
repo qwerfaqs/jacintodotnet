@@ -28,56 +28,56 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.GrpBoxOrdenCompra = new System.Windows.Forms.GroupBox();
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.lblEstado = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.btnConfirmar = new System.Windows.Forms.Button();
+            this.grpboxItems = new System.Windows.Forms.GroupBox();
+            this.dgvItems = new System.Windows.Forms.DataGridView();
+            this.grpBoxCliente = new System.Windows.Forms.GroupBox();
+            this.lblDomicilio = new System.Windows.Forms.Label();
+            this.lblId = new System.Windows.Forms.Label();
+            this.lblMail = new System.Windows.Forms.Label();
+            this.lblUser = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.GrpBoxOrdenCompra.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox2.SuspendLayout();
+            this.grpboxItems.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvItems)).BeginInit();
+            this.grpBoxCliente.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // GrpBoxOrdenCompra
             // 
-            this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.groupBox4);
-            this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.groupBox3);
-            this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Location = new System.Drawing.Point(13, 14);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(478, 326);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Orden de Compra";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            this.GrpBoxOrdenCompra.Controls.Add(this.label13);
+            this.GrpBoxOrdenCompra.Controls.Add(this.groupBox4);
+            this.GrpBoxOrdenCompra.Controls.Add(this.lblEstado);
+            this.GrpBoxOrdenCompra.Controls.Add(this.label11);
+            this.GrpBoxOrdenCompra.Controls.Add(this.btnConfirmar);
+            this.GrpBoxOrdenCompra.Controls.Add(this.grpboxItems);
+            this.GrpBoxOrdenCompra.Controls.Add(this.grpBoxCliente);
+            this.GrpBoxOrdenCompra.Location = new System.Drawing.Point(13, 14);
+            this.GrpBoxOrdenCompra.Name = "GrpBoxOrdenCompra";
+            this.GrpBoxOrdenCompra.Size = new System.Drawing.Size(478, 326);
+            this.GrpBoxOrdenCompra.TabIndex = 0;
+            this.GrpBoxOrdenCompra.TabStop = false;
+            this.GrpBoxOrdenCompra.Text = "Orden de Compra";
+            this.GrpBoxOrdenCompra.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(333, 294);
+            this.label13.Location = new System.Drawing.Point(339, 294);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(48, 20);
             this.label13.TabIndex = 12;
@@ -85,33 +85,33 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.label14);
+            this.groupBox4.Controls.Add(this.lblTotal);
             this.groupBox4.Location = new System.Drawing.Point(387, 283);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(81, 35);
             this.groupBox4.TabIndex = 14;
             this.groupBox4.TabStop = false;
             // 
-            // label14
+            // lblTotal
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(6, 11);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(49, 20);
-            this.label14.TabIndex = 13;
-            this.label14.Text = "00.00";
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.Location = new System.Drawing.Point(6, 11);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(49, 20);
+            this.lblTotal.TabIndex = 13;
+            this.lblTotal.Text = "00.00";
             // 
-            // label12
+            // lblEstado
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Red;
-            this.label12.Location = new System.Drawing.Point(85, 16);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(81, 20);
-            this.label12.TabIndex = 11;
-            this.label12.Text = "Pendiente";
+            this.lblEstado.AutoSize = true;
+            this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstado.ForeColor = System.Drawing.Color.Red;
+            this.lblEstado.Location = new System.Drawing.Point(85, 16);
+            this.lblEstado.Name = "lblEstado";
+            this.lblEstado.Size = new System.Drawing.Size(81, 20);
+            this.lblEstado.TabIndex = 11;
+            this.lblEstado.Text = "Pendiente";
             // 
             // label11
             // 
@@ -123,96 +123,96 @@
             this.label11.TabIndex = 10;
             this.label11.Text = "Estado: ";
             // 
-            // button1
+            // btnConfirmar
             // 
-            this.button1.Location = new System.Drawing.Point(365, 13);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Confirmar Orden";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnConfirmar.Location = new System.Drawing.Point(365, 13);
+            this.btnConfirmar.Name = "btnConfirmar";
+            this.btnConfirmar.Size = new System.Drawing.Size(103, 23);
+            this.btnConfirmar.TabIndex = 2;
+            this.btnConfirmar.Text = "Confirmar Orden";
+            this.btnConfirmar.UseVisualStyleBackColor = true;
             // 
-            // groupBox3
+            // grpboxItems
             // 
-            this.groupBox3.Controls.Add(this.dataGridView1);
-            this.groupBox3.Location = new System.Drawing.Point(6, 117);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(462, 167);
-            this.groupBox3.TabIndex = 1;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Items";
+            this.grpboxItems.Controls.Add(this.dgvItems);
+            this.grpboxItems.Location = new System.Drawing.Point(6, 117);
+            this.grpboxItems.Name = "grpboxItems";
+            this.grpboxItems.Size = new System.Drawing.Size(462, 167);
+            this.grpboxItems.TabIndex = 1;
+            this.grpboxItems.TabStop = false;
+            this.grpboxItems.Text = "Items";
             // 
-            // dataGridView1
+            // dgvItems
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 15);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(450, 144);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvItems.Location = new System.Drawing.Point(6, 15);
+            this.dgvItems.Name = "dgvItems";
+            this.dgvItems.Size = new System.Drawing.Size(450, 144);
+            this.dgvItems.TabIndex = 0;
             // 
-            // groupBox2
+            // grpBoxCliente
             // 
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Location = new System.Drawing.Point(6, 43);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(462, 68);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Datos del Cliente";
+            this.grpBoxCliente.Controls.Add(this.lblDomicilio);
+            this.grpBoxCliente.Controls.Add(this.lblId);
+            this.grpBoxCliente.Controls.Add(this.lblMail);
+            this.grpBoxCliente.Controls.Add(this.lblUser);
+            this.grpBoxCliente.Controls.Add(this.lblNombre);
+            this.grpBoxCliente.Controls.Add(this.label5);
+            this.grpBoxCliente.Controls.Add(this.label4);
+            this.grpBoxCliente.Controls.Add(this.label3);
+            this.grpBoxCliente.Controls.Add(this.label2);
+            this.grpBoxCliente.Controls.Add(this.label1);
+            this.grpBoxCliente.Location = new System.Drawing.Point(6, 43);
+            this.grpBoxCliente.Name = "grpBoxCliente";
+            this.grpBoxCliente.Size = new System.Drawing.Size(462, 68);
+            this.grpBoxCliente.TabIndex = 0;
+            this.grpBoxCliente.TabStop = false;
+            this.grpBoxCliente.Text = "Datos del Cliente";
             // 
-            // label10
+            // lblDomicilio
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(252, 42);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(195, 13);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "Donovan y Camino Gral. Chamizo - Gerli";
+            this.lblDomicilio.AutoSize = true;
+            this.lblDomicilio.Location = new System.Drawing.Point(252, 42);
+            this.lblDomicilio.Name = "lblDomicilio";
+            this.lblDomicilio.Size = new System.Drawing.Size(195, 13);
+            this.lblDomicilio.TabIndex = 9;
+            this.lblDomicilio.Text = "Donovan y Camino Gral. Chamizo - Gerli";
             // 
-            // label9
+            // lblId
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(113, 42);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(19, 13);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "00";
+            this.lblId.AutoSize = true;
+            this.lblId.Location = new System.Drawing.Point(113, 42);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(19, 13);
+            this.lblId.TabIndex = 8;
+            this.lblId.Text = "00";
             // 
-            // label8
+            // lblMail
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(252, 29);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(103, 13);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "gates09@gmail.com";
+            this.lblMail.AutoSize = true;
+            this.lblMail.Location = new System.Drawing.Point(252, 29);
+            this.lblMail.Name = "lblMail";
+            this.lblMail.Size = new System.Drawing.Size(103, 13);
+            this.lblMail.TabIndex = 7;
+            this.lblMail.Text = "gates09@gmail.com";
             // 
-            // label7
+            // lblUser
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(113, 29);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(47, 13);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Gates09";
+            this.lblUser.AutoSize = true;
+            this.lblUser.Location = new System.Drawing.Point(113, 29);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(47, 13);
+            this.lblUser.TabIndex = 6;
+            this.lblUser.Text = "Gates09";
             // 
-            // label6
+            // lblNombre
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(113, 16);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 13);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Bill Gates";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(113, 16);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(51, 13);
+            this.lblNombre.TabIndex = 5;
+            this.lblNombre.Text = "Bill Gates";
             // 
             // label5
             // 
@@ -259,59 +259,59 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre:";
             // 
-            // button2
+            // btnSalir
             // 
-            this.button2.Location = new System.Drawing.Point(394, 346);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(87, 23);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Salir";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnSalir.Location = new System.Drawing.Point(394, 346);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(87, 23);
+            this.btnSalir.TabIndex = 14;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
             // 
             // AdministracionOrdenesdeCompraDetalles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(504, 377);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.GrpBoxOrdenCompra);
             this.Name = "AdministracionOrdenesdeCompraDetalles";
             this.Text = "Administracion - Orden de Compra";
             this.Load += new System.EventHandler(this.AdministracionOrdenesdeCompraDetalles_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.GrpBoxOrdenCompra.ResumeLayout(false);
+            this.GrpBoxOrdenCompra.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.grpboxItems.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvItems)).EndInit();
+            this.grpBoxCliente.ResumeLayout(false);
+            this.grpBoxCliente.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.GroupBox GrpBoxOrdenCompra;
+        private System.Windows.Forms.GroupBox grpBoxCliente;
+        private System.Windows.Forms.GroupBox grpboxItems;
+        private System.Windows.Forms.DataGridView dgvItems;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblDomicilio;
+        private System.Windows.Forms.Label lblId;
+        private System.Windows.Forms.Label lblMail;
+        private System.Windows.Forms.Label lblUser;
+        private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button btnConfirmar;
+        private System.Windows.Forms.Label lblEstado;
+        private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.GroupBox groupBox4;
     }
 }
