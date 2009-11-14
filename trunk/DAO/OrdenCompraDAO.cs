@@ -15,17 +15,17 @@ namespace DAO
         }
         static private ArrayList ListaOrdenes = new ArrayList (); 
 
-        public static void grabarCompra(OrdenCompra UnaOrden)
+        public  void grabarCompra(OrdenCompra UnaOrden)
         {
             ListaOrdenes.Add(UnaOrden);
         }
         
-        public static ArrayList LeerOrdenes()
+        public  ArrayList LeerOrdenes()
         { 
          return(ListaOrdenes);
         }
         
-        public static void CambiarEstadoOrden(OrdenCompra OrdenModificada)
+        public void CambiarEstadoOrden(OrdenCompra OrdenModificada)
         { 
             int Encontrado = 0;
             int x = 0;

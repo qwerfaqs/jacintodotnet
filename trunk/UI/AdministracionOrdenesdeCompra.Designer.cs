@@ -50,7 +50,7 @@
             this.groupBox1.Controls.Add(this.btnDetalles);
             this.groupBox1.Controls.Add(this.chkPendientes);
             this.groupBox1.Controls.Add(this.dgvOrdenes);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(11, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(480, 205);
             this.groupBox1.TabIndex = 1;
@@ -69,7 +69,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(411, 223);
+            this.btnSalir.Location = new System.Drawing.Point(416, 223);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 2;
@@ -89,11 +89,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(502, 250);
+            this.ClientSize = new System.Drawing.Size(502, 254);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.groupBox1);
             this.Name = "AdministracionOrdenesdeCompra";
             this.Text = "Administracion - Ordenes de Compra";
+            this.Load += new System.EventHandler(this.AdministracionOrdenesdeCompra_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenes)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
