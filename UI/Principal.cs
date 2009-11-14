@@ -30,9 +30,10 @@ namespace UI
             Control.ControlCarritos COntroladoraCarrito = new Control.ControlCarritos();
             Control.ControlProductos ControladoraProductos = new Control.ControlProductos();
 
-            ControladoraUser.AgregarNuevoUsuario("Gustavo Emmanuel", "Sanchez Figueroa", "emmanuel.sf@hotmail.com", "admin", "1234", "14 de Julio 2182 6º B", 32395520,2);
-            ControladoraUser.AgregarNuevoUsuario("Gustavo Emmanuel", "Sanchez Figueroa", "emmanuel.sf@hotmail.com", "user", "1234", "14 de Julio 2182 6º B", 32395520, 1);
-            ControladoraUser.AgregarNuevoUsuario("Francisco", "Pane", "qwerfaqs@hotmail.com", "user2", "1234", "Alem 234", 00000000, 1);
+            ControladoraUser.AgregarNuevoUsuario("Gustavo Emmanuel", "Sanchez Figueroa", "emmanuel.sf@hotmail.com", "admin", "1234", "14 de Julio 2182 6º B - Mar del Plata", 32395520, 2);
+            ControladoraUser.AgregarNuevoUsuario("Gustavo Emmanuel", "Sanchez Figueroa", "emmanuel.sf@hotmail.com", "user", "1234", "14 de Julio 2182 6º B - Mar del Plata", 32395520, 1);
+            ControladoraUser.AgregarNuevoUsuario("Francisco", "Pane", "qwerfaqs@hotmail.com", "user2", "1234", "Alem 234 - Mar del Plata", 00000000, 1);
+            ControladoraUser.AgregarNuevoUsuario("Cristina", "Kirchner", "kk@hotmail.com", "user3", "1234", "Edison 1948 - Mar Chiquita", 00000000, 1);
 
             ControladoraCategorias.InsertarCategoria("Lacteos", "1");
             ControladoraCategorias.InsertarCategoria("Fiambres", "2");
@@ -80,6 +81,17 @@ namespace UI
             COntroladoraCarrito2.AgregarItem(10,10);
             COntroladoraCarrito2.AgregarItem(6, 6);
             COntroladoraCarrito2.GenerarOrden(this.session);
+
+            this.session = null;
+            this.session = ControladoraUser.LogIn("user3", "1234");
+
+            Control.ControlCarritos COntroladoraCarrito3 = new Control.ControlCarritos();
+            COntroladoraCarrito3.AgregarItem(7, 7);
+            COntroladoraCarrito3.AgregarItem(8, 8);
+            COntroladoraCarrito3.AgregarItem(9, 9);
+            COntroladoraCarrito3.AgregarItem(10, 10);
+            COntroladoraCarrito3.AgregarItem(6, 6);
+            COntroladoraCarrito3.GenerarOrden(this.session);
         
         }
 

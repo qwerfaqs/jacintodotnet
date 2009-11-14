@@ -23,12 +23,12 @@ namespace DAO
             int Numerito=0;
             foreach (OrdenCompra OC in ListaOrdenes)
             {
-                if (OC.Numero < Numerito)
+                if (OC.Numero > Numerito)
                 {
                     Numerito = OC.Numero;
                 }
             }
-            UnaOrden.Numero = Numerito - 1;
+            UnaOrden.Numero = Numerito + 1;
             ListaOrdenes.Add(UnaOrden);
         }
         
