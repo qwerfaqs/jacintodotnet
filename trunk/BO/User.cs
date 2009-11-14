@@ -28,6 +28,10 @@ namespace BO
             categoria = Categoria;
         }
 
+        public override string ToString()
+        {
+            return this.nombre+" "+this.apellido;
+        }
         public string Nombre
         { 
             get{return nombre;}

@@ -19,7 +19,16 @@ namespace DAO
         static private ArrayList ListaOrdenes = new ArrayList (); 
 
         public  void grabarCompra(OrdenCompra UnaOrden)
-        {
+        {   
+            int Numerito=0;
+            foreach (OrdenCompra OC in ListaOrdenes)
+            {
+                if (OC.Numero < Numerito)
+                {
+                    Numerito = OC.Numero;
+                }
+            }
+            UnaOrden.Numero = Numerito - 1;
             ListaOrdenes.Add(UnaOrden);
         }
         
