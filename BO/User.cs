@@ -6,11 +6,11 @@ namespace BO
 {
     public class User
     {
-        
-        public string nombre;
-        public string apellido;
-        public string email;
-        public string nickname;
+
+        private string nombre;
+        private string apellido;
+        private string email;
+        private string nickname;
         private string pass;
         private string domicilio;
         private int id;

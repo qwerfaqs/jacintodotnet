@@ -38,6 +38,15 @@ namespace Control
         {
             miDAO.ModificarOrden(OC);
         }
+        public Double TotalUnaOrden(OrdenCompra OC)
+        {
+            Double Total=0;
+            foreach (Item I in OC.Items)
+            {
+                Total = Total + (I.Cantidad * I.PrecioUnitario);
+            }
+            return Total;
+        }
         
     }
 }

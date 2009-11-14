@@ -51,7 +51,7 @@ namespace UI
 
         private void button4_Click(object sender, EventArgs e)
         {
-            AdministracionOrdenesdeCompra AOC = new AdministracionOrdenesdeCompra();
+            AdministracionOrdenesdeCompra AOC = new AdministracionOrdenesdeCompra(this.session);
             AOC.Show();
         }
 

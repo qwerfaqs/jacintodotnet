@@ -21,6 +21,10 @@ namespace BO
             set { _envio = value; }
         }
 
+        public ArrayList Items
+        {
+            get { return _items; }            
+        }
 
         public double Iva
         {

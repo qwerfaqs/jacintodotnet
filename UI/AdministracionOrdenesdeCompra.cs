@@ -5,18 +5,26 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-
+using BO;
 namespace UI
 {
     public partial class AdministracionOrdenesdeCompra : Form
     {
         //private ArrayList OrdenesdeCompra;
         Control.ControlOrdenCompra COC = new Control.ControlOrdenCompra();
-        
-        
+        Session Session = null;
 
-        public AdministracionOrdenesdeCompra()
+        public AdministracionOrdenesdeCompra(Session oSession)
         {
+            if (oSession.Loged == true)
+            {
+                this.Session = oSession;
+                this.Text =Session.username + " - Detalles Orden de Compra";
+            }
+            else
+            {
+                throw new ArgumentException("Sesion no valida");
+            }
             InitializeComponent();
         }
 
@@ -46,6 +54,12 @@ namespace UI
             {
                 ActualizarGrilla();
             }
+        }
+
+        private void btnDetalles_Click(object sender, EventArgs e)
+        {
+            AdministracionOrdenesdeCompraDetalles AOCD = new AdministracionOrdenesdeCompraDetalles(this.Session, (int)dgvOrdenes.CurrentRow.Cells["Numero"].Value);
+            AOCD.Show();   
         }
     }
 }
