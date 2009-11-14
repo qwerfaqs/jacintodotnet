@@ -23,11 +23,25 @@ namespace DAO
             ListaOrdenes.Add(UnaOrden);
         }
         
-        public  ArrayList LeerOrdenes()
-        { 
-         return(ListaOrdenes);
+        public  ArrayList LeerOrdenes(string Estado)
+        {   
+
+            ArrayList Lista=new ArrayList();
+            foreach (OrdenCompra oc in ListaOrdenes)
+            { 
+                if(oc.Estado==Estado)
+                {
+                    Lista.Add(oc);
+                }
+            }
+            return Lista;
         }
-        
+
+        public ArrayList LeerOrdenes()
+        {
+            return ListaOrdenes;
+        }
+
         public void CambiarEstadoOrden(OrdenCompra OrdenModificada)
         { 
             int Encontrado = 0;

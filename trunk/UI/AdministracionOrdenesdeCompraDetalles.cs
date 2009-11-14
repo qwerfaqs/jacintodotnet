@@ -19,5 +19,10 @@ namespace UI
         {
 
         }
+
+        private void AdministracionOrdenesdeCompraDetalles_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

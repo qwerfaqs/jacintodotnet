@@ -56,7 +56,8 @@ namespace DAO
             if(categoria == -1)
             {
                 return this.ListaProductos;
-            }else
+            }
+            else
             {
                 Lista = new ArrayList();
 
@@ -65,9 +66,8 @@ namespace DAO
                     if(UnProducto.Cat.Codigo == categoria)
                         Lista.Add(UnProducto);
                 }
-                
             }
-                return Lista;
+            return Lista;
         }
 
         public Producto leer_unproducto(int codigoproducto)

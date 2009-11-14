@@ -125,9 +125,9 @@ namespace UI
         private void Principal___Usuario_Load(object sender, EventArgs e)
         {
             Categorias = CC.CargarCategorias(false);
-            Categorias.Add("Todas");
+            //Categorias.Add("Todas");
             cmb_categorias.DataSource = Categorias;
-            cmb_categorias.Text = "Todas";
+            //cmb_categorias.Text = "Todas";
             RecargarGrilla(-1);
             RecargarCarretilla();
         }
@@ -135,7 +135,8 @@ namespace UI
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             x = -1;
-            RecargarGrilla(cmb_categorias.SelectedIndex);  
+            Categoria cat = (Categoria)CC.CargarCategorias(true)[cmb_categorias.SelectedIndex];
+            RecargarGrilla(cat.Codigo);  
         }
 
         private void dataGridView2_DragEnter(object sender, DragEventArgs e)
@@ -245,6 +246,32 @@ namespace UI
         {
            Carromato.GenerarOrden(this.session);
            
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                RecargarGrilla(-1);
+                cmb_categorias.Enabled = false; 
+                cmb_categorias.Text = "Seleccione Categoria";
+            }
+            else
+            {
+                cmb_categorias.Enabled = true; 
+                cmb_categorias.Text = "Seleccione Categoria";
+                RecargarGrilla(-1);
+            }
         }
 
     }

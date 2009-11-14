@@ -37,6 +37,7 @@
             this.btn_generarorden = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -44,7 +45,7 @@
             // cmb_categorias
             // 
             this.cmb_categorias.FormattingEnabled = true;
-            this.cmb_categorias.Location = new System.Drawing.Point(2, 621);
+            this.cmb_categorias.Location = new System.Drawing.Point(12, 514);
             this.cmb_categorias.Name = "cmb_categorias";
             this.cmb_categorias.Size = new System.Drawing.Size(179, 21);
             this.cmb_categorias.TabIndex = 0;
@@ -58,10 +59,10 @@
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(2, 1);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 1);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1029, 336);
+            this.dataGridView1.Size = new System.Drawing.Size(859, 260);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseDown);
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
@@ -74,17 +75,17 @@
             this.dataGridView2.AllowUserToResizeColumns = false;
             this.dataGridView2.AllowUserToResizeRows = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(2, 343);
+            this.dataGridView2.Location = new System.Drawing.Point(12, 267);
             this.dataGridView2.MultiSelect = false;
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(1029, 272);
+            this.dataGridView2.Size = new System.Drawing.Size(859, 236);
             this.dataGridView2.TabIndex = 2;
             this.dataGridView2.DragEnter += new System.Windows.Forms.DragEventHandler(this.dataGridView2_DragEnter);
             this.dataGridView2.DragDrop += new System.Windows.Forms.DragEventHandler(this.dataGridView2_DragDrop);
             // 
             // btn_EliminarCarrito
             // 
-            this.btn_EliminarCarrito.Location = new System.Drawing.Point(187, 619);
+            this.btn_EliminarCarrito.Location = new System.Drawing.Point(441, 552);
             this.btn_EliminarCarrito.Name = "btn_EliminarCarrito";
             this.btn_EliminarCarrito.Size = new System.Drawing.Size(103, 23);
             this.btn_EliminarCarrito.TabIndex = 3;
@@ -94,7 +95,7 @@
             // 
             // bt_modificarItem
             // 
-            this.bt_modificarItem.Location = new System.Drawing.Point(296, 619);
+            this.bt_modificarItem.Location = new System.Drawing.Point(550, 552);
             this.bt_modificarItem.Name = "bt_modificarItem";
             this.bt_modificarItem.Size = new System.Drawing.Size(103, 23);
             this.bt_modificarItem.TabIndex = 4;
@@ -104,7 +105,7 @@
             // 
             // btn_vaciarCarrito
             // 
-            this.btn_vaciarCarrito.Location = new System.Drawing.Point(405, 619);
+            this.btn_vaciarCarrito.Location = new System.Drawing.Point(659, 552);
             this.btn_vaciarCarrito.Name = "btn_vaciarCarrito";
             this.btn_vaciarCarrito.Size = new System.Drawing.Size(103, 23);
             this.btn_vaciarCarrito.TabIndex = 5;
@@ -114,7 +115,7 @@
             // 
             // btn_generarorden
             // 
-            this.btn_generarorden.Location = new System.Drawing.Point(514, 619);
+            this.btn_generarorden.Location = new System.Drawing.Point(768, 552);
             this.btn_generarorden.Name = "btn_generarorden";
             this.btn_generarorden.Size = new System.Drawing.Size(103, 23);
             this.btn_generarorden.TabIndex = 6;
@@ -127,27 +128,41 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(850, 621);
+            this.label1.Location = new System.Drawing.Point(793, 506);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 28);
             this.label1.TabIndex = 7;
             this.label1.Text = "123465";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(760, 621);
+            this.label2.Location = new System.Drawing.Point(703, 506);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(94, 28);
             this.label2.TabIndex = 8;
             this.label2.Text = "Total :  $";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(197, 516);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(94, 17);
+            this.checkBox1.TabIndex = 9;
+            this.checkBox1.Text = "Mostrar Todas";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // Principal___Usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1032, 653);
+            this.ClientSize = new System.Drawing.Size(880, 584);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_generarorden);
@@ -178,5 +193,6 @@
         private System.Windows.Forms.Button btn_generarorden;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

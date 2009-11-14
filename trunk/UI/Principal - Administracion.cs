@@ -38,6 +38,12 @@ namespace UI
             AP.Show();
         }
 
+        private void btnOrdenesdeCompra_Click(object sender, EventArgs e)
+        {
+            AdministracionOrdenesdeCompra AOC = new AdministracionOrdenesdeCompra();
+            AOC.Show();
+        }
+
         
     }
 }

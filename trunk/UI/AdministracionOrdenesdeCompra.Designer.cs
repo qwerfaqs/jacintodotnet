@@ -66,6 +66,7 @@
             this.chkPendientes.TabIndex = 1;
             this.chkPendientes.Text = "Mostrar Solo Ordenes Pendientes";
             this.chkPendientes.UseVisualStyleBackColor = true;
+            this.chkPendientes.CheckedChanged += new System.EventHandler(this.chkPendientes_CheckedChanged);
             // 
             // btnSalir
             // 
