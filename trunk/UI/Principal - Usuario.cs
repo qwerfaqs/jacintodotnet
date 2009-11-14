@@ -244,8 +244,7 @@ namespace UI
         /// <param name="e"></param>
         private void btn_generarorden_Click(object sender, EventArgs e)
         {
-           Carromato.GenerarOrden(this.session);
-           
+           Carromato.GenerarOrden(this.session);           
         }
 
         private void label1_Click(object sender, EventArgs e)

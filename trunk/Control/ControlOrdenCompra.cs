@@ -16,11 +16,11 @@ namespace Control
         
         private OrdenCompra _orden;
 
-        public void GenerarOrden(Carrito carrito,User usuario)
+        public int GenerarOrden(Carrito carrito,User usuario)
         {
             //throw new Exception("The method or operation is not implemented.");
             _orden = new OrdenCompra(carrito,usuario);
-            miDAO.grabarCompra(_orden);
+            return miDAO.grabarCompra(_orden);
         }
         public ArrayList LeerOdenesdeCompra()
         {
@@ -30,5 +30,14 @@ namespace Control
         {
             return miDAO.LeerOrdenes(Estado);
         }
+        public OrdenCompra LeerUnaOrden(int IdOrden)
+        {
+            return miDAO.LeerUnaOrden(IdOrden);
+        }
+        public void ModificarUnaOrden(OrdenCompra OC)
+        {
+            miDAO.ModificarOrden(OC);
+        }
+        
     }
 }

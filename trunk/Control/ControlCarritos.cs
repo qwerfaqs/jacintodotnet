@@ -52,11 +52,11 @@ namespace Control
             return this.unCarrito.Subtotal.ToString();
         }
 
-        public void GenerarOrden(Session session)
+        public int GenerarOrden(Session session)
         {
             //throw new Exception("The method or operation is not implemented.");
             ControlOrdenCompra crtlOrden = new ControlOrdenCompra();
-            crtlOrden.GenerarOrden(this.unCarrito,session.dameUser());
+            return crtlOrden.GenerarOrden(this.unCarrito,session.dameUser());
             
         }
 
