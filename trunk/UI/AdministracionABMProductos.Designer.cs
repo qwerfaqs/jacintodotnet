@@ -65,7 +65,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(305, 486);
+            this.checkBox1.Location = new System.Drawing.Point(314, 486);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(94, 17);
             this.checkBox1.TabIndex = 6;
@@ -89,7 +89,7 @@
             this.cmb_categorias.FormattingEnabled = true;
             this.cmb_categorias.Location = new System.Drawing.Point(139, 482);
             this.cmb_categorias.Name = "cmb_categorias";
-            this.cmb_categorias.Size = new System.Drawing.Size(143, 21);
+            this.cmb_categorias.Size = new System.Drawing.Size(154, 21);
             this.cmb_categorias.TabIndex = 4;
             this.cmb_categorias.SelectedIndexChanged += new System.EventHandler(this.cmb_categorias_SelectedIndexChanged);
             // 
@@ -180,7 +180,7 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.groupBox1);
             this.Name = "AdministracionABMProductos";
-            this.Text = "Productos";
+            this.Text = "Administracion - Productos";
             this.Load += new System.EventHandler(this.AdministracionABMProductos_Load);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdministracionABMProductos_FormClosed);
             this.groupBox1.ResumeLayout(false);

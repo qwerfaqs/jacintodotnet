@@ -34,7 +34,7 @@
             // 
             // btnProductos
             // 
-            this.btnProductos.Location = new System.Drawing.Point(12, 49);
+            this.btnProductos.Location = new System.Drawing.Point(109, 12);
             this.btnProductos.Name = "btnProductos";
             this.btnProductos.Size = new System.Drawing.Size(91, 31);
             this.btnProductos.TabIndex = 3;
@@ -56,11 +56,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(292, 207);
+            this.ClientSize = new System.Drawing.Size(324, 207);
             this.Controls.Add(this.btnProductos);
             this.Controls.Add(this.btnCategorias);
             this.Name = "Principal___Administracion";
-            this.Text = "Principal___Administracion";
+            this.Text = "Administracion";
             this.ResumeLayout(false);
 
         }

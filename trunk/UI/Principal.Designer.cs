@@ -115,7 +115,6 @@
             this.panel1.Size = new System.Drawing.Size(269, 88);
             this.panel1.TabIndex = 9;
             this.panel1.Visible = false;
-            //this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // linkLabel2
             // 
@@ -168,7 +167,7 @@
             this.ClientSize = new System.Drawing.Size(300, 127);
             this.Controls.Add(this.groupBox1);
             this.Name = "Principal";
-            this.Text = "Carrito De Compras";
+            this.Text = "Log In";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

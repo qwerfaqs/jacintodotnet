@@ -268,7 +268,7 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.groupBox1);
             this.Name = "AdministracionProductos";
-            this.Text = "Productos";
+            this.Text = "Administracion - Productos";
             this.Load += new System.EventHandler(this.AdministracionProductos_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

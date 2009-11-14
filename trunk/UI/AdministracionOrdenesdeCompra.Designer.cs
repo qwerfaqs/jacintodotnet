@@ -93,7 +93,7 @@
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.groupBox1);
             this.Name = "AdministracionOrdenesdeCompra";
-            this.Text = "AdministracionOrdenesdeCompra";
+            this.Text = "Administracion - Ordenes de Compra";
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenes)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
