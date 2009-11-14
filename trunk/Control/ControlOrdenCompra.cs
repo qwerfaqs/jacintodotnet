@@ -10,6 +10,7 @@ namespace Control
 {
     public class ControlOrdenCompra
     {
+        //DAO con ArrayList
         OrdenCompraDAO miDAO = OrdenCompraDAO.Instancia();
         //DAO con SQL
         
