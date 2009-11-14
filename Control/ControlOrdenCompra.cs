@@ -5,20 +5,21 @@ using System.Collections;
 using BO;
 using DAOSQL;
 using DAO;
+
 namespace Control
 {
     public class ControlOrdenCompra
     {
-        //DAO con ArrayList
+        OrdenCompraDAO miDAO = OrdenCompraDAO.Instancia();
         //DAO con SQL
         
         private OrdenCompra _orden;
-        
-        internal void GenerarOrden(Carrito carrito,User usuario)
+
+        public void GenerarOrden(Carrito carrito,User usuario)
         {
             //throw new Exception("The method or operation is not implemented.");
             _orden = new OrdenCompra(carrito,usuario);
-
-        }
+            miDAO.grabarCompra(_orden);
+        } 
     }
 }

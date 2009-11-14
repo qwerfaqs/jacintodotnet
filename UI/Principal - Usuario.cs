@@ -15,6 +15,7 @@ namespace UI
         Control.ControlProductos CP = new Control.ControlProductos();
         Control.ControlCategorias CC = new Control.ControlCategorias();
         Control.ControlCarritos Carromato = new Control.ControlCarritos();
+        Control.ControlOrdenCompra COC = new Control.ControlOrdenCompra();
         ArrayList Categorias;
         int x;//producto seleccionado
         Session session = null;
@@ -243,7 +244,7 @@ namespace UI
         private void btn_generarorden_Click(object sender, EventArgs e)
         {
            Carromato.GenerarOrden(this.session);
-           //Carromato.GenerarOrden(this.usuario);
+           
         }
 
     }

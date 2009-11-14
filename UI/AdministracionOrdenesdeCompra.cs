@@ -14,5 +14,10 @@ namespace UI
         {
             InitializeComponent();
         }
+
+        private void AdministracionOrdenesdeCompra_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
