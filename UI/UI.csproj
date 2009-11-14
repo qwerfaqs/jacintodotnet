@@ -48,6 +48,12 @@
     <Compile Include="AdministracionCategorias.Designer.cs">
       <DependentUpon>AdministracionCategorias.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdministracionMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdministracionMenu.Designer.cs">
+      <DependentUpon>AdministracionMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdministracionOrdenesdeCompra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,12 +71,6 @@
     </Compile>
     <Compile Include="IngresoCantidad.Usuario.Designer.cs">
       <DependentUpon>IngresoCantidad.Usuario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Principal - Administracion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Principal - Administracion.Designer.cs">
-      <DependentUpon>Principal - Administracion.cs</DependentUpon>
     </Compile>
     <Compile Include="Principal - Usuario.cs">
       <SubType>Form</SubType>
@@ -100,6 +100,10 @@
       <SubType>Designer</SubType>
       <DependentUpon>AdministracionCategorias.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdministracionMenu.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AdministracionMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdministracionOrdenesdeCompra.resx">
       <SubType>Designer</SubType>
       <DependentUpon>AdministracionOrdenesdeCompra.cs</DependentUpon>
@@ -111,10 +115,6 @@
     <EmbeddedResource Include="IngresoCantidad.Usuario.resx">
       <SubType>Designer</SubType>
       <DependentUpon>IngresoCantidad.Usuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Principal - Administracion.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>Principal - Administracion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal - Usuario.resx">
       <DependentUpon>Principal - Usuario.cs</DependentUpon>
