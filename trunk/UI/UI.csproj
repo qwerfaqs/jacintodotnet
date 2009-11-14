@@ -48,6 +48,18 @@
     <Compile Include="AdministracionCategorias.Designer.cs">
       <DependentUpon>AdministracionCategorias.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdministracionOrdenesdeCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdministracionOrdenesdeCompra.Designer.cs">
+      <DependentUpon>AdministracionOrdenesdeCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdministracionOrdenesdeCompraDetalles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdministracionOrdenesdeCompraDetalles.Designer.cs">
+      <DependentUpon>AdministracionOrdenesdeCompraDetalles.cs</DependentUpon>
+    </Compile>
     <Compile Include="IngresoCantidad.Usuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +99,14 @@
     <EmbeddedResource Include="AdministracionCategorias.resx">
       <SubType>Designer</SubType>
       <DependentUpon>AdministracionCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdministracionOrdenesdeCompra.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AdministracionOrdenesdeCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdministracionOrdenesdeCompraDetalles.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AdministracionOrdenesdeCompraDetalles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IngresoCantidad.Usuario.resx">
       <SubType>Designer</SubType>
