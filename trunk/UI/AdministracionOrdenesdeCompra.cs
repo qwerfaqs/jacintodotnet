@@ -22,12 +22,11 @@ namespace UI
 
         private void ActualizarGrilla(String Pendiente)
         {
-            dgvOrdenes.Rows.Clear();
             dgvOrdenes.DataSource = COC.LeerOdenesdeCompra(Pendiente); 
         }
         private void ActualizarGrilla()
         {
-            dgvOrdenes.Rows.Clear();
+            //dgvOrdenes.Rows.Clear();
             dgvOrdenes.DataSource = COC.LeerOdenesdeCompra();
         }
 

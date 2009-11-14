@@ -18,7 +18,7 @@ namespace DAO
         }
         static private ArrayList ListaOrdenes = new ArrayList (); 
 
-        public  void grabarCompra(OrdenCompra UnaOrden)
+        public  int grabarCompra(OrdenCompra UnaOrden)
         {   
             int Numerito=0;
             foreach (OrdenCompra OC in ListaOrdenes)
@@ -30,11 +30,25 @@ namespace DAO
             }
             UnaOrden.Numero = Numerito + 1;
             ListaOrdenes.Add(UnaOrden);
+            return UnaOrden.Numero;
+        }
+
+        public OrdenCompra LeerUnaOrden(int IdOrden)
+        {
+            OrdenCompra UnaOrden=null;
+            foreach (OrdenCompra OC in ListaOrdenes)
+            {
+                if (OC.Numero == IdOrden)
+                {
+                    UnaOrden = OC;
+                    break;
+                }
+            }
+            return UnaOrden;
         }
         
         public  ArrayList LeerOrdenes(string Estado)
         {   
-
             ArrayList Lista=new ArrayList();
             foreach (OrdenCompra oc in ListaOrdenes)
             { 
@@ -51,7 +65,7 @@ namespace DAO
             return ListaOrdenes;
         }
 
-        public void CambiarEstadoOrden(OrdenCompra OrdenModificada)
+        public void ModificarOrden(OrdenCompra OrdenModificada)
         { 
             int Encontrado = 0;
             int x = 0;
@@ -64,7 +78,7 @@ namespace DAO
                     Encontrado = 1;
                 }
                 x++;
-             }          
+            }          
         }
     }
 }
