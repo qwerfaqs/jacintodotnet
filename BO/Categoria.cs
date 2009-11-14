@@ -42,10 +42,10 @@ namespace BO
         }
           
 
-     public override string ToString()
-     {
-         return this.Nombre;
-     }
+         public override string ToString()
+         {
+             return this.Nombre;
+         }
 
 
 

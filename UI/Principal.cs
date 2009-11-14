@@ -107,7 +107,7 @@ namespace UI
                 }
                 else if (this.session.tipo.Equals("ADMIN"))
                 {
-                    AdministracionMenu AM = new AdministracionMenu();
+                    AdministracionMenu AM = new AdministracionMenu(this.session);
                     AM.Show();
                 }
                 

@@ -132,7 +132,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 28);
             this.label1.TabIndex = 7;
-            this.label1.Text = "123465";
+            this.label1.Text = "123456";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
