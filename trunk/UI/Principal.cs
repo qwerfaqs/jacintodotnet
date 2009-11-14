@@ -107,24 +107,19 @@ namespace UI
                 }
                 else if (this.session.tipo.Equals("ADMIN"))
                 {
-                    Principal___Administracion PA = new Principal___Administracion(this.session);
-                    PA.Show();
+                    AdministracionMenu AM = new AdministracionMenu();
+                    AM.Show();
                 }
                 
             }
             catch (Exception ex)
             {
-                if (this.session.Loged == false)
-                {
-                    label3.Text = "Nombre de usuario o contraseña incorrectos!";
-                    panel1.Visible = true;
-                    button3.Hide();
-                    button4.Hide();
-                }
-                else
-                {
-                    MessageBox.Show(ex.Message + " - " + ex.InnerException.Message, "Error");
-                }
+                
+                label3.Text = ex.Message+" - "+ex.InnerException.Message;
+                panel1.Visible = true;
+                button3.Hide();
+                button4.Hide();
+                
             }
         }
 
@@ -153,11 +148,14 @@ namespace UI
             button3.Show();
         }
 
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        
+        private void button1_Click(object sender, EventArgs e)
         {
-           //jajaja//MessageBox.Show("NO TE HAGAS EL VIVO Y PONE BIEN EL USER Y PASS", "KERNEL PANIC", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1, MessageBoxOptions.ServiceNotification, false);
-            Principal___Administracion PA = new Principal___Administracion(this.session);
-            PA.Show();
+            button4.Show();
+            button3.Show();
+            panel1.Visible = false;
+            //AdministracionMenu AM = new AdministracionMenu();
+            //AM.Show();
         }
 
        
