@@ -101,7 +101,10 @@ namespace DAOSQL
             {
                 throw new Exception("NO SE PUDO CONECTAR CON NINGUN CONECCTRION STRING revise conexiones.xml o consulte a su administrador de base de datos");
             }
+            if(_conn.State==System.Data.ConnectionState.Closed)
+            {
                 _conn.Open();
+            }
             
             
         }
@@ -111,7 +114,10 @@ namespace DAOSQL
             {
                 throw new Exception("NO SE PUDO CONECTAR CON NINGUN CONECCTRION STRING revise conexiones.xml o consulte a su administrador de base de datos");
             }
-            _conn.Close();
+            if (_conn.State == System.Data.ConnectionState.Open)
+            {
+                _conn.Close();
+            }
 
         }
         }
