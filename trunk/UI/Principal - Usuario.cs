@@ -37,7 +37,7 @@ namespace UI
                 throw new Exception("SESSION NO VALIDA");
             }
 
-            int x;//producto seleccionado
+            //int x;//producto seleccionado
 
 
             BindingSource BS = new BindingSource();

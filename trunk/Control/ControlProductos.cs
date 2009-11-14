@@ -27,7 +27,7 @@ namespace Control
 
             try
             {
-                Exception ex;
+                
                 int Precio = Convert.ToInt32(precio);
                 int Codigo = Convert.ToInt32(codigo);
                 Categoria Categoria = categoria;
@@ -41,7 +41,7 @@ namespace Control
             }
             catch (Exception ex)
             {
-                throw new ArgumentException("Error Agregando Producto");
+                throw new ArgumentException("Error Agregando Producto",ex);
             }
             return Exito;
         }

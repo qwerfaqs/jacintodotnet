@@ -49,9 +49,9 @@ namespace DAOSQL
                         
                     }
 
-                    catch (Exception exp)
+                    catch 
                     {
-                        exp = null;
+                        
                     }
                 }
                 else
