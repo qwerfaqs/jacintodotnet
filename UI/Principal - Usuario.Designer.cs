@@ -158,7 +158,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.cmb_categorias);
             this.Name = "Principal___Usuario";
-            this.Text = "Principal___Usuario";
+            this.Text = "Jacinto - Carrito de Compras";
             this.Load += new System.EventHandler(this.Principal___Usuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();

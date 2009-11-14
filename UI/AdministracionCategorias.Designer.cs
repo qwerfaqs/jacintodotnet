@@ -239,7 +239,7 @@
             this.btn_carga.UseVisualStyleBackColor = true;
             this.btn_carga.Click += new System.EventHandler(this.btn_carga_Click);
             // 
-            // Categorias
+            // AdministracionCategorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -249,8 +249,8 @@
             this.Controls.Add(this.grp_eliminacion);
             this.Controls.Add(this.grp_Modificacion);
             this.Controls.Add(this.grp_carga);
-            this.Name = "Categorias";
-            this.Text = "Categorias";
+            this.Name = "AdministracionCategorias";
+            this.Text = "Administracion - Categorias";
             this.Load += new System.EventHandler(this.Categorias_Load);
             this.grp_lista.ResumeLayout(false);
             this.grp_eliminacion.ResumeLayout(false);
