@@ -26,7 +26,7 @@ namespace UI
             }
             else
             {
-                throw new Exception("SESSION NO VALIDA");
+                throw new Exception("SESION NO VALIDA");
             }
 
             BS.DataSource = CC.CargarCategorias(true);

@@ -5,13 +5,24 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-
+using BO;
 namespace UI
 {
     public partial class AdministracionOrdenesdeCompraDetalles : Form
     {
-        public AdministracionOrdenesdeCompraDetalles()
+        Session Session;
+        public AdministracionOrdenesdeCompraDetalles(Session oSession)
         {
+            if (oSession.Loged == true)
+            {
+                this.Session = oSession;
+                this.Text =Session.username + " - Detalles Orden de Compra";
+            }
+            else
+            {
+                throw new ArgumentException("Sesion no valida");
+            }
+
             InitializeComponent();
         }
 
