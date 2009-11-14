@@ -30,11 +30,13 @@
         {
             this.btnProductos = new System.Windows.Forms.Button();
             this.btnCategorias = new System.Windows.Forms.Button();
+            this.btnOrdenesdeCompra = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnProductos
             // 
             this.btnProductos.Location = new System.Drawing.Point(109, 12);
+            this.btnProductos.Location = new System.Drawing.Point(12, 49);
             this.btnProductos.Name = "btnProductos";
             this.btnProductos.Size = new System.Drawing.Size(91, 31);
             this.btnProductos.TabIndex = 3;
@@ -52,11 +54,23 @@
             this.btnCategorias.UseVisualStyleBackColor = true;
             this.btnCategorias.Click += new System.EventHandler(this.btnCategorias_Click);
             // 
+            // btnOrdenesdeCompra
+            // 
+            this.btnOrdenesdeCompra.Location = new System.Drawing.Point(12, 86);
+            this.btnOrdenesdeCompra.Name = "btnOrdenesdeCompra";
+            this.btnOrdenesdeCompra.Size = new System.Drawing.Size(91, 46);
+            this.btnOrdenesdeCompra.TabIndex = 4;
+            this.btnOrdenesdeCompra.Text = "Ordenes de Compra";
+            this.btnOrdenesdeCompra.UseVisualStyleBackColor = true;
+            this.btnOrdenesdeCompra.Click += new System.EventHandler(this.btnOrdenesdeCompra_Click);
+            // 
             // Principal___Administracion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(488, 207);
+            this.ClientSize = new System.Drawing.Size(324, 207);
+            this.ClientSize = new System.Drawing.Size(122, 143);
+            this.Controls.Add(this.btnOrdenesdeCompra);
             this.Controls.Add(this.btnProductos);
             this.Controls.Add(this.btnCategorias);
             this.Name = "Principal___Administracion";
@@ -69,5 +83,6 @@
 
         private System.Windows.Forms.Button btnProductos;
         private System.Windows.Forms.Button btnCategorias;
+        private System.Windows.Forms.Button btnOrdenesdeCompra;
     }
 }
