@@ -30,9 +30,9 @@
         {
             this.dgvOrdenes = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnDetalles = new System.Windows.Forms.Button();
             this.chkPendientes = new System.Windows.Forms.CheckBox();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.btnDetalles = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenes)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -57,6 +57,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Lista de Ordenes de Compra";
             // 
+            // btnDetalles
+            // 
+            this.btnDetalles.Location = new System.Drawing.Point(8, 175);
+            this.btnDetalles.Name = "btnDetalles";
+            this.btnDetalles.Size = new System.Drawing.Size(100, 23);
+            this.btnDetalles.TabIndex = 3;
+            this.btnDetalles.Text = "Ver Detalles...";
+            this.btnDetalles.UseVisualStyleBackColor = true;
+            this.btnDetalles.Click += new System.EventHandler(this.btnDetalles_Click);
+            // 
             // chkPendientes
             // 
             this.chkPendientes.AutoSize = true;
@@ -76,15 +86,6 @@
             this.btnSalir.TabIndex = 2;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
-            // 
-            // btnDetalles
-            // 
-            this.btnDetalles.Location = new System.Drawing.Point(8, 175);
-            this.btnDetalles.Name = "btnDetalles";
-            this.btnDetalles.Size = new System.Drawing.Size(100, 23);
-            this.btnDetalles.TabIndex = 3;
-            this.btnDetalles.Text = "Ver Detalles...";
-            this.btnDetalles.UseVisualStyleBackColor = true;
             // 
             // AdministracionOrdenesdeCompra
             // 
