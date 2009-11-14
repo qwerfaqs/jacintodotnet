@@ -45,6 +45,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -53,6 +56,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label14);
+            this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.button1);
@@ -60,7 +65,7 @@
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Location = new System.Drawing.Point(16, 14);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(515, 323);
+            this.groupBox1.Size = new System.Drawing.Size(515, 314);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Orden de Compra";
@@ -195,7 +200,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(400, 290);
+            this.button1.Location = new System.Drawing.Point(406, 16);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(103, 23);
             this.button1.TabIndex = 2;
@@ -223,11 +228,41 @@
             this.label12.TabIndex = 11;
             this.label12.Text = "Pendiente";
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(401, 287);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(48, 20);
+            this.label13.TabIndex = 12;
+            this.label13.Text = "Total:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(455, 287);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(49, 20);
+            this.label14.TabIndex = 13;
+            this.label14.Text = "00.00";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(444, 334);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(87, 23);
+            this.button2.TabIndex = 14;
+            this.button2.Text = "Salir";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // AdministracionOrdenesdeCompraDetalles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(548, 349);
+            this.ClientSize = new System.Drawing.Size(548, 365);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox1);
             this.Name = "AdministracionOrdenesdeCompraDetalles";
             this.Text = "AdministracionOrdenesdeCompraDetalles";
@@ -260,5 +295,8 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button button2;
     }
 }
