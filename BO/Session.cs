@@ -53,8 +53,7 @@ namespace BO
                 {
                     salida = this._user.Nombre + " " + this._user.Apellido;
                 }
-                return salida;
-                
+                return salida;                
             }
         }
     }

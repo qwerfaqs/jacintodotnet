@@ -8,7 +8,7 @@ namespace BO
     {
         int _Cantidad;
         
-        Producto _UnProducto;
+        public Producto _UnProducto;
 
         
         public Item(Producto UnProducto,int Cantidad)

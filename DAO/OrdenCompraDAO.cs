@@ -33,6 +33,21 @@ namespace DAO
             return UnaOrden.Numero;
         }
 
+        public OrdenCompra grabarCompra2(OrdenCompra UnaOrden)//Borrar luego- solo sirve para precarga en arraylist de orden de compra confrimada 
+        {
+            int Numerito = 0;
+            foreach (OrdenCompra OC in ListaOrdenes)
+            {
+                if (OC.Numero > Numerito)
+                {
+                    Numerito = OC.Numero;
+                }
+            }
+            UnaOrden.Numero = Numerito + 1;
+            ListaOrdenes.Add(UnaOrden);
+            return UnaOrden;
+        }
+
         public OrdenCompra LeerUnaOrden(int IdOrden)
         {
             OrdenCompra UnaOrden=null;
@@ -66,19 +81,15 @@ namespace DAO
         }
 
         public void ModificarOrden(OrdenCompra OrdenModificada)
-        { 
-            int Encontrado = 0;
-            int x = 0;
-            while ((x < ListaOrdenes.Count) && (Encontrado == 0))
+        {
+            foreach (OrdenCompra OC in ListaOrdenes)
             {
-                OrdenCompra aux = (OrdenCompra)ListaOrdenes[x];
-                if (aux.Numero == OrdenModificada.Numero)
+                if (OC.Numero == OrdenModificada.Numero)
                 {
-                    aux = OrdenModificada;
-                    Encontrado = 1;
+                    OC.Estado = OrdenModificada.Estado;
+                    break;
                 }
-                x++;
-            }          
+            }
         }
     }
 }

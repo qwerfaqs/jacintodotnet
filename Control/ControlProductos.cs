@@ -20,7 +20,6 @@ namespace Control
             
         }
         
-
         public bool AgregarProducto(Categoria categoria, string codigo,Image Foto, string nombre, string precio, string preciooferta, string stockactual, string stockcomprometido)
         {
             bool Exito = false;
@@ -45,6 +44,7 @@ namespace Control
             }
             return Exito;
         }
+        
         public bool ExistenProductosConEstaCategoria(int categoria)
         {
             Control.ControlProductos CP = new ControlProductos();
@@ -59,6 +59,7 @@ namespace Control
             }
             return r;
         }
+        
         public bool ModificarProducto(Categoria categoria, string codigo, Image Foto, string nombre, string precio, string preciooferta, string stockactual, string stockcomprometido)
         {
             bool Exito = false;
@@ -121,5 +122,18 @@ namespace Control
                 throw new Exception("Error Borrando Producto. Producto no se ha boorado");
             }
         }
+
+        public void ModificarUnStock(Producto Prod, int Cant)
+        {
+            this.ModificarProducto(Prod.Cat, Prod.Codigo.ToString(), Prod.FotoPath, Prod.Nombre.ToString(), Prod.Precio.ToString(), Prod.PrecioOferta.ToString(), Convert.ToString((Prod.StockActual - Cant)), Prod.StockComprometido.ToString());
+        }
+        public void ModificarStocksdeProductosdeUnaOrden(OrdenCompra UnaOrden)
+        {
+            foreach (Item Item in UnaOrden.Items)
+            {
+                ModificarUnStock(Item._UnProducto, Item.Cantidad);
+            }
+        }
+
     }
 }

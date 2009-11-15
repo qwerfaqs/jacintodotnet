@@ -45,22 +45,22 @@ namespace UI
             Categoria oCategoria = new Categoria();
             ControladoraCategorias.CargarCategorias(false);
             oCategoria = ControladoraCategorias.ObtenerUnaCategoria(1);
-            ControladoraProductos.AgregarProducto(oCategoria, "1", Image.FromFile(path + "\\Imagenes\\PortSalut.jpg"), "Queso Port Salut Sancor", "100", "90", "4", "1");
-            ControladoraProductos.AgregarProducto(oCategoria, "2", Image.FromFile(path + "\\Imagenes\\LecheConHierro.jpg"), "Leche con Hierro La Serenisima", "3", "2", "4", "1");
-            ControladoraProductos.AgregarProducto(oCategoria, "3", Image.FromFile(path + "\\Imagenes\\Yogur.jpg"), "Yogurisimo Vainilla", "2", "2", "4", "1");
+            ControladoraProductos.AgregarProducto(oCategoria, "1", Image.FromFile(path + "\\Imagenes\\PortSalut.jpg"), "Queso Port Salut Sancor", "100", "90", "10", "0");
+            ControladoraProductos.AgregarProducto(oCategoria, "2", Image.FromFile(path + "\\Imagenes\\LecheConHierro.jpg"), "Leche con Hierro La Serenisima", "3", "2", "10", "0");
+            ControladoraProductos.AgregarProducto(oCategoria, "3", Image.FromFile(path + "\\Imagenes\\Yogur.jpg"), "Yogurisimo Vainilla", "2", "2", "10", "0");
             oCategoria = ControladoraCategorias.ObtenerUnaCategoria(2);
-            ControladoraProductos.AgregarProducto(oCategoria, "4", Image.FromFile(path + "\\Imagenes\\Mortadela.jpg"), "Mortadela Paladini", "70", "66", "4", "1");
-            ControladoraProductos.AgregarProducto(oCategoria, "5", Image.FromFile(path + "\\Imagenes\\JamonCocido.jpg"), "Jamon Cocido Paladini", "70", "66", "4", "1");
+            ControladoraProductos.AgregarProducto(oCategoria, "4", Image.FromFile(path + "\\Imagenes\\Mortadela.jpg"), "Mortadela Paladini", "70", "66", "10", "0");
+            ControladoraProductos.AgregarProducto(oCategoria, "5", Image.FromFile(path + "\\Imagenes\\JamonCocido.jpg"), "Jamon Cocido Paladini", "70", "66", "10", "0");
             oCategoria = ControladoraCategorias.ObtenerUnaCategoria(3);
-            ControladoraProductos.AgregarProducto(oCategoria, "6", Image.FromFile(path + "\\Imagenes\\Crema.jpg"), "Cif Crema", "7", "6", "4", "1");
-            ControladoraProductos.AgregarProducto(oCategoria, "7", Image.FromFile(path + "\\Imagenes\\JabonEnPolvo.jpg"), "Javon en Polvo Ace", "10", "8", "4", "1");
+            ControladoraProductos.AgregarProducto(oCategoria, "6", Image.FromFile(path + "\\Imagenes\\Crema.jpg"), "Cif Crema", "7", "6", "10", "0");
+            ControladoraProductos.AgregarProducto(oCategoria, "7", Image.FromFile(path + "\\Imagenes\\JabonEnPolvo.jpg"), "Javon en Polvo Ace", "10", "8", "10", "0");
             oCategoria = ControladoraCategorias.ObtenerUnaCategoria(4);
-            ControladoraProductos.AgregarProducto(oCategoria, "8", Image.FromFile(path + "\\Imagenes\\Patitas.jpg"), "Patitas", "10", "8", "4", "1");
-            ControladoraProductos.AgregarProducto(oCategoria, "9", Image.FromFile(path + "\\Imagenes\\HamburguesasPollo.jpg"), "Supremas con Jamon y queso Granja del Sol", "15", "13", "4", "1");
-            ControladoraProductos.AgregarProducto(oCategoria, "10", Image.FromFile(path + "\\Imagenes\\Pizza.jpg"), "Pizza Especial Sivarita", "22", "19", "4", "1");
+            ControladoraProductos.AgregarProducto(oCategoria, "8", Image.FromFile(path + "\\Imagenes\\Patitas.jpg"), "Patitas", "10", "8", "10", "0");
+            ControladoraProductos.AgregarProducto(oCategoria, "9", Image.FromFile(path + "\\Imagenes\\HamburguesasPollo.jpg"), "Supremas con Jamon y queso Granja del Sol", "15", "13", "10", "0");
+            ControladoraProductos.AgregarProducto(oCategoria, "10", Image.FromFile(path + "\\Imagenes\\Pizza.jpg"), "Pizza Especial Sivarita", "22", "19", "10", "0");
             oCategoria = ControladoraCategorias.ObtenerUnaCategoria(5);
-            ControladoraProductos.AgregarProducto(oCategoria, "11", Image.FromFile(path + "\\Imagenes\\PanLactal.jpg"), "Pan Lactal Fargo", "5", "4", "4", "1");
-            ControladoraProductos.AgregarProducto(oCategoria, "12", Image.FromFile(path + "\\Imagenes\\PanHamburguesas.jpg"), "Pan Hamburguesas Bimbo", "5", "4", "6", "1");
+            ControladoraProductos.AgregarProducto(oCategoria, "11", Image.FromFile(path + "\\Imagenes\\PanLactal.jpg"), "Pan Lactal Fargo", "5", "4", "10", "0");
+            ControladoraProductos.AgregarProducto(oCategoria, "12", Image.FromFile(path + "\\Imagenes\\PanHamburguesas.jpg"), "Pan Hamburguesas Bimbo", "5", "4", "10", "0");
             
             this.session = ControladoraUser.LogIn("user", "1234");
 
@@ -91,8 +91,8 @@ namespace UI
             COntroladoraCarrito3.AgregarItem(9, 9);
             COntroladoraCarrito3.AgregarItem(10, 10);
             COntroladoraCarrito3.AgregarItem(6, 6);
-            COntroladoraCarrito3.GenerarOrden(this.session);
-        
+            OrdenCompra OC = COntroladoraCarrito3.GenerarOrden2(this.session);
+            OC.Estado = "CONFIRMADO";            
         }
 
         

@@ -59,6 +59,13 @@ namespace Control
             return crtlOrden.GenerarOrden(this.unCarrito,session.dameUser());
             
         }
+        public OrdenCompra GenerarOrden2(Session session)//Borrar Luego - Solo sirve para hacer una carga inicial de una orden con estado CONFIRMADO 
+        {
+            //throw new Exception("The method or operation is not implemented.");
+            ControlOrdenCompra crtlOrden = new ControlOrdenCompra();
+            return crtlOrden.GenerarOrden2(this.unCarrito, session.dameUser());
+
+        }
 
        
     }
