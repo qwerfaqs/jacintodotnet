@@ -131,6 +131,7 @@
             this.btnConfirmar.TabIndex = 2;
             this.btnConfirmar.Text = "Confirmar Orden";
             this.btnConfirmar.UseVisualStyleBackColor = true;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
             // grpboxItems
             // 

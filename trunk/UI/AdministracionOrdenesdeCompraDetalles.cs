@@ -41,7 +41,7 @@ namespace UI
             dgvItems.DataSource = CurrentOrder.Items;
         }
 
-        private void CargarDatosCliente()
+        private void CargarDatosOrden()
         {
             lblNombre.Text = CurrentOrder.Cliente.ToString();
             lblNombre.ForeColor = Color.Blue;
@@ -51,13 +51,30 @@ namespace UI
             lblMail.Text = CurrentOrder.Cliente.Email;
             lblUser.Text = CurrentOrder.Cliente.NickName;
             lblTotal.Text = COC.TotalUnaOrden(CurrentOrder).ToString();
+            if (CurrentOrder.Estado == "PENDIENTE")
+            {
+                lblEstado.ForeColor = Color.Red;
+                btnConfirmar.Enabled = true;
+            }
+            else
+            {
+                lblEstado.ForeColor = Color.Green;
+                btnConfirmar.Enabled = false;
+            }
         }
 
         private void AdministracionOrdenesdeCompraDetalles_Load(object sender, EventArgs e)
         {
             CurrentOrder = COC.LeerUnaOrden(this.Codigo);
-            CargarDatosCliente();
+            CargarDatosOrden();
             CargarGrilla();
+        }
+
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            CurrentOrder.Estado = "CONFIRMADO";
+            COC.ModificarUnaOrden(CurrentOrder);
+            CargarDatosOrden();
         }
     }
 }
