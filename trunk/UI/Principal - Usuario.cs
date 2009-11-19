@@ -156,7 +156,10 @@ namespace UI
             dataGridView1.Update();
             if (dataGridView1.Rows.Count > 0)
             {
-                DoDragDrop(this.dataGridView1.CurrentRow.Cells["Codigo"].Value.ToString(), DragDropEffects.Copy);
+                DataGridView.HitTestInfo info;
+                info = dataGridView1.HitTest(e.X, e.Y);
+                DoDragDrop(dataGridView1.Rows[info.RowIndex].Cells["Codigo"].Value.ToString(), DragDropEffects.Copy);
+                //dataGridView1.Rows[info.RowIndex].Cells["Codigo"].Value.ToString();
             }
           
         }
@@ -169,7 +172,17 @@ namespace UI
         {
             //llamada al control del carrito
             //MessageBox.Show("Ingresastes" + cant.ToString() + " Articulos del Producto con Codigo: " + codigo.ToString());
-            Carromato.AgregarItem(codigo, cant);
+            try
+            {
+                Carromato.AgregarItem(codigo, cant);
+            }
+            catch (Exception ex)
+            {
+                if (ex.Message = "STOCK")
+                {
+                    MessageBox.Show("NO HAY STOCK DISPONIBLE");
+                }
+            }
             RecargarCarretilla();
         }
         private void dataGridView2_DragDrop(object sender, DragEventArgs e)
