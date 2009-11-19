@@ -273,5 +273,11 @@ namespace UI
             }
         }
 
+        private void dataGridView1_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            //es una prueba para hacer un mejor drag and drop
+           //dataGridView1.
+        }
+
     }
 }
