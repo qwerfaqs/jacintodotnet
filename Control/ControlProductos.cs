@@ -27,12 +27,12 @@ namespace Control
             try
             {
                 
-                int Precio = Convert.ToInt32(precio);
+                double Precio = double.Parse(precio);
                 int Codigo = Convert.ToInt32(codigo);
                 Categoria Categoria = categoria;
                 int StockActual = Convert.ToInt32(stockactual);
                 int StockComprometido = Convert.ToInt32(stockcomprometido);
-                int PrecioOferta = Convert.ToInt32(preciooferta);
+                double PrecioOferta = double.Parse(preciooferta);
                 Producto Producto = new Producto(Codigo, nombre, Precio, Categoria, PrecioOferta, Foto, StockActual, StockComprometido);
                 //this.miDao.agregar_producto(Producto);
                 this.DaoProducto.Agregar_producto(Producto);
@@ -66,21 +66,21 @@ namespace Control
 
             try
             {
-                int Precio = Convert.ToInt32(precio);
+                double Precio = double.Parse(precio);
                 int Codigo = Convert.ToInt32(codigo);
                 Categoria Categoria = categoria;
                 int StockActual = Convert.ToInt32(stockactual);
                 int StockComprometido = Convert.ToInt32(stockcomprometido);
-                int PrecioOferta = Convert.ToInt32(preciooferta);
+                double PrecioOferta = double.Parse(preciooferta);
 
                 Producto Producto1 = new Producto(Codigo, nombre, Precio, Categoria, PrecioOferta, Foto, StockActual, StockComprometido);
                 //this.miDao.modificar_producto(Producto);
                 this.DaoProducto.modificar_producto(Producto1);
                 Exito = true;
             }
-            catch
+            catch(Exception ex)
             {
-                throw new ArgumentException("Error Modificando Producto");
+                throw new ArgumentException("Error Modificando Producto",ex);
             }
             return Exito;
         }
@@ -116,10 +116,10 @@ namespace Control
                 Producto p = this.DaoProducto.leer_unproducto(id);
                 this.DaoProducto.EliminarProducto(p);
             }
-            catch
+            catch(Exception ex)
             {
 
-                throw new Exception("Error Borrando Producto. Producto no se ha boorado");
+                throw new Exception("Error Borrando Producto. Producto no se ha boorado",ex);
             }
         }
 
