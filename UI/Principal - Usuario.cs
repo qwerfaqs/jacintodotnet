@@ -178,7 +178,7 @@ namespace UI
             }
             catch (Exception ex)
             {
-                if (ex.Message = "STOCK")
+                if (ex.Message == "STOCK")
                 {
                     MessageBox.Show("NO HAY STOCK DISPONIBLE");
                 }
