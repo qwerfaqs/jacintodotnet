@@ -46,14 +46,28 @@ namespace BO
             {
                 if (it.Codigo == prod.Codigo)
                 {
-                    it.Cantidad = it.Cantidad + cant;
+                    if ((cant+it.Cantidad) <= prod.StockActual)
+                    {
+                        it.Cantidad = it.Cantidad + cant;
+                    }
+                    else
+                    {
+                        throw new Exception("STOCK");
+                    }
                     _existia = true;
                 }
             }
             if (_existia == false)
             {
-                Item i = new Item(prod, cant);
-                _ListaItems.Add(i);
+                if (cant <= prod.StockActual)
+                {
+                    Item i = new Item(prod, cant);
+                    _ListaItems.Add(i);
+                }
+                else
+                {
+                    throw new Exception("STOCK");
+                }
             }
         }
 
