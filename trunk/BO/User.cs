@@ -16,6 +16,8 @@ namespace BO
         private int id;
         private int categoria;
 
+        public User()
+        { }
         public User(string Nombre, string Apellido, string Email, string NickName, string Pass, string Domicilio,int Id,int Categoria)
         {
             nombre = Nombre;

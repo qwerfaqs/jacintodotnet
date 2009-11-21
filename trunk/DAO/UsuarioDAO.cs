@@ -42,5 +42,23 @@ namespace DAO
             }
             return result;
         }
+        public User UnUser(int UserId)
+        {
+            User result = null;
+            foreach (User Chabon in Usuarios)
+            {
+                if (Chabon.Id == UserId)
+                {
+                    result = Chabon;
+                }
+            }
+            if (result == null)
+            {
+                throw new Exception("ERROR DE LOGIN");
+            }
+            return result;
+        }
+
+    
     }
 }
