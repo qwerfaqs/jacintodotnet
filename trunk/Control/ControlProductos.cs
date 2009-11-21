@@ -9,11 +9,12 @@ namespace Control
 {
     public class ControlProductos
     {
+
+        private Control.ControlCategorias ControlCategorias = new ControlCategorias();
         //DAO con ArrayList
-        private DAO.Productodao DaoProducto = DAO.Productodao.Instancia();
+        //private DAO.Productodao DaoProducto = DAO.Productodao.Instancia();
         //DAO con SQL
-        //private DAOSQL.ProductoDAOSQL DaoProducto = DAOSQL.ProductoDAOSQL.Instancia();
-        Control.ControlCategorias ControlCategorias = new ControlCategorias();
+        private DAOSQL.ProductoDAOSQL DaoProducto = DAOSQL.ProductoDAOSQL.Instancia();
 
         public ControlProductos()
         {
