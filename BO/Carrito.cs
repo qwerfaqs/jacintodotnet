@@ -72,10 +72,17 @@ namespace BO
 
 
 
-      public bool modificar_item(Producto prod, int cant)
+      public void modificar_item(Producto prod, int cant)
       {
-              
-          return modificaCantidad(prod ,cant);
+
+          try
+          {
+              modificaCantidad(prod, cant);
+          }
+          catch (Exception ex)
+          {
+              throw new Exception(ex.Message, ex);
+          }
       }
 
       public ArrayList ver_lista()
@@ -122,7 +129,7 @@ namespace BO
             
         }
       
-      private bool modificaCantidad(Producto prod, int cant)
+      private void modificaCantidad(Producto prod, int cant)
       {
           if (cant > prod.StockActual)
           {
@@ -139,7 +146,10 @@ namespace BO
                   modificado = true;
               }
           }
-          return modificado;
+          if (modificado == false)
+          {
+              throw new Exception("ERROR NO EXISTE EL ITEM A MODIFICAR");
+          }
       }
       public void eliminar_item(Producto prod)
       {
