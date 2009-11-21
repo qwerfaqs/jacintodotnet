@@ -127,6 +127,7 @@ namespace DAOSQL
                             producto = new Producto(Id, Nombre, Precio, Cat, PrecioOferta, Foto, Stock, StockComprometido);
                             ListaProductos.Add(producto);
                         }
+                        rdr.Close();
                     }
                     connServ.Cerrar();
 
@@ -164,16 +165,15 @@ namespace DAOSQL
 
         public Producto leer_unproducto(int codigoproducto)
         {
+            
             Producto producto = null;
             string string1 = "", string2 = "";
 
             string1 = "where Id=";
             string2 = Convert.ToString(codigoproducto);
 
-            try
-            {
-                
-
+            //try
+            //{
                     connServ.Abrir();
 
                     using (SqlCommand command = new SqlCommand())
@@ -206,15 +206,14 @@ namespace DAOSQL
 
                             producto = new Producto(Id, Nombre, Precio, Cat, PrecioOferta, Foto, Stock, StockComprometido);
                         }
+                        //rdr.Close();
                     }
                     connServ.Cerrar();
-
-                
-            }
-            catch
-            {
-                throw new ArgumentException("Error Obteniendo un objeto del Tipo Producto");
-            }
+            //}
+            //catch
+            //{
+            //    throw new ArgumentException("Error Obteniendo un objeto del Tipo Producto");
+            //}
             return producto;
         }
     }

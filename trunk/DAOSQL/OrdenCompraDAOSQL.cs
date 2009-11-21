@@ -24,6 +24,8 @@ namespace DAOSQL
                 ArrayList Ordenes = new ArrayList();
                 OrdenCompra OC = null;
                 connServ.Abrir();
+                int idproducto=0;
+                int cantidad=0;
 
                 using(SqlCommand command = new SqlCommand())//aca lleno el arraylista con todas las ordenes
                 {   //                                0          1         2         3           4            5        6     
@@ -48,13 +50,13 @@ namespace DAOSQL
                         Ordenes.Add(OC);
                     }
                     rdr1.Close();
-                    connServ.Cerrar();
+                    //connServ.Cerrar();
                 }
                 
                 
                 using (SqlCommand Command2 = new SqlCommand())//aca le agrego items a cada orden
                 {
-                    connServ.Abrir();
+                    //connServ.Abrir();
                     foreach (OrdenCompra unaOrden in Ordenes)
                     {   //                                   0         1                  2        3    4
                         Command2.CommandText = "SELECT id_orden, codigo_articulo, descripcion, precio, cant FROM DetallesOrden WHERE id_orden=" + unaOrden.Numero + " ";
@@ -63,10 +65,13 @@ namespace DAOSQL
                         SqlDataReader rdr2 = Command2.ExecuteReader();
                         while (rdr2.Read())
                         {
-                            Item Item = new Item(DAOProductos.leer_unproducto((int)rdr2.GetValue(1)), (int)rdr2.GetValue(4));
-                            unaOrden.Items.Add(Item);
+                            idproducto = (int)rdr2.GetValue(1);
+                            cantidad = Convert.ToInt32(rdr2.GetValue(4));
                         }
+                        rdr2.Dispose();
                         rdr2.Close();
+                        Item Item = new Item(DAOProductos.leer_unproducto(idproducto), cantidad);
+                        unaOrden.Items.Add(Item);                        
                     }
                 }
                 connServ.Cerrar();
