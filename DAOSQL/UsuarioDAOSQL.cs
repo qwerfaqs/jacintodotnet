@@ -52,7 +52,7 @@ namespace DAOSQL
                 connServ.Abrir();
 
                 using (SqlCommand command = new SqlCommand())
-                {
+                {   //                                 0          1         2       3     4      5        6       7     
                     command.CommandText = "SELECT id_usuario,categoria,apellido,nombre,pass,domicilio,email,nickname FROM Usuarios where nickname='"+Nick+"' and pass='"+Pass+"'";
                     command.Connection = connServ.Conexion();
 

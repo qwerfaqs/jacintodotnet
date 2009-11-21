@@ -72,6 +72,7 @@ namespace UI
 
         private void AdministracionABMProductos_Load(object sender, EventArgs e)
         {
+            
             this.ListaCategorias = CC.CargarCategorias(true);
             //this.ListaCategorias.Add("Todas");
             cmb_categorias.DataSource = this.ListaCategorias;
