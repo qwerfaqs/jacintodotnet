@@ -172,5 +172,10 @@ namespace DAOSQL
                 throw new ArgumentException("Error Buscando Categoria [DAOSQL]",ex) ;
             }         
         }
+
+        public System.Collections.Generic.IEnumerable<Categoria> leer_categorias()
+        {
+            throw new Exception("The method or operation is not implemented.");
+        }
     }
 }
