@@ -20,7 +20,17 @@ namespace Control
         {
             
         }
-        
+
+        public bool ImagenTieneTamañoCorrecto(Image Imagen)
+        {
+            bool Respuesta = false;
+            if (Imagen.Height <= 160 && Imagen.Width <= 160)
+            {
+                Respuesta = true;
+            }
+            return Respuesta;
+        }
+
         public bool AgregarProducto(Categoria categoria, string codigo,Image Foto, string nombre, string precio, string preciooferta, string stockactual, string stockcomprometido)
         {
             bool Exito = false;
