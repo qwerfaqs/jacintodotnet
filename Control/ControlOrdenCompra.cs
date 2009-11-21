@@ -11,8 +11,9 @@ namespace Control
     public class ControlOrdenCompra
     {
         //DAO con ArrayList
-        OrdenCompraDAO miDAO = OrdenCompraDAO.Instancia();
+        //OrdenCompraDAO miDAO = OrdenCompraDAO.Instancia();
         //DAO con SQL
+        OrdenCompraDAOSQL miDAO = OrdenCompraDAOSQL.Instancia();
         
         private OrdenCompra _orden;
 
