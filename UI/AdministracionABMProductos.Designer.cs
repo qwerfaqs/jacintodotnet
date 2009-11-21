@@ -64,6 +64,7 @@
             // 
             // checkBox1
             // 
+            this.checkBox1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.checkBox1.AutoSize = true;
             this.checkBox1.Location = new System.Drawing.Point(314, 486);
             this.checkBox1.Name = "checkBox1";
