@@ -41,6 +41,10 @@ namespace BO
 
         public void agregar_item(Producto prod,int cant)
         {
+            if (cant > prod.StockActual)
+            {
+                throw new Exception("STOCK");
+            }
             bool _existia = false;
             foreach (Item it in _ListaItems)
             {
@@ -59,15 +63,10 @@ namespace BO
             }
             if (_existia == false)
             {
-                if (cant <= prod.StockActual)
-                {
-                    Item i = new Item(prod, cant);
-                    _ListaItems.Add(i);
-                }
-                else
-                {
-                    throw new Exception("STOCK");
-                }
+                
+                Item i = new Item(prod, cant);
+                _ListaItems.Add(i);
+               
             }
         }
 
@@ -75,7 +74,8 @@ namespace BO
 
       public bool modificar_item(Producto prod, int cant)
       {
-              return modificaCantidad(prod ,cant);
+              
+          return modificaCantidad(prod ,cant);
       }
 
       public ArrayList ver_lista()
@@ -124,11 +124,17 @@ namespace BO
       
       private bool modificaCantidad(Producto prod, int cant)
       {
+          if (cant > prod.StockActual)
+          {
+              throw new Exception("STOCK");
+          }
+          
           bool modificado = false;
+                   
           foreach (Item it in _ListaItems)
           {
               if (it.Codigo == prod.Codigo)
-              {
+              {            
                   it.Cantidad = cant;
                   modificado = true;
               }
