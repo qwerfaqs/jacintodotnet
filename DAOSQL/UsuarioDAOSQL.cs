@@ -69,6 +69,7 @@ namespace DAOSQL
 
 
             }
+            
             catch (Exception e)
             {
                 throw new ArgumentException("Error Cargando LEYENDO USUARIOS", e);
@@ -79,5 +80,44 @@ namespace DAOSQL
             }
             return result;
         }
+
+        
+        public User UnUser(int UserId)
+        {
+            User result = null;
+            ///hago un select y si me lo devuelve es que esta logeado
+            //try
+            //{
+                connServ.Abrir();
+
+                using (SqlCommand command3 = new SqlCommand())
+                {   //                                 0          1         2       3     4      5        6       7     
+                    command3.CommandText = "SELECT id_usuario,categoria,apellido,nombre,pass,domicilio,email,nickname FROM Usuarios where id_usuario='" + UserId + "'";
+                    command3.Connection = connServ.Conexion();
+
+                    SqlDataReader rdr3 = command3.ExecuteReader();
+
+
+                    while (rdr3.Read())
+                    {
+                        result = new User(rdr3.GetString(3), rdr3.GetString(2), rdr3.GetString(6), rdr3.GetString(7), rdr3.GetString(4), rdr3.GetString(5), rdr3.GetInt32(0), rdr3.GetInt32(1));
+
+                    }
+                }
+                connServ.Cerrar();
+            //}
+
+            //catch (Exception e)
+            //{
+            //    throw new ArgumentException("Error LEYENDO UN USUARIO", e);
+            //}
+            if (result == null)
+            {
+                throw new Exception("ERROR: NO EXISTE TAL USUARIO");
+            }
+            return result;
+        }   
+             
+             
     }
 }

@@ -15,6 +15,17 @@ namespace BO
         private double _iva =0.21f;
         private double _envio = 50;
 
+        public OrdenCompra(ArrayList items, int numero, User cliente, string estado)
+        {
+            _items = items;
+            _numero = numero;
+            _Cliente = cliente;
+            _estado = estado;
+        }
+
+        public OrdenCompra()
+        { }
+
         public double Envio
         {
             get { return _envio; }
@@ -23,7 +34,8 @@ namespace BO
 
         public ArrayList Items
         {
-            get { return _items; }            
+            get { return _items; }
+            set { _items = value; }
         }
 
         public double Iva
@@ -56,7 +68,6 @@ namespace BO
         public OrdenCompra(Carrito carr, User client,double iva): this(carr,client)
         {
             this._iva = iva;
-
         }
         public OrdenCompra(Carrito carr,User client)
         {
