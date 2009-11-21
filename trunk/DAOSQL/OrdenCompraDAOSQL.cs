@@ -14,8 +14,7 @@ namespace DAOSQL
         {
             return _instancia;
         }
-
-
+        
         public int grabarCompra(BO.OrdenCompra _orden)
         {
             throw new Exception("The method or operation is not implemented.");
