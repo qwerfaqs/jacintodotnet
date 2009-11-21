@@ -70,8 +70,9 @@ namespace Control
         public ArrayList CargarCategorias(bool DesdeMemoria)
         {
             //ArrayList Categorias = miDao.leer_categorias();
-            ArrayList Categorias = miDao.leer_categorias();
+            ArrayList Categorias = miDao.leer_categorias(false);
             return Categorias;
+            
         }
         
         public void EliminarCategoria(int Id)
