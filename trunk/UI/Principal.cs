@@ -109,7 +109,7 @@ namespace UI
                 label3.Text = "";
                 Control.ControlUsuarios CU = new Control.ControlUsuarios();
                 this.session = CU.LogIn(txtUser.Text, mtxtPass.Text);
-
+                
                 
                 label3.Text = "";
                 if (this.session.tipo.Equals("CLIENT"))

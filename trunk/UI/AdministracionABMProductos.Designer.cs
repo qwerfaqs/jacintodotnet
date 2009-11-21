@@ -182,6 +182,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "AdministracionABMProductos";
             this.Text = "Administracion - Productos";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.AdministracionABMProductos_Load);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdministracionABMProductos_FormClosed);
             this.groupBox1.ResumeLayout(false);

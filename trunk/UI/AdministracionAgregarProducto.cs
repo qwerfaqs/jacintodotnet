@@ -63,11 +63,19 @@ namespace UI
         private void btnImagen_Click(object sender, EventArgs e)
         {
             openFileDialog1.Title = "Nuevo Producto - Imagen";
-            openFileDialog1.Filter = "Imagenes | *.png; *.jpg";
+            openFileDialog1.Filter = "Imagenes | *.png; *.jpg; *.gif";
             
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                pictureBox1.Image = Image.FromFile(openFileDialog1.FileName);
+                Image Imagen = Image.FromFile(openFileDialog1.FileName);
+                if (Imagen.Height <= 160 && Imagen.Width <= 160)
+                {
+                    pictureBox1.Image = Image.FromFile(openFileDialog1.FileName);
+                }
+                else
+                {
+                    MessageBox.Show("La Imagen no debe superar los 160 píxeles de alto y 160 píxeles de ancho.");
+                }
             }
         }
 
