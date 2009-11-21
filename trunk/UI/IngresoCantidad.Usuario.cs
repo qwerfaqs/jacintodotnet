@@ -23,6 +23,7 @@ namespace UI
             button1.Visible = false;
             btn_modificar.Visible = true;
             this.Text = "MODIFICAR CANTIDAD DE ITEMS";
+            this.AcceptButton = btn_modificar;
         }
         
 

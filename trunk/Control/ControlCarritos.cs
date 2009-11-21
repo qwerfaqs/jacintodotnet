@@ -39,7 +39,9 @@ namespace Control
         }
         public void ModificarItem(int Codigo,int cant)
         {
-            this.unCarrito.modificar_item(this.DAOproducto.leer_unproducto(Codigo), cant);
+            
+                this.unCarrito.modificar_item(this.DAOproducto.leer_unproducto(Codigo), cant);
+           
         }
         public void VaciarCarrito()
         {

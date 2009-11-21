@@ -243,7 +243,21 @@ namespace UI
             form_cantidad.ShowDialog();
             if (form_cantidad.DialogResult == DialogResult.OK)
             {
-                Carromato.ModificarItem(codigo, form_cantidad.Cantidad);
+                try
+                {
+                    Carromato.ModificarItem(codigo, form_cantidad.Cantidad);
+                }
+                catch(Exception ex)
+                {
+                    if (ex.Message == "STOCK")
+                    {
+                        MessageBox.Show("NO HAY STOCK DISPONIBLE");
+                    }
+                    else 
+                    {
+                        MessageBox.Show(ex.Message+" "+ex.InnerException.Message);
+                    }
+                }
                 RecargarCarretilla();
             }
 
