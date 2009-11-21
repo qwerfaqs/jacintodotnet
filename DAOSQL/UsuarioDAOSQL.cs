@@ -61,7 +61,7 @@ namespace DAOSQL
 
                     while (rdr.Read())
                     {
-                        result = new User(rdr.GetString(3), rdr.GetString(2), rdr.GetString(6), rdr.GetString(7), rdr.GetString(4), rdr.GetString(5), rdr.GetInt32(0), rdr.GetInt32(1));
+                        result = new User(rdr.GetString(3), rdr.GetString(2), rdr.GetString(6), rdr.GetString(7), rdr.GetString(4), rdr.GetString(5), rdr.GetInt32(0), rdr.GetInt16(1));
                         
                     }
                 }
