@@ -14,9 +14,9 @@ namespace BO
         private string pass;
         private string domicilio;
         private int id;
-        private short categoria;
+        private int categoria;
 
-        public User(string Nombre, string Apellido, string Email, string NickName, string Pass, string Domicilio,int Id,short Categoria)
+        public User(string Nombre, string Apellido, string Email, string NickName, string Pass, string Domicilio,int Id,int Categoria)
         {
             nombre = Nombre;
             apellido = Apellido;
@@ -67,7 +67,7 @@ namespace BO
             get { return id; }
             set { id = value; }
         }
-        public short Categoria
+        public int Categoria
         {
             get { return categoria; }
             set { categoria= value; }
