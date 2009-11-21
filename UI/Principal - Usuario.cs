@@ -150,7 +150,12 @@ namespace UI
                 e.Effect = DragDropEffects.None;
 
         }
-
+        /// <summary>
+        /// Trata el evento mousedown para el drag and drop,
+        /// envia el Codigo de la fila, sobre la que se presiono el mouse
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dataGridView1_MouseDown(object sender, MouseEventArgs e)
         {
             dataGridView1.Update();
@@ -159,7 +164,6 @@ namespace UI
                 DataGridView.HitTestInfo info;
                 info = dataGridView1.HitTest(e.X, e.Y);
                 DoDragDrop(dataGridView1.Rows[info.RowIndex].Cells["Codigo"].Value.ToString(), DragDropEffects.Copy);
-                //dataGridView1.Rows[info.RowIndex].Cells["Codigo"].Value.ToString();
             }
           
         }
