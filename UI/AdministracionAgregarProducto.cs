@@ -22,7 +22,7 @@ namespace UI
             if (session.Loged == true)
             {
                 this.session = session;
-                this.Text = "Bienvenido, " + this.session.username + "  -  NUEVO PRODUCTO";
+                this.Text = "Bienvenido, " + this.session.username + " - NUEVO PRODUCTO";
             }
             else
             {
@@ -68,9 +68,9 @@ namespace UI
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 Image Imagen = Image.FromFile(openFileDialog1.FileName);
-                if (Imagen.Height <= 160 && Imagen.Width <= 160)
+                if (CP.ImagenTieneTamañoCorrecto(Imagen))
                 {
-                    pictureBox1.Image = Image.FromFile(openFileDialog1.FileName);
+                    pictureBox1.Image = Imagen;
                 }
                 else
                 {
@@ -118,12 +118,5 @@ namespace UI
                 MessageBox.Show(ex.Message);
             }
         }
-
-        
-
-        
-
-        
-        
     }
 }
