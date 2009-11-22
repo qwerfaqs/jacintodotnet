@@ -275,7 +275,17 @@ namespace UI
         /// <param name="e"></param>
         private void btn_generarorden_Click(object sender, EventArgs e)
         {
-           Carromato.GenerarOrden(this.session);           
+            try
+            {
+                Carromato.GenerarOrden(this.session);
+                MessageBox.Show("Orden de compra generada con exito", "Orden de compra");
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }        
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
