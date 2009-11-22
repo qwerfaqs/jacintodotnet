@@ -11,14 +11,17 @@ namespace UI
     public partial class IngresoCantidad : Form
     {
         public int Cantidad;
+        public string Nombre;
         public IngresoCantidad()
         {
             InitializeComponent();
             button1.Visible = true;
             btn_modificar.Visible = false;
         }
-        public IngresoCantidad(int cant) : this()
+        public IngresoCantidad(int cant, string nombre)
+            : this()
         {
+            Nombre = nombre;
             this.textBox1.Text = cant.ToString();
             button1.Visible = false;
             btn_modificar.Visible = true;
@@ -45,6 +48,11 @@ namespace UI
             this.Cantidad = Convert.ToInt16(this.textBox1.Text);
             this.DialogResult = DialogResult.OK;
             this.Close();
+        }
+
+        private void IngresoCantidad_Load(object sender, EventArgs e)
+        {
+            label3.Text = Nombre;
         }
     }
 }

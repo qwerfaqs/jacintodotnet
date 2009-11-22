@@ -193,8 +193,8 @@ namespace UI
         {
             int codigo = int.Parse(e.Data.GetData(DataFormats.Text).ToString());
 
-           
-            IngresoCantidad form_cantidad = new IngresoCantidad();
+
+            IngresoCantidad form_cantidad = new IngresoCantidad(1,dataGridView1.CurrentRow.Cells["Nombre"].Value.ToString());
             form_cantidad.ShowDialog();
             if (form_cantidad.DialogResult == DialogResult.OK)
             {
@@ -239,7 +239,7 @@ namespace UI
         {
             int codigo = int.Parse(dataGridView2.CurrentRow.Cells["Codigo"].Value.ToString());
             int cantidad = int.Parse(dataGridView2.CurrentRow.Cells["Cantidad"].Value.ToString());
-            IngresoCantidad form_cantidad = new IngresoCantidad(cantidad);
+            IngresoCantidad form_cantidad = new IngresoCantidad(cantidad, dataGridView1.CurrentRow.Cells["Nombre"].Value.ToString());
             form_cantidad.ShowDialog();
             if (form_cantidad.DialogResult == DialogResult.OK)
             {
