@@ -19,9 +19,20 @@ namespace Control
 
         public int GenerarOrden(Carrito carrito,User usuario)
         {
-            //throw new Exception("The method or operation is not implemented.");
-            _orden = new OrdenCompra(carrito,usuario);
-            return miDAO.grabarCompra(_orden);
+            try
+            {
+                if (carrito.DameFuego().Count > 0)
+                {
+                    //throw new Exception("The method or operation is not implemented.");
+                    _orden = new OrdenCompra(carrito, usuario);
+
+                }
+                return miDAO.grabarCompra(_orden);
+            }
+            catch (Exception ex)
+            {
+                throw new ArgumentException("Error Generando orden");
+            } 
         }
         
         //public OrdenCompra GenerarOrden2(Carrito carrito, User usuario)////Borrar Luego - Solo sirve para hacer una carga inicial de una orden con estado CONFIRMADO 
