@@ -166,6 +166,8 @@ namespace UI
             button4.Show();
             button3.Show();
             panel1.Visible = false;
+            txtUser.Clear();
+            mtxtPass.Clear();
             //AdministracionMenu AM = new AdministracionMenu();
             //AM.Show();
         }
