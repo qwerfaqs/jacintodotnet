@@ -222,10 +222,9 @@ namespace UI
 
         private void btn_EliminarCarrito_Click(object sender, EventArgs e)
         {
-            int codigo = int.Parse(dataGridView2.CurrentRow.Cells["Codigo"].Value.ToString());
-
             try
             {
+                int codigo = int.Parse(dataGridView2.CurrentRow.Cells["Codigo"].Value.ToString());
                 Carromato.EliminarItem(codigo);
                 RecargarCarretilla();
             }
@@ -237,29 +236,38 @@ namespace UI
 
         private void bt_modificarItem_Click(object sender, EventArgs e)
         {
-            int codigo = int.Parse(dataGridView2.CurrentRow.Cells["Codigo"].Value.ToString());
-            int cantidad = int.Parse(dataGridView2.CurrentRow.Cells["Cantidad"].Value.ToString());
-            IngresoCantidad form_cantidad = new IngresoCantidad(cantidad, dataGridView1.CurrentRow.Cells["Nombre"].Value.ToString());
-            form_cantidad.ShowDialog();
-            if (form_cantidad.DialogResult == DialogResult.OK)
+            try
             {
-                try
-                {
-                    Carromato.ModificarItem(codigo, form_cantidad.Cantidad);
-                }
-                catch(Exception ex)
-                {
-                    if (ex.Message == "STOCK")
+
+                int codigo = int.Parse(dataGridView2.CurrentRow.Cells["Codigo"].Value.ToString());
+                int cantidad = int.Parse(dataGridView2.CurrentRow.Cells["Cantidad"].Value.ToString());
+                IngresoCantidad form_cantidad = new IngresoCantidad(cantidad, dataGridView1.CurrentRow.Cells["Nombre"].Value.ToString());
+                form_cantidad.ShowDialog();
+
+                    if (form_cantidad.DialogResult == DialogResult.OK)
                     {
-                        MessageBox.Show("NO HAY STOCK DISPONIBLE");
-                    }
-                    else 
-                    {
-                        MessageBox.Show(ex.Message+" "+ex.InnerException.Message);
+                        try
+                        {
+                            Carromato.ModificarItem(codigo, form_cantidad.Cantidad);
+                        }
+                        catch (Exception ex)
+                        {
+                            if (ex.Message == "STOCK")
+                            {
+                                MessageBox.Show("NO HAY STOCK DISPONIBLE");
+                            }
+                            else
+                            {
+                                MessageBox.Show(ex.Message + " " + ex.InnerException.Message);
+                            }
+                        }
+                        RecargarCarretilla();
                     }
                 }
-                RecargarCarretilla();
-            }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
 
         }
 
