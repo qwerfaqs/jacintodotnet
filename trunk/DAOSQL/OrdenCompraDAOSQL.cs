@@ -23,8 +23,8 @@ namespace DAOSQL
         
         public ArrayList LeerOrdenes()
         {
-            try
-            {
+            //try
+            //{
             
             connServ.Abrir();
 
@@ -43,7 +43,8 @@ namespace DAOSQL
                     Orden.Estado = rdr.GetValue(1).ToString();
                     Orden.Iva = Convert.ToDouble(rdr.GetValue(2));
                     Orden.Numero = (int)rdr.GetValue(0);
-                    
+                    Orden.Items = new ArrayList();
+
                     User Usuario = new User();
                     Usuario.Id = (int)rdr.GetValue(5);
                     Orden.Cliente = Usuario;
@@ -53,24 +54,24 @@ namespace DAOSQL
                 rdr.Close();
             }
             connServ.Cerrar();
-            //CompletarListaOrdenes();
+            CompletarListaOrdenes();
             return ListaOrdenes;
-            }
-            catch
-            {
-                throw new ArgumentException("Error Obteniendo un objeto del Tipo Producto");
-            }
+            //}
+            //catch
+            //{
+            //    throw new ArgumentException("Error Obteniendo un objeto del Tipo Producto");
+            //}
         }
         
         private void CompletarListaOrdenes()
         {
-            try
-            {
+            //try
+            //{
                 
                 DataTable dt=new DataTable();
                 SqlDataReader reader;
                 SqlCommand command = new SqlCommand(); 
-                command.CommandText = "SELECT id_orden, codigo_articulo, descripcion, precio, cant from DetallesOrden where id_orden=";
+                command.CommandText = "SELECT id_orden, codigo_articulo, descripcion, precio, cant from DetallesOrden";
                 command.Connection=connServ.Conexion();
 
                 connServ.Abrir();
@@ -90,11 +91,11 @@ namespace DAOSQL
                         }
                     }
                 }
-            }
-            catch
-            {
-                throw new ArgumentException("Error Cargando Items");
-            }
+            //}
+            //catch
+            //{
+            //    throw new ArgumentException("Error Cargando Items");
+            //}
         }
 
         public ArrayList LeerOrdenes(string estado)
@@ -121,7 +122,14 @@ namespace DAOSQL
         
         public BO.OrdenCompra LeerUnaOrden(int IdOrden)
         {
-            throw new Exception("The method or operation is not implemented.");
+            OrdenCompra UnaOrden=new OrdenCompra();
+            this.LeerOrdenes();
+            foreach (OrdenCompra orden in ListaOrdenes)
+            {
+                if (orden.Numero == IdOrden)
+                    UnaOrden = orden;
+            }
+            return UnaOrden;
         }       
 
         public void ModificarOrden(BO.OrdenCompra OC)
