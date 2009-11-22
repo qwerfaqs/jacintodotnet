@@ -206,7 +206,7 @@ namespace DAOSQL
 
                             producto = new Producto(Id, Nombre, Precio, Cat, PrecioOferta, Foto, Stock, StockComprometido);
                         }
-                        //rdr.Close();
+                        rdr.Close();
                     }
                     connServ.Cerrar();
             //}
