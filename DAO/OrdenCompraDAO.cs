@@ -33,20 +33,20 @@ namespace DAO
             return UnaOrden.Numero;
         }
 
-        public OrdenCompra grabarCompra2(OrdenCompra UnaOrden)//Borrar luego- solo sirve para precarga en arraylist de orden de compra confrimada 
-        {
-            int Numerito = 0;
-            foreach (OrdenCompra OC in ListaOrdenes)
-            {
-                if (OC.Numero > Numerito)
-                {
-                    Numerito = OC.Numero;
-                }
-            }
-            UnaOrden.Numero = Numerito + 1;
-            ListaOrdenes.Add(UnaOrden);
-            return UnaOrden;
-        }
+        //public OrdenCompra grabarCompra2(OrdenCompra UnaOrden)//Borrar luego- solo sirve para precarga en arraylist de orden de compra confrimada 
+        //{
+        //    int Numerito = 0;
+        //    foreach (OrdenCompra OC in ListaOrdenes)
+        //    {
+        //        if (OC.Numero > Numerito)
+        //        {
+        //            Numerito = OC.Numero;
+        //        }
+        //    }
+        //    UnaOrden.Numero = Numerito + 1;
+        //    ListaOrdenes.Add(UnaOrden);
+        //    return UnaOrden;
+        //}
 
         public OrdenCompra LeerUnaOrden(int IdOrden)
         {

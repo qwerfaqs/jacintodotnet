@@ -41,7 +41,7 @@ namespace UI
             ControladoraCategorias.InsertarCategoria("Supercongelados", "4");
             ControladoraCategorias.InsertarCategoria("Panaderia", "5");
 
-            
+
             Categoria oCategoria = new Categoria();
             ControladoraCategorias.CargarCategorias(false);
             oCategoria = ControladoraCategorias.ObtenerUnaCategoria(1);
@@ -61,7 +61,7 @@ namespace UI
             oCategoria = ControladoraCategorias.ObtenerUnaCategoria(5);
             ControladoraProductos.AgregarProducto(oCategoria, "11", Image.FromFile(path + "\\Imagenes\\PanLactal.jpg"), "Pan Lactal Fargo", "5", "4", "10", "0");
             ControladoraProductos.AgregarProducto(oCategoria, "12", Image.FromFile(path + "\\Imagenes\\PanHamburguesas.jpg"), "Pan Hamburguesas Bimbo", "5", "4", "10", "0");
-            
+
             this.session = ControladoraUser.LogIn("user", "1234");
 
             COntroladoraCarrito.AgregarItem(2, 2);
@@ -78,21 +78,21 @@ namespace UI
             COntroladoraCarrito2.AgregarItem(7, 7);
             COntroladoraCarrito2.AgregarItem(8, 8);
             COntroladoraCarrito2.AgregarItem(9, 9);
-            COntroladoraCarrito2.AgregarItem(10,10);
+            COntroladoraCarrito2.AgregarItem(10, 10);
             COntroladoraCarrito2.AgregarItem(6, 6);
             COntroladoraCarrito2.GenerarOrden(this.session);
 
-            this.session = null;
-            this.session = ControladoraUser.LogIn("user3", "1234");
+            //this.session = null;
+            //this.session = ControladoraUser.LogIn("user3", "1234");
 
-            Control.ControlCarritos COntroladoraCarrito3 = new Control.ControlCarritos();
-            COntroladoraCarrito3.AgregarItem(7, 7);
-            COntroladoraCarrito3.AgregarItem(8, 8);
-            COntroladoraCarrito3.AgregarItem(9, 9);
-            COntroladoraCarrito3.AgregarItem(10, 10);
-            COntroladoraCarrito3.AgregarItem(6, 6);
-            OrdenCompra OC = COntroladoraCarrito3.GenerarOrden2(this.session);
-            OC.Estado = "CONFIRMADO";            
+            //Control.ControlCarritos COntroladoraCarrito3 = new Control.ControlCarritos();
+            //COntroladoraCarrito3.AgregarItem(7, 7);
+            //COntroladoraCarrito3.AgregarItem(8, 8);
+            //COntroladoraCarrito3.AgregarItem(9, 9);
+            //COntroladoraCarrito3.AgregarItem(10, 10);
+            //COntroladoraCarrito3.AgregarItem(6, 6);
+            //OrdenCompra OC = COntroladoraCarrito3.GenerarOrden2(this.session);
+            //OC.Estado = "CONFIRMADO";
         }
 
         

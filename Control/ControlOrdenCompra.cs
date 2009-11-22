@@ -23,12 +23,14 @@ namespace Control
             _orden = new OrdenCompra(carrito,usuario);
             return miDAO.grabarCompra(_orden);
         }
-        public OrdenCompra GenerarOrden2(Carrito carrito, User usuario)////Borrar Luego - Solo sirve para hacer una carga inicial de una orden con estado CONFIRMADO 
-        {
-            //throw new Exception("The method or operation is not implemented.");
-            _orden = new OrdenCompra(carrito, usuario);
-            return miDAO.grabarCompra2(_orden);
-        }
+        
+        //public OrdenCompra GenerarOrden2(Carrito carrito, User usuario)////Borrar Luego - Solo sirve para hacer una carga inicial de una orden con estado CONFIRMADO 
+        //{
+        //    //throw new Exception("The method or operation is not implemented.");
+        //    _orden = new OrdenCompra(carrito, usuario);
+        //    return miDAO.grabarCompra2(_orden);
+        //}
+        
         public ArrayList LeerOdenesdeCompra()
         {
             return miDAO.LeerOrdenes();

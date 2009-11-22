@@ -23,50 +23,50 @@ namespace DAOSQL
         
         public ArrayList LeerOrdenes()
         {
-            //try
-            //{
-            
-            connServ.Abrir();
+            try
+            {
+                ListaOrdenes.Clear();
+                connServ.Abrir();
 
-            using (SqlCommand command = new SqlCommand())
-            {   //                                0        1         2         3          4         5        6
-                command.CommandText = "SELECT id_orden,pendiente,total_iva,subtotal,total_envio,id_cliente,fecha from OrdenesCompra";
-                command.Connection = connServ.Conexion();
+                using (SqlCommand command = new SqlCommand())
+                {   //                                0        1         2         3          4         5        6
+                    command.CommandText = "SELECT id_orden,pendiente,total_iva,subtotal,total_envio,id_cliente,fecha from OrdenesCompra";
+                    command.Connection = connServ.Conexion();
 
-                SqlDataReader rdr = command.ExecuteReader();
+                    SqlDataReader rdr = command.ExecuteReader();
 
-                while (rdr.Read())
-                {
-                    //int StockComprometido = Convert.ToInt32(rdr.GetValue(7));
-                    OrdenCompra Orden = new OrdenCompra();
-                    Orden.Envio = Convert.ToDouble(rdr.GetValue(4));
-                    Orden.Estado = rdr.GetValue(1).ToString();
-                    Orden.Iva = Convert.ToDouble(rdr.GetValue(2));
-                    Orden.Numero = (int)rdr.GetValue(0);
-                    Orden.Items = new ArrayList();
+                    while (rdr.Read())
+                    {
+                        //int StockComprometido = Convert.ToInt32(rdr.GetValue(7));
+                        OrdenCompra Orden = new OrdenCompra();
+                        Orden.Envio = Convert.ToDouble(rdr.GetValue(4));
+                        Orden.Estado = rdr.GetValue(1).ToString();
+                        Orden.Iva = Convert.ToDouble(rdr.GetValue(2));
+                        Orden.Numero = (int)rdr.GetValue(0);
+                        Orden.Items = new ArrayList();
 
-                    User Usuario = new User();
-                    Usuario.Id = (int)rdr.GetValue(5);
-                    Orden.Cliente = Usuario;
-                    
-                    ListaOrdenes.Add(Orden);
+                        User Usuario = new User();
+                        Usuario.Id = (int)rdr.GetValue(5);
+                        Orden.Cliente = Usuario;
+                        
+                        ListaOrdenes.Add(Orden);
+                    }
+                    rdr.Close();
                 }
-                rdr.Close();
+                connServ.Cerrar();
+                CompletarListaOrdenes();
+                return ListaOrdenes;
             }
-            connServ.Cerrar();
-            CompletarListaOrdenes();
-            return ListaOrdenes;
-            //}
-            //catch
-            //{
-            //    throw new ArgumentException("Error Obteniendo un objeto del Tipo Producto");
-            //}
+            catch
+            {
+                throw new ArgumentException("Error Obteniendo un objeto del Tipo Producto");
+            }
         }
         
         private void CompletarListaOrdenes()
         {
-            //try
-            //{
+            try
+            {
                 
                 DataTable dt=new DataTable();
                 SqlDataReader reader;
@@ -91,11 +91,11 @@ namespace DAOSQL
                         }
                     }
                 }
-            //}
-            //catch
-            //{
-            //    throw new ArgumentException("Error Cargando Items");
-            //}
+            }
+            catch
+            {
+                throw new ArgumentException("Error Cargando Items");
+            }
         }
 
         public ArrayList LeerOrdenes(string estado)
@@ -111,49 +111,71 @@ namespace DAOSQL
         
         public int grabarCompra(BO.OrdenCompra _orden)
         {
-            try
-            {
-
+            //try
+            //{
                 connServ.Abrir();
-
                 using (SqlCommand command = new SqlCommand())
                 {
-                    command.CommandText = "INSERT INTO OrdenesCompra (pendiente,total_iva,total_envio,id_cliente) values ('" + _orden.Estado + "', " + _orden.Iva + ", " + orden.Envio + ", " + _orden.Cliente + ")";
+                    command.CommandText = "INSERT INTO OrdenesCompra (pendiente,total_iva,total_envio,id_cliente) values ('" + _orden.Estado + "', " + _orden.Iva + ", " + _orden.Envio + ", " + _orden.Cliente.Id + ") select @@identity";
                     command.Connection = connServ.Conexion();
 
-                    command.ExecuteNonQuery();
+                    _orden.Numero = Convert.ToInt32(command.ExecuteScalar());
                 }
                 connServ.Cerrar();
-
-            }
-            catch (Exception ex)
-            {
-                throw new ArgumentException("Error Generando Orden de Compra", ex);
-            }
+                GrabarItemsdeUnaOrden(_orden);
+                return _orden.Numero;
+            //}
+            //catch (Exception ex)
+            //{
+            //    throw new ArgumentException("Error Generando Orden de Compra", ex);
+            //}
         }
 
-        public BO.OrdenCompra grabarCompra2(BO.OrdenCompra _orden)
+        private void GrabarItemsdeUnaOrden(OrdenCompra UnaOrden)
         {
-            try
-            {
-
+            //try
+            //{
                 connServ.Abrir();
-
                 using (SqlCommand command = new SqlCommand())
                 {
-                    command.CommandText = "INSERT INTO OrdenesCompra (pendiente,total_iva,total_envio,id_cliente) values ('"+_orden.Estado+"', "+ _orden.Iva+", "+orden.Envio+", "+ _orden.Cliente+")";
-                    command.Connection = connServ.Conexion();
-
-                    command.ExecuteNonQuery();
+                    foreach (Item Item in UnaOrden.Items)
+                    {
+                        command.CommandText = "INSERT INTO DetallesOrden (id_orden, codigo_articulo, precio, cant) values ("+UnaOrden.Numero+","+Item._UnProducto.Codigo+","+Item._UnProducto.Precio+","+Item.Cantidad+")";
+                        command.Connection = connServ.Conexion();
+                        command.ExecuteNonQuery();
+                    }
                 }
                 connServ.Cerrar();
+            //}
+            //catch (Exception ex)
+            //{
+            //    throw new ArgumentException("Error Guardando Items", ex);
+            //}
 
-            }
-            catch (Exception ex)
-            {
-                throw new ArgumentException("Error Generando Orden de Compra", ex);
-            }
         }
+
+        //public BO.OrdenCompra grabarCompra2(BO.OrdenCompra _orden)
+        //{
+        //    try
+        //    {
+
+        //        connServ.Abrir();
+
+        //        using (SqlCommand command = new SqlCommand())
+        //        {
+        //            command.CommandText = "INSERT INTO OrdenesCompra (pendiente,total_iva,total_envio,id_cliente) values ('"+_orden.Estado+"', "+ _orden.Iva+", "+_orden.Envio+", "+ _orden.Cliente+")";
+        //            command.Connection = connServ.Conexion();
+
+        //            command.ExecuteNonQuery();
+        //        }
+        //        connServ.Cerrar();
+
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw new ArgumentException("Error Generando Orden de Compra", ex);
+        //    }
+        //}
 
         
         public BO.OrdenCompra LeerUnaOrden(int IdOrden)
