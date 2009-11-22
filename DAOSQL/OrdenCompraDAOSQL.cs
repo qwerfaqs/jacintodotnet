@@ -111,12 +111,48 @@ namespace DAOSQL
         
         public int grabarCompra(BO.OrdenCompra _orden)
         {
-            throw new Exception("The method or operation is not implemented.");
+            try
+            {
+
+                connServ.Abrir();
+
+                using (SqlCommand command = new SqlCommand())
+                {
+                    command.CommandText = "INSERT INTO OrdenesCompra (pendiente,total_iva,total_envio,id_cliente) values ('" + _orden.Estado + "', " + _orden.Iva + ", " + orden.Envio + ", " + _orden.Cliente + ")";
+                    command.Connection = connServ.Conexion();
+
+                    command.ExecuteNonQuery();
+                }
+                connServ.Cerrar();
+
+            }
+            catch (Exception ex)
+            {
+                throw new ArgumentException("Error Generando Orden de Compra", ex);
+            }
         }
 
         public BO.OrdenCompra grabarCompra2(BO.OrdenCompra _orden)
         {
-            throw new Exception("The method or operation is not implemented.");
+            try
+            {
+
+                connServ.Abrir();
+
+                using (SqlCommand command = new SqlCommand())
+                {
+                    command.CommandText = "INSERT INTO OrdenesCompra (pendiente,total_iva,total_envio,id_cliente) values ('"+_orden.Estado+"', "+ _orden.Iva+", "+orden.Envio+", "+ _orden.Cliente+")";
+                    command.Connection = connServ.Conexion();
+
+                    command.ExecuteNonQuery();
+                }
+                connServ.Cerrar();
+
+            }
+            catch (Exception ex)
+            {
+                throw new ArgumentException("Error Generando Orden de Compra", ex);
+            }
         }
 
         
