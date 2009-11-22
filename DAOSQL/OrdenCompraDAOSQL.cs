@@ -100,8 +100,44 @@ namespace DAOSQL
 
         public ArrayList LeerOrdenes(string estado)
         {
-            ArrayList Lista=null;
-            return Lista;
+            try
+            {
+                ListaOrdenes.Clear();
+                connServ.Abrir();
+
+                using (SqlCommand command = new SqlCommand())
+                {   //                                0        1         2         3          4         5        6
+                    command.CommandText = "SELECT id_orden,pendiente,total_iva,subtotal,total_envio,id_cliente,fecha from OrdenesCompra WHERE pendiente="+estado+"";
+                    command.Connection = connServ.Conexion();
+
+                    SqlDataReader rdr = command.ExecuteReader();
+
+                    while (rdr.Read())
+                    {
+                        //int StockComprometido = Convert.ToInt32(rdr.GetValue(7));
+                        OrdenCompra Orden = new OrdenCompra();
+                        Orden.Envio = Convert.ToDouble(rdr.GetValue(4));
+                        Orden.Estado = rdr.GetValue(1).ToString();
+                        Orden.Iva = Convert.ToDouble(rdr.GetValue(2));
+                        Orden.Numero = (int)rdr.GetValue(0);
+                        Orden.Items = new ArrayList();
+
+                        User Usuario = new User();
+                        Usuario.Id = (int)rdr.GetValue(5);
+                        Orden.Cliente = Usuario;
+
+                        ListaOrdenes.Add(Orden);
+                    }
+                    rdr.Close();
+                }
+                connServ.Cerrar();
+                CompletarListaOrdenes();
+                return ListaOrdenes;
+            }
+            catch
+            {
+                throw new ArgumentException("Error Obteniendo un objeto del Tipo Producto");
+            }
         }
 
         public static OrdenCompraDAOSQL Instancia()
@@ -111,8 +147,8 @@ namespace DAOSQL
         
         public int grabarCompra(BO.OrdenCompra _orden)
         {
-            //try
-            //{
+            try
+            {
                 connServ.Abrir();
                 using (SqlCommand command = new SqlCommand())
                 {
@@ -124,17 +160,17 @@ namespace DAOSQL
                 connServ.Cerrar();
                 GrabarItemsdeUnaOrden(_orden);
                 return _orden.Numero;
-            //}
-            //catch (Exception ex)
-            //{
-            //    throw new ArgumentException("Error Generando Orden de Compra", ex);
-            //}
+            }
+            catch (Exception ex)
+            {
+                throw new ArgumentException("Error Generando Orden de Compra", ex);
+            }
         }
 
         private void GrabarItemsdeUnaOrden(OrdenCompra UnaOrden)
         {
-            //try
-            //{
+            try
+            {
                 connServ.Abrir();
                 using (SqlCommand command = new SqlCommand())
                 {
@@ -146,11 +182,11 @@ namespace DAOSQL
                     }
                 }
                 connServ.Cerrar();
-            //}
-            //catch (Exception ex)
-            //{
-            //    throw new ArgumentException("Error Guardando Items", ex);
-            //}
+            }
+            catch (Exception ex)
+            {
+                throw new ArgumentException("Error Guardando Items", ex);
+            }
 
         }
 
@@ -192,7 +228,10 @@ namespace DAOSQL
 
         public void ModificarOrden(BO.OrdenCompra OC)
         {
-            throw new Exception("The method or operation is not implemented.");
+            SqlCommand cmd = new SqlCommand("UPDATE OrdenesCompra set pendiente='"+OC.Estado+"' WHERE id_orden="+OC.Numero+"", connServ.Conexion());
+            connServ.Abrir();
+            cmd.ExecuteNonQuery();
+            connServ.Cerrar();
         }
     }
 }
