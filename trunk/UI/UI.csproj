@@ -83,6 +83,12 @@
     <Compile Include="IngresoCantidad.Usuario.Designer.cs">
       <DependentUpon>IngresoCantidad.Usuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Principal - Logueo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal - Logueo.Designer.cs">
+      <DependentUpon>Principal - Logueo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Principal - Usuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,10 @@
     <EmbeddedResource Include="IngresoCantidad.Usuario.resx">
       <SubType>Designer</SubType>
       <DependentUpon>IngresoCantidad.Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal - Logueo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Principal - Logueo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal - Usuario.resx">
       <DependentUpon>Principal - Usuario.cs</DependentUpon>

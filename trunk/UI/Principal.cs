@@ -19,7 +19,11 @@ namespace UI
         private void Form1_Load(object sender, EventArgs e)
         {
             //CargaInicial();
-            mtxtPass.UseSystemPasswordChar = true;
+            //mtxtPass.UseSystemPasswordChar = true;
+            cerrarSesionToolStripMenuItem.Enabled = false;
+            productosToolStripMenuItem.Enabled = false;
+            comprasToolStripMenuItem.Enabled = false;
+            herramientasToolStripMenuItem.Enabled = false;
         }
 
         public void CargaInicial()
@@ -101,66 +105,60 @@ namespace UI
             this.Close();
         }
 
-        private void button3_Click_1(object sender, EventArgs e)
-        {
-
-            try
-            {
-                label3.Text = "";
-                Control.ControlUsuarios CU = new Control.ControlUsuarios();
-                this.session = CU.LogIn(txtUser.Text, mtxtPass.Text);
-                
-                
-                label3.Text = "";
-                if (this.session.tipo.Equals("CLIENT"))
-                {
-                    Principal___Usuario PU = new Principal___Usuario(this.session);
-                    PU.Show();
-                }
-                else if (this.session.tipo.Equals("ADMIN"))
-                {
-                    AdministracionMenu AM = new AdministracionMenu(this.session);
-                    AM.Show();
-                }
-                
-            }
-            catch (Exception ex)
-            {
-                
-                label3.Text = ex.Message+" - "+ex.InnerException.Message;
-                panel1.Visible = true;
-                button3.Hide();
-                button4.Hide();
-                
-            }
-        }
-
         private void groupBox1_Enter(object sender, EventArgs e)
         {
             //Principal___Administracion PA = new Principal___Administracion();
             //PA.Show();
         }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        
+        private void iniciarSesionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            panel1.Visible = false;
-            txtUser.Clear();
-            mtxtPass.Clear();
-            button4.Show();
-            button3.Show();
+            Principal___Logueo PL = new Principal___Logueo(this.session);
+            PL.ShowDialog();
+            if (PL.DialogResult == DialogResult.Yes)
+            {
+                this.session = PL.session;
+                this.Text = "Carrito de Compras - "+this.session.username;
+                iniciarSesionToolStripMenuItem.Enabled = false;
+                cerrarSesionToolStripMenuItem.Enabled = true;
+                if (this.session.tipo == "CLIENT")
+                {
+                    productosToolStripMenuItem.Enabled = false;
+                    herramientasToolStripMenuItem.Enabled = false;
+                    ordenesDeCompraToolStripMenuItem.Enabled = false;
+                    comprasToolStripMenuItem.Enabled = true;
+                }
+                else
+                {
+                    nuevaToolStripMenuItem.Enabled = false;
+                    ordenesDeCompraToolStripMenuItem.Enabled = true;
+                    productosToolStripMenuItem.Enabled = true;
+                    herramientasToolStripMenuItem.Enabled = true;
+                    comprasToolStripMenuItem.Enabled = true;
+                }
+            }
+
+        }
+
+        private void cerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            iniciarSesionToolStripMenuItem.Enabled = true;
+            this.Text = "Carrito de Compras - Sesion no iniciada";
+            this.session = null;
+            iniciarSesionToolStripMenuItem.Enabled = true;
+            cerrarSesionToolStripMenuItem.Enabled = false;
+            productosToolStripMenuItem.Enabled = false;
+            comprasToolStripMenuItem.Enabled = false;
+            herramientasToolStripMenuItem.Enabled = false;
         }
 
         
-        private void button1_Click(object sender, EventArgs e)
-        {
-            button4.Show();
-            button3.Show();
-            panel1.Visible = false;
-            txtUser.Clear();
-            mtxtPass.Clear();
-            //AdministracionMenu AM = new AdministracionMenu();
-            //AM.Show();
-        }
+
+        
+
+        
+
+        
 
        
     }
