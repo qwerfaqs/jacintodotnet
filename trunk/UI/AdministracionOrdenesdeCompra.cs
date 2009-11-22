@@ -11,6 +11,7 @@ namespace UI
     public partial class AdministracionOrdenesdeCompra : Form
     {
         //private ArrayList OrdenesdeCompra;
+        BindingSource bs;
         Control.ControlOrdenCompra COC = new Control.ControlOrdenCompra();
         Session Session = null;
 
@@ -30,7 +31,10 @@ namespace UI
 
         private void ActualizarGrilla(String Pendiente)
         {
-            dgvOrdenes.DataSource = COC.LeerOdenesdeCompra(Pendiente); 
+            bs.ResetBindings(false);
+            bs.DataSource = COC.LeerOdenesdeCompra(Pendiente);
+            dgvOrdenes.DataSource = bs;//COC.LeerOdenesdeCompra(Pendiente); 
+            
         }
         private void ActualizarGrilla()
         {
@@ -60,6 +64,11 @@ namespace UI
         {
             AdministracionOrdenesdeCompraDetalles AOCD = new AdministracionOrdenesdeCompraDetalles(this.Session, (int)dgvOrdenes.CurrentRow.Cells["Numero"].Value);
             AOCD.Show();   
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

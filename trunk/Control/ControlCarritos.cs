@@ -29,19 +29,15 @@ namespace Control
         }
         public ArrayList CargarCarrito()
         {
-            
             return this.unCarrito.ver_lista();
-
         }
         public void EliminarItem(int Codigo)
         {
             this.unCarrito.eliminar_item(this.DAOproducto.leer_unproducto(Codigo));
         }
         public void ModificarItem(int Codigo,int cant)
-        {
-            
-                this.unCarrito.modificar_item(this.DAOproducto.leer_unproducto(Codigo), cant);
-           
+        {            
+            this.unCarrito.modificar_item(this.DAOproducto.leer_unproducto(Codigo), cant);           
         }
         public void VaciarCarrito()
         {
@@ -58,16 +54,15 @@ namespace Control
         {
             //throw new Exception("The method or operation is not implemented.");
             ControlOrdenCompra crtlOrden = new ControlOrdenCompra();
-            return crtlOrden.GenerarOrden(this.unCarrito,session.dameUser());
-            
+            return crtlOrden.GenerarOrden(this.unCarrito,session.dameUser());            
         }
-        public OrdenCompra GenerarOrden2(Session session)//Borrar Luego - Solo sirve para hacer una carga inicial de una orden con estado CONFIRMADO 
-        {
-            //throw new Exception("The method or operation is not implemented.");
-            ControlOrdenCompra crtlOrden = new ControlOrdenCompra();
-            return crtlOrden.GenerarOrden2(this.unCarrito, session.dameUser());
+        //public OrdenCompra GenerarOrden2(Session session)//Borrar Luego - Solo sirve para hacer una carga inicial de una orden con estado CONFIRMADO 
+        //{
+        //    //throw new Exception("The method or operation is not implemented.");
+        //    ControlOrdenCompra crtlOrden = new ControlOrdenCompra();
+        //    return crtlOrden.GenerarOrden2(this.unCarrito, session.dameUser());
 
-        }
+        //}
 
        
     }
