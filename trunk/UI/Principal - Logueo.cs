@@ -86,6 +86,8 @@ namespace UI
                 mtxtPass.Text = "Contraseña";
             }
         }
+
+        
         
     }
 }
