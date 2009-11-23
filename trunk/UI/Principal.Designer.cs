@@ -177,7 +177,7 @@
             // 
             this.temasDeAyudaToolStripMenuItem.Name = "temasDeAyudaToolStripMenuItem";
             this.temasDeAyudaToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
-            this.temasDeAyudaToolStripMenuItem.Text = "Temas de Ayuda";
+            this.temasDeAyudaToolStripMenuItem.Text = "Ayuda...";
             this.temasDeAyudaToolStripMenuItem.Click += new System.EventHandler(this.temasDeAyudaToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
