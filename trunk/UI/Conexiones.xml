@@ -3,7 +3,7 @@
   
   <conexion name="Casa de Emmanuel" connectionString="Data Source=EMMANUEL2; Initial Catalog=Jacinto; Integrated Security = True"/>
   <conexion name="Casa de Francisco" connectionString="Data Source=QWERFAQS\SQLEXPRESS; Initial Catalog=Carrito; Integrated Security = True"/>
-  <conexion name="UTN Lab4" connectionString="Data Source=172.16.1.32; Initial Catalog=Carrito; User Id = sanchezf"/>
+  <conexion name="UTN Lab4" connectionString="Data Source=172.16.1.32; Initial Catalog=jacinto; User Id = sanchezf"/>
   
 </conexiones>
 
