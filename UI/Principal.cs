@@ -206,7 +206,7 @@ namespace UI
 
         private void temasDeAyudaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Llama al 911");
         }
 
         private void acercaDeJacintoDotNetToolStripMenuItem_Click(object sender, EventArgs e)
