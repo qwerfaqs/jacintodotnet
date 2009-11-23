@@ -68,7 +68,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(930, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(779, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -196,9 +196,9 @@
             // 
             this.statusStripEstado.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStripEstado.Location = new System.Drawing.Point(0, 327);
+            this.statusStripEstado.Location = new System.Drawing.Point(0, 338);
             this.statusStripEstado.Name = "statusStripEstado";
-            this.statusStripEstado.Size = new System.Drawing.Size(930, 22);
+            this.statusStripEstado.Size = new System.Drawing.Size(779, 22);
             this.statusStripEstado.TabIndex = 12;
             this.statusStripEstado.Text = "statusStrip1";
             // 
@@ -215,11 +215,11 @@
             // 
             this.toolStripContainer1.ContentPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("toolStripContainer1.ContentPanel.BackgroundImage")));
             this.toolStripContainer1.ContentPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(930, 303);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(779, 314);
             this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStripContainer1.Location = new System.Drawing.Point(0, 0);
             this.toolStripContainer1.Name = "toolStripContainer1";
-            this.toolStripContainer1.Size = new System.Drawing.Size(930, 327);
+            this.toolStripContainer1.Size = new System.Drawing.Size(779, 338);
             this.toolStripContainer1.TabIndex = 14;
             this.toolStripContainer1.Text = "toolStripContainer1";
             // 
@@ -233,7 +233,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.CausesValidation = false;
-            this.ClientSize = new System.Drawing.Size(930, 349);
+            this.ClientSize = new System.Drawing.Size(779, 360);
             this.Controls.Add(this.toolStripContainer1);
             this.Controls.Add(this.statusStripEstado);
             this.IsMdiContainer = true;
