@@ -173,9 +173,6 @@ namespace DAOSQL
             }         
         }
 
-        public System.Collections.Generic.IEnumerable<Categoria> leer_categorias()
-        {
-            throw new Exception("The method or operation is not implemented.");
-        }
+        
     }
 }
