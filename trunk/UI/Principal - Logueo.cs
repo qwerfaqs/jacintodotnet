@@ -12,6 +12,7 @@ namespace UI
     public partial class Principal___Logueo : Form
     {
         int x = 0;
+        
         public Session session;
         public Principal___Logueo(Session Sesion)
         {
@@ -41,17 +42,6 @@ namespace UI
                 {
                     Control.ControlUsuarios CU = new Control.ControlUsuarios();
                     this.session = CU.LogIn(txtUser.Text, mtxtPass.Text);
-
-                    //if (this.session.tipo.Equals("CLIENT"))
-                    //{
-                    //    Principal___Usuario PU = new Principal___Usuario(this.session);
-                    //    PU.Show();
-                    //}
-                    //else if (this.session.tipo.Equals("ADMIN"))
-                    //{
-                    //    AdministracionMenu AM = new AdministracionMenu(this.session);
-                    //    AM.Show();
-                    //}
                     this.DialogResult = DialogResult.Yes;
                     this.Close();
                 }
@@ -96,7 +86,6 @@ namespace UI
                 mtxtPass.Text = "Contraseña";
             }
         }
-
         
     }
 }
