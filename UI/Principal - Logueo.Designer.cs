@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.mtxtPass = new System.Windows.Forms.MaskedTextBox();
             this.txtUser = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -50,6 +50,36 @@
             this.groupBox1.Size = new System.Drawing.Size(176, 80);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Location = new System.Drawing.Point(9, 10);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(161, 64);
+            this.panel1.TabIndex = 3;
+            this.panel1.Visible = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(30, 37);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "label3";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(30, 14);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "label2";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // mtxtPass
             // 
@@ -80,6 +110,7 @@
             this.button1.Text = "Iniciar Sesion";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Enter += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -91,38 +122,9 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Ingreso al sistema";
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(9, 10);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(161, 64);
-            this.panel1.TabIndex = 3;
-            this.panel1.Visible = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(30, 14);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "label2";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(30, 37);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "label3";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
             // Principal___Logueo
             // 
+            this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(200, 163);
@@ -132,7 +134,7 @@
             this.Name = "Principal___Logueo";
             this.Text = "Principal___Logueo";
             this.Load += new System.EventHandler(this.Principal___Logueo_Load);
-            //this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Principal___Logueo_FormClosing);
+            this.Enter += new System.EventHandler(this.button1_Click);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
