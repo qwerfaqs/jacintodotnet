@@ -42,7 +42,7 @@ namespace Control
         public bool CodigoRepetido(int codigo)
         {
             bool Repetido = false;
-            foreach (Categoria c in this.miDao.leer_categorias())
+            foreach (Categoria c in this.miDao.leer_categorias(false))
             {
                 if (c.Codigo == codigo)
                 {
@@ -56,7 +56,7 @@ namespace Control
         public bool NombreRepetido(string nombre)
         {
             bool Repetido = false;
-            foreach (Categoria c in this.miDao.leer_categorias())
+            foreach (Categoria c in this.miDao.leer_categorias(false))
             {
                 if (c.Nombre == nombre)
                 {

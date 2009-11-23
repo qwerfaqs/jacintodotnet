@@ -119,8 +119,8 @@ namespace DAOSQL
                             int Id = Convert.ToInt32(rdr.GetValue(0));
                             string Nombre = rdr.GetValue(1).ToString();
                             Categoria Cat = miDAOSQLCat.UnObjetoCategoria((int)rdr.GetValue(2));
-                            int Precio = Convert.ToInt32(rdr.GetValue(3));
-                            int PrecioOferta = Convert.ToInt32(rdr.GetValue(4));
+                            double Precio = Convert.ToDouble(rdr.GetValue(3));
+                            double PrecioOferta = Convert.ToDouble(rdr.GetValue(4));
                             int Stock = Convert.ToInt32(rdr.GetValue(6));
                             int StockComprometido = Convert.ToInt32(rdr.GetValue(7));
 
