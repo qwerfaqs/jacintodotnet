@@ -107,7 +107,7 @@ namespace DAOSQL
 
                 using (SqlCommand command = new SqlCommand())
                 {   //                                0        1         2         3          4         5        6
-                    command.CommandText = "SELECT id_orden,pendiente,total_iva,subtotal,total_envio,id_cliente,fecha from OrdenesCompra WHERE pendiente="+estado+"";
+                    command.CommandText = "SELECT id_orden,pendiente,total_iva,subtotal,total_envio,id_cliente,fecha from OrdenesCompra WHERE pendiente='"+estado+"'";
                     command.Connection = connServ.Conexion();
 
                     SqlDataReader rdr = command.ExecuteReader();
@@ -136,7 +136,7 @@ namespace DAOSQL
             }
             catch
             {
-                throw new ArgumentException("Error Obteniendo un objeto del Tipo Producto");
+                throw new ArgumentException("Error Leyendo Ordenes de Compra");
             }
         }
 

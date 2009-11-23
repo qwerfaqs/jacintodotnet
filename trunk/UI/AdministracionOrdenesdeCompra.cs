@@ -11,7 +11,7 @@ namespace UI
     public partial class AdministracionOrdenesdeCompra : Form
     {
         //private ArrayList OrdenesdeCompra;
-        BindingSource bs;
+        BindingSource bs=new BindingSource();
         Control.ControlOrdenCompra COC = new Control.ControlOrdenCompra();
         Session Session = null;
 
@@ -31,8 +31,9 @@ namespace UI
 
         private void ActualizarGrilla(String Pendiente)
         {
-            bs.ResetBindings(false);
+            //bs.ResetBindings(false);
             bs.DataSource = COC.LeerOdenesdeCompra(Pendiente);
+            
             dgvOrdenes.DataSource = bs;//COC.LeerOdenesdeCompra(Pendiente); 
             
         }
