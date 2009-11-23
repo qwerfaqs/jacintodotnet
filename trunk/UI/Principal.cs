@@ -121,6 +121,11 @@ namespace UI
             if(PL.DialogResult==DialogResult.Yes)
             {
                 DateTime f = DateTime.Now;
+                string minutos = f.Minute.ToString();
+                if ((int)f.Minute < 10)
+                {
+                    minutos = "0" + minutos;
+                }
                 this.session = PL.session;
                 this.Text = "Carrito de Compras - " + this.session.username;
                 iniciarSesionToolStripMenuItem.Enabled = false;
@@ -131,11 +136,7 @@ namespace UI
                     herramientasToolStripMenuItem.Enabled = false;
                     ordenesDeCompraToolStripMenuItem.Enabled = false;
                     comprasToolStripMenuItem.Enabled = true;
-                    string minutos = f.Minute.ToString();
-                    if((int)f.Minute<10)
-                    {
-                        minutos = "0" + minutos;
-                    }
+                    
                     toolStripStatusLabel1.Text = "Sesion Iniciada el " + f.Day + "/" + f.Month + "/" + f.Year + " a las " + Convert.ToString(f.Hour) + ":" + minutos; 
                 }
                 else
