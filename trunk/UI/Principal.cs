@@ -136,7 +136,7 @@ namespace UI
                     //herramientasToolStripMenuItem.Enabled = false;
                     ordenesDeCompraToolStripMenuItem.Enabled = false;
                     comprasToolStripMenuItem.Enabled = true;
-                    
+                    nuevaToolStripMenuItem.Enabled = true;
                     toolStripStatusLabel1.Text = "Sesion Iniciada el " + f.Day + "/" + f.Month + "/" + f.Year + " a las " + Convert.ToString(f.Hour) + ":" + minutos; 
                 }
                 else
