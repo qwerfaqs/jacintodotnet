@@ -23,7 +23,7 @@ namespace UI
             cerrarSesionToolStripMenuItem.Enabled = false;
             productosToolStripMenuItem.Enabled = false;
             comprasToolStripMenuItem.Enabled = false;
-            herramientasToolStripMenuItem.Enabled = false;
+            //herramientasToolStripMenuItem.Enabled = false;
             toolStripStatusLabel1.Text = "Jacinto Dot Net Carrito de Compras";
         }
 
@@ -133,7 +133,7 @@ namespace UI
                 if (this.session.tipo == "CLIENT")
                 {
                     productosToolStripMenuItem.Enabled = false;
-                    herramientasToolStripMenuItem.Enabled = false;
+                    //herramientasToolStripMenuItem.Enabled = false;
                     ordenesDeCompraToolStripMenuItem.Enabled = false;
                     comprasToolStripMenuItem.Enabled = true;
                     
@@ -144,7 +144,7 @@ namespace UI
                     nuevaToolStripMenuItem.Enabled = false;
                     ordenesDeCompraToolStripMenuItem.Enabled = true;
                     productosToolStripMenuItem.Enabled = true;
-                    herramientasToolStripMenuItem.Enabled = true;
+                    //herramientasToolStripMenuItem.Enabled = true;
                     comprasToolStripMenuItem.Enabled = true;
                     toolStripStatusLabel1.Text = "Sesion Iniciada el " + f.Day + "/" + f.Month + "/" + f.Year + " a las " + Convert.ToString(f.Hour) + ":" + minutos; 
                 }
@@ -165,8 +165,54 @@ namespace UI
             cerrarSesionToolStripMenuItem.Enabled = false;
             productosToolStripMenuItem.Enabled = false;
             comprasToolStripMenuItem.Enabled = false;
-            herramientasToolStripMenuItem.Enabled = false;
+            //herramientasToolStripMenuItem.Enabled = false;
             toolStripStatusLabel1.Text = "";
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void nuevoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AdministracionProductos AP = new AdministracionProductos(this.session);
+            AP.Show();
+        }
+
+        private void listadoDeProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AdministracionABMProductos AABMP = new AdministracionABMProductos(this.session);
+            AABMP.Show();
+        }
+
+        private void categoriasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AdministracionCategorias AC = new AdministracionCategorias(this.session);
+            AC.Show();
+        }
+
+        private void nuevaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Principal___Usuario PU = new Principal___Usuario(this.session);
+            PU.Show();
+        }
+
+        private void ordenesDeCompraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AdministracionOrdenesdeCompra AOC = new AdministracionOrdenesdeCompra(this.session);
+            AOC.Show();
+        }
+
+        private void temasDeAyudaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void acercaDeJacintoDotNetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AcercaDe AD = new AcercaDe();
+            AD.Show();
         }
 
         
