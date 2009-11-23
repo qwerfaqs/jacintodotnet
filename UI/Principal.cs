@@ -166,7 +166,7 @@ namespace UI
             productosToolStripMenuItem.Enabled = false;
             comprasToolStripMenuItem.Enabled = false;
             herramientasToolStripMenuItem.Enabled = false;
-            
+            toolStripStatusLabel1.Text = "";
         }
 
         
