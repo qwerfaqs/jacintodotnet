@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
+            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.iniciarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,28 +54,13 @@
             this.temasDeAyudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.acercaDeJacintoDotNetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
-            this.toolStripContainer1.SuspendLayout();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolStripMenu = new System.Windows.Forms.ToolStrip();
+            this.statusStripEstado = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
+            this.statusStripEstado.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // toolStripContainer1
-            // 
-            // 
-            // toolStripContainer1.ContentPanel
-            // 
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(930, 325);
-            this.toolStripContainer1.ContentPanel.Visible = false;
-            this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.toolStripContainer1.Location = new System.Drawing.Point(0, 0);
-            this.toolStripContainer1.Name = "toolStripContainer1";
-            this.toolStripContainer1.Size = new System.Drawing.Size(930, 349);
-            this.toolStripContainer1.TabIndex = 9;
-            this.toolStripContainer1.Text = "toolStripContainer1";
-            // 
-            // toolStripContainer1.TopToolStripPanel
-            // 
-            this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.menuStrip1);
             // 
             // menuStrip1
             // 
@@ -86,9 +71,10 @@
             this.comprasToolStripMenuItem,
             this.herramientasToolStripMenuItem,
             this.ayudaToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 1);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(930, 24);
+            this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.menuStrip1.Size = new System.Drawing.Size(324, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -164,7 +150,6 @@
             this.comprasToolStripMenuItem.Name = "comprasToolStripMenuItem";
             this.comprasToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.comprasToolStripMenuItem.Text = "Compras";
-            //this.comprasToolStripMenuItem.Click += new System.EventHandler(this.comprasToolStripMenuItem_Click);
             // 
             // nuevaToolStripMenuItem
             // 
@@ -259,30 +244,56 @@
             this.acercaDeJacintoDotNetToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
             this.acercaDeJacintoDotNetToolStripMenuItem.Text = "Acerca de Jacinto Dot Net";
             // 
+            // toolStripMenu
+            // 
+            this.toolStripMenu.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStripMenu.Location = new System.Drawing.Point(0, 0);
+            this.toolStripMenu.Name = "toolStripMenu";
+            this.toolStripMenu.Size = new System.Drawing.Size(930, 25);
+            this.toolStripMenu.TabIndex = 11;
+            this.toolStripMenu.Text = "toolStrip1";
+            // 
+            // statusStripEstado
+            // 
+            this.statusStripEstado.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1});
+            this.statusStripEstado.Location = new System.Drawing.Point(0, 327);
+            this.statusStripEstado.Name = "statusStripEstado";
+            this.statusStripEstado.Size = new System.Drawing.Size(930, 22);
+            this.statusStripEstado.TabIndex = 12;
+            this.statusStripEstado.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(109, 17);
+            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
+            //this.toolStripStatusLabel1.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(930, 349);
-            this.Controls.Add(this.toolStripContainer1);
+            this.Controls.Add(this.statusStripEstado);
+            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.toolStripMenu);
             this.IsMdiContainer = true;
             this.Name = "Principal";
             this.Text = "Carrito de Compras - Sesion no iniciada";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.toolStripContainer1.TopToolStripPanel.ResumeLayout(false);
-            this.toolStripContainer1.TopToolStripPanel.PerformLayout();
-            this.toolStripContainer1.ResumeLayout(false);
-            this.toolStripContainer1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.statusStripEstado.ResumeLayout(false);
+            this.statusStripEstado.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ToolStripContainer toolStripContainer1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem productosToolStripMenuItem;
@@ -308,6 +319,10 @@
         private System.Windows.Forms.ToolStripMenuItem acercaDeJacintoDotNetToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripMenuItem opcionesToolStripMenuItem;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ToolStrip toolStripMenu;
+        private System.Windows.Forms.StatusStrip statusStripEstado;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
     }
 }
 

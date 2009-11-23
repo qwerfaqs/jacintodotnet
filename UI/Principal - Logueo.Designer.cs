@@ -132,6 +132,7 @@
             this.Name = "Principal___Logueo";
             this.Text = "Principal___Logueo";
             this.Load += new System.EventHandler(this.Principal___Logueo_Load);
+            //this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Principal___Logueo_FormClosing);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);

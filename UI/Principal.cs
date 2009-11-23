@@ -24,6 +24,7 @@ namespace UI
             productosToolStripMenuItem.Enabled = false;
             comprasToolStripMenuItem.Enabled = false;
             herramientasToolStripMenuItem.Enabled = false;
+            toolStripStatusLabel1.Text = "Jacinto Dot Net Carrito de Compras";
         }
 
         public void CargaInicial()
@@ -111,14 +112,17 @@ namespace UI
             //PA.Show();
         }
         
-        private void iniciarSesionToolStripMenuItem_Click(object sender, EventArgs e)
+        public void iniciar_sesion()
         {
             Principal___Logueo PL = new Principal___Logueo(this.session);
+            //PL.MdiParent = this;
             PL.ShowDialog();
-            if (PL.DialogResult == DialogResult.Yes)
+            
+            if(PL.DialogResult==DialogResult.Yes)
             {
+                DateTime f = DateTime.Now;
                 this.session = PL.session;
-                this.Text = "Carrito de Compras - "+this.session.username;
+                this.Text = "Carrito de Compras - " + this.session.username;
                 iniciarSesionToolStripMenuItem.Enabled = false;
                 cerrarSesionToolStripMenuItem.Enabled = true;
                 if (this.session.tipo == "CLIENT")
@@ -127,6 +131,12 @@ namespace UI
                     herramientasToolStripMenuItem.Enabled = false;
                     ordenesDeCompraToolStripMenuItem.Enabled = false;
                     comprasToolStripMenuItem.Enabled = true;
+                    string minutos = f.Minute.ToString();
+                    if((int)f.Minute<10)
+                    {
+                        minutos = "0" + minutos;
+                    }
+                    toolStripStatusLabel1.Text = "Sesion Iniciada el " + f.Day + "/" + f.Month + "/" + f.Year + " a las " + Convert.ToString(f.Hour) + ":" + minutos; 
                 }
                 else
                 {
@@ -135,9 +145,14 @@ namespace UI
                     productosToolStripMenuItem.Enabled = true;
                     herramientasToolStripMenuItem.Enabled = true;
                     comprasToolStripMenuItem.Enabled = true;
+                    toolStripStatusLabel1.Text = "Sesion Iniciada el " + f.Day + "/" + f.Month + "/" + f.Year + " a las " + Convert.ToString(f.Hour) + ":" + minutos; 
                 }
             }
+        }
 
+        private void iniciarSesionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            iniciar_sesion();
         }
 
         private void cerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
@@ -150,7 +165,14 @@ namespace UI
             productosToolStripMenuItem.Enabled = false;
             comprasToolStripMenuItem.Enabled = false;
             herramientasToolStripMenuItem.Enabled = false;
+            
         }
+
+        
+
+        
+
+        
 
         
 
