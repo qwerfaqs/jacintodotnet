@@ -18,14 +18,16 @@ namespace Control
         
       
         //DAOS CON SQL
-        private DAOSQL.ProductoDAOSQL DAOproducto = DAOSQL.ProductoDAOSQL.Instancia();
-        
+        //private DAOSQL.ProductoDAOSQL DAOproducto = DAOSQL.ProductoDAOSQL.Instancia();
+
+        private ControlProductos ctrl_prod = new ControlProductos();
+
         public ControlCarritos()
         {
         }
         public void AgregarItem(int idProducto, int cant)
         {
-            this.unCarrito.agregar_item(this.DAOproducto.leer_unproducto(idProducto), cant);
+            this.unCarrito.agregar_item(this.ctrl_prod.DameProducto(idProducto), cant);
         }
         public ArrayList CargarCarrito()
         {
@@ -34,11 +36,11 @@ namespace Control
         }
         public void EliminarItem(int Codigo)
         {
-            this.unCarrito.eliminar_item(this.DAOproducto.leer_unproducto(Codigo));
+            this.unCarrito.eliminar_item(this.ctrl_prod.DameProducto(Codigo));
         }
         public void ModificarItem(int Codigo,int cant)
-        {            
-            this.unCarrito.modificar_item(this.DAOproducto.leer_unproducto(Codigo), cant);           
+        {
+            this.unCarrito.modificar_item(this.ctrl_prod.DameProducto(Codigo), cant);           
         }
         public void VaciarCarrito()
         {
