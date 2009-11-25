@@ -30,6 +30,7 @@ namespace Control
         public ArrayList CargarCarrito()
         {
             return this.unCarrito.ver_lista();
+            
         }
         public void EliminarItem(int Codigo)
         {
@@ -43,11 +44,11 @@ namespace Control
         {
             this.unCarrito.VaciarCarrito();
         }
-
-
+        
         public string DameTotal()
         {
-            return this.unCarrito.Subtotal.ToString();
+            //return this.unCarrito.Subtotal.ToString();
+            return String.Format("{0:#,##0.00;($#,##0.00);0.00}", this.unCarrito.Subtotal);
         }
 
         public int GenerarOrden(Session session)

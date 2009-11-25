@@ -112,7 +112,8 @@ namespace UI
 
 
                 }
-                label1.Text = Carromato.DameTotal();
+                string x = Carromato.DameTotal();
+                label1.Text = x;
             /*}
             catch (Exception ex)
             {
