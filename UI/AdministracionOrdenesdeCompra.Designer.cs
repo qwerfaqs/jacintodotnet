@@ -1,14 +1,14 @@
-ï»¿namespace UI
+namespace UI
 {
     partial class AdministracionOrdenesdeCompra
     {
         /// <summary>
-        /// Variable del diseÃ±ador requerida.
+        /// Variable del diseñador requerida.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Limpiar los recursos que se estÃ©n utilizando.
+        /// Limpiar los recursos que se estén utilizando.
         /// </summary>
         /// <param name="disposing">true si los recursos administrados se deben eliminar; false en caso contrario, false.</param>
         protected override void Dispose(bool disposing)
@@ -20,15 +20,14 @@
             base.Dispose(disposing);
         }
 
-        #region CÃ³digo generado por el DiseÃ±ador de Windows Forms
+        #region Código generado por el Diseñador de Windows Forms
 
         /// <summary>
-        /// MÃ©todo necesario para admitir el DiseÃ±ador. No se puede modificar
-        /// el contenido del mÃ©todo con el editor de cÃ³digo.
+        /// Método necesario para admitir el Diseñador. No se puede modificar
+        /// el contenido del método con el editor de código.
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdministracionOrdenesdeCompra));
             this.dgvOrdenes = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnDetalles = new System.Windows.Forms.Button();
@@ -69,6 +68,7 @@
             this.btnDetalles.TabIndex = 3;
             this.btnDetalles.Text = "Ver Detalles...";
             this.btnDetalles.UseVisualStyleBackColor = true;
+            this.btnDetalles.Click += new System.EventHandler(this.btnDetalles_Click);
             // 
             // chkPendientes
             // 
@@ -79,6 +79,7 @@
             this.chkPendientes.TabIndex = 1;
             this.chkPendientes.Text = "Mostrar Solo Ordenes Pendientes";
             this.chkPendientes.UseVisualStyleBackColor = true;
+            this.chkPendientes.CheckedChanged += new System.EventHandler(this.chkPendientes_CheckedChanged);
             // 
             // btnSalir
             // 
@@ -88,12 +89,18 @@
             this.btnSalir.TabIndex = 2;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // AdministracionOrdenesdeCompra
             // 
-            this.ClientSize = new System.Drawing.Size(292, 266);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(502, 254);
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.groupBox1);
             this.Name = "AdministracionOrdenesdeCompra";
+            this.Text = "Administracion - Ordenes de Compra";
+            this.Load += new System.EventHandler(this.AdministracionOrdenesdeCompra_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenes)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
