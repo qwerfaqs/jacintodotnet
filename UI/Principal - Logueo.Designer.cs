@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal___Logueo));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -88,8 +89,8 @@
             this.mtxtPass.Size = new System.Drawing.Size(148, 20);
             this.mtxtPass.TabIndex = 1;
             this.mtxtPass.Text = "Contraseña";
-            this.mtxtPass.Leave += new System.EventHandler(this.mtxtPass_Leave);
             this.mtxtPass.Enter += new System.EventHandler(this.mtxtPass_Enter);
+            this.mtxtPass.Leave += new System.EventHandler(this.mtxtPass_Leave);
             // 
             // txtUser
             // 
@@ -98,8 +99,8 @@
             this.txtUser.Size = new System.Drawing.Size(148, 20);
             this.txtUser.TabIndex = 0;
             this.txtUser.Text = "Usuario";
-            this.txtUser.Leave += new System.EventHandler(this.txtUser_Leave);
             this.txtUser.Enter += new System.EventHandler(this.txtUser_Enter);
+            this.txtUser.Leave += new System.EventHandler(this.txtUser_Leave);
             // 
             // button1
             // 
@@ -109,8 +110,8 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "Iniciar Sesion";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             this.button1.Enter += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -131,10 +132,11 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Principal___Logueo";
             this.Text = "Principal___Logueo";
-            this.Load += new System.EventHandler(this.Principal___Logueo_Load);
             this.Enter += new System.EventHandler(this.button1_Click);
+            this.Load += new System.EventHandler(this.Principal___Logueo_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);

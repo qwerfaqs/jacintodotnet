@@ -160,10 +160,11 @@ namespace UI
         private void dataGridView1_MouseDown(object sender, MouseEventArgs e)
         {
             dataGridView1.Update();
-            if (dataGridView1.Rows.Count > 0)
+            DataGridView.HitTestInfo info;
+            info = dataGridView1.HitTest(e.X, e.Y);
+            if ((dataGridView1.Rows.Count > 0) & (info.RowIndex>=0))
             {
-                DataGridView.HitTestInfo info;
-                info = dataGridView1.HitTest(e.X, e.Y);
+                
                 DoDragDrop(dataGridView1.Rows[info.RowIndex].Cells["Codigo"].Value.ToString(), DragDropEffects.Copy);
             }          
         }
