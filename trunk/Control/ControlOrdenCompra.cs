@@ -12,9 +12,9 @@ namespace Control
     {
         
         //DAO con ArrayList
-        //OrdenCompraDAO miDAO = OrdenCompraDAO.Instancia();
+        OrdenCompraDAO miDAO = OrdenCompraDAO.Instancia();
         //DAO con SQL
-        OrdenCompraDAOSQL miDAO = OrdenCompraDAOSQL.Instancia();
+        //OrdenCompraDAOSQL miDAO = OrdenCompraDAOSQL.Instancia();
         
         private OrdenCompra _orden;
 

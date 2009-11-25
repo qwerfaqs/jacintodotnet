@@ -10,9 +10,9 @@ namespace Control
     public class ControlCategorias
     {
         //DAO con ArrayList
-        //private DAO.CategoriaDAO miDao = DAO.CategoriaDAO.Instancia();
+        private DAO.CategoriaDAO miDao = DAO.CategoriaDAO.Instancia();
         //DAO con SQL
-        private DAOSQL.DAOSQLCategorias miDao = DAOSQL.DAOSQLCategorias.Instancia();
+        //private DAOSQL.DAOSQLCategorias miDao = DAOSQL.DAOSQLCategorias.Instancia();
 
         public ControlCategorias()
         {
