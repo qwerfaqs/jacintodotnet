@@ -35,7 +35,7 @@ namespace BO
         {
             get
             {
-                return (_Cantidad * this._UnProducto.Precio);
+                return ((double)_Cantidad * this._UnProducto.Precio);
             }
             
         }
@@ -86,11 +86,8 @@ namespace BO
             get
             {
                 return (_UnProducto.Codigo);
-            }
-            
+            }            
         }
-
-
     }
 
 }

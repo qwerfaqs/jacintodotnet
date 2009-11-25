@@ -50,7 +50,7 @@ namespace UI
             lblId.Text = CurrentOrder.Numero.ToString();
             lblMail.Text = CurrentOrder.Cliente.Email;
             lblUser.Text = CurrentOrder.Cliente.NickName;
-            lblTotal.Text = COC.TotalUnaOrden(CurrentOrder).ToString();
+            lblTotal.Text = String.Format("{0:#,##0.00;($#,##0.00);0.00}", COC.TotalUnaOrden(CurrentOrder)); 
             if (CurrentOrder.Estado == "PENDIENTE")
             {
                 lblEstado.ForeColor = Color.Red;

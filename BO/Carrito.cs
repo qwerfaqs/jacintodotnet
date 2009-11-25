@@ -17,7 +17,7 @@ namespace BO
             this.Fecha = fecha;
         }
 
-      public double Subtotal
+        public double Subtotal
         {
             get
             {
@@ -26,7 +26,7 @@ namespace BO
                 while (( x < _ListaItems.Count))
                 {
                     Item i = (Item)_ListaItems[x];
-                    sub = sub +( i.Cantidad * i.PrecioUnitario);
+                    sub = sub +( (double)i.Cantidad * i.PrecioUnitario);
                     x++;
                 }
                 return sub;
