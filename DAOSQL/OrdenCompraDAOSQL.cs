@@ -18,7 +18,7 @@ namespace DAOSQL
         private static Session Sesion = null;
         ConecctionServer connServ = ConecctionServer.Instancia();
 
-        DAOSQL.ProductoDAOSQL DAOProductos = DAOSQL.ProductoDAOSQL.Instancia();
+        //DAOSQL.ProductoDAOSQL DAOProductos = DAOSQL.ProductoDAOSQL.Instancia();
         //DAO.Productodao DAOProductos = DAO.Productodao.Instancia();
         DAOSQL.UsuarioDAOSQL DAOUsuarios = DAOSQL.UsuarioDAOSQL.Instancia();
         //DAO.UsuarioDAO DAOUsuarios = DAO.UsuarioDAO.Instancia();
