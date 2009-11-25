@@ -66,11 +66,14 @@ namespace UI
 
         private void listBox_listado_SelectedValueChanged(object sender, EventArgs e)
         {
-            c = (Categoria)ListaCategorias[listBox_listado.SelectedIndex];
-            label_nombre.Text = c.Nombre;
-            label_id.Text = c.Codigo.ToString();
-            txt_modif_id.Text = c.Codigo.ToString();
-            txt_modif_nombre.Text = c.Nombre;
+            if (listBox_listado.SelectedIndex >= 0)
+            {
+                c = (Categoria)ListaCategorias[listBox_listado.SelectedIndex];
+                label_nombre.Text = c.Nombre;
+                label_id.Text = c.Codigo.ToString();
+                txt_modif_id.Text = c.Codigo.ToString();
+                txt_modif_nombre.Text = c.Nombre;
+            }
         }
 
         private void btn_ok_Click(object sender, EventArgs e)

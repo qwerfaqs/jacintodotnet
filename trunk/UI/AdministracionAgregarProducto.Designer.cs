@@ -113,7 +113,7 @@
             this.txtStockComprometido.Location = new System.Drawing.Point(334, 75);
             this.txtStockComprometido.Name = "txtStockComprometido";
             this.txtStockComprometido.Size = new System.Drawing.Size(47, 20);
-            this.txtStockComprometido.TabIndex = 20;
+            this.txtStockComprometido.TabIndex = 7;
             // 
             // lbl5
             // 
@@ -129,7 +129,7 @@
             this.btnImagen.Location = new System.Drawing.Point(237, 103);
             this.btnImagen.Name = "btnImagen";
             this.btnImagen.Size = new System.Drawing.Size(144, 22);
-            this.btnImagen.TabIndex = 18;
+            this.btnImagen.TabIndex = 8;
             this.btnImagen.Text = "Cargar Imagen";
             this.btnImagen.UseVisualStyleBackColor = true;
             this.btnImagen.Click += new System.EventHandler(this.btnImagen_Click);
@@ -139,7 +139,7 @@
             this.txtNombre.Location = new System.Drawing.Point(80, 48);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
-            this.txtNombre.TabIndex = 15;
+            this.txtNombre.TabIndex = 2;
             // 
             // label8
             // 
@@ -155,7 +155,7 @@
             this.txtPrecio.Location = new System.Drawing.Point(80, 100);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(47, 20);
-            this.txtPrecio.TabIndex = 13;
+            this.txtPrecio.TabIndex = 4;
             // 
             // label7
             // 
@@ -171,7 +171,7 @@
             this.txtPrecioOferta.Location = new System.Drawing.Point(334, 20);
             this.txtPrecioOferta.Name = "txtPrecioOferta";
             this.txtPrecioOferta.Size = new System.Drawing.Size(47, 20);
-            this.txtPrecioOferta.TabIndex = 11;
+            this.txtPrecioOferta.TabIndex = 5;
             // 
             // label6
             // 
@@ -187,7 +187,7 @@
             this.txtStock.Location = new System.Drawing.Point(334, 46);
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(47, 20);
-            this.txtStock.TabIndex = 5;
+            this.txtStock.TabIndex = 6;
             // 
             // label3
             // 
@@ -232,7 +232,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(123, 174);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(101, 23);
-            this.btnCancelar.TabIndex = 19;
+            this.btnCancelar.TabIndex = 10;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -242,7 +242,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(12, 174);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(105, 23);
-            this.btnGuardar.TabIndex = 20;
+            this.btnGuardar.TabIndex = 9;
             this.btnGuardar.Text = "Guardar Producto";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
@@ -252,7 +252,7 @@
             this.button1.Location = new System.Drawing.Point(12, 174);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(105, 23);
-            this.button1.TabIndex = 21;
+            this.button1.TabIndex = 9;
             this.button1.Text = "Modificar Producto";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Visible = false;
