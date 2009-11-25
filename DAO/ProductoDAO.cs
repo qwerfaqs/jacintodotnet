@@ -14,6 +14,10 @@ namespace DAO
         {
             return _instancia;
         }
+        private Productodao()
+        {
+        }
+
         private ArrayList ListaProductos = new ArrayList();
         
 
