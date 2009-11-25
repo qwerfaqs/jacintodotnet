@@ -9,9 +9,9 @@ namespace Control
     public class ControlUsuarios
     {
         //dao con Array list
-        private DAO.UsuarioDAO miDao = DAO.UsuarioDAO.Instancia();
+        //private DAO.UsuarioDAO miDao = DAO.UsuarioDAO.Instancia();
         //dao con SQL
-        //private DAOSQL.UsuarioDAOSQL miDao = DAOSQL.UsuarioDAOSQL.Instancia();
+        private DAOSQL.UsuarioDAOSQL miDao = DAOSQL.UsuarioDAOSQL.Instancia();
         public ControlUsuarios()
         {
         }
