@@ -269,6 +269,7 @@
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AdministracionProductos";
+            this.ShowInTaskbar = false;
             this.Text = "Administracion - Productos";
             this.Load += new System.EventHandler(this.AdministracionProductos_Load);
             this.groupBox1.ResumeLayout(false);
