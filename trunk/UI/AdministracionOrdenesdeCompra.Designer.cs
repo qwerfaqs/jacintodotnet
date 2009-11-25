@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdministracionOrdenesdeCompra));
             this.dgvOrdenes = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnDetalles = new System.Windows.Forms.Button();
@@ -68,7 +69,6 @@
             this.btnDetalles.TabIndex = 3;
             this.btnDetalles.Text = "Ver Detalles...";
             this.btnDetalles.UseVisualStyleBackColor = true;
-            this.btnDetalles.Click += new System.EventHandler(this.btnDetalles_Click);
             // 
             // chkPendientes
             // 
@@ -79,7 +79,6 @@
             this.chkPendientes.TabIndex = 1;
             this.chkPendientes.Text = "Mostrar Solo Ordenes Pendientes";
             this.chkPendientes.UseVisualStyleBackColor = true;
-            this.chkPendientes.CheckedChanged += new System.EventHandler(this.chkPendientes_CheckedChanged);
             // 
             // btnSalir
             // 
@@ -89,18 +88,12 @@
             this.btnSalir.TabIndex = 2;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // AdministracionOrdenesdeCompra
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(502, 254);
-            this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(292, 266);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AdministracionOrdenesdeCompra";
-            this.Text = "Administracion - Ordenes de Compra";
-            this.Load += new System.EventHandler(this.AdministracionOrdenesdeCompra_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenes)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

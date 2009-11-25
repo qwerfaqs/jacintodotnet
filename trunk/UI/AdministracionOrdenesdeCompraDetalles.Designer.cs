@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdministracionOrdenesdeCompraDetalles));
             this.GrpBoxOrdenCompra = new System.Windows.Forms.GroupBox();
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -280,6 +281,7 @@
             this.ClientSize = new System.Drawing.Size(504, 377);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.GrpBoxOrdenCompra);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AdministracionOrdenesdeCompraDetalles";
             this.Text = "Administracion - Orden de Compra";
             this.Load += new System.EventHandler(this.AdministracionOrdenesdeCompraDetalles_Load);

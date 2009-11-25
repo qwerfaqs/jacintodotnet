@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdministracionCategorias));
             this.grp_lista = new System.Windows.Forms.GroupBox();
             this.listBox_listado = new System.Windows.Forms.ListBox();
             this.btn_ok = new System.Windows.Forms.Button();
@@ -249,6 +250,7 @@
             this.Controls.Add(this.grp_eliminacion);
             this.Controls.Add(this.grp_Modificacion);
             this.Controls.Add(this.grp_carga);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AdministracionCategorias";
             this.Text = "Administracion - Categorias";
             this.Load += new System.EventHandler(this.Categorias_Load);

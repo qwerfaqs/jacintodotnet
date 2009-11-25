@@ -236,6 +236,7 @@
             this.ClientSize = new System.Drawing.Size(779, 360);
             this.Controls.Add(this.toolStripContainer1);
             this.Controls.Add(this.statusStripEstado);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Name = "Principal";
             this.Text = "Carrito de Compras - Sesion no iniciada";

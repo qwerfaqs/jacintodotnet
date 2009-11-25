@@ -267,6 +267,7 @@
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AdministracionProductos";
             this.Text = "Administracion - Productos";
             this.Load += new System.EventHandler(this.AdministracionProductos_Load);
