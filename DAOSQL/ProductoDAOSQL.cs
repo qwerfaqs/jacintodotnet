@@ -6,10 +6,13 @@ using System.Data.SqlClient;
 using System.Data;
 using System.IO;
 using System.Drawing;
+using System.Globalization;
 namespace DAOSQL
 {
     public sealed class ProductoDAOSQL
     {
+        //obtengo la cultura inglesa sin region ni pais, independiente del sistema operativo
+        CultureInfo cultura = CultureInfo.InvariantCulture;
         private ArrayList ListaProductos;
         private static readonly ProductoDAOSQL _instancia = new ProductoDAOSQL();
         private ConecctionServer connServ = ConecctionServer.Instancia();
@@ -30,7 +33,7 @@ namespace DAOSQL
 
                     using (SqlCommand command = new SqlCommand())
                     {
-                        command.CommandText = "UPDATE Productos SET Id=" + product.Codigo + ",Nombre ='" + product.Nombre + "',Categoria=" + product.Cat.Codigo + ",Precio=" + product.Precio + ",PrecioOferta=" + product.PrecioOferta + ",Foto= @img,Stock= " + product.StockActual + ",StockComprometido=" + product.StockComprometido + " where Id="+product.Codigo;
+                        command.CommandText = "UPDATE Productos SET Id=" + product.Codigo + ",Nombre ='" + product.Nombre + "',Categoria=" + product.Cat.Codigo + ",Precio=" + product.Precio.ToString(this.cultura) + ",PrecioOferta=" + product.PrecioOferta.ToString(this.cultura) + ",Foto= @img,Stock= " + product.StockActual + ",StockComprometido=" + product.StockComprometido + " where Id="+product.Codigo;
                         command.Parameters.Add("@img", SqlDbType.Image);
                         command.Connection = connServ.Conexion();
                         if (product.FotoPath != null)
@@ -58,7 +61,7 @@ namespace DAOSQL
 
                     using (SqlCommand command = new SqlCommand())
                     {
-                        command.CommandText = "INSERT INTO Productos (Id,Nombre,Categoria,Precio,PrecioOferta,Foto,Stock,StockComprometido) values (" + product.Codigo + ",'" + product.Nombre + "'," + product.Cat.Codigo + "," + product.Precio + "," + product.PrecioOferta + ",@img," + product.StockActual + "," + product.StockComprometido + ")";
+                        command.CommandText = "INSERT INTO Productos (Id,Nombre,Categoria,Precio,PrecioOferta,Foto,Stock,StockComprometido) values (" + product.Codigo + ",'" + product.Nombre + "'," + product.Cat.Codigo + "," + product.Precio.ToString(this.cultura) + "," + product.PrecioOferta + ",@img," + product.StockActual + "," + product.StockComprometido.ToString(this.cultura) + ")";
                         command.Parameters.Add("@img", SqlDbType.Image);
                         command.Connection = connServ.Conexion();
                         if (product.FotoPath != null)

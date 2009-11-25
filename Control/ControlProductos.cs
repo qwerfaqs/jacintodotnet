@@ -4,18 +4,20 @@ using System.Text;
 using BO;
 using System.Drawing;
 using System.Data.SqlClient;
+using System.Globalization;
 
 namespace Control
 {
     public class ControlProductos
     {
+        //obtengo la cultura inglesa sin paisn ni region, cultura que no varia en ninguna makina ni sistema
+        private CultureInfo cultura = CultureInfo.InvariantCulture;
 
         private Control.ControlCategorias ControlCategorias = new ControlCategorias();
         //DAO con ArrayList
-        private DAO.Productodao DaoProducto = DAO.Productodao.Instancia();
+        //private DAO.Productodao DaoProducto = DAO.Productodao.Instancia();
         //DAO con SQL
-        //private DAOSQL.ProductoDAOSQL DaoProducto = DAOSQL.ProductoDAOSQL.Instancia();
-
+        private DAOSQL.ProductoDAOSQL DaoProducto = DAOSQL.ProductoDAOSQL.Instancia();
         public ControlProductos()
         {
             
@@ -38,12 +40,12 @@ namespace Control
             try
             {
                 
-                double Precio = double.Parse(precio);
+                double Precio = double.Parse(precio,this.cultura);
                 int Codigo = Convert.ToInt32(codigo);
                 Categoria Categoria = categoria;
                 int StockActual = Convert.ToInt32(stockactual);
                 int StockComprometido = Convert.ToInt32(stockcomprometido);
-                double PrecioOferta = double.Parse(preciooferta);
+                double PrecioOferta = double.Parse(preciooferta,this.cultura);
                 Producto Producto = new Producto(Codigo, nombre, Precio, Categoria, PrecioOferta, Foto, StockActual, StockComprometido);
                 //this.miDao.agregar_producto(Producto);
                 this.DaoProducto.Agregar_producto(Producto);
@@ -77,12 +79,12 @@ namespace Control
 
             try
             {
-                double Precio = double.Parse(precio);
+                double Precio = double.Parse(precio,this.cultura);
                 int Codigo = Convert.ToInt32(codigo);
                 Categoria Categoria = categoria;
                 int StockActual = Convert.ToInt32(stockactual);
                 int StockComprometido = Convert.ToInt32(stockcomprometido);
-                double PrecioOferta = double.Parse(preciooferta);
+                double PrecioOferta = double.Parse(preciooferta,this.cultura);
 
                 Producto Producto1 = new Producto(Codigo, nombre, Precio, Categoria, PrecioOferta, Foto, StockActual, StockComprometido);
                 //this.miDao.modificar_producto(Producto);

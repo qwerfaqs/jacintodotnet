@@ -4,11 +4,14 @@ using System.Text;
 using BO;
 using System.Data.SqlClient;
 using System.Data;
+using System.Globalization;
 
 namespace DAOSQL
 {
     public sealed class OrdenCompraDAOSQL
     {
+        //obtiene la cultura inglesa sin pais ni region,  independiente del sistema operativo
+        CultureInfo cultura = CultureInfo.InvariantCulture;
         ArrayList ListaOrdenes = new ArrayList();
         private static readonly OrdenCompraDAOSQL _instancia = new OrdenCompraDAOSQL();
         private static Session Sesion = null;
@@ -152,7 +155,7 @@ namespace DAOSQL
                 connServ.Abrir();
                 using (SqlCommand command = new SqlCommand())
                 {
-                    command.CommandText = "INSERT INTO OrdenesCompra (pendiente,total_iva,total_envio,id_cliente) values ('" + _orden.Estado + "', " + _orden.Iva + ", " + _orden.Envio + ", " + _orden.Cliente.Id + ") select @@identity";
+                    command.CommandText = "INSERT INTO OrdenesCompra (pendiente,total_iva,total_envio,id_cliente) values ('" + _orden.Estado + "', " + _orden.Iva.ToString(this.cultura) + ", " + _orden.Envio.ToString(this.cultura) + ", " + _orden.Cliente.Id + ") select @@identity";
                     command.Connection = connServ.Conexion();
 
                     _orden.Numero = Convert.ToInt32(command.ExecuteScalar());
@@ -176,7 +179,7 @@ namespace DAOSQL
                 {
                     foreach (Item Item in UnaOrden.Items)
                     {
-                        command.CommandText = "INSERT INTO DetallesOrden (id_orden, codigo_articulo, precio, cant) values ("+UnaOrden.Numero+","+Item._UnProducto.Codigo+","+Item._UnProducto.Precio+","+Item.Cantidad+")";
+                        command.CommandText = "INSERT INTO DetallesOrden (id_orden, codigo_articulo, precio, cant) values ("+UnaOrden.Numero+","+Item._UnProducto.Codigo+","+Item._UnProducto.Precio.ToString(this.cultura)+","+Item.Cantidad+")";
                         command.Connection = connServ.Conexion();
                         command.ExecuteNonQuery();
                     }
