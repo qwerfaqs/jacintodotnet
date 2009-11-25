@@ -15,12 +15,12 @@ namespace DAOSQL
         ArrayList ListaOrdenes = new ArrayList();
         private static readonly OrdenCompraDAOSQL _instancia = new OrdenCompraDAOSQL();
         
-        private static Session Sesion = null;
+        //private static Session Sesion = null;
         ConecctionServer connServ = ConecctionServer.Instancia();
 
         //DAOSQL.ProductoDAOSQL DAOProductos = DAOSQL.ProductoDAOSQL.Instancia();
         //DAO.Productodao DAOProductos = DAO.Productodao.Instancia();
-        DAOSQL.UsuarioDAOSQL DAOUsuarios = DAOSQL.UsuarioDAOSQL.Instancia();
+        //DAOSQL.UsuarioDAOSQL DAOUsuarios = DAOSQL.UsuarioDAOSQL.Instancia();
         //DAO.UsuarioDAO DAOUsuarios = DAO.UsuarioDAO.Instancia();
 
         private OrdenCompraDAOSQL()
