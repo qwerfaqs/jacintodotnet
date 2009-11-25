@@ -5,7 +5,7 @@ using BO;
 using System.Data.SqlClient;
 using System.Data;
 using System.Globalization;
-
+using DAO;
 namespace DAOSQL
 {
     public sealed class OrdenCompraDAOSQL
@@ -16,8 +16,10 @@ namespace DAOSQL
         private static readonly OrdenCompraDAOSQL _instancia = new OrdenCompraDAOSQL();
         private static Session Sesion = null;
         ConecctionServer connServ = ConecctionServer.Instancia();
-        DAOSQL.ProductoDAOSQL DAOProductos = DAOSQL.ProductoDAOSQL.Instancia();
+        //DAOSQL.ProductoDAOSQL DAOProductos = DAOSQL.ProductoDAOSQL.Instancia();
+        DAO.Productodao DAOProductos = DAO.Productodao.Instancia();
         DAOSQL.UsuarioDAOSQL DAOUsuarios = DAOSQL.UsuarioDAOSQL.Instancia();
+        
 
         private OrdenCompraDAOSQL()
         {
