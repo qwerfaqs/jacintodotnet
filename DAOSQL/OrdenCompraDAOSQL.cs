@@ -17,6 +17,7 @@ namespace DAOSQL
         
         private static Session Sesion = null;
         ConecctionServer connServ = ConecctionServer.Instancia();
+
         DAOSQL.ProductoDAOSQL DAOProductos = DAOSQL.ProductoDAOSQL.Instancia();
         //DAO.Productodao DAOProductos = DAO.Productodao.Instancia();
         DAOSQL.UsuarioDAOSQL DAOUsuarios = DAOSQL.UsuarioDAOSQL.Instancia();
@@ -87,12 +88,16 @@ namespace DAOSQL
 
                 foreach(OrdenCompra Orden in ListaOrdenes)
                 {
-                    Orden.Cliente=DAOUsuarios.UnUser(Orden.Cliente.Id);
+                   // Orden.Cliente=DAOUsuarios.UnUser(Orden.Cliente.Id);
+                    String path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase).Substring(6);
+            
+            
                     foreach (DataRow dr in dt.Rows)
                     {
                         if ((int)dr["id_orden"] == Orden.Numero)
                         {
-                            Producto p = DAOProductos.leer_unproducto((int)dr["codigo_articulo"]);
+                            Producto p = new Producto((int)dr["codigo_articulo"],(string)dr["descripcion"],(double)dr["precio"],new Categoria(),0,System.Drawing.Image.FromFile(path +"\\ImagenNodisponible.jpg") ,0,0);
+                            
                             Orden.Items.Add(new Item(p,(int)dr["cant"]));                            
                         }
                     }
