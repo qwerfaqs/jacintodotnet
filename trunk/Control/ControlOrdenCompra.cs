@@ -32,7 +32,7 @@ namespace Control
             }
             catch (Exception ex)
             {
-                throw new ArgumentException("Error Generando orden");
+                throw new ArgumentException("Error Generando orden",ex);
             } 
         }
         
