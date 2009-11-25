@@ -14,11 +14,11 @@ namespace Control
     {
         private Carrito unCarrito = new Carrito(DateTime.Now);
         //DAOS CON ARRAYLIST
-        //private DAO.Productodao DAOproducto = DAO.Productodao.Instancia();
+        private DAO.Productodao DAOproducto = DAO.Productodao.Instancia();
         
       
         //DAOS CON SQL
-        private DAOSQL.ProductoDAOSQL DAOproducto = DAOSQL.ProductoDAOSQL.Instancia();
+        //private DAOSQL.ProductoDAOSQL DAOproducto = DAOSQL.ProductoDAOSQL.Instancia();
         
         public ControlCarritos()
         {

@@ -88,7 +88,7 @@ namespace UI
                 //se le carga por un milisegundo la grilla de ´productos para que se actualize (Problema a resolver bien)
                 dataGridView2.DataSource = BS;
 
-                BScarrito.ResetBindings(false);
+                //BScarrito.ResetBindings(false);
                 ArrayList arreglo = Carromato.CargarCarrito();
                 BScarrito.DataSource = arreglo;
                 dataGridView2.DataSource = BScarrito;
@@ -165,8 +165,7 @@ namespace UI
                 DataGridView.HitTestInfo info;
                 info = dataGridView1.HitTest(e.X, e.Y);
                 DoDragDrop(dataGridView1.Rows[info.RowIndex].Cells["Codigo"].Value.ToString(), DragDropEffects.Copy);
-            }
-          
+            }          
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
