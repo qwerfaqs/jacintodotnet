@@ -22,7 +22,7 @@ namespace DAO
         {
             ListaCategorias.Add(cat);
         }
-        public ArrayList leer_categorias()
+        public ArrayList leer_categorias(bool nada)
         {
             return ListaCategorias;
         }     

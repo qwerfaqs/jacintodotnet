@@ -18,7 +18,7 @@ namespace UI
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //CargaInicial();
+            CargaInicial();
             //mtxtPass.UseSystemPasswordChar = true;
             cerrarSesionToolStripMenuItem.Enabled = false;
             productosToolStripMenuItem.Enabled = false;
