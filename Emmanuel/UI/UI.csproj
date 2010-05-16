@@ -1,0 +1,212 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EADB6355-0948-4D3D-99EF-327C069C384C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UI</RootNamespace>
+    <AssemblyName>UI</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\WINDOWS\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AcercaDe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AcercaDe.Designer.cs">
+      <DependentUpon>AcercaDe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdministracionABMProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdministracionABMProductos.Designer.cs">
+      <DependentUpon>AdministracionABMProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdministracionCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdministracionCategorias.Designer.cs">
+      <DependentUpon>AdministracionCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdministracionMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdministracionMenu.Designer.cs">
+      <DependentUpon>AdministracionMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdministracionOrdenesdeCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdministracionOrdenesdeCompra.Designer.cs">
+      <DependentUpon>AdministracionOrdenesdeCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdministracionOrdenesdeCompraDetalles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdministracionOrdenesdeCompraDetalles.Designer.cs">
+      <DependentUpon>AdministracionOrdenesdeCompraDetalles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IngresoCantidad.Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IngresoCantidad.Usuario.Designer.cs">
+      <DependentUpon>IngresoCantidad.Usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Principal - Logueo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal - Logueo.Designer.cs">
+      <DependentUpon>Principal - Logueo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Principal - Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal - Usuario.Designer.cs">
+      <DependentUpon>Principal - Usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdministracionAgregarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdministracionAgregarProducto.Designer.cs">
+      <DependentUpon>AdministracionAgregarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AcercaDe.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AcercaDe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdministracionABMProductos.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AdministracionABMProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdministracionCategorias.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AdministracionCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdministracionMenu.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AdministracionMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdministracionOrdenesdeCompra.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AdministracionOrdenesdeCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdministracionOrdenesdeCompraDetalles.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AdministracionOrdenesdeCompraDetalles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IngresoCantidad.Usuario.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>IngresoCantidad.Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal - Logueo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Principal - Logueo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal - Usuario.resx">
+      <DependentUpon>Principal - Usuario.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdministracionAgregarProducto.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AdministracionAgregarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BO\BO.csproj">
+      <Project>{D1B86D35-9B04-4948-80DB-75CB7792197F}</Project>
+      <Name>BO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Control\Control.csproj">
+      <Project>{0304854B-2A6D-4BBF-81A6-04443CF2655C}</Project>
+      <Name>Control</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Conexiones.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImagenNodisponible.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
