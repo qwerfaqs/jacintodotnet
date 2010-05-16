@@ -10,9 +10,12 @@ namespace DAOSQL
 {
     public sealed class OrdenCompraDAOSQL
     {
+        private DAOSQL.ProductoDAOSQL DaoProducto = DAOSQL.ProductoDAOSQL.Instancia();
+        private DAOSQL.UsuarioDAOSQL DaoUsuario = DAOSQL.UsuarioDAOSQL.Instancia();
         //obtiene la cultura inglesa sin pais ni region,  independiente del sistema operativo
         CultureInfo cultura = CultureInfo.InvariantCulture;
         ArrayList ListaOrdenes = new ArrayList();
+        
         private static readonly OrdenCompraDAOSQL _instancia = new OrdenCompraDAOSQL();
         
         //private static Session Sesion = null;
@@ -32,6 +35,7 @@ namespace DAOSQL
         {
             try
             {
+                ArrayList ListaUsers = this.DaoUsuario.TodosLosUsuarios();
                 ListaOrdenes.Clear();
                 connServ.Abrir();
 
@@ -43,18 +47,22 @@ namespace DAOSQL
                     SqlDataReader rdr = command.ExecuteReader();
 
                     while (rdr.Read())
-                    {
-                        //int StockComprometido = Convert.ToInt32(rdr.GetValue(7));
+                    {                        //int StockComprometido = Convert.ToInt32(rdr.GetValue(7));
                         OrdenCompra Orden = new OrdenCompra();
                         Orden.Envio = Convert.ToDouble(rdr.GetValue(4));
                         Orden.Estado = rdr.GetValue(1).ToString();
                         Orden.Iva = Convert.ToDouble(rdr.GetValue(2));
                         Orden.Numero = (int)rdr.GetValue(0);
-                        Orden.Items = new ArrayList();
+                        Orden.Items = new ArrayList();                                 //completar lista ordenes
 
-                        User Usuario = new User();
-                        Usuario.Id = (int)rdr.GetValue(5);
-                        Orden.Cliente = Usuario;
+                        foreach (User Tipo in ListaUsers)
+                        {
+                            if (Tipo.Id == (int)rdr.GetValue(5))
+                            {   
+                                Orden.Cliente = Tipo;
+                                break;
+                            }
+                        }
                         
                         ListaOrdenes.Add(Orden);
                     }
@@ -96,7 +104,9 @@ namespace DAOSQL
                     {
                         if ((int)dr["id_orden"] == Orden.Numero)
                         {
-                            Producto p = new Producto((int)dr["codigo_articulo"],(string)dr["descripcion"],(double)dr["precio"],new Categoria(),0,System.Drawing.Image.FromFile(path +"\\ImagenNodisponible.jpg") ,0,0);
+                            //Producto p = new Producto((int)dr["codigo_articulo"],(string)dr["descripcion"],(double)dr["precio"],new Categoria(),0,System.Drawing.Image.FromFile(path +"\\ImagenNodisponible.jpg") ,0,0);
+                            Producto p = this.DaoProducto.leer_unproducto((int)dr["codigo_articulo"]);
+                            p.Precio = (double)dr["precio"];
                             
                             Orden.Items.Add(new Item(p,(int)dr["cant"]));                            
                         }
@@ -163,7 +173,7 @@ namespace DAOSQL
                 connServ.Abrir();
                 using (SqlCommand command = new SqlCommand())
                 {
-                    command.CommandText = "INSERT INTO OrdenesCompra (pendiente,total_iva,total_envio,id_cliente) values ('" + _orden.Estado + "', " + _orden.Iva.ToString(this.cultura) + ", " + _orden.Envio.ToString(this.cultura) + ", " + _orden.Cliente.Id + ") select @@identity";
+                    command.CommandText = "INSERT INTO OrdenesCompra (pendiente,total_iva,total_envio,id_cliente, fecha) values ('" + _orden.Estado + "', " + _orden.Iva.ToString(this.cultura) + ", " + _orden.Envio.ToString(this.cultura) + ", " + _orden.Cliente.Id + ",getdate()) select @@identity";
                     command.Connection = connServ.Conexion();
 
                     _orden.Numero = Convert.ToInt32(command.ExecuteScalar());
@@ -187,7 +197,7 @@ namespace DAOSQL
                 {
                     foreach (Item Item in UnaOrden.Items)
                     {
-                        command.CommandText = "INSERT INTO DetallesOrden (id_orden, codigo_articulo, precio, cant) values ("+UnaOrden.Numero+","+Item._UnProducto.Codigo+","+Item._UnProducto.Precio.ToString(this.cultura)+","+Item.Cantidad+")";
+                        command.CommandText = "INSERT INTO DetallesOrden (id_orden, codigo_articulo, precio, cant, descripcion) values ("+UnaOrden.Numero+","+Item._UnProducto.Codigo+","+Item._UnProducto.Precio.ToString(this.cultura)+","+Item.Cantidad+",'"+Item.Nombre.ToString()+"')";
                         command.Connection = connServ.Conexion();
                         command.ExecuteNonQuery();
                     }
@@ -223,8 +233,7 @@ namespace DAOSQL
         //        throw new ArgumentException("Error Generando Orden de Compra", ex);
         //    }
         //}
-
-        
+                
         public BO.OrdenCompra LeerUnaOrden(int IdOrden)
         {
             OrdenCompra UnaOrden=new OrdenCompra();
@@ -244,5 +253,6 @@ namespace DAOSQL
             cmd.ExecuteNonQuery();
             connServ.Cerrar();
         }
+
     }
 }

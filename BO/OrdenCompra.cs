@@ -14,6 +14,7 @@ namespace BO
         private string _estado;
         private double _iva =0.21f;
         private double _envio = 50;
+        private double _subtotal=0;
 
         public OrdenCompra(ArrayList items, int numero, User cliente, string estado)
         {
@@ -21,6 +22,10 @@ namespace BO
             _numero = numero;
             _Cliente = cliente;
             _estado = estado;
+            foreach (Item I in items)
+            {
+                _subtotal += I.Total;
+            }
         }
 
         public OrdenCompra()

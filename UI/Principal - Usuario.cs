@@ -272,6 +272,7 @@ namespace UI
 
         }
 
+
         private void btn_vaciarCarrito_Click(object sender, EventArgs e)
         {
             Carromato.VaciarCarrito();
@@ -328,6 +329,8 @@ namespace UI
             //es una prueba para hacer un mejor drag and drop
            //dataGridView1.
         }
+
+        
 
     }
 }

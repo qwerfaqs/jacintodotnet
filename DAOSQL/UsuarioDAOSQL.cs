@@ -82,29 +82,53 @@ namespace DAOSQL
         }
 
         
+        public ArrayList TodosLosUsuarios()
+        {
+            ArrayList ListaUsuarios=new ArrayList();
+            connServ.Abrir();
+
+            using (SqlCommand command3 = new SqlCommand())
+            {   //                                 0          1         2       3     4      5        6       7     
+                command3.CommandText = "SELECT id_usuario,categoria,apellido,nombre,pass,domicilio,email,nickname FROM Usuarios";
+                command3.Connection = connServ.Conexion();
+
+                SqlDataReader rdr3 = command3.ExecuteReader();
+
+
+                while (rdr3.Read())
+                {
+                    User Usuario  = new User(rdr3.GetString(3), rdr3.GetString(2), rdr3.GetString(6), rdr3.GetString(7), rdr3.GetString(4), rdr3.GetString(5), rdr3.GetInt32(0), rdr3.GetInt32(1));
+                    ListaUsuarios.Add(Usuario);
+                }
+            }
+            connServ.Cerrar();
+                       
+            return ListaUsuarios;
+        }
+
         public User UnUser(int UserId)
         {
             User result = null;
             ///hago un select y si me lo devuelve es que esta logeado
             //try
             //{
-                connServ.Abrir();
+            connServ.Abrir();
 
-                using (SqlCommand command3 = new SqlCommand())
-                {   //                                 0          1         2       3     4      5        6       7     
-                    command3.CommandText = "SELECT id_usuario,categoria,apellido,nombre,pass,domicilio,email,nickname FROM Usuarios where id_usuario='" + UserId + "'";
-                    command3.Connection = connServ.Conexion();
+            using (SqlCommand command3 = new SqlCommand())
+            {   //                                 0          1         2       3     4      5        6       7     
+                command3.CommandText = "SELECT id_usuario,categoria,apellido,nombre,pass,domicilio,email,nickname FROM Usuarios where id_usuario='" + UserId + "'";
+                command3.Connection = connServ.Conexion();
 
-                    SqlDataReader rdr3 = command3.ExecuteReader();
+                SqlDataReader rdr3 = command3.ExecuteReader();
 
 
-                    while (rdr3.Read())
-                    {
-                        result = new User(rdr3.GetString(3), rdr3.GetString(2), rdr3.GetString(6), rdr3.GetString(7), rdr3.GetString(4), rdr3.GetString(5), rdr3.GetInt32(0), rdr3.GetInt32(1));
+                while (rdr3.Read())
+                {
+                    result = new User(rdr3.GetString(3), rdr3.GetString(2), rdr3.GetString(6), rdr3.GetString(7), rdr3.GetString(4), rdr3.GetString(5), rdr3.GetInt32(0), rdr3.GetInt32(1));
 
-                    }
                 }
-                connServ.Cerrar();
+            }
+            connServ.Cerrar();
             //}
 
             //catch (Exception e)
@@ -116,8 +140,7 @@ namespace DAOSQL
                 throw new Exception("ERROR: NO EXISTE TAL USUARIO");
             }
             return result;
-        }   
-             
-             
+        }
+     
     }
 }

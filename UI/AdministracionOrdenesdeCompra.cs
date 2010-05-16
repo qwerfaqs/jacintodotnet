@@ -63,8 +63,15 @@ namespace UI
 
         private void btnDetalles_Click(object sender, EventArgs e)
         {
-            AdministracionOrdenesdeCompraDetalles AOCD = new AdministracionOrdenesdeCompraDetalles(this.Session, (int)dgvOrdenes.CurrentRow.Cells["Numero"].Value);
-            AOCD.Show();   
+            try
+            {
+                AdministracionOrdenesdeCompraDetalles AOCD = new AdministracionOrdenesdeCompraDetalles(this.Session, (int)dgvOrdenes.CurrentRow.Cells["Numero"].Value);
+                AOCD.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }   
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
