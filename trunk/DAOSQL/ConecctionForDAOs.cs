@@ -32,8 +32,6 @@ namespace DAOSQL
             CargarListaStrings();
             foreach (CadenaDeConexiones cs in _connectionStrings)
             {
-
-
                 if (this.conecto == false)
                 {
                     try

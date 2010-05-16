@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <conexiones>
   
-  <conexion name="Casa de Emmanuel" connectionString="Data Source=EMMANUEL2; Initial Catalog=Jacinto; Integrated Security = True"/>
+  <conexion name="Casa de Emmanuel" connectionString="Data Source=EMMANUEL-PC; Initial Catalog=Jacinto; Integrated Security = True"/>
   <conexion name="Casa de Francisco" connectionString="Data Source=QWERFAQS\SQLEXPRESS; Initial Catalog=Carrito; Integrated Security = True"/>
   <conexion name="UTN Lab4" connectionString="Data Source=172.16.1.32; Initial Catalog=jacinto; User Id = sanchezf"/>
   

@@ -8,6 +8,8 @@ namespace DAO
 {
     public sealed class OrdenCompraDAO
     {
+        //private DAOSQL.ProductoDAOSQL DaoProducto = DAOSQL.ProductoDAOSQL.Instancia();
+         
         private static readonly OrdenCompraDAO _instancia = new OrdenCompraDAO();
         private OrdenCompraDAO()
         { 

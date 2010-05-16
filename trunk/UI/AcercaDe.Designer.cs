@@ -67,6 +67,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
@@ -83,12 +84,13 @@
             this.label3.Size = new System.Drawing.Size(202, 13);
             this.label3.TabIndex = 4;
             this.label3.Text = "http://code.google.com/p/jacintodotnet/";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // AcercaDe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(419, 121);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);

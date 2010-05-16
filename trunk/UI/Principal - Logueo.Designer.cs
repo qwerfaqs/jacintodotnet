@@ -89,8 +89,8 @@
             this.mtxtPass.Size = new System.Drawing.Size(148, 20);
             this.mtxtPass.TabIndex = 1;
             this.mtxtPass.Text = "Contraseña";
-            this.mtxtPass.Enter += new System.EventHandler(this.mtxtPass_Enter);
             this.mtxtPass.Leave += new System.EventHandler(this.mtxtPass_Leave);
+            this.mtxtPass.Enter += new System.EventHandler(this.mtxtPass_Enter);
             // 
             // txtUser
             // 
@@ -99,8 +99,8 @@
             this.txtUser.Size = new System.Drawing.Size(148, 20);
             this.txtUser.TabIndex = 0;
             this.txtUser.Text = "Usuario";
-            this.txtUser.Enter += new System.EventHandler(this.txtUser_Enter);
             this.txtUser.Leave += new System.EventHandler(this.txtUser_Leave);
+            this.txtUser.Enter += new System.EventHandler(this.txtUser_Enter);
             // 
             // button1
             // 
@@ -110,8 +110,8 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "Iniciar Sesion";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Enter += new System.EventHandler(this.button1_Click);
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Enter += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -134,9 +134,9 @@
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Principal___Logueo";
-            this.Text = "Principal___Logueo";
-            this.Enter += new System.EventHandler(this.button1_Click);
+            this.Text = "Principal - Logueo";
             this.Load += new System.EventHandler(this.Principal___Logueo_Load);
+            this.Enter += new System.EventHandler(this.button1_Click);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
