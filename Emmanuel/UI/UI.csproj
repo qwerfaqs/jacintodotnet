@@ -59,6 +59,12 @@
     <Compile Include="AdministracionABMProductos.Designer.cs">
       <DependentUpon>AdministracionABMProductos.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdministracionAltaClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdministracionAltaClientes.Designer.cs">
+      <DependentUpon>AdministracionAltaClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdministracionCategorias.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,11 +101,11 @@
     <Compile Include="Principal - Logueo.Designer.cs">
       <DependentUpon>Principal - Logueo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Principal - Usuario.cs">
+    <Compile Include="Usuario - Nueva Orden de Compra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Principal - Usuario.Designer.cs">
-      <DependentUpon>Principal - Usuario.cs</DependentUpon>
+    <Compile Include="Usuario - Nueva Orden de Compra.Designer.cs">
+      <DependentUpon>Usuario - Nueva Orden de Compra.cs</DependentUpon>
     </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
@@ -147,8 +153,8 @@
       <SubType>Designer</SubType>
       <DependentUpon>Principal - Logueo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Principal - Usuario.resx">
-      <DependentUpon>Principal - Usuario.cs</DependentUpon>
+    <EmbeddedResource Include="Usuario - Nueva Orden de Compra.resx">
+      <DependentUpon>Usuario - Nueva Orden de Compra.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
