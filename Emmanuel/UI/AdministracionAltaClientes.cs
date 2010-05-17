@@ -14,5 +14,10 @@ namespace UI
         {
             InitializeComponent();
         }
+
+        private void AdministracionAltaClientes_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

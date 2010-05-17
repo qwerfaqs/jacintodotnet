@@ -137,7 +137,7 @@ namespace UI
                     ordenesDeCompraToolStripMenuItem.Enabled = false;
                     comprasToolStripMenuItem.Enabled = true;
                     nuevaToolStripMenuItem.Enabled = true;
-                    toolStripStatusLabel1.Text = "Sesion Iniciada el " + f.Day + "/" + f.Month + "/" + f.Year + " a las " + Convert.ToString(f.Hour) + ":" + minutos; 
+                    toolStripStatusLabel1.Text = "Sesion Iniciada el " + f.Day + "/" + f.Month + "/" + f.Year + " a las " + Convert.ToString(f.Hour) + ":" + minutos " - Modo Cliente"; 
                 }
                 else
                 {
@@ -146,7 +146,7 @@ namespace UI
                     productosToolStripMenuItem.Enabled = true;
                     //herramientasToolStripMenuItem.Enabled = true;
                     comprasToolStripMenuItem.Enabled = true;
-                    toolStripStatusLabel1.Text = "Sesion Iniciada el " + f.Day + "/" + f.Month + "/" + f.Year + " a las " + Convert.ToString(f.Hour) + ":" + minutos; 
+                    toolStripStatusLabel1.Text = "Sesion Iniciada el " + f.Day + "/" + f.Month + "/" + f.Year + " a las " + Convert.ToString(f.Hour) + ":" + minutos + " - Modo Administrador"; 
                 }
             }
         }
