@@ -10,14 +10,30 @@ namespace UI
 {
     public partial class AdministracionAltaClientes : Form
     {
+        Control.ControlUsuarios CU = new Control.ControlUsuarios();
         public AdministracionAltaClientes()
         {
             InitializeComponent();
         }
 
-        private void AdministracionAltaClientes_Load(object sender, EventArgs e)
+        private void btnAplicar_Click(object sender, EventArgs e)
         {
+            try
+            {
 
+                CU.AgregarNuevoUsuario(txtNombres.Text, txtApellido.Text, txtEmail.Text, txtPass.Text, txtPass.Text, txtDireccion.Text, 0, 1);
+                MessageBox.Show("Usuario Agregado con exito");
+            }
+            catch (Exception Ex)
+            {
+
+                MessageBox.Show(Ex.Message);
+            }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

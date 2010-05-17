@@ -53,6 +53,12 @@
     <Compile Include="AcercaDe.Designer.cs">
       <DependentUpon>AcercaDe.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administracion - Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion - Clientes.Designer.cs">
+      <DependentUpon>Administracion - Clientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdministracionABMProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +124,10 @@
     <EmbeddedResource Include="AcercaDe.resx">
       <SubType>Designer</SubType>
       <DependentUpon>AcercaDe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion - Clientes.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Administracion - Clientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdministracionABMProductos.resx">
       <SubType>Designer</SubType>

@@ -215,6 +215,12 @@ namespace UI
             AD.Show();
         }
 
+        private void nuevoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            AdministracionAltaClientes AAC = new AdministracionAltaClientes();
+            AAC.Show();
+        }
+
         
 
         

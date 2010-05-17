@@ -199,6 +199,7 @@
             this.btnAplicar.TabIndex = 16;
             this.btnAplicar.Text = "Aplicar Cambios";
             this.btnAplicar.UseVisualStyleBackColor = true;
+            this.btnAplicar.Click += new System.EventHandler(this.btnAplicar_Click);
             // 
             // btnCancelar
             // 
@@ -209,6 +210,7 @@
             this.btnCancelar.TabIndex = 17;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // AdministracionAltaClientes
             // 
@@ -225,7 +227,7 @@
             this.Controls.Add(this.txtNombres);
             this.Name = "AdministracionAltaClientes";
             this.Text = "Administracion - Alta de Clientes";
-            this.Load += new System.EventHandler(this.AdministracionAltaClientes_Load);
+            //this.Load += new System.EventHandler(this.AdministracionAltaClientes_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
