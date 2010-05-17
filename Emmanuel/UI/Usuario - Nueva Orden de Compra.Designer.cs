@@ -147,7 +147,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arista", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Lime;
-            this.label1.Location = new System.Drawing.Point(101, 11);
+            this.label1.Location = new System.Drawing.Point(105, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 22);
             this.label1.TabIndex = 7;
