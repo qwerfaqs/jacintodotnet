@@ -71,12 +71,6 @@
     <Compile Include="AdministracionCategorias.Designer.cs">
       <DependentUpon>AdministracionCategorias.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdministracionMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AdministracionMenu.Designer.cs">
-      <DependentUpon>AdministracionMenu.cs</DependentUpon>
-    </Compile>
     <Compile Include="AdministracionOrdenesdeCompra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,10 +130,6 @@
     <EmbeddedResource Include="AdministracionCategorias.resx">
       <SubType>Designer</SubType>
       <DependentUpon>AdministracionCategorias.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AdministracionMenu.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>AdministracionMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdministracionOrdenesdeCompra.resx">
       <SubType>Designer</SubType>
