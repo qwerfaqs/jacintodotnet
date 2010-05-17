@@ -10,15 +10,19 @@ namespace DAOSQL
     public sealed class UsuarioDAOSQL
     {
         private static readonly UsuarioDAOSQL _instancia = new UsuarioDAOSQL();
+        
         private ConecctionServer connServ = ConecctionServer.Instancia();
+        
         private UsuarioDAOSQL()
         {
 
         }
+
         public static UsuarioDAOSQL Instancia()
         {
             return _instancia;
         }
+
         public void AgregarUsuario(BO.User usuario)
         {
             try
@@ -80,8 +84,7 @@ namespace DAOSQL
             }
             return result;
         }
-
-        
+                
         public ArrayList TodosLosUsuarios()
         {
             ArrayList ListaUsuarios=new ArrayList();
