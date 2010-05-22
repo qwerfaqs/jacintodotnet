@@ -46,14 +46,18 @@
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cuentaCorrienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.temasDeAyudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.acercaDeJacintoDotNetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.serviciosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nuevoToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.statusStripEstado = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
+            this.pagosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStripEstado.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
@@ -68,7 +72,8 @@
             this.productosToolStripMenuItem,
             this.comprasToolStripMenuItem,
             this.clientesToolStripMenuItem,
-            this.ayudaToolStripMenuItem});
+            this.ayudaToolStripMenuItem,
+            this.serviciosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
@@ -171,7 +176,9 @@
             // 
             this.clientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nuevoToolStripMenuItem1,
-            this.listadoToolStripMenuItem});
+            this.listadoToolStripMenuItem,
+            this.cuentaCorrienteToolStripMenuItem,
+            this.pagosToolStripMenuItem});
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
             this.clientesToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.clientesToolStripMenuItem.Text = "Clientes";
@@ -179,16 +186,22 @@
             // nuevoToolStripMenuItem1
             // 
             this.nuevoToolStripMenuItem1.Name = "nuevoToolStripMenuItem1";
-            this.nuevoToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.nuevoToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.nuevoToolStripMenuItem1.Text = "Nuevo...";
             this.nuevoToolStripMenuItem1.Click += new System.EventHandler(this.nuevoToolStripMenuItem1_Click);
             // 
             // listadoToolStripMenuItem
             // 
             this.listadoToolStripMenuItem.Name = "listadoToolStripMenuItem";
-            this.listadoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.listadoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.listadoToolStripMenuItem.Text = "Listado";
             this.listadoToolStripMenuItem.Click += new System.EventHandler(this.listadoToolStripMenuItem_Click);
+            // 
+            // cuentaCorrienteToolStripMenuItem
+            // 
+            this.cuentaCorrienteToolStripMenuItem.Name = "cuentaCorrienteToolStripMenuItem";
+            this.cuentaCorrienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cuentaCorrienteToolStripMenuItem.Text = "Resumen de Cuenta";
             // 
             // ayudaToolStripMenuItem
             // 
@@ -218,6 +231,20 @@
             this.acercaDeJacintoDotNetToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
             this.acercaDeJacintoDotNetToolStripMenuItem.Text = "Acerca de Jacinto Dot Net";
             this.acercaDeJacintoDotNetToolStripMenuItem.Click += new System.EventHandler(this.acercaDeJacintoDotNetToolStripMenuItem_Click);
+            // 
+            // serviciosToolStripMenuItem
+            // 
+            this.serviciosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nuevoToolStripMenuItem2});
+            this.serviciosToolStripMenuItem.Name = "serviciosToolStripMenuItem";
+            this.serviciosToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.serviciosToolStripMenuItem.Text = "Servicios";
+            // 
+            // nuevoToolStripMenuItem2
+            // 
+            this.nuevoToolStripMenuItem2.Name = "nuevoToolStripMenuItem2";
+            this.nuevoToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
+            this.nuevoToolStripMenuItem2.Text = "Nuevo...";
             // 
             // statusStripEstado
             // 
@@ -255,6 +282,12 @@
             // toolStripContainer1.TopToolStripPanel
             // 
             this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.menuStrip1);
+            // 
+            // pagosToolStripMenuItem
+            // 
+            this.pagosToolStripMenuItem.Name = "pagosToolStripMenuItem";
+            this.pagosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pagosToolStripMenuItem.Text = "Pagos";
             // 
             // Principal
             // 
@@ -310,6 +343,10 @@
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nuevoToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem listadoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cuentaCorrienteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem serviciosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nuevoToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem pagosToolStripMenuItem;
     }
 }
 

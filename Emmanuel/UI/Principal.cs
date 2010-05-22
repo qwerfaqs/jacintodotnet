@@ -99,7 +99,6 @@ namespace UI
             //OrdenCompra OC = COntroladoraCarrito3.GenerarOrden2(this.session);
             //OC.Estado = "CONFIRMADO";
         }
-
         
         private void button4_Click(object sender, EventArgs e)
         {
@@ -225,6 +224,12 @@ namespace UI
         {
             Administracion___Clientes ac = new Administracion___Clientes();
             ac.Show();
-        }      
+        }
+
+        
+
+        
+
+          
     }
 }
