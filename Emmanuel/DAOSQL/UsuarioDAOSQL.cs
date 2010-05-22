@@ -19,6 +19,7 @@ namespace DAOSQL
         {
             return _instancia;
         }
+        
         public void AgregarUsuario(BO.User usuario)
         {
             try
@@ -80,8 +81,7 @@ namespace DAOSQL
             }
             return result;
         }
-
-        
+                
         public ArrayList TodosLosUsuarios()
         {
             ArrayList ListaUsuarios=new ArrayList();
@@ -141,6 +141,20 @@ namespace DAOSQL
             }
             return result;
         }
-     
+
+        public void EliminarUser(int UserId)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("delete Usuarios where id_usuario=" + UserId, connServ.Conexion());
+                connServ.Abrir();
+                cmd.ExecuteNonQuery();
+                connServ.Cerrar();
+            }
+            catch (Exception ex)
+            {
+                throw new ArgumentException("[DAOSQL] - Error Eliminando Usuario");
+            }
+        }     
     }
 }

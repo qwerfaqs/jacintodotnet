@@ -1,5 +1,5 @@
 using System;
-using System.Collections.Generic;
+using System.Collections;//.Generic;
 using System.Text;
 using DAO;
 using BO;
@@ -12,6 +12,7 @@ namespace Control
         //private DAO.UsuarioDAO miDao = DAO.UsuarioDAO.Instancia();
         //dao con SQL
         private DAOSQL.UsuarioDAOSQL miDao = DAOSQL.UsuarioDAOSQL.Instancia();
+        
         public ControlUsuarios()
         {
         }
@@ -22,6 +23,7 @@ namespace Control
             this.miDao.AgregarUsuario(Nuevo);
             
         }
+        
         public Session LogIn(string Nick, string Pass)
         {
             try
@@ -32,6 +34,18 @@ namespace Control
             {
                 throw new Exception("Error al crear sesion", e);
             }
+        }
+
+        public ArrayList TodosLosUsuarios()
+        {
+            ArrayList Listado = new ArrayList();
+            Listado = miDao.TodosLosUsuarios();
+            return Listado;
+        }
+
+        public void EliminarUsuario(int IdUsuario)
+        {
+            miDao.EliminarUser(IdUsuario);
         }
     }
 }

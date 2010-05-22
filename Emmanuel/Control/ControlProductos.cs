@@ -18,6 +18,7 @@ namespace Control
         //private DAO.Productodao DaoProducto = DAO.Productodao.Instancia();
         //DAO con SQL
         private DAOSQL.ProductoDAOSQL DaoProducto = DAOSQL.ProductoDAOSQL.Instancia();
+        
         public ControlProductos()
         {
             
@@ -140,6 +141,7 @@ namespace Control
         {
             this.ModificarProducto(Prod.Cat, Prod.Codigo.ToString(), Prod.FotoPath, Prod.Nombre.ToString(), Prod.Precio.ToString(), Prod.PrecioOferta.ToString(), Convert.ToString((Prod.StockActual - Cant)), Prod.StockComprometido.ToString());
         }
+        
         public void ModificarStocksdeProductosdeUnaOrden(OrdenCompra UnaOrden)
         {
             foreach (Item Item in UnaOrden.Items)

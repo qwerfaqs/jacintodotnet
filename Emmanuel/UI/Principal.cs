@@ -221,20 +221,10 @@ namespace UI
             AAC.Show();
         }
 
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
-       
+        private void listadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Administracion___Clientes ac = new Administracion___Clientes();
+            ac.Show();
+        }      
     }
 }
