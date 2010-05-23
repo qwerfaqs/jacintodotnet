@@ -40,6 +40,7 @@
     <Compile Include="OrdenCompraDAOSQL.cs" />
     <Compile Include="ProductoDAOSQL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProvinciaDAOSQL.cs" />
     <Compile Include="UsuarioDAOSQL.cs" />
   </ItemGroup>
   <ItemGroup>
