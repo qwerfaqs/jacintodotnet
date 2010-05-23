@@ -5,7 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-
+using BO;
 namespace UI
 {
     public partial class AdministracionAltaClientes : Form
@@ -15,7 +15,7 @@ namespace UI
 
         ArrayList Provincias = new ArrayList();
         ArrayList Ciudades = new ArrayList();
-
+        ArrayList Ciudadesb = new ArrayList();
         public AdministracionAltaClientes()
         {
             InitializeComponent();
@@ -57,6 +57,23 @@ namespace UI
             cmbCiudad.ValueMember = "id";
         }
 
+        private void cmbCiudad_TextChanged(object sender, EventArgs e)
+        {
+            cmbCiudad.FindString(cmbCiudad.Text);
+        }
+
+        private void cmbCiudad_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            if ((int)cmbCiudad.SelectedValue > 0)
+            {
+                Departamento d = CC.CargarDepartamentoporCiudad((int)cmbCiudad.SelectedValue);
+                txtDepartamento.Text = d.Nombre;
+            }
+        }
+
+        
+
+        
         
     }
 }

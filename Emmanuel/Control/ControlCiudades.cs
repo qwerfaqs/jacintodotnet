@@ -1,7 +1,7 @@
 using System;
 using System.Collections;//.Generic;
 using System.Text;
-
+using BO;
 namespace Control
 {
     public class ControlCiudades
@@ -19,6 +19,13 @@ namespace Control
         {
             return DAOCiudad.ObtenerCiudades(IdProvincia);
         }
+
+        public Departamento CargarDepartamentoporCiudad(int idCiudad)
+        {
+            Ciudad c = DAOCiudad.ObtenerCiudad(idCiudad);
+            return DAODepartamento.ObtenerDepartamento(c.IdDepartamento);
+        }
+
     }
     
 }

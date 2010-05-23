@@ -43,10 +43,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtUser = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbProvincia = new System.Windows.Forms.ComboBox();
             this.cmbCiudad = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtDepartamento = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txtmasDatos = new System.Windows.Forms.TextBox();
@@ -57,7 +58,6 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnAplicar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.cmbProvincia = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -139,7 +139,7 @@
             // 
             this.txtTelefono.Location = new System.Drawing.Point(71, 122);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(83, 20);
+            this.txtTelefono.Size = new System.Drawing.Size(145, 20);
             this.txtTelefono.TabIndex = 8;
             // 
             // label6
@@ -155,7 +155,7 @@
             // 
             this.txtEmail.Location = new System.Drawing.Point(281, 17);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(100, 20);
+            this.txtEmail.Size = new System.Drawing.Size(205, 20);
             this.txtEmail.TabIndex = 10;
             // 
             // label7
@@ -180,7 +180,7 @@
             this.groupBox1.Controls.Add(this.cmbCiudad);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txtDepartamento);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.txtmasDatos);
@@ -196,18 +196,29 @@
             this.groupBox1.Controls.Add(this.txtCalle);
             this.groupBox1.Location = new System.Drawing.Point(12, 63);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(403, 157);
+            this.groupBox1.Size = new System.Drawing.Size(510, 157);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de Contacto";
+            // 
+            // cmbProvincia
+            // 
+            this.cmbProvincia.FormattingEnabled = true;
+            this.cmbProvincia.Location = new System.Drawing.Point(281, 43);
+            this.cmbProvincia.Name = "cmbProvincia";
+            this.cmbProvincia.Size = new System.Drawing.Size(205, 21);
+            this.cmbProvincia.TabIndex = 25;
+            this.cmbProvincia.SelectionChangeCommitted += new System.EventHandler(this.cmbProvincia_SelectionChangeCommitted);
             // 
             // cmbCiudad
             // 
             this.cmbCiudad.FormattingEnabled = true;
             this.cmbCiudad.Location = new System.Drawing.Point(281, 96);
             this.cmbCiudad.Name = "cmbCiudad";
-            this.cmbCiudad.Size = new System.Drawing.Size(100, 21);
+            this.cmbCiudad.Size = new System.Drawing.Size(205, 21);
             this.cmbCiudad.TabIndex = 24;
+            this.cmbCiudad.SelectionChangeCommitted += new System.EventHandler(this.cmbCiudad_SelectionChangeCommitted);
+            this.cmbCiudad.TextChanged += new System.EventHandler(this.cmbCiudad_TextChanged);
             // 
             // label13
             // 
@@ -227,13 +238,13 @@
             this.label12.TabIndex = 21;
             this.label12.Text = "Partido";
             // 
-            // textBox2
+            // txtDepartamento
             // 
-            this.textBox2.Location = new System.Drawing.Point(281, 70);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 20;
+            this.txtDepartamento.Location = new System.Drawing.Point(281, 70);
+            this.txtDepartamento.Name = "txtDepartamento";
+            this.txtDepartamento.ReadOnly = true;
+            this.txtDepartamento.Size = new System.Drawing.Size(205, 20);
+            this.txtDepartamento.TabIndex = 20;
             // 
             // label11
             // 
@@ -308,7 +319,7 @@
             // btnAplicar
             // 
             this.btnAplicar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAplicar.Location = new System.Drawing.Point(423, 188);
+            this.btnAplicar.Location = new System.Drawing.Point(311, 227);
             this.btnAplicar.Name = "btnAplicar";
             this.btnAplicar.Size = new System.Drawing.Size(101, 32);
             this.btnAplicar.TabIndex = 16;
@@ -319,7 +330,7 @@
             // btnCancelar
             // 
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelar.Location = new System.Drawing.Point(423, 151);
+            this.btnCancelar.Location = new System.Drawing.Point(423, 227);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(101, 32);
             this.btnCancelar.TabIndex = 17;
@@ -327,20 +338,11 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // cmbProvincia
-            // 
-            this.cmbProvincia.FormattingEnabled = true;
-            this.cmbProvincia.Location = new System.Drawing.Point(281, 43);
-            this.cmbProvincia.Name = "cmbProvincia";
-            this.cmbProvincia.Size = new System.Drawing.Size(100, 21);
-            this.cmbProvincia.TabIndex = 25;
-            this.cmbProvincia.SelectionChangeCommitted += new System.EventHandler(this.cmbProvincia_SelectionChangeCommitted);
-            // 
             // AdministracionAltaClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(536, 234);
+            this.ClientSize = new System.Drawing.Size(536, 263);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAplicar);
             this.Controls.Add(this.groupBox2);
@@ -389,7 +391,7 @@
         private System.Windows.Forms.TextBox txtmasDatos;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtDepartamento;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox cmbCiudad;
         private System.Windows.Forms.ComboBox cmbProvincia;
