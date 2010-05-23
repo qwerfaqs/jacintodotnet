@@ -334,6 +334,7 @@
             this.cmbProvincia.Name = "cmbProvincia";
             this.cmbProvincia.Size = new System.Drawing.Size(100, 21);
             this.cmbProvincia.TabIndex = 25;
+            this.cmbProvincia.SelectionChangeCommitted += new System.EventHandler(this.cmbProvincia_SelectionChangeCommitted);
             // 
             // AdministracionAltaClientes
             // 
@@ -350,6 +351,7 @@
             this.Controls.Add(this.txtNombres);
             this.Name = "AdministracionAltaClientes";
             this.Text = "Administracion - Alta de Clientes";
+            this.Load += new System.EventHandler(this.AdministracionAltaClientes_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

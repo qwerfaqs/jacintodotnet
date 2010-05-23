@@ -64,7 +64,6 @@ namespace UI
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
             }
         }

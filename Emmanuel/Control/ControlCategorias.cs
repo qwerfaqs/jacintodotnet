@@ -13,7 +13,7 @@ namespace Control
         //private DAO.CategoriaDAO miDao = DAO.CategoriaDAO.Instancia();
         //DAO con SQL
         private DAOSQL.DAOSQLCategorias miDao = DAOSQL.DAOSQLCategorias.Instancia();
-
+        
         public ControlCategorias()
         {
             

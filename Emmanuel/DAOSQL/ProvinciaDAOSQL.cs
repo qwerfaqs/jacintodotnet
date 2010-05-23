@@ -23,10 +23,33 @@ namespace DAOSQL
         { 
             
         }
-        
+
+        public ArrayList ObtenerProvincias()
+        {
+            Provincia Provincia;
+            ArrayList Provincias=new ArrayList();
+            connServ.Abrir();
+
+            using (SqlCommand command = new SqlCommand())
+            {
+                command.CommandText = "SELECT Id,Nombre FROM Provincia";
+                command.Connection = connServ.Conexion();
+
+                SqlDataReader rdr = command.ExecuteReader();
+
+                while (rdr.Read())
+                {
+                    Provincia = new Provincia(Convert.ToInt32(rdr.GetValue(0)), rdr.GetValue(1).ToString());
+                    Provincias.Add(Provincia);
+                }
+            }
+            connServ.Cerrar();
+            return Provincias;
+        }
+
         public Provincia ObtenerProvincia(int Id)
         {
-            Provincia Provincia=new Provincia(0,"");
+            Provincia Provincia=new Provincia();
             connServ.Abrir();
 
             using (SqlCommand command = new SqlCommand())

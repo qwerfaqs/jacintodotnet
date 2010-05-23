@@ -7,7 +7,7 @@ using System.Globalization;
 
 namespace DAOSQL
 {
-    class DepartamentoDAOSQL
+    public class DepartamentoDAOSQL
     {////obtengo la cultura inglesa sin region ni pais, independiente del sistema operativo
         CultureInfo cultura = CultureInfo.InvariantCulture;
 

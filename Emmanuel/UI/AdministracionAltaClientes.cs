@@ -1,5 +1,5 @@
 using System;
-using System.Collections.Generic;
+using System.Collections;//.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -11,6 +11,11 @@ namespace UI
     public partial class AdministracionAltaClientes : Form
     {
         Control.ControlUsuarios CU = new Control.ControlUsuarios();
+        Control.ControlCiudades CC = new Control.ControlCiudades();
+
+        ArrayList Provincias = new ArrayList();
+        ArrayList Ciudades = new ArrayList();
+
         public AdministracionAltaClientes()
         {
             InitializeComponent();
@@ -34,6 +39,22 @@ namespace UI
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void AdministracionAltaClientes_Load(object sender, EventArgs e)
+        {
+            Provincias = CC.CargarProvincias();
+            cmbProvincia.DataSource = Provincias;
+            cmbProvincia.DisplayMember = "Nombre";
+            cmbProvincia.ValueMember = "Id";         
+        }
+
+        private void cmbProvincia_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            Ciudades = CC.CargarCiudadesporProvincia((int)cmbProvincia.SelectedValue);
+            cmbCiudad.DataSource = Ciudades;
+            cmbCiudad.DisplayMember = "Nombre";
+            cmbCiudad.ValueMember = "id";
         }
 
         
