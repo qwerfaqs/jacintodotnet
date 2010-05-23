@@ -29,7 +29,7 @@ namespace DAOSQL
 
                 using (SqlCommand command = new SqlCommand())
                 {
-                    command.CommandText = "INSERT INTO Usuarios (categoria,apellido,nombre,pass,domicilio,email,nickname)VALUES(" + usuario.Categoria + ", '" + usuario.Apellido + "', '" + usuario.Nombre + "', '" + usuario.Pass + "', '" + usuario.Domicilio + "', '" + usuario.Email + "', '" + usuario.NickName + "')";
+                    command.CommandText = "INSERT INTO Usuarios (categoria,apellido,nombre,pass,domicilio,email,nickname, id_localidad)VALUES(" + usuario.Categoria + ", '" + usuario.Apellido + "', '" + usuario.Nombre + "', '" + usuario.Pass + "', '" + usuario.Domicilio + "', '" + usuario.Email + "', '" + usuario.NickName + "',"+usuario.IdLocalidad+")";
                     command.Connection = connServ.Conexion();
 
                     command.ExecuteNonQuery();
@@ -39,7 +39,7 @@ namespace DAOSQL
             }
             catch (Exception ex)
             {
-                throw new ArgumentException("Error Agregando Categoria", ex);
+                throw new ArgumentException("Error Agregando Usuario", ex);
             }
         }
   
@@ -54,7 +54,7 @@ namespace DAOSQL
 
                 using (SqlCommand command = new SqlCommand())
                 {   //                                 0          1         2       3     4      5        6       7     
-                    command.CommandText = "SELECT id_usuario,categoria,apellido,nombre,pass,domicilio,email,nickname FROM Usuarios where nickname='"+Nick+"' and pass='"+Pass+"'";
+                    command.CommandText = "SELECT id_usuario,categoria,apellido,nombre,pass,domicilio,email,nickname,id_localidad FROM Usuarios where nickname='"+Nick+"' and pass='"+Pass+"'";
                     command.Connection = connServ.Conexion();
 
                     SqlDataReader rdr = command.ExecuteReader();
@@ -62,7 +62,7 @@ namespace DAOSQL
 
                     while (rdr.Read())
                     {
-                        result = new User(rdr.GetString(3), rdr.GetString(2), rdr.GetString(6), rdr.GetString(7), rdr.GetString(4), rdr.GetString(5), rdr.GetInt32(0), rdr.GetInt32(1));
+                        result = new User(rdr.GetString(3), rdr.GetString(2), rdr.GetString(6), rdr.GetString(7), rdr.GetString(4), rdr.GetString(5), rdr.GetInt32(0), rdr.GetInt32(1),Convert.ToInt32(rdr.GetValue(8)));
                         
                     }
                 }
@@ -89,7 +89,7 @@ namespace DAOSQL
 
             using (SqlCommand command3 = new SqlCommand())
             {   //                                 0          1         2       3     4      5        6       7     
-                command3.CommandText = "SELECT id_usuario,categoria,apellido,nombre,pass,domicilio,email,nickname FROM Usuarios";
+                command3.CommandText = "SELECT id_usuario,categoria,apellido,nombre,pass,domicilio,email,nickname, id_localidad FROM Usuarios";
                 command3.Connection = connServ.Conexion();
 
                 SqlDataReader rdr3 = command3.ExecuteReader();
@@ -97,7 +97,7 @@ namespace DAOSQL
 
                 while (rdr3.Read())
                 {
-                    User Usuario  = new User(rdr3.GetString(3), rdr3.GetString(2), rdr3.GetString(6), rdr3.GetString(7), rdr3.GetString(4), rdr3.GetString(5), rdr3.GetInt32(0), rdr3.GetInt32(1));
+                    User Usuario  = new User(rdr3.GetString(3), rdr3.GetString(2), rdr3.GetString(6), rdr3.GetString(7), rdr3.GetString(4), rdr3.GetString(5), rdr3.GetInt32(0), rdr3.GetInt32(1),Convert.ToInt32(rdr3.GetValue(8)));
                     ListaUsuarios.Add(Usuario);
                 }
             }
@@ -114,7 +114,7 @@ namespace DAOSQL
 
             using (SqlCommand command3 = new SqlCommand())
             {   //                                 0          1         2       3     4      5        6       7     
-                command3.CommandText = "SELECT id_usuario,categoria,apellido,nombre,pass,domicilio,email,nickname FROM Usuarios where id_usuario='" + UserId + "'";
+                command3.CommandText = "SELECT id_usuario,categoria,apellido,nombre,pass,domicilio,email,nickname, id_localidad FROM Usuarios where id_usuario='" + UserId + "'";
                 command3.Connection = connServ.Conexion();
 
                 SqlDataReader rdr3 = command3.ExecuteReader();
@@ -122,7 +122,7 @@ namespace DAOSQL
 
                 while (rdr3.Read())
                 {
-                    result = new User(rdr3.GetString(3), rdr3.GetString(2), rdr3.GetString(6), rdr3.GetString(7), rdr3.GetString(4), rdr3.GetString(5), rdr3.GetInt32(0), rdr3.GetInt32(1));
+                    result = new User(rdr3.GetString(3), rdr3.GetString(2), rdr3.GetString(6), rdr3.GetString(7), rdr3.GetString(4), rdr3.GetString(5), rdr3.GetInt32(0), rdr3.GetInt32(1),Convert.ToInt32(rdr3.GetValue(8)));
 
                 }
             }

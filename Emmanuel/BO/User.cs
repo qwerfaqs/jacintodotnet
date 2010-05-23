@@ -15,10 +15,11 @@ namespace BO
         private string domicilio;
         private int id;
         private int categoria;
+        private int id_localidad;
 
         public User()
         { }
-        public User(string Nombre, string Apellido, string Email, string NickName, string Pass, string Domicilio,int Id,int Categoria)
+        public User(string Nombre, string Apellido, string Email, string NickName, string Pass, string Domicilio,int Id,int Categoria,int IdLocalidad)
         {
             nombre = Nombre;
             apellido = Apellido;
@@ -28,6 +29,7 @@ namespace BO
             domicilio = Domicilio;
             id = Id;
             categoria = Categoria;
+            id_localidad = IdLocalidad;
         }
 
         public override string ToString()
@@ -68,6 +70,11 @@ namespace BO
         {
             get { return id; }
             set { id = value; }
+        }
+        public int IdLocalidad
+        {
+            get { return id_localidad; }
+            set { id_localidad = value; }
         }
         public int Categoria
         {

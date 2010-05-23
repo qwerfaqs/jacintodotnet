@@ -27,7 +27,7 @@ namespace UI
             toolStripStatusLabel1.Text = "Jacinto Dot Net Carrito de Compras";
         }
 
-        public void CargaInicial()
+        /*public void CargaInicial()
         {
             String path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase).Substring(6);
             Control.ControlCategorias ControladoraCategorias = new Control.ControlCategorias();
@@ -98,7 +98,7 @@ namespace UI
             //COntroladoraCarrito3.AgregarItem(6, 6);
             //OrdenCompra OC = COntroladoraCarrito3.GenerarOrden2(this.session);
             //OC.Estado = "CONFIRMADO";
-        }
+        }*/
         
         private void button4_Click(object sender, EventArgs e)
         {

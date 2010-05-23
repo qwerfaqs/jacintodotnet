@@ -17,9 +17,9 @@ namespace Control
         {
         }
         
-        public void AgregarNuevoUsuario(string Nombre,string Apellido, string Mail, string Nick,string Pass, string Domicilio, int Id, short Categoria)
+        public void AgregarNuevoUsuario(string Nombre,string Apellido, string Mail, string Nick,string Pass, string Domicilio, int Id, short Categoria, int IdLocalidad)
         { 
-            BO.User Nuevo=new BO.User(Nombre,Apellido,Mail,Nick,Pass,Domicilio, Id,Categoria);
+            BO.User Nuevo=new BO.User(Nombre,Apellido,Mail,Nick,Pass,Domicilio, Id,Categoria,IdLocalidad);
             this.miDao.AgregarUsuario(Nuevo);
             
         }
