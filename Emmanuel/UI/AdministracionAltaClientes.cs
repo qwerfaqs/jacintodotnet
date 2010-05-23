@@ -70,10 +70,5 @@ namespace UI
                 txtDepartamento.Text = d.Nombre;
             }
         }
-
-        
-
-        
-        
     }
 }
