@@ -129,7 +129,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(383, 48);
+            this.label5.Location = new System.Drawing.Point(16, 125);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 13);
             this.label5.TabIndex = 9;
@@ -137,15 +137,15 @@
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(438, 45);
+            this.txtTelefono.Location = new System.Drawing.Point(71, 122);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(100, 20);
+            this.txtTelefono.Size = new System.Drawing.Size(83, 20);
             this.txtTelefono.TabIndex = 8;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(396, 22);
+            this.label6.Location = new System.Drawing.Point(239, 20);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(36, 13);
             this.label6.TabIndex = 11;
@@ -153,7 +153,7 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(438, 19);
+            this.txtEmail.Location = new System.Drawing.Point(281, 17);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(100, 20);
             this.txtEmail.TabIndex = 10;
@@ -196,7 +196,7 @@
             this.groupBox1.Controls.Add(this.txtCalle);
             this.groupBox1.Location = new System.Drawing.Point(12, 63);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(565, 133);
+            this.groupBox1.Size = new System.Drawing.Size(403, 157);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de Contacto";
@@ -204,7 +204,7 @@
             // cmbCiudad
             // 
             this.cmbCiudad.FormattingEnabled = true;
-            this.cmbCiudad.Location = new System.Drawing.Point(277, 71);
+            this.cmbCiudad.Location = new System.Drawing.Point(281, 96);
             this.cmbCiudad.Name = "cmbCiudad";
             this.cmbCiudad.Size = new System.Drawing.Size(100, 21);
             this.cmbCiudad.TabIndex = 24;
@@ -212,7 +212,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(231, 74);
+            this.label13.Location = new System.Drawing.Point(235, 99);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(40, 13);
             this.label13.TabIndex = 23;
@@ -221,7 +221,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(231, 48);
+            this.label12.Location = new System.Drawing.Point(235, 73);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(40, 13);
             this.label12.TabIndex = 21;
@@ -229,7 +229,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(277, 45);
+            this.textBox2.Location = new System.Drawing.Point(281, 70);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(100, 20);
@@ -238,7 +238,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(222, 22);
+            this.label11.Location = new System.Drawing.Point(226, 47);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(51, 13);
             this.label11.TabIndex = 19;
@@ -298,7 +298,7 @@
             this.groupBox2.Controls.Add(this.txtUser);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.txtPass);
-            this.groupBox2.Location = new System.Drawing.Point(289, 8);
+            this.groupBox2.Location = new System.Drawing.Point(234, 8);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(288, 49);
             this.groupBox2.TabIndex = 15;
@@ -308,20 +308,20 @@
             // btnAplicar
             // 
             this.btnAplicar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAplicar.Location = new System.Drawing.Point(421, 203);
+            this.btnAplicar.Location = new System.Drawing.Point(423, 188);
             this.btnAplicar.Name = "btnAplicar";
-            this.btnAplicar.Size = new System.Drawing.Size(75, 45);
+            this.btnAplicar.Size = new System.Drawing.Size(101, 32);
             this.btnAplicar.TabIndex = 16;
-            this.btnAplicar.Text = "Aplicar Cambios";
+            this.btnAplicar.Text = "Guardar";
             this.btnAplicar.UseVisualStyleBackColor = true;
             this.btnAplicar.Click += new System.EventHandler(this.btnAplicar_Click);
             // 
             // btnCancelar
             // 
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelar.Location = new System.Drawing.Point(500, 203);
+            this.btnCancelar.Location = new System.Drawing.Point(423, 151);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 45);
+            this.btnCancelar.Size = new System.Drawing.Size(101, 32);
             this.btnCancelar.TabIndex = 17;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -330,7 +330,7 @@
             // cmbProvincia
             // 
             this.cmbProvincia.FormattingEnabled = true;
-            this.cmbProvincia.Location = new System.Drawing.Point(277, 18);
+            this.cmbProvincia.Location = new System.Drawing.Point(281, 43);
             this.cmbProvincia.Name = "cmbProvincia";
             this.cmbProvincia.Size = new System.Drawing.Size(100, 21);
             this.cmbProvincia.TabIndex = 25;
@@ -339,7 +339,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(585, 260);
+            this.ClientSize = new System.Drawing.Size(536, 234);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAplicar);
             this.Controls.Add(this.groupBox2);
