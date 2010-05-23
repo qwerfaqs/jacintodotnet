@@ -10,11 +10,13 @@ namespace BO
         private string nombre;
         private int idProvincia;
 
+
+        public Departamento() { }
         public Departamento(int Id, string Nombre,int IdProvincia)
         {
             id = Id;
             nombre = Nombre;
-            idProvincia = idProvincia;
+            idProvincia = IdProvincia;
         }
 
         public string Nombre

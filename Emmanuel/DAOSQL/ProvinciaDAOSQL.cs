@@ -3,15 +3,18 @@ using System.Collections;//.Generic;
 using System.Text;
 using BO;
 using System.Data.SqlClient;
+using System.Globalization;
+
 namespace DAOSQL
 {
     public sealed class ProvinciaDAOSQL
     {
+        ConecctionServer connServ = ConecctionServer.Instancia();
         ////obtengo la cultura inglesa sin region ni pais, independiente del sistema operativo
         CultureInfo cultura = CultureInfo.InvariantCulture;
         
         private static readonly ProvinciaDAOSQL _instancia = new ProvinciaDAOSQL();
-        private ConecctionServer CS = ConecctionServer.Instancia();
+        
         public static ProvinciaDAOSQL Instancia()
         {
             return _instancia;
@@ -20,10 +23,10 @@ namespace DAOSQL
         { 
             
         }
-
+        
         public Provincia ObtenerProvincia(int Id)
         {
-            Provincia Provincia;
+            Provincia Provincia=new Provincia(0,"");
             connServ.Abrir();
 
             using (SqlCommand command = new SqlCommand())
@@ -35,7 +38,7 @@ namespace DAOSQL
 
                 while (rdr.Read())
                 {
-                    Provincia = new Provincia(Convert.ToInt32(rdr.GetValue(0)), rdr.GetValue(1));                                        
+                    Provincia = new Provincia(Convert.ToInt32(rdr.GetValue(0)), rdr.GetValue(1).ToString());                                        
                 }
             }
             connServ.Cerrar();

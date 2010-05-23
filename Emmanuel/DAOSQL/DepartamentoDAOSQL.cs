@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Text;
 using BO;
 using System.Data.SqlClient;
+using System.Globalization;
+
 namespace DAOSQL
 {
     class DepartamentoDAOSQL
@@ -10,7 +12,7 @@ namespace DAOSQL
         CultureInfo cultura = CultureInfo.InvariantCulture;
 
         private static readonly DepartamentoDAOSQL _instancia = new DepartamentoDAOSQL();
-        private ConecctionServer CS = ConecctionServer.Instancia();
+        ConecctionServer connServ = ConecctionServer.Instancia();
         public static DepartamentoDAOSQL Instancia()
         {
             return _instancia;
@@ -20,9 +22,9 @@ namespace DAOSQL
 
         }
 
-        public Provincia ObtenerDepartamento(int Id)
+        public Departamento ObtenerDepartamento(int Id)
         {
-            Departamento Departamento;
+            Departamento Departamento=new Departamento();
             
             connServ.Abrir();
 
@@ -35,7 +37,7 @@ namespace DAOSQL
 
                 while (rdr.Read())
                 {
-                    Departamento = new Departamento(Convert.ToInt32(rdr.GetValue(0)), rdr.GetValue(1), Convert.ToInt32(rdr.GetValue(2)));
+                    Departamento = new Departamento(Convert.ToInt32(rdr.GetValue(0)), rdr.GetValue(1).ToString(), Convert.ToInt32(rdr.GetValue(2)));
                 }
             }
             connServ.Cerrar();

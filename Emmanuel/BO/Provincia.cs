@@ -9,6 +9,7 @@ namespace BO
         private int id;
         private string nombre;
 
+        public Provincia() { }
         public Provincia(int Id, string Nombre)
         {
             id = Id;

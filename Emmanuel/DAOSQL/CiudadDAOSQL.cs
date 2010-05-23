@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using BO;
 using System.Data.SqlClient;
+using System.Globalization;
 
 namespace DAOSQL
 {
@@ -12,19 +13,22 @@ namespace DAOSQL
         CultureInfo cultura = CultureInfo.InvariantCulture;
 
         private static readonly CiudadDAOSQL _instancia = new CiudadDAOSQL();
-        private ConecctionServer CS = ConecctionServer.Instancia();
+        
+        private ConecctionServer connServ = ConecctionServer.Instancia();
+        
         public static CiudadDAOSQL Instancia()
         {
             return _instancia;
         }
+        
         private CiudadDAOSQL()
         {
 
         }
 
-        public Provincia ObtenerCiudad(int Id)
+        public Ciudad ObtenerCiudad(int Id)
         {
-            Ciudad Ciudad;
+            Ciudad Ciudad=new Ciudad();
             
             connServ.Abrir();
 
@@ -37,12 +41,11 @@ namespace DAOSQL
 
                 while (rdr.Read())
                 {
-                    Ciudad = new Ciudad(Convert.ToInt32(rdr.GetValue(0)), rdr.GetValue(1), Convert.ToInt32(rdr.GetValue(2)));
+                    Ciudad = new Ciudad(Convert.ToInt32(rdr.GetValue(0)), rdr.GetValue(1).ToString(), Convert.ToInt32(rdr.GetValue(2)));
                 }
             }
             connServ.Cerrar();
             return Ciudad;
         }
-
     }
 }
