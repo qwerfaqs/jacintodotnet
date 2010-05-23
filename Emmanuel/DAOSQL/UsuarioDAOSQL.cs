@@ -109,9 +109,7 @@ namespace DAOSQL
         public User UnUser(int UserId)
         {
             User result = null;
-            ///hago un select y si me lo devuelve es que esta logeado
-            //try
-            //{
+            
             connServ.Abrir();
 
             using (SqlCommand command3 = new SqlCommand())
@@ -129,12 +127,7 @@ namespace DAOSQL
                 }
             }
             connServ.Cerrar();
-            //}
-
-            //catch (Exception e)
-            //{
-            //    throw new ArgumentException("Error LEYENDO UN USUARIO", e);
-            //}
+            
             if (result == null)
             {
                 throw new Exception("ERROR: NO EXISTE TAL USUARIO");
@@ -151,7 +144,7 @@ namespace DAOSQL
                 cmd.ExecuteNonQuery();
                 connServ.Cerrar();
             }
-            catch (Exception ex)
+            catch 
             {
                 throw new ArgumentException("[DAOSQL] - Error Eliminando Usuario");
             }

@@ -21,7 +21,7 @@ namespace UI
             try
             {
 
-                CU.AgregarNuevoUsuario(txtNombres.Text, txtApellido.Text, txtEmail.Text, txtPass.Text, txtPass.Text, txtDireccion.Text, 0, 1);
+                CU.AgregarNuevoUsuario(txtNombres.Text, txtApellido.Text, txtEmail.Text, txtPass.Text, txtPass.Text, txtCalle.Text + " " + txtNumero.Text + " " + txtPisoDpto.Text + " " + txtmasDatos.Text, 0, 1);
                 MessageBox.Show("Usuario Agregado con exito");
             }
             catch (Exception Ex)
@@ -35,5 +35,7 @@ namespace UI
         {
             this.Close();
         }
+
+        
     }
 }

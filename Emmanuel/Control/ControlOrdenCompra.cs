@@ -59,7 +59,7 @@ namespace Control
         {
             miDAO.ModificarOrden(OC);
             Control.ControlProductos CP = new ControlProductos();
-            CP.ModificarStocksdeProductosdeUnaOrden(OC);
+            //CP.ModificarStocksdeProductosdeUnaOrden(OC); //modificare los stocks al crear factura, no orden de compra
         }
         public Double TotalUnaOrden(OrdenCompra OC)
         {
