@@ -1,7 +1,8 @@
 using System;
 using System.Collections;//.Generic;
 using System.Text;
-
+using BO;
+using System.Data.SqlClient;
 namespace DAOSQL
 {
     public sealed class ProvinciaDAOSQL
@@ -19,6 +20,15 @@ namespace DAOSQL
         { 
             
         }
+
+        public Provincia ObtenerProvincia(int Id)
+        {
+            Provincia p = new Provincia(Id, "");
+            SqlCommand cmd = new SqlCommand("select * from Provincia where idProvincia=" + Id, CS.Conexion);
+            
+
+        }
+        
         
         
         

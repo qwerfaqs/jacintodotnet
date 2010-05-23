@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BO
 {
-    class Provincia
+    public class Provincia
     {
         private int id;
         private string nombre;

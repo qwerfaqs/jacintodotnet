@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BO
 {
-    class Departamento
+    public class Departamento
     {
         private int id;
         private string nombre;
