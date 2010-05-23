@@ -36,7 +36,9 @@
   <ItemGroup>
     <Compile Include="CategoriaDAOSQL.cs" />
     <None Include="Prueba.cs" />
+    <Compile Include="CiudadDAOSQL.cs" />
     <Compile Include="ConecctionForDAOs.cs" />
+    <Compile Include="DepartamentoDAOSQL.cs" />
     <Compile Include="OrdenCompraDAOSQL.cs" />
     <Compile Include="ProductoDAOSQL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
