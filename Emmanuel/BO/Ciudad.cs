@@ -11,6 +11,7 @@ namespace BO
         private int idDepartamento;
         
         public Ciudad() { }
+        
         public Ciudad(int Id, string Nombre,int IdDepartamento)
         {
             id = Id;
