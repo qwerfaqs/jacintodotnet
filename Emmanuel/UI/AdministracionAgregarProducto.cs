@@ -7,7 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using BO;
 namespace UI
-{
+{//lala
     public partial class AdministracionProductos : Form
     {
         BindingSource BS = new BindingSource();
