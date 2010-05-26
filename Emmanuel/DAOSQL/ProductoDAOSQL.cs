@@ -61,7 +61,7 @@ namespace DAOSQL
 
                     using (SqlCommand command = new SqlCommand())
                     {
-                        command.CommandText = "INSERT INTO Productos (Id,Nombre,Categoria,Precio,PrecioOferta,Foto,Stock,StockComprometido) values (" + product.Codigo + ",'" + product.Nombre + "'," + product.Cat.Codigo + "," + product.Precio.ToString(this.cultura) + "," + product.PrecioOferta + ",@img," + product.StockActual + "," + product.StockComprometido.ToString(this.cultura) + ")";
+                        command.CommandText = "INSERT INTO Productos (Id,Nombre,Categoria,Precio,PrecioOferta,Foto,Stock,StockComprometido) values (" + product.Codigo + ",'" + product.Nombre + "'," + product.Cat.Codigo + "," + product.Precio.ToString(this.cultura) + "," + product.PrecioOferta.ToString(this.cultura) + ",@img," + product.StockActual + "," + product.StockComprometido.ToString(this.cultura) + ")";
                         command.Parameters.Add("@img", SqlDbType.Image);
                         command.Connection = connServ.Conexion();
                         if (product.FotoPath != null)
@@ -90,7 +90,6 @@ namespace DAOSQL
                 string1 = "where Categoria = ";
                 string2 = Convert.ToString(Categoria1);
             }
-
             try
             {
                 ListaProductos = new ArrayList();
@@ -175,8 +174,8 @@ namespace DAOSQL
             string1 = "where Id=";
             string2 = Convert.ToString(codigoproducto);
 
-            //try
-            //{
+            try
+            {
                     connServ.Abrir();
 
                     using (SqlCommand command = new SqlCommand())
@@ -212,11 +211,11 @@ namespace DAOSQL
                         rdr.Close();
                     }
                     connServ.Cerrar();
-            //}
-            //catch
-            //{
-            //    throw new ArgumentException("Error Obteniendo un objeto del Tipo Producto");
-            //}
+            }
+            catch
+            {
+                throw new ArgumentException("Error Obteniendo un objeto del Tipo Producto");
+            }
             return producto;
         }
     }
